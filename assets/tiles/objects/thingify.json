@@ -125,5 +125,20 @@
     "desc": "sussy",
     "tags": ["chars", "thingify", "mod"],
 	"pronouns": ["it"]
+  },
+  {
+    "name": "me",
+    "sprite": ["baba/objects/me"],
+    "layer": 11,
+    "color": [[3, 1]],
+    "rotate": true,
+    "wobble": true,
+    "features": {
+      "sans": {"x": 18, "y": 3, "w": 2, "h": 2}
+    },
+    "voice": "s_organ",
+    "desc": "MEs are a intelegant creature from another universe, the Baba Is You universe.",
+    "tags": ["chars"],
+    "pronouns": ["he", "him"]
   }
 ]

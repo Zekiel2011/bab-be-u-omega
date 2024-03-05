@@ -423,7 +423,7 @@
     "sprite": ["letter_ae"],
     "types": ["letter"],
     "color": [[0, 3]],
-    "desc": "can be used in haet & graey unless you are trying to prove me wrong but good luck trying to do that lol"
+    "desc": "can only be used in the haet's & graey unless you are trying to prove me wrong, but good luck trying to do that. lol"
   },
   {
     "name": "letter_¢",
@@ -458,6 +458,7 @@
     "sprite": ["txt/me"],
     "types": ["letter"],
     "color": [[3, 1]],
+    "thingify": "me",
     "desc": "Wait... this is the name for a Baba Is You character."
   },
   {
@@ -473,5 +474,40 @@
     "types": ["letter"],
     "color": [[0, 3]],
     "desc": "Ga."
-  }
+  },
+  {
+    "name": "letter_al",
+    "sprite": ["letter_al"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "Used for W AL K"
+  },
+  {
+    "name": "letter_ut",
+    "sprite": ["letter_ut"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "Ut oo."
+  },
+  {
+    "name": "letter_lk",
+    "sprite": ["letter_lk"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "Used for WA LK or W A LK."
+  },
+  {
+    "name": "letter_wa",
+    "sprite": ["letter_wa"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "Used for WA LK or WA L K"
+  },
+  {
+    "name": "letter_!",
+    "sprite": ["letter_!"],
+    "types": ["letter", "note"],
+    "color": [[0, 3]],
+    "desc": "Warning"
+  },
 ]

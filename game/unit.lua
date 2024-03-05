@@ -524,6 +524,20 @@ function moveBlock()
     end
   end
   
+  local isshift = getUnitsWithEffect("lookwithme")
+  for _,unit in ipairs(isshift) do
+    local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
+    for _,on in ipairs(stuff) do
+      if unit ~= on and sameFloat(unit, on) and ignoreCheck(unit, on, "lookwithme") and timecheck(unit,"be","lookwithme") then
+        if (units_to_change[on] == nil) then
+          units_to_change[on] = {0, 0}
+        end
+        units_to_change[on][1] = units_to_change[on][1] + dirs8[unit.dir][1]
+        units_to_change[on][2] = units_to_change[on][2] + dirs8[unit.dir][2]
+      end
+    end
+  end
+  
   local isshift = getUnitsWithEffect("goooo")
   for _,unit in ipairs(isshift) do
     local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
@@ -1072,6 +1086,27 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    local isweak2 = getUnitsWithEffect("template")
+    for _,unit in ipairs(isweak2) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if unit ~= on and on.fullname ~= "no1" and sameFloat(unit, on) then
+          if timecheck(unit,"be","template") and timecheck(on) then
+            table.insert(to_destroy, unit)
+            playSound("break")
+            shakeScreen(0.3, 0.1)
+          else
+            table.insert(time_destroy,{unit.id,timeless})
+						addUndo({"time_destroy",unit.id})
+            table.insert(time_sfx,"break")
+          end
+          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+        end
+      end
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
     local isstrong = getUnitsWithEffect("anti ouch")
     for _,unit in ipairs(isstrong) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
@@ -1215,6 +1250,51 @@ function updateUnits(undoing, big_update)
       end
     end
     
+
+    local isshen = getUnitsWithEffect("neddor")
+    for _,unit in ipairs(isshen) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasProperty(on, "forkee") and sameFloat(unit, on) then
+          local ignore_unit = ignoreCheck(unit, on, "forkee")
+          local ignore_on = ignoreCheck(on, unit, "neddor")
+          if ignore_unit or ignore_on then
+            if timecheck(unit,"be","neddor") and timecheck(on,"be","forkee") then
+              if ignore_unit then
+                table.insert(to_destroy, unit)
+              end
+              if ignore_on then
+                table.insert(to_destroy, on)
+              end
+              playSound("break")
+              playSound("unlock")
+              shakeScreen(0.3, 0.1)
+            else
+              if ignore_unit then
+                table.insert(time_destroy,{unit.id,timeless})
+                addUndo({"time_destroy",unit.id})
+              end
+              if ignore_on then
+                table.insert(time_destroy,{on.id,timeless})
+                addUndo({"time_destroy",on.id})
+              end
+              table.insert(time_sfx,"break")
+              table.insert(time_sfx,"unlock")
+            end
+            if ignore_unit then
+              addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+            end
+            if ignore_on then
+              addParticles("destroy", on.x, on.y, getUnitColor(on))
+            end
+            --unlike other destruction effects, keys and doors pair off one-by-one
+            to_destroy = handleDels(to_destroy)
+            break
+          end
+        end
+      end
+    end
+    
     local issnacc = matchesRule(nil, "snacc", "?")
     for _,ruleparent in ipairs(issnacc) do
       local unit = ruleparent[2]
@@ -1229,6 +1309,43 @@ function updateUnits(undoing, big_update)
             table.insert(time_destroy,{on.id,timeless})
             addUndo({"time_destroy",on.id})
             table.insert(time_sfx,"snacc")
+          end
+          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+        end
+      end
+    end
+
+    local isyays = matchesRule(nil, "yays", "?")
+    for _,ruleparent in ipairs(isyays) do
+      local unit = ruleparent[2]
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if (unit ~= on or ruleparent[1].rule.object.name == "themself") and hasRule(unit, "yays", on) and sameFloat(unit, on) and ignoreCheck(on, unit) then
+          if timecheck(unit,"yay",on) and timecheck(on) then
+            wins = wins + 1
+          else
+            addUndo({"timeless_win_add", on.id})
+            table.insert(timeless_win,on.id)
+            addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+    end
+
+    local issnacc = matchesRule(nil, "drincc", "?")
+    for _,ruleparent in ipairs(issnacc) do
+      local unit = ruleparent[2]
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if (unit ~= on or ruleparent[1].rule.object.name == "themself") and hasRule(unit, "drincc", on) and sameFloat(unit, on) and ignoreCheck(on, unit) then
+          if timecheck(unit,"drincc",on) and timecheck(on) then
+            table.insert(to_destroy, on)
+            playSound("drincc")
+            shakeScreen(0.3, 0.15)
+          else
+            table.insert(time_destroy,{on.id,timeless})
+            addUndo({"time_destroy",on.id})
+            table.insert(time_sfx,"drincc")
           end
           addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
         end
@@ -1300,7 +1417,7 @@ function updateUnits(undoing, big_update)
           is_u = hasProperty(on, "u") or hasProperty(on, "u too") or hasProperty(on, "u tres")
           if is_u and sameFloat(unit, on) then
             if timecheck(unit,"be","xwx") and (timecheck(on,"be","u") or timecheck(on,"be","u too") or timecheck(on,"be","u tres")) then
-              doXWX()
+              error(INVALID_VALUE)
             else
               addUndo({"timeless_crash_add"})
               timeless_crash = true
@@ -1332,6 +1449,25 @@ function updateUnits(undoing, big_update)
       end
     end
     
+    local isbonus2 = getUnitsWithEffect(":p")
+    for _,unit in ipairs(isbonus2) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, ":p") then
+          writeSaveFile(true, {"levels", level_filename, "whunus"})
+          if timecheck(unit,"be",":p") and (timecheckUs(on)) then
+            table.insert(to_destroy, unit)
+            playSound("bonus")
+          else
+            table.insert(time_destroy,{unit.id,timeless})
+						addUndo({"time_destroy",unit.id})
+            table.insert(time_sfx,"bonus")
+          end
+          addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+        end
+      end
+    end
+    
     local isbonus = getUnitsWithEffect("anti :o")
     for _,unit in ipairs(isbonus) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -1347,6 +1483,25 @@ function updateUnits(undoing, big_update)
             table.insert(time_sfx,"bonus")
           end
           addParticles("bonus", on.x, on.y, getUnitColor(on))
+        end
+      end
+    end
+    
+    local isbonus = getUnitsWithEffect("un:o")
+    for _,unit in ipairs(isbonus) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, "un:o") then
+          writeSaveFile(true, {"levels", level_filename, "bonus"})
+          if timecheck(unit,"be","un:o") and (timecheckUs(on)) then
+            table.insert(to_destroy, unit)
+            playSound("bonus")
+          else
+            table.insert(time_destroy,{unit.id,timeless})
+						addUndo({"time_destroy",unit.id})
+            table.insert(time_sfx,"bonus")
+          end
+          addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
         end
       end
     end
@@ -1546,6 +1701,21 @@ function updateUnits(undoing, big_update)
         end
       end
     end
+    
+    local creators = matchesRule(nil, "creates", "?")
+    for _,match in ipairs(creators) do
+      local creator = match[2]
+      local createe = match[1].rule.object.name
+      if timecheck(creator,"creates",createe) then
+        if (group_names_set[createe] ~= nil) then
+          for _,v in ipairs(namesInGroup(createe)) do
+            doOneCreate(match[1].rule, creator, v)
+          end
+        else
+          doOneCreate(match[1].rule, creator, createe)
+        end
+      end
+    end
 
     local revived_units = {}
     local zombies = matchesRule("?", "be", "zomb")
@@ -1701,11 +1871,11 @@ function miscUpdates(state_change)
           local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
           if color == "bleu" or color == "cyeann" then
             unit.sprite = {"casete_bleu"}
-          elseif color == "reed" or color == "pinc" then
+          elseif color == "reed" or color == "pinc" or color == "corl" then
             unit.sprite = {"casete_pinc"}
           elseif color == "orang" or color == "yello" then
             unit.sprite = {"casete_yello"}
-          elseif color == "grun" then
+          elseif color == "grun" or color == "limeme" then
             unit.sprite = {"casete_grun"}
           else
             unit.sprite = {"casete_wut"}
@@ -1743,8 +1913,47 @@ function miscUpdates(state_change)
             unit.sprite = {"bolble_stars"}
           elseif color == "grun" then
             unit.sprite = {"bolble_tree"}
+          elseif color == "limeme" then
+            unit.sprite = {"modd/bolble_lime"}
+          elseif color == "corl" then
+            unit.sprite = {"modd/bolble_coral"}
           else
             unit.sprite = {"bolble"}
+          end
+        end
+      end
+
+      if unit.fullname == "kat" then
+        if unit.color_override then
+          local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
+          if color == "whit" then
+            unit.sprite = {"kat"}
+          elseif color == "bleu" then
+            unit.sprite = {"kat"}
+          elseif color == "cyeann" then
+            unit.sprite = {"kat"}
+          elseif color == "purp" then
+            unit.sprite = {"kat"}
+          elseif color == "brwn" then
+            unit.sprite = {"kat"}
+          elseif color == "blacc" then
+            unit.sprite = {"kat"}
+          elseif color == "graey" then
+            unit.sprite = {"normal"}
+          elseif color == "orang" then
+            unit.sprite = {"gramfild"}
+          elseif color == "pinc" then
+            unit.sprite = {"kat"}
+          elseif color == "yello" then
+            unit.sprite = {"kat"}
+          elseif color == "grun" then
+            unit.sprite = {"kat"}
+          elseif color == "limeme" then
+            unit.sprite = {"kat"}
+          elseif color == "corl" then
+            unit.sprite = {"kat"}
+          else
+            unit.sprite = {"kat"}
           end
         end
       end
@@ -1754,6 +1963,48 @@ function miscUpdates(state_change)
           unit.sprite = {"chest_close"}
         else
           unit.sprite = {"chest_open"}
+        end
+      end
+
+      if unit.fullname == "sparkl" then
+        if hasProperty(unit,"brite") then
+          unit.sprite = {"sparkl_brite"}
+        else
+          unit.sprite = {"sparkl"}
+        end
+      end
+
+      if unit.fullname == "menstr" then
+        if hasProperty(unit,"thicc") then
+          unit.sprite = {"menstr_thicc"}
+        else
+          unit.sprite = {"menstr"}
+        end
+      end
+      
+      if unit.fullname == "bellt" then
+        if hasProperty(unit,"stukc") then
+          unit.sprite = {"bellt_1"}
+        else
+          unit.sprite = {"bellt"}
+        end
+      end
+      
+      if unit.fullname == "bab" then
+        if hasProperty(unit,"crye") then
+          unit.sprite = {"bab_crye"}
+        --elseif hasProperty(unit,"down") or (unit.draw.rotation = 3) then
+          --unit.sprite = {"bab_down"}
+        else
+          unit.sprite = {"bab"}
+        end
+      end
+      
+      if unit.fullname == "tzsh" then
+        if hasProperty(unit,"nogo") or hasProperty(unit,"goawaypls") then
+          unit.sprite = {"tzsh"}
+        else
+          unit.sprite = {"tzsh_2"}
         end
       end
       
@@ -1861,6 +2112,15 @@ function miscUpdates(state_change)
       if unit.fullname == "die" and (first_turn or not (hasProperty(unit,"stukc") or hasProperty(unit,"noturn"))) then
         local roll = math.random(6)
         unit.sprite[2] = "die_"..roll
+      end
+
+      if unit.name == "it" and scene ~= editor then --blatantly stolen from byc, but dont let anyone know that
+        if not card_for_id[unit.id] then
+          card_for_id[unit.id] = {math.random(1,9)}
+        end
+        local it = unpack(card_for_id[unit.id])
+        print("b")
+        unit.sprite[1] = "modd/it_"..it or "modd/it"
       end
 
       if unit.fullname == "txt_katany" then
@@ -2113,6 +2373,12 @@ function updateUnitColourOverride(unit)
     unit.color_override = {0, 3}
   elseif unit.blacc then
     unit.color_override = {0, 0}
+  elseif unit.limeme then
+    unit.color_override = {5, 3}
+  elseif unit.corl then
+    unit.color_override = {4, 2}
+  elseif unit.golld then
+    unit.color_override = {6, 2}
   end
   --mixing colors
   if (unit.reed and unit.whit) then --pinc
@@ -2133,6 +2399,12 @@ function updateUnitColourOverride(unit)
     unit.color_override = {5, 2}
   elseif (unit.blacc and unit.whit) then --graey
     unit.color_override = {0, 1}
+  elseif (unit.pinc and unit.whit) then --corl
+    unit.color_override = {4, 2}
+  elseif (unit.grun and unit.yello) then --limeme
+    unit.color_override = {5, 3}
+  elseif (unit.yello and unit.brwn) then --golld
+    unit.color_override = {6, 2}
   end
 end
 
@@ -2919,7 +3191,7 @@ function convertUnits(pass)
       end
     end
   end
-  
+
   local function addTile(nametocreate,unit)
     table.insert(converted_units, unit)
     addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
@@ -3309,6 +3581,7 @@ function convertUnits(pass)
         if tile ~= nil and not tile.convertible then
           tile = nil
         end
+
         --let x ben't x txt prevent x be txt, and x ben't txt prevent x be y txt
         local overriden = false;
         if rule.object.name == "txt" then
@@ -3320,6 +3593,13 @@ function convertUnits(pass)
         local new_special = {}
         if rule.object.name:find("letter_custom") then
           new_special.customletter = rule.object.unit.special.customletter
+        end
+        --figure out if the next tile has the happen or nft prop
+		if hasProperty(rule.object.name,"happen") and tile ~= nil then
+          tile = nil
+        end
+		if hasProperty(rule.object.name,"nft") and tile ~= nil then
+          tile = nil
         end
         if tile ~= nil and not overriden then
           if not unit.removed then
@@ -3607,6 +3887,14 @@ function createUnit(tile,x,y,dir,convert,id_,really_create_empty,prefix,anti_gon
 
   if unit.name == "camra" then
     unit.special.camera = {x = 0, y = 0, w = 11, h = 7, fixed_w = false, fixed_h = false}
+  end
+
+  if unit.name == "camra2" then
+    unit.special.camera = {x = 0, y = 0, w = 22, h = 14, fixed_w = false, fixed_h = false}
+  end
+
+  if unit.name == "camra3" then
+    unit.special.camera = {x = 0, y = 0, w = 33, h = 21, fixed_w = false, fixed_h = false}
   end
   
   if rules_effecting_names[unit.name] then
@@ -4149,6 +4437,7 @@ function doXWX()
   writeSaveFile(nil,{"levels",level_filename,"seen"})
   writeSaveFile(nil,{"levels",level_filename,"won"})
   writeSaveFile(nil,{"levels",level_filename,"bonus"})
+  writeSaveFile(nil,{"levels",level_filename,"whunus"})
   writeSaveFile(nil,{"levels",level_filename,"transform"})
   escResult(true, true)
 end
@@ -4163,4 +4452,3 @@ function tablesum(t)
 
     return sum
 end
-

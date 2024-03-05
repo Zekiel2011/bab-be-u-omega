@@ -153,7 +153,7 @@ end
 function initializeGraphicalPropertyCache()
   local properties_to_init = -- list of properties that require the graphical cache
   {
-    "flye", "slep", "stelth", "colrful", "delet", "xwx", "rave" -- miscelleaneous graphical effects
+    "flye", "slep", "altsprite", "altsprite2", "stelth", "colrful", "delet", "xwx", "rave" -- miscelleaneous graphical effects
   }
   for name,_ in pairs(overlay_props) do -- add overlays
     table.insert(properties_to_init, name)
@@ -1776,6 +1776,9 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
     elseif condtype == "wun" then
       local name = unit.special.level or level_filename
       result = readSaveFile{"levels",name,"won"}
+    elseif condtype == "whuhd" then
+      local name = unit.special.level or level_filename
+      result = readSaveFile{"levels",name,"whunus"}
     elseif condtype == "past" then
       if cond_not then
         result = doing_past_turns
@@ -1804,6 +1807,7 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
         graey = "graey",
         blacc = "whit",
         brwn = "cyeann"
+        golld = "bleu",
       }]]
     elseif condtype == "anti sameface" then
       result = unit.dir == dirAdd(compare_with.dir,4)
@@ -1813,6 +1817,10 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = not ((math.floor(unit.x)==unit.x) and (math.floor(unit.y)==unit.y)) 
     elseif condtype == "alt" then
       result = #undo_buffer % 2 == 1
+    elseif condtype == "on" then
+      result = countProperty(v, "energy", true) > 0
+    elseif condtype == "on2" then
+      result = countProperty(v, "energy2", true) > 0
     else
       print("unknown condtype: " .. condtype)
       result = false
@@ -2503,7 +2511,8 @@ function addParticles(ptype,x,y,color,count)
     ps:setSpread(0.8)
     ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
     ps:setSizes(0.40, 0.40, 0.40, 0)
-    ps:setSpeed(30)
+    ps:setSpeed(x + 2 * TILE_SIZE)
+    --og speed is 30
     ps:setLinearDamping(2)
     ps:setParticleLifetime(0.6)
     ps:setColors(unpack(particle_colors))
@@ -2614,11 +2623,133 @@ function addParticles(ptype,x,y,color,count)
     ps:start()
     ps:emit(count or 1)
     table.insert(particles, ps)
+  elseif ptype == "stink" then
+    local ps = love.graphics.newParticleSystem(sprites["modd/indotherm"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0)
+    ps:setEmissionArea("borderrectangle", TILE_SIZE/3, TILE_SIZE/3, 0, true)
+    ps:setSizes(0.7, 0.7, 0.7, 0)
+    ps:setSpeed(math.random(10,20))
+    ps:setParticleLifetime(math.random(1,2))
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "blood" then
+    local ps = love.graphics.newParticleSystem(sprites["circle"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(1)
+    ps:setEmissionArea("borderrectangle", TILE_SIZE/3, TILE_SIZE/3, 0, true)
+    ps:setSizes(0.3, 0.3, 0.3, 0)
+    ps:setSpeed(math.random(10,20))
+    ps:setParticleLifetime(math.random(1,2))
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "cry" then
+    local ps = love.graphics.newParticleSystem(sprites["tear"])
+    local px = (x + 0.9) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0)
+    ps:setEmissionArea("borderrectangle", 0, 0, 0, true)    
+    ps:setSizes(0.5, 0.5, 0.5, 0)
+    ps:setSpeed(math.random(10,20))
+    ps:setLinearAcceleration(0,30)
+    ps:setParticleLifetime(1)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "cry2" then
+    local ps = love.graphics.newParticleSystem(sprites["tear"])
+    local px = x * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0)
+    ps:setEmissionArea("borderrectangle", 0, 0, 0, true)    
+    ps:setSizes(0.5, 0.5, 0.5, 0)
+    ps:setSpeed(math.random(-10,-20))
+    ps:setLinearAcceleration(0,30)
+    ps:setParticleLifetime(1)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "bain" then
+    local ps = love.graphics.newParticleSystem(sprites["letter_a"])
+    local px = (x + 1) * TILE_SIZE
+    local py = y * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0)
+    ps:setEmissionArea("borderrectangle", 0, 0, 0, true)    
+    ps:setSizes(0.5, 0.5, 0.5, 0)
+    ps:setSpeed(10)
+    ps:setLinearAcceleration(0,-50)
+    ps:setParticleLifetime(2)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "bonusmeta" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["sparklemeta"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(30)
+    ps:setLinearDamping(2)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "smoke" then
+    local ps = love.graphics.newParticleSystem(sprites["smoke"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 2 * TILE_SIZE)
+    --og speed is 30
+    ps:setLinearDamping(2)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
   elseif ptype == "sing" then
     local ps = love.graphics.newParticleSystem(sprites["noet"])
     local px = (x + 0.5) * TILE_SIZE
     local py = (y + 0.5) * TILE_SIZE
     local size = 0.2
+  elseif ptype == "orrb" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["dotti"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 2 * TILE_SIZE)
+    --og speed is 30
+    ps:setLinearDamping(2)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
     -- insert particles here
   end
 end
@@ -3760,7 +3891,9 @@ end
 
 function getTheme()
   if not settings["themes"] then return "default" end
-  if cmdargs["theme"] then
+  if settings["dzhake_theme"] and not settings["dzhake_random_theme"] then
+      return settings["dzhake_theme"]
+  elseif cmdargs["theme"] then
     if cmdargs["theme"] ~= "" then
       return cmdargs["theme"]
     end
@@ -3805,6 +3938,7 @@ function buildOptions()
     scene.addOption("mouse_lines", "mouse lines", {{"on", true}, {"off", false}})
     scene.addOption("stopwatch_effect", "stopwatch effect", {{"on", true}, {"off", false}})
     scene.addOption("fullscreen", "screen mode", {{"windowed", false}, {"fullscreen", true}}, function() fullScreen() end)
+    scene.addOption("babafont", "use Baba Is You font", {{"off", false}, {"on", true}})
     if scene == menu then
       scene.addOption("scroll_on", "menu background scroll", {{"on", true}, {"off", false}})
       scene.addOption("menu_anim", "menu animations", {{"on", true}, {"off", false}})
@@ -3823,6 +3957,8 @@ function buildOptions()
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc2" then
     scene.addOption("contrast", "High contrasted colors", {{"on", true}, {"off", false}})
+    scene.addOption("savefile", "Current Save File", {{"Bab", bab}, {"Keek", keek}, {"Meem", meem}})
+    scene.addOption("ads", "Ads", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)
@@ -4176,7 +4312,7 @@ local function addTry(try, str, extra)
 end
 
 function getTileSprite(name, tile, o)
-  local o = getTableWithDefaults(o, {wobble = 1, sleep = false})
+  local o = getTableWithDefaults(o, {wobble = 1, sleep = false, altsprite = false, altsprite2 = false})
   local try = o.try or {name}
   if tile then
     if name == "os" then
@@ -4209,6 +4345,14 @@ function getTileSprite(name, tile, o)
 
     if o.sleep then
       addTry(try, "?_slep", true)
+    end
+
+    if o.altsprite then
+      addTry(try, "?_alt", true)
+    end
+
+    if o.altsprite2 then
+      addTry(try, "?_alt2", true)
     end
 
     if tile.wobble then
@@ -4352,7 +4496,9 @@ function getUnitSprite(name, unit)
   return getTileSprite(name, unit and getTile(unit.tile), {
     try = try,
     wobble = unit and unit.frame or 0,
-    sleep = unit and graphical_property_cache["slep"][unit]
+    sleep = unit and graphical_property_cache["slep"][unit],
+    altsprite = unit and graphical_property_cache["altsprite"][unit],
+    altsprite2 = unit and graphical_property_cache["altsprite2"][unit]
   })
 end
 
@@ -4491,6 +4637,9 @@ function drawSprite(x, y, rotation, sx, sy, o)
       if current_palette == "default" and o.wobble then
         palette = "baba"
       end
+      --if current_palette == "default" and o.sprite[1] == "jely" or o.sprite[1] == "txt/jely" then
+        --palette = "ocean"
+      --end
       color = {getPaletteColor(color[1], color[2], palette)}
     end
 

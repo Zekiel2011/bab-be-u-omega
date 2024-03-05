@@ -158,6 +158,17 @@
     "tags": ["colors", "colours", "yellow"]
   },
   {
+    "name": "txt_golld",
+    "sprite": ["txt/golld_cond"],
+    "sprite_transforms": {
+      "property": "txt/golld"
+    },
+    "types": ["class_prefix", "cond_prefix", "property"],
+    "color": [[6, 2]],
+    "desc": "GOLLD: Causes the unit to appear gold.\nYello+Brwn.",
+    "tags": ["colors", "colours", "gold"]
+  },
+  {
     "name": "txt_purp",
     "sprite": ["txt/purp_cond"],
     "sprite_transforms": {
@@ -379,5 +390,13 @@
     "color": [[0, 3]],
     "desc": "NXTTOO (Infix Condition): To do: Insert txt desc",
     "tags": ["nextto", "around"]
+  },
+  {
+    "name": "txt_whuhd",
+    "sprite": ["txt2/whuhd"],
+    "types": ["cond_prefix"],
+    "color": [[3, 1]],
+    "desc": "WHUHD: A prefix condition that's true if the unit is a whuhed level. If the unit isn't a level, then true if the current level is whuhd.",
+    "tags": ["whuhed"]
   }
 ]

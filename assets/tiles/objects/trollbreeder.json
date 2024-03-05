@@ -1,0 +1,391 @@
+[
+  {
+    "name": "getboux",
+    "sprite": ["getboux"],
+    "layer": 8,
+    "color": [[0, 1]],
+    "rotate": true,
+    "desc": "essential warehouse utility for boux moving",
+    "tags": ["forklift"]
+  },
+  {
+    "name": "txt_getboux",
+    "sprite": ["txt/getboux"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["forklift"]
+  },
+  {
+    "name": "evil",
+    "sprite": ["evil", "evil_boots", "evil_skates", "evil_hair", "evil_horns"],
+    "layer": 11,
+    "color": [[2, 2], [2, 1], [0,3], [0,2], [0,0]],
+    "painted": [true, false, false, false, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 21, "y": 11, "w": 3, "h": 2}
+    },
+    "desc": "half bab, half keek, ALLL EVILLE!!",
+    "tags": ["trollbreeder", "troll", "chars", "evilevil", "bab", "keek", "devil", "demon", "debil"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_evil",
+    "sprite": ["txt/evil"],
+    "types": ["object"],
+    "color": [[2, 2]],
+	"desc": "omg trollbreeder style text",
+    "tags": ["trollbreeder", "troll", "chars", "evilevil", "bab", "keek", "devil", "demon", "debil"]
+  },
+  {
+    "name": "itte!",
+    "sprite": ["itte"],
+    "layer": 11,
+    "color": [[1, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 19, "y": 12, "w": 3, "h": 2}
+    },
+    "desc": "ripof's cousin",
+    "tags": ["it", "itte", "chars"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_itte!",
+    "sprite": ["txt/itte"],
+    "types": ["object"],
+    "color": [[1, 4]],
+	"desc": "you need an exclamation mark to spell its name",
+    "tags": ["it", "itte", "chars"]
+  },
+  {
+    "name": "tu",
+    "sprite": ["tu", "tu_scarf"],
+    "layer": 11,
+    "color": [[4, 2], [2, 2]],
+    "painted": [false, true],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 13, "w": 3, "h": 3}
+    },
+    "desc": "a strange shapeshifter that came into existance due to a revival machine mishap",
+    "tags": ["somevovka", "flofl", "flag", "chars"],
+    "pronouns": ["all"]
+  },
+  {
+    "name": "txt_tu",
+    "sprite": ["txt/tu"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["somevovka", "flofl", "flag", "chars"]
+  },
+  {
+    "name": "trob",
+    "sprite": ["trob", "trob_floof"],
+    "layer": 11,
+    "color": [[1, 4], [0, 3]],
+    "painted": [true, false],
+    "rotate": true,
+    "desc": "that cat number guy",
+    "tags": ["trollbreeder", "troll", "furry", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_trob",
+    "sprite": ["txt/trob", "txt/trob_floof"],
+	"painted": [true, false],
+    "types": ["object"],
+    "color": [[1, 4], [0,3]],
+	"desc": "even his text is a furry",
+    "tags": ["trollbreeder", "troll", "furry", "chars"]
+  },
+  {
+    "name": "dad",
+    "sprite": ["dad"],
+    "layer": 11,
+    "color": [[1, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 19, "y": 12, "w": 4, "h": 3}
+    },
+    "desc": "proud babysitter of babby, not actually a father",
+    "tags": ["adam", "allie", "chars", "ada", "adad", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_dad",
+    "sprite": ["txt/dad"],
+    "types": ["object"],
+    "color": [[1, 2]],
+    "tags": ["adam", "allie", "chars", "ada", "adad", "chars"]
+  },
+  {
+    "name": "pati",
+    "sprite": ["pati"],
+    "layer": 10,
+    "color": [[4, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 21, "y": 8, "w": 5, "h": 5}
+    },
+    "desc": "pati go in pareboux and go in pareboux and go in pareboux...",
+    "tags": ["patrick", "parabox", "pattie", "paraboux", "pareboux", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_pati",
+    "sprite": ["txt/pati"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "tags": ["patrick", "parabox", "pattie", "paraboux", "pareboux", "chars"]
+  },
+  {
+    "name": "aka",
+    "sprite": ["aka"],
+    "layer": 11,
+    "color": [[4, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 12, "w": 2, "h": 2}
+    },
+    "desc": "dad's bff and a furry (see nyaka)",
+    "tags": ["adam", "allie", "chars", "akak", "furry"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_aka",
+    "sprite": ["txt/aka"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "tags": ["adam", "allie", "chars", "akak", "furry"]
+  },
+  {
+    "name": "nyaka",
+    "sprite": ["nyaka", "nyaka_floof"],
+	"painted": [true, false],
+    "layer": 11,
+    "color": [[4, 1], [0,3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 12, "w": 2, "h": 2}
+    },
+    "desc": "owo",
+    "tags": ["adam", "allie", "chars", "aka", "akak", "furry"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_nyaka",
+    "sprite": ["txt/nyaka", "txt/nyaka_floof"],
+	"painted": [true, false],
+	"color": [[4, 1], [0, 3]],
+	"desc:": "even her text is furry",
+    "types": ["object"],
+    "tags": ["adam", "allie", "chars", "aka", "akak", "furry"]
+  },
+  {
+    "name": "obby",
+    "sprite": ["obby", "obby_glow", "obby_wings"],
+    "layer": 10,
+    "color": [[2, 4], [2, 4], [0,3]],
+    "painted": [true, true, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 19, "y": 13, "w": 2, "h": 3}
+    },
+    "desc": "ben't spooped",
+    "tags": ["adam", "allie", "chars", "ring", "angel", "obo"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_obby",
+    "sprite": ["txt/obby"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["adam", "allie", "chars", "ring", "angel", "obo"]
+  },
+  {
+    "name": "day",
+    "sprite": ["day"],
+    "layer": 11,
+    "color": [[5, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 16, "w": 3, "h": 3}
+    },
+    "desc": "wants to destroy the sun for melting him",
+    "tags": ["adam", "allie", "chars", "dag", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_day",
+    "sprite": ["txt/day"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["adam", "allie", "chars", "dag", "chars"]
+  },
+  {
+    "name": "ses",
+    "sprite": ["ses"],
+    "layer": 11,
+    "color": [[0, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 13, "w": 5, "h": 5}
+    },
+    "desc": "very spooped by bogs",
+    "tags": ["adam", "allie", "chars", "sas", "sesa", "chars"],
+    "pronouns": ["all"]
+  },
+  {
+    "name": "txt_ses",
+    "sprite": ["txt/ses"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["adam", "allie", "chars", "sas", "sesa", "chars"]
+  },
+  {
+    "name": "amoung",
+    "sprite": ["amoung", "amoung_visor"],
+    "layer": 9,
+	"painted": [true, false],
+    "color": [[2, 2], [1,4]],
+    "rotate": true,
+    "desc": "very sus",
+    "tags": ["chars", "sus", "among", "among us", "crewmate"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_amoung",
+    "sprite": ["txt/amoung", "txt/amoung_visor"],
+    "types": ["object"],
+	"painted": [true, false],
+    "color": [[2, 2], [1, 4]],
+	"desc": "amoung txt be sus",
+    "tags": ["chars", "sus", "among", "among us", "crewmate"]
+  },
+  {
+    "name": "gargle",
+    "sprite": ["gargle", "gargle_tongue"],
+    "layer": 11,
+    "color": [[5, 3], [2, 2]],
+	"painted": [true, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 20, "y": 7, "w": 1, "h": 1}
+    },
+    "desc": "cool mermaid animal with a tongue",
+    "tags": ["theopold", "platformy", "glagla", "fish", "mermaid", "chars"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_gargle",
+    "sprite": ["txt/gargle"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "tags": ["theopold", "platformy", "glagla", "fish", "mermaid", "chars"]
+  },
+  {
+    "name": "bellby",
+    "sprite": ["bellby"],
+    "layer": 11,
+    "color": [[0, 1]],
+    "rotate": true,
+	"features": {
+      "sans": {"x": 24, "y": 21, "w": 2, "h": 2}
+    },
+    "desc": "babby's sis that got combined with a bellt in the wrong way",
+    "tags": ["trollbreeder", "troll", "chars", "beba", "balt", "ballt"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_bellby",
+    "sprite": ["txt/bellby"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["trollbreeder", "troll", "chars", "beba", "balt", "ballt"]
+  },
+  {
+    "name": "chad.",
+    "sprite": ["chad", "chad_ring", "chad_scarf", "chad_scarfend", "chad_skateboard", "chad_wheels"],
+    "layer": 11,
+    "color": [[1, 3], [7, 2], [2,2], [2,4], [7,0], [7,1]],
+    "painted": [true, false, false, false, false, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 28, "y": 6, "w": 2, "h": 2}
+    },
+    "desc": "fabulous enby punk jij teen, watch out for xem!",
+    "tags": ["chars", "jij", "chad", "bad"],
+    "pronouns": ["xe", "xem"]
+  },
+  {
+    "name": "txt_chad.",
+    "sprite": ["txt/chad"],
+    "types": ["object"],
+    "color": [[1, 3]],
+	"desc": "you need a period to spell xeir name",
+    "tags": ["chars", "jij", "chad", "bad"]
+  },
+  {
+    "name": "smoll",
+    "sprite": ["smoll_base", "smoll_legs", "smoll_orb", "smoll_spike", "smoll_tail", "smoll_teeth", "smoll_eyes"],
+    "layer": 10,
+    "color": [[4, 1], [3, 1], [1, 4], [2,3], [3,0], [0,3], [0,1]],
+    "painted": [true, true, false, false, true, false, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 8, "w": 3, "h": 3}
+    },
+    "desc": "a strange little animal unlike any we've seen...",
+    "tags": ["chars", "snek", "monster", "smol"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_smoll",
+    "sprite": ["txt/smoll"],
+    "types": ["object"],
+    "color": [[4, 1]],
+	"desc": "not to be confused with smol (the small portal)",
+    "tags": ["chars", "snek", "monster", "smol"]
+  },
+  {
+    "name": "trol",
+    "sprite": ["trol"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "rotate": true,
+	"features": {
+      "sans": {"x": 19, "y": 8, "w": 7, "h": 2}
+    },
+    "desc": "you've been troled! trolibous",
+    "tags": ["meme", "troll", "trollface"]
+  },
+  {
+    "name": "txt_trol",
+    "sprite": ["txt/trol"],
+    "types": ["object"],
+    "color": [[0, 3]],
+	"desc": "in lower case just to trol you even more",
+    "tags": ["meme", "troll", "trollface"]
+  },
+  {
+    "name": "cic",
+    "sprite": ["cic"],
+    "layer": 11,
+    "color": [[4, 1]],
+    "rotate": true,
+	"features": {
+      "sans": {"x": 24, "y": 9, "w": 3, "h": 3}
+    },
+    "desc": "trob's bff 4ever!!",
+    "tags": ["troll", "trollbreeder", "char", "cici"],
+	"pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_cic",
+    "sprite": ["txt/cic"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "tags": ["troll", "trollbreeder", "char", "cici"]
+  }
+]

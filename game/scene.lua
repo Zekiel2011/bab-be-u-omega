@@ -236,13 +236,32 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, ":)", "bonus", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "un:)", "unwin", 0.25, 1, 1, {1, 2})
   scene.doPassiveParticles(dt, "nxt", "nxt", 0.25, 1, 1, {0, 3})
-  scene.doPassiveParticles(dt, ":o", "bonus", 0.5, 0.8, 1, {4, 1})
+  scene.doPassiveParticles(dt, ":o", "orrb", 0.5, 0.8, 1, {4, 1})
+  scene.doPassiveParticles(dt, ":p", "orrb", 0.5, 0.8, 1, {3, 1})
+  scene.doPassiveParticles(dt, "un:o", "unwin", 0.5, 0.8, 1, {4, 1})
   scene.doPassiveParticles(dt, "qt", "love", 0.25, 0.5, 1, {4, 2})
   scene.doPassiveParticles(dt, "slep", "slep", 1, 0.33, 1, {0, 3})
   scene.doPassiveParticles(dt, "thonk", "thonk", 0.25, 0.5, 1, {0, 3})
   scene.doPassiveParticles(dt, "tryagain", "bonus", 0.25, 0.25, 1, {3, 3})
+  scene.doPassiveParticles(dt, "gud", "bonus", 0.25, 1, 1, {2, 4})
+  scene.doPassiveParticles(dt, "awdul", "stink", 0.25, 1, 1, {1, 2})
+  scene.doPassiveParticles(dt, "anti gud", "stink", 0.25, 1, 1, {2, 4})
+  scene.doPassiveParticles(dt, "anti awdul", "bonus", 0.25, 1, 1, {1, 2})
+  scene.doPassiveParticles(dt, "/:o", "bonus", 0.5, 0.8, 1, {4, 1})
   scene.doPassiveParticles(dt, "huh", "bonus", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "unhuh", "unwin", 0.25, 1, 1, {1, 2})
+  scene.doPassiveParticles(dt, "^o^", "unwin", 0.25, 1, 10, {1, 4})
+  scene.doPassiveParticles(dt, "crye", "cry", 0.25, 1, 2, {1, 3})
+  scene.doPassiveParticles(dt, "crye", "cry2", 0.25, 1, 2, {1, 3})
+  scene.doPassiveParticles(dt, "scream", "bain", 0.25, 1, 2, {0, 3})
+  scene.doPassiveParticles(dt, "txt_:)", "bonusmeta", 0.25, 1, 1, {2, 4})
+  scene.doPassiveParticles(dt, "txt_:o", "bonusmeta", 0.5, 0.8, 1, {4, 1})
+  scene.doPassiveParticles(dt, "hotte", "smoke", 1, 8, 1, {0, 1})
+  scene.doPassiveParticles(dt, "energy", "blood", 0.5, 2.5, 1, {2, 4})
+  scene.doPassiveParticles(dt, "energy", "movement-puff", 0.5, 1, 1, {2, 4})
+  scene.doPassiveParticles(dt, "energy2", "blood", 0.5, 2.5, 1, {5, 3})
+  scene.doPassiveParticles(dt, "energy2", "movement-puff", 0.5, 1, 1, {5, 3})
+
 	
   doReplay(dt)
   if rules_with and rules_with["rythm"] then
@@ -506,6 +525,9 @@ function scene.keyPressed(key, isrepeat)
     end
     if readSaveFile(level_name, "bonus") then
       current_level = current_level.." (bonused) "
+    end
+    if readSaveFile(level_name, "whunus") then
+      current_level = current_level.." (whunused) "
     end
     local tfs = readSaveFile(level_name, "transform")
     if tfs then
@@ -874,7 +896,11 @@ function scene.draw(dt)
     lvl_color = {hslToRgb(love.timer.getTime()/6%1, .1, .1, .9), 1}
   elseif (hasProperty(outerlvl,"reed") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"pinc") then
     lvl_color = {getPaletteColor(4, 1)}
-  elseif (hasProperty(outerlvl,"grun") and hasProperty(outerlvl,"whit")) then
+  elseif (hasProperty(outerlvl,"pinc") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"corl") then
+    lvl_color = {getPaletteColor(4, 2)}
+  elseif (hasProperty(outerlvl,"yello") and hasProperty(outerlvl,"brwn")) or hasProperty(outerlvl,"golld") then
+    lvl_color = {getPaletteColor(6, 2)}
+  elseif (hasProperty(outerlvl,"grun") and hasProperty(outerlvl,"yello")) or hasProperty(outerlvl,"limeme") then
     lvl_color = {getPaletteColor(5, 3)}
   elseif hasProperty(outerlvl,"whit") then
     lvl_color = {getPaletteColor(0, 3)}
@@ -894,6 +920,8 @@ function scene.draw(dt)
     lvl_color = {getPaletteColor(5, 2)}
   elseif hasProperty(outerlvl,"cyeann") then
     lvl_color = {getPaletteColor(1, 4)}
+  elseif hasProperty(outerlvl,"golld") then
+    lvl_color = {getPaletteColor(6, 2)}
   elseif hasProperty(outerlvl,"blacc") then
     lvl_color = {getPaletteColor(0, 4)}
   end
@@ -941,6 +969,18 @@ function scene.draw(dt)
     
     if timeless and not hasProperty(unit,"zawarudo") and not (unit.type == "txt") then
       brightness = 0.33
+    end
+
+    if hasProperty(unit,"ad") then
+      love.graphics.setBlendMode("add", "alphamultiply")
+    end
+
+    if hasProperty(unit,"subt") then
+      love.graphics.setBlendMode("subtract", "alphamultiply")
+    end
+
+    if hasProperty(unit,"uhhh") then
+      love.graphics.setBlendMode("multiply", "premultiplied")
     end
 
     if unit.fullname == "txt_now" then
@@ -1046,12 +1086,6 @@ function scene.draw(dt)
       end
     end
     
-    if unit.fullname == "txt_temmi" and unit.active then
-      local range = 0.5
-      fulldrawx = fulldrawx + math.random(-range, range)
-      fulldrawy = fulldrawy + math.random(-range, range)
-    end
-
     local function getOffset()
       if unit.cool or not settings["shake_on"] then return 0,0 end
       if rules_with["temmi"] or rules_with["anti slep"] then
@@ -1394,6 +1428,14 @@ function scene.draw(dt)
           love.graphics.setColor(color[1], color[2], color[3], color[4])
         end
         love.graphics.draw(sprites[o.sprite], fulldrawx + o.x + shake_x, fulldrawy - 0.5*TILE_SIZE + o.y + shake_y, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      elseif name == "mhatt" then
+        local o = getTableWithDefaults(unit.features.hatt, {x=0, y=0, sprite="mhattsmol"})
+        if c1 and c2 then
+          love.graphics.setColor(getPaletteColor(c1, c2))
+        else
+          love.graphics.setColor(color[1], color[2], color[3], color[4])
+        end
+        love.graphics.draw(sprites[o.sprite], fulldrawx + o.x + shake_x, fulldrawy - 0.5*TILE_SIZE + o.y + shake_y, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
       elseif name == "katany" then
         local o = getTableWithDefaults(unit.features.katany, {x=0, y=0, sprite="katanysmol"})
         love.graphics.setColor(getPaletteColor(c1 or 0, c2 or 1))
@@ -1409,6 +1451,10 @@ function scene.draw(dt)
       elseif name == "gunne" then
         local o = getTableWithDefaults(unit.features.gunne, {x=0, y=0, sprite="gunnesmol"})
         love.graphics.setColor(getPaletteColor(c1 or 0, c2 or 3))
+        love.graphics.draw(sprites[o.sprite], fulldrawx + o.x + shake_x, fulldrawy + o.y + shake_y, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      elseif name == "cap" then
+        local o = getTableWithDefaults(unit.features.cap, {x=0, y=0, sprite="modd/cap"})
+        love.graphics.setColor(getPaletteColor(c1 or 2, c2 or 2))
         love.graphics.draw(sprites[o.sprite], fulldrawx + o.x + shake_x, fulldrawy + o.y + shake_y, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
       elseif name ~= "bowie" and unit.fullname == "swan" then
         local tile = getTile(name)
@@ -1827,7 +1873,11 @@ function scene.draw(dt)
         color = newcolor
       elseif (hasProperty(cursor,"reed") and hasProperty(cursor,"whit")) or hasProperty(cursor,"pinc") then
         color = {4, 1}
-      elseif (hasProperty(cursor,"grun") and hasProperty(cursor,"whit")) then
+      elseif (hasProperty(cursor,"pinc") and hasProperty(cursor,"whit")) or hasProperty(cursor,"corl") then
+        color = {4, 2}
+      elseif (hasProperty(cursor,"yello") and hasProperty(cursor,"brwn")) or hasProperty(cursor,"golld") then
+        color = {6, 2}
+      elseif (hasProperty(cursor,"yello") and hasProperty(cursor,"grun")) or hasProperty(cursor,"limeme") then
         color = {5, 3}
       elseif (hasProperty(cursor,"bleu") and hasProperty(cursor,"reed")) or hasProperty(cursor,"purp") then
         color = {3, 1}
@@ -1944,6 +1994,9 @@ function scene.draw(dt)
       end
       if readSaveFile{"levels", level_filename, "bonus"} then
         current_level = current_level.." (bonused) "
+      end
+      if readSaveFile{"levels", level_filename, "whunus"} then
+        current_level = current_level.." (whunused) "
       end
       local tfs = readSaveFile{"levels", level_filename, "transform"}
       if tfs then

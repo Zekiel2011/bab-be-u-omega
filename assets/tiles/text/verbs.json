@@ -216,5 +216,54 @@
     "color": [[2, 3]],
     "desc": "COOM (Verb): A verbified COME PLS.",
     "tags": ["come"]
+  },
+  {
+    "name": "txt_golden_be",
+    "sprite": ["txt/golden/be"],
+    "types": ["verb_class", "verb_property", "verb", "and", "golden"],
+    "color": [[0, 3]],
+    "desc": "BE (Verb): Causes the subject to become an object or have a property.\nAnti: mirror",
+    "tags": ["is"]
+  },
+  {
+    "name": "txt_creates",
+    "sprite": ["txt/creates"],
+    "types": ["verb_class", "verb"],
+    "color": [[0, 3]],
+    "desc": "CREATES (Verb): At end of turn, the unit makes this object in a way like moar.\nAnti: snacc",
+    "tags": ["make", "create"]
+  },
+  {
+    "name": "txt_iscome",
+    "sprite": ["txt/iscome"],
+    "types": ["verb_class", "verb"],
+    "color": [[0, 3]],
+    "desc": "ISCOME (Verb): Causes the subject to become an object.",
+    "tags": ["become"]
+  },
+  {
+    "name": "txt_befit",
+    "sprite": ["txt/befit"],
+    "types": ["verb_property", "verb"],
+    "color": [[0, 3]],
+    "desc": "BEFIT (Verb): Causes the subject to have a property.",
+    "tags": ["is", "become", "isproperty"]
+  },
+  {
+    "name": "txt_txt_is",
+    "sprite": ["txt/txt_is"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "wobble": true,
+    "desc": "TEXT_IS (Object Text): refers to the IS text.",
+    "tags": ["is"]
+  },
+  {
+    "name": "txt_yays",
+    "sprite": ["txt2/yays"],
+    "types": ["verb_unit", "verb_direction", "verb"],
+    "color": [[2, 4]],
+    "desc": "YAYS (Verb): A verbified :)",
+    "tags": ["wins"]
   }
 ]

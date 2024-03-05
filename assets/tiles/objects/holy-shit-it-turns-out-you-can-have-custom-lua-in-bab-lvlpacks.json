@@ -1,0 +1,20 @@
+[
+  {
+    "name": "beeb",
+    "sprite": ["beeb"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "its beeb bruh",
+    "tags": ["chars"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_beeb",
+    "sprite": ["txt/beeb"],
+    "types": ["object"],
+    "color": [[3, 2]],
+    "desc": "\"BEEB\". thats what it says",
+    "tags": ["chars"]
+  }
+]

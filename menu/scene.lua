@@ -12,7 +12,9 @@ local oldmousey = 0
 local buttons = {}--{"play", "editor", "options", "exit"}
 local git_btn = nil
 
-local splash = love.timer.getTime() % 1
+math.randomseed(os.time())
+local splash = math.random()
+  -- love.timer.getTime() % 1 old splash
 
 local tweens = {}
 local buttonPos = {}
@@ -240,6 +242,88 @@ function scene.draw(dt)
       else
         splashtext = "happi hunnukkah!!"
       end
+    elseif getTheme() == "factory" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.66 then
+        splashtext = "beep boop bap?"
+      elseif splash < 0.33 then
+        splashtext = "beep?"
+      else
+        splashtext = "beep bap boop?!"
+      end
+    elseif getTheme() == "baba" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.66 then
+        splashtext = "baba is you!"
+      elseif splash < 0.33 then
+        splashtext = "baba make level!"
+      else
+        splashtext = "Nordie's gamejam 2017's winner!"
+      end
+    elseif getTheme() == "babadefault" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.66 then
+        splashtext = "baba is you!"
+      elseif splash < 0.33 then
+        splashtext = "baba make level!"
+      else
+        splashtext = "Nordie's gamejam 2017's winner!"
+      end
+    elseif getTheme() == "corruption" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.1 then
+        splashtext = "b4b b3 u!"
+      elseif splash < 0.2 then
+        splashtext = "b4b b3 u t00: 3l3ctr1c b00g4l00"
+      elseif splash < 0.3 then
+        splashtext = "b4b cr43t lvl!"
+      elseif splash < 0.4 then
+        splashtext = "error 404: bab not found"
+      elseif splash < 0.5 then
+        splashtext = "k33k b3 w4lk!"
+      elseif splash < 0.6 then
+        splashtext = "Do not delete bab.png, worst mistake of my life."
+      elseif splash < 0.7 then
+        splashtext = "g4rf13ld - th1s 1s d3m0cr4cy 1n 4ct10n."
+      elseif splash < 0.8 then
+        splashtext = "f34tur3s 3 un3d1t3d g4rf13ld pngs"
+      elseif splash < 0.9 then
+        splashtext = "why 1s 1t c4ll3d 0v3n wh3n y0u 0f 1n th3 c0ld f00d 0f 0ut h0t 34t th3 f00d?"
+      else
+        splashtext = "spl0sh txt!"
+      end
+    elseif getTheme() == "gramfild" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.66 then
+        splashtext = "why is it called oven when you of in the cold food of out hot eat the food?"
+      elseif splash < 0.33 then
+        splashtext = "garfield - this is democracy in action."
+      else
+        splashtext = "features 3 unedited garfield pngs"
+      end
+    elseif getTheme() == "redfault" then
+      love.graphics.setColor(0,0,1)
+      if splash > 0.1 then
+        splashtext = "keek be u!"
+      elseif splash < 0.2 then
+        splashtext = "keek be u too: electric boogaloo!"
+      elseif splash < 0.3 then
+        splashtext = "keek craet lvl!"
+      elseif splash < 0.4 then
+        splashtext = "I finally got the wildfire in my sock drawer under control!"
+      elseif splash < 0.5 then
+        splashtext = "dude, it's called Keek Be U Omega, not Keek Be Omega."
+      elseif splash < 0.6 then
+        splashtext = "bab be walk!"
+      elseif splash < 0.7 then
+        splashtext = "eat polish gras"
+      elseif splash < 0.8 then
+        splashtext = "good for puzzle levels"
+      elseif splash < 0.9 then
+        splashtext = "boy mode!!!!"
+      else
+        splashtext = "splosh txt!"
+      end
     elseif getTheme() == "halloween" then
       if not settings["lessflashing"] and (love.timer.getTime()%10 > 8.7 and love.timer.getTime()%10 < 8.8 or love.timer.getTime()%10 > 8.9 and love.timer.getTime()%10 < 9) then
         splashtext = "BAB IS DEAD"
@@ -248,8 +332,24 @@ function scene.draw(dt)
       else
         splashtext = "spooky month!"
       end
-    elseif splash > 0.5 then
+    elseif splash < 0.1 then
       splashtext = "bab be u!"
+    elseif splash < 0.2 then
+      splashtext = "bab be u too: electric boogaloo!"
+    elseif splash < 0.3 then
+      splashtext = "bab craet lvl!"
+    elseif splash < 0.4 then
+      splashtext = "I finally got the wildfire in my sock drawer under control!"
+    elseif splash < 0.5 then
+      splashtext = "dude, it's called Bab Be U Omega, not Bab Be Omega."
+    elseif splash < 0.6 then
+      splashtext = "keek be walk!"
+    elseif splash < 0.7 then
+      splashtext = "eat polish gras"
+    elseif splash < 0.8 then
+      splashtext = "good for puzzle levels"
+    elseif splash < 0.9 then
+      splashtext = "girl mode!!!!"
     else
       splashtext = "splosh txt!"
     end

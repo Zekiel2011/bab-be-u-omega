@@ -1,0 +1,402 @@
+[
+  {
+    "name": "platfory",
+    "sprite": ["modd/platfory"],
+    "layer": 3,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "i wonder if he watches bfdi",
+    "tags": ["platform", "bfdi", "object", "dev", "character", "mod"],  
+    "pronouns": ["it"]
+  },
+  {
+    "name": "wiki",
+    "sprite": ["modd/wiki"],
+    "layer": 12,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "it's like bup but worse",
+    "tags": ["character", "mod", "toad", "mushroom"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "him",
+    "sprite": ["modd/him"],
+    "color": [[6, 2]],
+    "rotate": false,
+    "desc": "gomba jumpscare",
+    "tags": ["character", "mod", "goomba", "mushroom"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_platfory",
+    "sprite": ["modd/moddtxt/platfory"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "has absolut 0 relation to platform from baba",
+    "tags": ["platform", "bfdi", "object", "dev", "character", "mod"]
+  },
+  {
+    "name": "txt_wiki",
+    "sprite": ["modd/moddtxt/wiki"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "pedia",
+    "tags": ["character", "mod", "toad", "mushroom"]
+  },
+  {
+    "name": "txt_him",
+    "sprite": ["modd/moddtxt/him"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "praise our lord and savior Cursed Goomba",
+    "tags": ["character", "mod", "goomba", "god", "mushroom"]
+  },
+  {
+    "name": "monokeek",
+    "sprite": ["modd/monokeek"],
+    "color": [[2, 2]],
+    "rotate": true,
+    "desc": "created in a befren accident",
+    "tags": ["keke", "mod", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_monokeek",
+    "sprite": ["modd/moddtxt/monokeek"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "how",
+    "tags": ["keke", "mod", "chars"],
+  },
+  {
+    "name": "gunguy",
+    "sprite": ["modd/gunguy"],
+    "color": [[1, 3]],
+    "desc": "maybe he can find his PB over yonder",
+    "tags": ["hempuli", "mod", "blue", "chars"],
+    "rotate": true,
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_gunguy",
+    "sprite": ["modd/moddtxt/gunguy"],
+    "types": ["object"],
+    "color": [[1, 3]],
+    "desc": "oh? his roommate is a laser gun",
+    "tags": ["hempuli", "mod", "blue", "chars"]
+  },
+  {
+    "name": "whiz",
+    "sprite": ["modd/whiz"],
+    "color": [[5, 3]],
+    "desc": "can allegedly talk to robobots",
+    "tags": ["mod"],
+    "rotate": true,
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_whiz",
+    "sprite": ["modd/moddtxt/whiz"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "desc": "gee whiz",
+    "tags": ["mod"]
+  },
+  {
+    "name": "monsert",
+    "sprite": ["modd/monsert"],
+    "color": [[4, 1]],
+    "desc": "aw sweet, horrors beyond my comprehension",
+    "tags": ["mod"],
+    "rotate": true,
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_monsert",
+    "sprite": ["modd/moddtxt/monsert"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "tags": ["it"]
+  },
+  {
+    "name": "bologna",
+    "sprite": ["modd/bologna_body", "modd/bologna_head"],
+    "color": [[2, 2], [2, 1]],
+    "desc": "idk anymore",
+    "tags": ["mod", "chars"],
+    "rotate": true,
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_bologna",
+    "sprite": ["modd/moddtxt/bologna"],
+    "types": ["object"],
+    "color": [[2, 1]],
+    "desc": "baloney",
+    "tags": ["mod", "chars"]
+  },
+  {
+    "name": "bruhbruh",
+    "sprite": ["modd/bruhbruh_body", "modd/bruhbruh_head"],
+    "color": [[1, 2], [1, 3]],
+    "tags": ["mod", "chars"],
+    "rotate": true,
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_bruhbruh",
+    "sprite": ["modd/moddtxt/bruhbruh"],
+    "types": ["object"],
+    "color": [[1, 3]],
+    "desc": "bruh",
+    "tags": ["mod", "chars"]
+  },
+  {
+    "name": "whenthe",
+    "sprite": ["modd/whenthe"],
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "me when the",
+    "tags": ["mod"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_whenthe",
+    "sprite": ["modd/moddtxt/whenthe"],
+    "types": ["object"],
+    "desc": "when you at the when you you when the",
+    "color": [[0, 3]],
+    "tags": ["it"]
+  },
+  {
+    "name": "it",
+    "sprite": ["modd/it_editor"],
+    "color": [[1, 4]],
+    "desc": "Can't decide on a tile for it",
+    "tags": ["mod", "it"],
+    "rotate": true
+  },
+  {
+    "name": "txt_it",
+    "sprite": ["modd/moddtxt/it"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "desc": "IT: Randomizes each time it loads.",
+    "tags": ["mod", "txt", "it"]
+  },  {
+    "name": "cbush",
+    "sprite": ["modd/cbush"],
+    "color": [[5, 1]],
+    "desc": "three eyes means 1.5x the fun",
+    "tags": ["mod", "floflo"],
+    "rotate": true
+  },
+  {
+    "name": "txt_cbush",
+    "sprite": ["modd/moddtxt/cbush"],
+    "types": ["object"],
+    "color": [[5, 1]],
+    "desc": "the c stands for \"seeing\"",
+    "tags": ["mod", "txt", "floflo"]
+  },
+  {
+    "name": "lol",
+    "sprite": ["modd/lol"],
+    "color": [[4, 1]],
+    "desc": "lmao vera :)",
+    "tags": ["mod", "aloe", "alal"],
+    "rotate": true,
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_lol",
+    "sprite": ["modd/moddtxt/lol"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "the day I came up with this name, platfory's modds prolly started going uphill",
+    "tags": ["mod", "txt", "aloe", "alal"]
+  },
+  {
+    "name": "xx__xx",
+    "sprite": ["modd/xx--xx"],
+    "color": [[0, 3]],
+    "rotate": true,
+    "wobble": true,
+    "desc": "It simultaneously breaks every single rule of Baba Be U sprite makeing. Amazing!",
+    "tags": ["x", "mod", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_xx__xx",
+    "sprite": ["modd/moddtxt/xx--xx"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "you know, this game doesn't have an underscore character that works",
+    "wobble": true,
+    "tags": ["x", "mod", "chars"],
+  },
+  {
+    "name": "ubu",
+    "sprite": ["modd/ubu"],
+    "color": [[1, 2]],
+    "desc": "eats limons for a living",
+    "tags": ["mod"],
+    "rotate": true
+  },
+  {
+    "name": "txt_ubu",
+    "sprite": ["modd/moddtxt/ubu"],
+    "types": ["object"],
+    "color": [[1, 2]],
+    "desc": "nice going, bub",
+    "tags": ["mod"]
+  },
+  {
+    "name": "babtoo",
+    "sprite": ["modd/babtoo"],
+    "color": [[0, 3]],
+    "desc": "the one and only",
+    "tags": ["mod", "bab"],
+    "rotate": true
+  },
+  {
+    "name": "txt_babtoo",
+    "sprite": ["txt/bab2", "mini/letter_2"],
+    "metasprite": ["txt/bab2 meta"],
+    "types": ["object"],
+    "color": [[4, 1], [4,1]],
+    "desc": "new and improoved? doesn't that imply bab 1 is old and inferior",
+    "tags": ["mod", "bab"]
+  },
+  {
+    "name": "waly",
+    "sprite": ["modd/waly"],
+    "layer": 2,
+    "color": [[1, 1]],
+    "desc": "camouflage",
+    "tags": ["walla", "mod"],
+    "pronouns": ["it"],
+    "rotate": true
+  },
+  {
+    "name": "txt_waly",
+    "sprite": ["modd/moddtxt/waly"],
+    "color": [[1, 1]],
+    "desc": "waly wonder",
+    "tags": ["mod", "walla"],
+  },
+  {
+    "name": "wowbrutal",
+    "sprite": ["modd/wowbrutal"],
+    "color": [[4, 0]],
+    "desc": "stays in spce",
+    "tags": ["mod", "brute"],
+    "rotate": true
+  },
+  {
+    "name": "txt_wowbrutal",
+    "sprite": ["modd/moddtxt/wowbrutal"],
+    "color": [[4, 0]],
+    "desc": "aw, hootal",
+    "tags": ["mod", "brute"],
+  },
+  {
+    "name": "bab0",
+    "sprite": ["modd/bab0"],
+    "color": [[0, 3]],
+    "desc": "wtf?",
+    "tags": ["mod", "bab"],
+    "rotate": true
+  },
+  {
+    "name": "heeh2",
+    "sprite": ["modd/heeh2"],
+    "color": [[1, 4]],
+    "desc": "I wheezed",
+    "tags": ["mod", "heeh"],
+    "rotate": true
+  },
+  {
+    "name": "txt_heeh2",
+    "sprite": ["modd/moddtxt/heeh2"],
+    "color": [[1, 4]],
+    "desc": "so as not to conflict with heeh (fof's modds)",
+    "tags": ["mod", "heeh"],
+  },
+  {
+    "name": "sallt",
+    "sprite": ["modd/sallt"],
+    "color": [[4, 0]],
+    "desc": "see this is why i dont hang out wit u",
+    "tags": ["mod", "salt"],
+    "rotate": true
+  },
+  {
+    "name": "txt_sallt",
+    "sprite": ["modd/moddtxt/sallt"],
+    "color": [[4, 1]],
+    "desc": "samalt? that's crinch",
+    "tags": ["mod", "salt"],
+  },
+  {
+    "name": "sammah",
+    "sprite": ["modd/sammah"],
+    "color": [[2, 3]],
+    "desc": "do nut touch",
+    "tags": ["mod", "sama"],
+    "rotate": true
+  },
+  {
+    "name": "txt_sammah",
+    "sprite": ["modd/moddtxt/sammah"],
+    "color": [[2, 3]],
+    "desc": "u ever juts plugg in and giv powr and not taek",
+    "tags": ["mod", "sama"],
+  },
+  {
+    "name": "huro",
+    "sprite": ["modd/huro"],
+    "color": [[6, 1]],
+    "desc": "goes brrrrrrrr",
+    "tags": ["mod", "tero"],
+    "rotate": true
+  },
+  {
+    "name": "txt_huro",
+    "sprite": ["modd/moddtxt/huro"],
+    "color": [[6, 1]],
+    "desc": "hurcan't",
+    "tags": ["mod", "tero"],
+  },
+  {
+    "name": "chonke",
+    "sprite": ["modd/chonke"],
+    "color": [[2, 4]],
+    "desc": "wink wink wink wink wink",
+    "tags": ["mod", "chunk"],
+    "rotate": true
+  },
+  {
+    "name": "txt_chonke",
+    "sprite": ["modd/moddtxt/chonke"],
+    "color": [[2, 4]],
+    "desc": "pleas don't call it foke",
+    "tags": ["mod", "chunke"],
+  },
+  {
+    "name": "quiq",
+    "sprite": ["modd/quiq"],
+    "color": [[3, 4]],
+    "desc": "keeks distant cousine",
+    "tags": ["mod", "qiqi", "quiqui"],
+    "rotate": true
+  },
+  {
+    "name": "txt_quiq",
+    "sprite": ["modd/moddtxt/quiq"],
+    "color": [[3, 4]],
+    "desc": "QUICKLY!!!!!!!",
+    "tags": ["mod", "qiqi", "quiqui"],
+  }
+]

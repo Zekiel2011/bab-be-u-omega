@@ -44,6 +44,26 @@ function clearRules()
   addBaseRule("txt","be","wurd")
   addBaseRule("txt","be","goawaypls")
   addBaseRule("lvl","be","nogo")
+  --cell machiiiiine
+  addBaseRule("pooosh","be","goawaypls")
+  addBaseRule("pooosh","rp","cell")
+  addBaseRule("redbloodcell","be","noswim")
+  addBaseRule("redbloodcell","rp","cell")
+  addBaseRule("tholl","be","goawaypls")
+  addBaseRule("tholl","be","haetskye")
+  addBaseRule("tholl","rp","cell")
+  addBaseRule("muuv","be","goawaypls")
+  addBaseRule("muuv","be","noturn")
+  addBaseRule("muuv","be","matic")
+  addBaseRule("muuv","rp","cell")
+  addBaseRule("stne","be","nogo")
+  addBaseRule("stne","rp","cell")
+  --kees baserules
+  addBaseRule("kees","rp","kee")
+  addBaseRule("kees","got","kee")
+  --half properties
+  addBaseRule("halfu","be","u")
+  addBaseRule("halfnogo","be","nogo")
   --TODO: This will need to be automatic on levels with letters/combined words, since a selectr/bordr might be made in a surprising way, and it will need to have its implicit rules apply immediately.
   if (units_by_name["selctr"] or units_by_name["txt_selctr"] or units_by_name["lin"] or units_by_name["txt_lin"] or units_by_name["txt_pathz"]) then
     addBaseRule("selctr","be","curse")
@@ -837,6 +857,51 @@ function addRule(full_rule)
   if verb == "is" then
     local new_verb = copyTable(rules.verb)
     new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "iscome" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "befit" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "bebe" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "golden_be" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "golden_be" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "&"
     for i = 1, verb_not do
       new_verb.name = new_verb.name .. "n't"
     end

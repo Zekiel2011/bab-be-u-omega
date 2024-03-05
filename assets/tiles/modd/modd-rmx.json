@@ -1,0 +1,55 @@
+[
+  {
+    "name": "mtalmaje",
+    "sprite": ["modd/maje/maje_hood", "modd/maje/maje_mtal", "modd/maje/maje_eye", "modd/maje/maje_face"],
+    "color": [[2, 4], [0, 3], [0, 3], [0, 0]],
+    "desc": "it flies",
+    "tags": ["mod", "mage"],
+    "rotate": true
+  },
+  {
+    "name": "txt_mtalmaje",
+    "sprite": ["modd/misctxt/mtalmaje"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["mod", "mage", "txt"]
+  },
+  {
+    "name": "tinbolt",
+    "sprite": ["modd/maje/tinbolt"],
+    "color": [[2, 1]],
+    "desc": "if you are hit by this, you are inflicted wit TETANUS",
+    "tags": ["mod", "bolt"],
+    "rotate": true
+  },
+  {
+    "name": "txt_tinbolt",
+    "sprite": ["modd/misctxt/tinbolt"],
+    "types": ["object"],
+    "color": [[2,2]],
+    "desc": "metal should be an elemnt",
+    "tags": ["mod", "bolt", "txt"]
+  },
+  {
+    "name": "woug",
+    "sprite": ["wog"],
+    "layer": 10,
+    "color": [[2, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 16, "y": 9, "w": 3, "h": 3}
+    },
+    "voice": "s_strum",
+    "desc": "what are you talking about? it was always named woug",
+    "tags": ["wug", "chars", "bird"],
+	  "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_woug",
+    "sprite": ["modd/moddtxt/woug"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "desc": "wougs dream is to be a mad scientist and go evil with power using nothing but sheer linguistics. linguists' evil career options may be limited but that wont stop woug from trying their best",
+    "tags": ["wug", "chars", "bird"]
+  }
+]

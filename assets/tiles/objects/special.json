@@ -78,5 +78,59 @@
     "color": [[0, 1]],
     "desc": "X BE CAMRA replaces the camera with a new one at X. CAMRA STALK X makes the camera follow all X.",
     "tags": ["camera", "scroll", "screen"]
+  },
+  {
+    "name": "camra2",
+    "sprite": ["camra"],
+    "layer": 30,
+    "color": [[2, 1]],
+    "desc": "Middle or SHIFT right-click set area around the camera that the screen will be zoomed into (mainly for minigame uses). Only one can exist at a time. STELTH by default",
+    "tags": ["camera", "scroll", "screen"]
+  },
+  {
+    "name": "txt_camra2",
+    "sprite": ["txt/camra"],
+    "types": ["object"],
+    "color": [[2, 1]],
+    "desc": "X BE CAMRA replaces the camera with a new one at X. CAMRA STALK X makes the camera follow all X.",
+    "tags": ["camera", "scroll", "screen"]
+  },
+  {
+    "name": "camra3",
+    "sprite": ["camra"],
+    "layer": 30,
+    "color": [[4, 1]],
+    "desc": "Middle or SHIFT right-click set area around the camera that the screen will be zoomed into (mainly for minigame uses). Only one can exist at a time. STELTH by default",
+    "tags": ["camera", "scroll", "screen"]
+  },
+  {
+    "name": "txt_camra3",
+    "sprite": ["txt/camra"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "X BE CAMRA replaces the camera with a new one at X. CAMRA STALK X makes the camera follow all X.",
+    "tags": ["camera", "scroll", "screen"]
+  },
+  {
+    "name": ":o",
+    "sprite": ["whoa"],
+    "types": ["object"],
+    "desc": "It constantly runs away from U objects in fear of dying.",
+    "convertible": false,
+    "rotate": true,
+    "color": [[4, 1]],
+    "tags": ["chars", "bonus", "iiy", "thingify"],
+    "tags": ["it"]
+  },
+  {
+    "name": "gomyway",
+    "sprite": ["gomywayocwip"],
+    "types": ["object"],
+    "desc": "Likes anime, but always want stuff to go how it wants it to go.",
+    "convertible": false,
+    "rotate": true,
+    "color": [[1, 3]],
+    "tags": ["chars", "bonus", "iiy", "thingify"],
+    "tags": ["it"]
   }
 ]

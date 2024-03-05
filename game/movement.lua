@@ -127,7 +127,7 @@ function doMovement(movex, movey, key)
     movex = 0
     movey = 0
   end
-  walkdirchangingrulesexist = rules_with["munwalk"] or rules_with["sidestep"] or rules_with["diagstep"] or rules_with["hopovr"] or rules_with["knightstep"] or rules_with["halfstep"]
+  walkdirchangingrulesexist = rules_with["munwalk"] or rules_with["sidestep"] or rules_with["diagstep"] or rules_with["hopovr"] or rules_with["knightstep"] or rules_with["halfstep"] or rules_with["seventyfive"]
   sliderulesexist = rules_with["icyyyy"] or rules_with["goooo"] or rules_with["reflecc"] or rules_with["anti icyyyy"] or rules_with["anti goooo"]
   local played_sound = {}
   local slippers = {}
@@ -220,6 +220,28 @@ function doMovement(movex, movey, key)
                   local dy = other.y-undo[4]
                   local slipdir = dirs8_by_offset[sign(dx)][sign(dy)]
                   addMove(other,"icy",dirAdd(slipdir,dir),icyness)
+                  break
+                end
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("shiftaway",
+      function(word,dir)
+        local icy = getUnitsWithEffectAndCount(word)
+        for unit,icyness in pairs(icy) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) and undo_buffer[2] ~= nil and not hasRule(other,"got","slippers") then
+              for _,undo in ipairs(undo_buffer[2]) do
+                if undo[1] == "update" and undo[2] == other.id and ((undo[3] ~= other.x) or (undo[4] ~= other.y)) then
+                  local dx = other.x-undo[3]
+                  local dy = other.y-undo[4]
+                  local slipdir = dirs8_by_offset[sign(dx)][sign(dy)]
+                  addMove(unit,"walk",dirAdd(unit.dir,dir),icyness)
                   break
                 end
               end
@@ -339,6 +361,61 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             addMove(unit,"walk",dirAdd(unit.dir,dir),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("vibe",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"walk",dirAdd(love.math.random(1,8),dir),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("stalkskye",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"matic",dirAdd(7,0),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("stalkflor",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"matic",dirAdd(3,0),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("march",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"walk",dirAdd(i-unit.dir,i*dir),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("matic",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"matic",dirAdd(unit.dir,dir),walkness)
           end
         end
       end
@@ -1444,6 +1521,8 @@ function fallBlock()
   
   addFallersFromLoop("be", "haetskye", {0, 1});
   addFallersFromLoop("be", "haetflor", {0, -1});
+  addFallersFromLoop("be", "east", {1, 0});
+  addFallersFromLoop("be", "west", {-1, 0});
   
   
   --[[if (rules_with["haet"]) then
@@ -1920,6 +1999,9 @@ function canMove(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, push_
     return false,{},{}
   end
   local success, movers, specials = canMoveCore(unit,dx,dy,dir,o)
+  if specials == "yesgo" then
+    return true, movers, {}
+  end
   if thicc_units[unit] then
     local old_x, old_y = unit.x, unit.y;
     local thicc = thicc_units[unit]
@@ -2048,6 +2130,10 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
       dx = dx / (2^hops)
       dy = dy / (2^hops)
     end
+    if hasProperty(unit, "seventyfive") then
+      dx = dx * 0.75
+      dy = dy * 0.75
+    end
   end
 	
 	
@@ -2060,6 +2146,12 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
   local movers = {}
   local specials = {}
   table.insert(movers, {unit = unit, dx = x-unit.x, dy = y-unit.y, dir = dir, move_dx = move_dx, move_dy = move_dy, move_dir = move_dir, geometry_spin = geometry_spin, portal = portal_unit})
+
+  for _,v in ipairs(getUnitsOnTile(x, y, {checkmous = true})) do
+    if hasProperty(v,"yesgo") or hasRule(v, "alow", unit) then
+      return true, movers, {}
+    end
+  end
   
   if rules_with["ignor"] ~= nil and not ignoreCheck(unit,outerlvl) then
     return true,movers,{}
