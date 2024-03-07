@@ -303,68 +303,6 @@ function moveBlock()
     moveUnit(a, b.x, b.y)
   end
   
-  local ishere, hererules = getUnitsWithEffect("her", true)
-  local hashered = {}
-  for ri,unit in ipairs(ishere) do
-    --checks to see if the unit has already been moved by "her"
-    local already = false
-    for _,moved in ipairs(hashered) do
-      if unit == moved then
-        already = true
-      end
-    end
-    
-    --if it has, then don't run code this iteration
-    if not already then
-      local heres = {}
-      local found = false
-      
-      --gets each destination the unit needs to go to
-      local fullrule = hererules[ri].units
-      for i,hererule in ipairs(fullrule) do
-        if hererule.fullname == "txt_her" then
-          table.insert(heres,hererule)
-          break
-        end
-      end
-      --sorts it like "visitfren"
-      for name,tbl in pairs(heres) do
-        table.sort(tbl, readingOrderSort)
-      end
-      
-      --actual teleport
-      for i,here in ipairs(heres) do
-        local dx = dirs8[here.dir][1]
-        local dy = dirs8[here.dir][2]
-        
-        --if this is true, it means that on the last iteration it found a unit at a destination, so on this iteration it teleports it to the following one
-        if found then
-          addUndo({"update", unit.id, unit.x, unit.y, unit.dir})
-          moveUnit(unit,here.x+dx,here.y+dy)
-          table.insert(hashered,unit)
-          break
-        end
-        
-        --if i == #heres, that means it's at the last one in line, meaning we can just use the system that sends it to the first word
-        --otherwise, if it finds unit at one of the places, that means that it should send it to the next one on the next turn
-        if (unit.x == here.x+dx) and (unit.y == here.y+dy) and (i ~= #heres) then
-          found = true
-        end
-      end
-      
-      --sends it to the first "here" if it isn't at any existing destination or if it's at the last
-      if not found then
-        local firsthere = heres[1]
-        local dx = dirs8[firsthere.dir][1]
-        local dy = dirs8[firsthere.dir][2]
-        
-        addUndo({"update", unit.id, unit.x, unit.y, unit.dir})
-        moveUnit(unit,firsthere.x+dx,firsthere.y+dy)
-        table.insert(hashered,unit)
-      end
-    end
-  end
-  
   local isthere, thererules = getUnitsWithEffect("thr", true)
   local hasthered = {}
   for ri,unit in ipairs(isthere) do
@@ -1086,7 +1024,7 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
-    local isweak2 = getUnitsWithEffect("template")
+    local isweak2 = getUnitsWithEffect("template2")
     for _,unit in ipairs(isweak2) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
       for _,on in ipairs(stuff) do
@@ -1550,6 +1488,27 @@ function updateUnits(undoing, big_update)
       end
     end
     
+    local iscrasher = getUnitsWithEffect("loep")
+    for _,unit in ipairs(iscrasher) do
+      destroyLevel("infloop")
+    end
+    
+    local iswhen = getUnitsWithEffect("when")
+    for _,unit in ipairs(iswhen) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if not hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, "when") then
+          if timecheck(unit,"be","when") and (timecheckUs(on)) then
+            wins = wins + 1
+          else
+            addUndo({"timeless_win_add", on.id})
+            table.insert(timeless_win,on.id)
+            addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+    end
+    
     local iswin = getUnitsWithEffect("^o^")
     for _,unit in ipairs(iswin) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -1956,6 +1915,14 @@ function miscUpdates(state_change)
             unit.sprite = {"kat"}
           end
         end
+      end
+      
+      if unit.fullname == "noe" then
+        unit.sprite = {"no1"}
+      end
+      
+      if unit.fullname == "yea" then
+        unit.sprite = {"no1"}
       end
       
       if unit.fullname == "ches" then

@@ -3449,4 +3449,38 @@
     "color": [[3, 3]],
     "tags": ["plants", "dayzy", "daisy", "flower", "sprout", "sprowt"]
   },
+  {
+    "name": "noe",
+    "sprite": ["no bad dont"],
+    "layer": 90,
+    "color": [[2, 2]],
+    "desc": "Don't you dare!",
+    "tags": ["no", "no bad dont"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_noe",
+    "sprite": ["txt/noe"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "still noe.",
+    "tags": ["no", "no bad dont"]
+  },
+  {
+    "name": "yea",
+    "sprite": ["yea"],
+    "layer": 90,
+    "color": [[5, 3]],
+    "desc": "Do you dare!",
+    "tags": ["yes", "yes bab do"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_yea",
+    "sprite": ["txt/yea"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "desc": "still yea.",
+    "tags": ["yes", "yes bab do"]
+  },
 ]

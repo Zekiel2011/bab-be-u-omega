@@ -444,7 +444,7 @@ selector_grid_contents = {
     "fube","txt_fube","tronk","txt_tronk","cart","txt_cart","drop","txt_drop","woosh","txt_woosh","tanc","txt_tanc","gato","txt_gato","painbuct","txt_painbuct","sinyroc","txt_sinyroc",
     "colect","txt_colect","zig","txt_zig","pixl","txt_pixl","prop","txt_prop","qb","txt_qb","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod",
     "tobm","txt_tobm","steam","txt_steam","pois","txt_pois","tres","txt_tres","extres","txt_extres","decaey","txt_decaey","predayzy","txt_predayzy",0,0,"clif","txt_clif",
-    "whee","txt_whee","joycon","txt_joycon","stik","txt_stik","rubbe","txt_rubbe","mhatt","txt_mhatt",0,0,0,0,0,0,0,0,
+    "whee","txt_whee","joycon","txt_joycon","stik","txt_stik","rubbe","txt_rubbe","mhatt","txt_mhatt","noe","txt_noe","yea","txt_yea",0,0,0,0,
     "furt","txt_furt","hous","txt_hous","¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana",0,0,0,0,0,0,0,0,
     "flag","txt_flag","ray","txt_ray","cair","txt_cair","seewead","txt_seewead",0,0,0,0,0,0,0,0,0,0,
     "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti",0,0,0,0,0,0,0,0,0,0,
@@ -514,7 +514,7 @@ selector_grid_contents = {
   -- page 10: the extra propertys and stuff
   {
     "txt_iscome","txt_befit",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_halfu","txt_yays",0,0,0,0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
+    "txt_halfu","txt_yays","txt_when",0,0,0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,0,0,0,0,"txt_unhuh",0,0,0,0,0,0,0,0,
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o",0,0,0,0,0,"txt_whuhd",0,0,
     0,0,0,0,0,"txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,
@@ -523,7 +523,7 @@ selector_grid_contents = {
     0,0,0,0,"txt_and",0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,"txt_idk","txt_knobout","txt_eat",0,0,0,0,0,0,0,
     0,0,0,"txt_vibe",0,0,0,0,0,0,"txt_scream",0,"txt_golden_be",0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_loep",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld",
     "txt_uhhh",0,0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6","txt_xwx","txt_crye",0,0,0,"txt_bigender","txt_gaymen",
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",

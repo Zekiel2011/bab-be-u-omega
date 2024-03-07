@@ -991,6 +991,14 @@ function scene.draw(dt)
       end
     end
 
+    if unit.fullname == "txt_when" then
+      if doing_past_turns then
+        unit.sprite = {"txt/now2"}
+      else
+        unit.sprite = {"txt/when"}
+      end
+    end
+
     
     if unit.rave then
       -- print("unit " .. unit.name .. " is rave")
@@ -1485,6 +1493,34 @@ function scene.draw(dt)
 
       sprite = sprites["no bad dont_outline"]
       love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+    end
+
+    if unit.fullname == "noe" then
+
+      local rotation = math.sin(love.timer.getTime()*4)*math.rad(5)
+
+      local sprite = sprites["no bad dont"]
+      love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+
+      setColor{0, 4}
+
+      sprite = sprites["no bad dont_outline"]
+      love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+    end
+
+    if unit.fullname == "yea" then
+
+      local rotation = math.sin(love.timer.getTime()*4)*math.rad(5)
+
+      setColor(getUnitColor(unit))
+
+      local sprite = sprites["yea"]
+      love.graphics.draw(sprite, 0, 0, rotation, rotation*10, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+
+      setColor{0, 4}
+
+      sprite = sprites["yea outline"]
+      love.graphics.draw(sprite, 0, 0, rotation, rotation*10, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
     end
 
     love.graphics.pop()

@@ -2131,8 +2131,9 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
       dy = dy / (2^hops)
     end
     if hasProperty(unit, "seventyfive") then
-      dx = dx * 0.75
-      dy = dy * 0.75
+      local hops = countProperty(unit, "seventyfive")
+      dx = dx * 0.75^hops
+      dy = dy * 0.75^hops
     end
   end
 	
