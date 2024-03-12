@@ -5,6 +5,7 @@
     "types": ["verb_class", "verb_property", "verb"],
     "color": [[0, 3]],
     "desc": "BE (Verb): Causes the subject to become an object or have a property.\nAnti: mirror",
+    "alias": ["be", "is"],
     "tags": ["is"]
   },
   {
@@ -179,6 +180,7 @@
     "color": [[0, 3]],
     "wobble": true,
     "desc": "IS (Verb): Causes the subject to become an object or have a property.\nAnti: mirror",
+    "alias": ["is"],
     "tags": ["is"]
   },
   {

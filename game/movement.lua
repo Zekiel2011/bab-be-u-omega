@@ -276,7 +276,7 @@ function doMovement(movex, movey, key)
       )
     elseif move_stage == 0 and (movex ~= 0 or movey ~= 0) then
       local alwaysKeys = {
-        wasd= not (hasPropertyOrAnti(nil,"u") or hasPropertyOrAnti(nil,"w")),
+        wasd= not (hasPropertyOrAnti(nil,"u") or hasPropertyOrAnti(nil,"vsel") or hasPropertyOrAnti(nil,"w")),
         udlr= not hasPropertyOrAnti(nil,"utoo"),
         ijkl= not hasPropertyOrAnti(nil,"utres"),
       }
@@ -315,6 +315,7 @@ function doMovement(movex, movey, key)
       uMoveAnti("utres","ijkl")
       uMoveAnti("y'all")
       uMoveAnti("w","wasd",2)
+      uMoveAnti("vsel","wasd")
       uMoveAnti("you",nil,1,true)
 
     elseif move_stage == 1 then
@@ -680,6 +681,150 @@ function doMovement(movex, movey, key)
           for __,other in ipairs(others) do 
             if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
               table.insert(other.moves, {reason = "go", dir = dirAdd(unit.dir,dir), times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go1",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 1, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go2",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 2, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go3",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 3, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go4",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 4, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go5",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 5, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go6",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 6, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go7",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 7, times = goness})
+              if #other.moves > 0 and not already_added[other] then
+                table.insert(moving_units, other)
+                already_added[other] = true
+              end
+            end
+          end
+        end
+      end
+      )
+      moveAndAnti("go8",
+      function(word,dir)
+        local go = getUnitsWithEffectAndCount(word)
+        for unit,goness in pairs(go) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          local others = (unit == outerlvl and units or getUnitsOnTile(unit.x, unit.y, {thicc = thicc_units[unit]}))
+          for __,other in ipairs(others) do 
+            if other.fullname ~= "no1" and other.id ~= unit.id and sameFloat(unit, other) and timecheck(unit,"be",word) and ignoreCheck(other,unit,word) then
+              table.insert(other.moves, {reason = "go", dir = 8, times = goness})
               if #other.moves > 0 and not already_added[other] then
                 table.insert(moving_units, other)
                 already_added[other] = true

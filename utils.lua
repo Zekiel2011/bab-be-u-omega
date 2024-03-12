@@ -994,7 +994,7 @@ function countProperty(unit, prop, ignore_flye)
 end
 
 function hasU(unit)
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you"} do
+  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
     if hasProperty(unit,prop) or hasProperty(unit,"anti "..prop) then
       return true
     end
@@ -1004,7 +1004,7 @@ end
 
 function getUs()
   local yous = {}
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you"} do
+  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
     mergeTable(yous,getUnitsWithEffect(prop))
     mergeTable(yous,getUnitsWithEffect("anti "..prop))
   end
@@ -3959,6 +3959,8 @@ function buildOptions()
     scene.addOption("contrast", "High contrasted colors", {{"on", true}, {"off", false}})
     scene.addOption("savefile", "Current Save File", {{"Bab", bab}, {"Keek", keek}, {"Meem", meem}})
     scene.addOption("ads", "Ads", {{"on", true}, {"off", false}})
+    scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
+    scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)
@@ -4355,7 +4357,7 @@ function getTileSprite(name, tile, o)
       addTry(try, "?_alt2", true)
     end
 
-    if tile.wobble then
+    if tile.wobble or settings["true_wobble"] then
       local wobble_frame = anim_stage % 3 + 1
       addTry(try, "?_"..wobble_frame, true)
     end
@@ -4636,6 +4638,12 @@ function drawSprite(x, y, rotation, sx, sy, o)
       local palette = current_palette
       if current_palette == "default" and o.wobble then
         palette = "baba"
+      end
+      if current_palette == "garden" and o.wobble then
+        palette = "babagarden"
+      end
+      if settings["contrast"] then
+        palette = "contrast"
       end
       --if current_palette == "default" and o.sprite[1] == "jely" or o.sprite[1] == "txt/jely" then
         --palette = "ocean"

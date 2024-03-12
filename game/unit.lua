@@ -1354,7 +1354,7 @@ function updateUnits(undoing, big_update)
         for _,on in ipairs(stuff) do
           is_u = hasProperty(on, "u") or hasProperty(on, "u too") or hasProperty(on, "u tres")
           if is_u and sameFloat(unit, on) then
-            if timecheck(unit,"be","xwx") and (timecheck(on,"be","u") or timecheck(on,"be","u too") or timecheck(on,"be","u tres")) then
+            if timecheck(unit,"be","xwx") and (timecheck(on,"be","u") or timecheck(on,"be","u too") or timecheck(on,"be","u tres") or timecheck(on,"be","living")) then
               error(INVALID_VALUE)
             else
               addUndo({"timeless_crash_add"})
@@ -2088,6 +2088,15 @@ function miscUpdates(state_change)
         local it = unpack(card_for_id[unit.id])
         print("b")
         unit.sprite[1] = "modd/it_"..it or "modd/it"
+      end
+
+      if unit.fullname == "txt_borgitte!" and scene ~= editor then --blatantly stolen from byc, but dont let anyone know that
+        if not card_for_id[unit.id] then
+          card_for_id[unit.id] = {math.random(1,3)}
+        end
+        local it = unpack(card_for_id[unit.id])
+        print("b")
+        unit.sprite[1] = "txt/burgitt_"..it or "txt/burgit"
       end
 
       if unit.fullname == "txt_katany" then
@@ -4322,6 +4331,24 @@ function updateNameBasedOnDir(unit)
       unit.textname = "v"
     else
       unit.textname = ">"
+    end
+  elseif unit.fullname == "txt_dirgo" then
+    if unit.rotatdir == 1 then
+      unit.textname = "go1"
+    elseif unit.rotatdir == 2 then
+      unit.textname = "go2"
+    elseif unit.rotatdir == 3 then
+      unit.textname = "go3"
+    elseif unit.rotatdir == 4 then
+      unit.textname = "go4"
+    elseif unit.rotatdir == 5 then
+      unit.textname = "go5"
+    elseif unit.rotatdir == 6 then
+      unit.textname = "go6"
+    elseif unit.rotatdir == 7 then
+      unit.textname = "go7"
+    elseif unit.rotatdir == 8 then
+      unit.textname = "go8"
     end
   end
 end

@@ -115,7 +115,6 @@
     "sprite": ["watr"],
     "layer": 2,
     "color": [[1, 3]],
-    "wobble": true,
     "desc": "splish sploosh",
     "tags": ["water"]
   },
@@ -154,7 +153,6 @@
     "sprite": ["laav"],
     "layer": 2,
     "color": [[2, 3]],
-    "wobble": true,
     "desc": "very hot. not hotte tho unless u make it",
     "tags": ["lava"]
   },
@@ -243,7 +241,6 @@
     "layer": 3,
     "color": [[1, 1]],
     "rotate": true,
-    "wobble": true,
     "desc": "bells and bellts are both metal so theyre basically the same thing right? dont tell anyone",
     "tags": ["belt"]
   },
@@ -658,7 +655,6 @@
     "sprite": ["sparkl"],
     "layer": 5,
     "color": [[2, 4]],
-    "wobble": true,
     "desc": "as brite as a star... but also as hotte as one!!",
     "tags": ["sparkle", "dust"]
   },
@@ -3482,5 +3478,31 @@
     "color": [[5, 3]],
     "desc": "still yea.",
     "tags": ["yes", "yes bab do"]
+  },
+  {
+    "name": "couhc",
+    "sprite": ["couhc"],
+    "layer": 4,
+    "color": [[2, 2]],
+    "desc": "soft thing",
+    "tags": ["sofa", "couch", "soaf", "couhc"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_couhc",
+    "sprite": ["txt/couhc"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "txt isnt though",
+    "tags": ["sofa", "couch", "soaf", "couhc"],
+  },
+  {
+    "name": "special",
+    "sprite": ["SPECIAL"],
+    "types": ["special"],
+    "layer": 19,
+    "color": [[0, 3]],
+    "desc": "special object",
+    "tags": ["property", "square", "box"]
   },
 ]
