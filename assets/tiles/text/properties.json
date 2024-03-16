@@ -1521,5 +1521,14 @@
     },
     "desc": ":(-ish: At end of turn, if a U object is on it, the level gets destroyed.",
     "tags": ["defeat", "sad", "face", "aw", "defeatlike"]
+  },
+  {
+    "name": "txt_noswimish",
+    "display": "no swimish",
+    "sprite": ["txt2/sinklike"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NO SWIMISH: At end of turn, if a NO SWIMISH unit is touching another object, the object on the tile gets destroyed, sorta like if everything execpt that tile is FRIDG, and that tile is HOTTE.",
+    "tags": ["sink", "sinklike"]
   }
 ]

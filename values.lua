@@ -515,8 +515,8 @@ selector_grid_contents = {
   },
   -- page 10: the extra propertys and stuff
   {
-    "txt_iscome","txt_befit",0,0,"txt_snaccish",0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_halfu","txt_yays","txt_when","txt_:(ish",0,0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
+    "txt_iscome","txt_befit",0,0,"txt_snaccish","txt_noswims",0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish",0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,0,0,0,0,"txt_unhuh",0,0,0,0,0,0,0,0,
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o",0,0,0,0,0,"txt_whuhd",0,0,
     "txt_dirgo",0,0,0,0,"txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,
@@ -529,7 +529,7 @@ selector_grid_contents = {
     "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld",
     "txt_uhhh",0,0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6","txt_xwx","txt_crye",0,0,0,"txt_bigender","txt_gaymen",
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",
-    "txt_template","txt_template2",0,0,"txt_seventyfive","txt_energy","txt_energy2","txt_on","txt_on2",0,0,0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",
+    "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_on","txt_on2",0,0,0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",
   },
 }
 tile_grid_width = 18

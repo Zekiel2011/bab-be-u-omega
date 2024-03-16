@@ -275,5 +275,22 @@
     "color": [[2, 4]],
     "desc": "YAYS (Verb): A verbified :)",
     "tags": ["wins"]
+  },
+  {
+    "name": "txt_template3",
+    "sprite": ["txt/template", "wat"],
+    "types": ["verb_unit", "verb"],
+    "color": [[2, 3], [2, 2]],
+    "desc": "for templates as a attempt for custom verbs ig",
+    "tags": ["test"]
+  },
+  {
+    "name": "txt_noswims",
+    "display": "no swims",
+    "sprite": ["txt/noswims"],
+    "types": ["verb_unit", "verb"],
+    "color": [[1, 3]],
+    "desc": "NOSWIMS (Verb): Acts like a verbified NO SWIM.",
+    "tags": ["sinks"]
   }
 ]
