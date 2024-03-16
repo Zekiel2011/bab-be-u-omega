@@ -501,7 +501,7 @@ selector_grid_contents = {
 	"whiz","txt_whiz","monsert","txt_monsert",0,0,0,0,0,0,0,0,"it","txt_it","lol","txt_lol",0,0,
 	"ubu","txt_ubu",0,0,0,0,"waly","txt_waly",0,0,"wowbrutal","txt_wowbrutal",0,0,"heeh2","txt_heeh2",0,0,
 	"sammah","txt_sammah","sallt","txt_sallt","huro","txt_huro","chonke","txt_chonke","quiq","txt_quiq",0,0,0,0,0,0,0,0,
-	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic","txt_yesgo","txt_did",0,0,0,0,0,0,0,0,0,0,
+	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic",0,"txt_did",0,0,0,0,0,0,0,0,0,0,
 	"muuv","pooosh","redbloodcell","tholl","stne",0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"be","goawaypls","nedkee","fordor","every1","every2","every3","txtify",":)",0,0,0,0,"direction",0,0,0,0,
 	"snacc","ouch","lookat","nogo","walk","flye",0,0,0,0,0,0,0,0,0,0,0,0,
@@ -515,8 +515,8 @@ selector_grid_contents = {
   },
   -- page 10: the extra propertys and stuff
   {
-    "txt_iscome","txt_befit",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_halfu","txt_yays","txt_when",0,0,0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
+    "txt_iscome","txt_befit",0,0,"txt_snaccish",0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_halfu","txt_yays","txt_when","txt_:(ish",0,0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,0,0,0,0,"txt_unhuh",0,0,0,0,0,0,0,0,
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o",0,0,0,0,0,"txt_whuhd",0,0,
     "txt_dirgo",0,0,0,0,"txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,

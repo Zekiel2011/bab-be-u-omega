@@ -1129,6 +1129,30 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    
+    local isdefeatlike = getUnitsWithEffect(":(ish")
+    for _,unit in ipairs(isdefeatlike) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, ":(ish") then
+          if timecheck(unit,"be",":(ish") and (timecheckUs(on)) then
+            table.insert(to_destroy, on)
+            playSound("break")
+            shakeScreen(0.3, 0.2)
+          else
+            table.insert(time_destroy,{on.id,timeless})
+						addUndo({"time_destroy",on.id})
+            table.insert(time_sfx,"break")
+          end
+          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+          destroyLevel("urded")
+          print("YOU LOSE!", unit.fullname)
+        end
+      end
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
     local isntprotecc = getUnitsWithEffect("anti protecc")
     for _,unit in ipairs(isntprotecc) do
       if timecheck(unit,"be","anti protecc") then
@@ -1188,51 +1212,6 @@ function updateUnits(undoing, big_update)
       end
     end
     
-
-    local isshen = getUnitsWithEffect("neddor")
-    for _,unit in ipairs(isshen) do
-      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
-      for _,on in ipairs(stuff) do
-        if hasProperty(on, "forkee") and sameFloat(unit, on) then
-          local ignore_unit = ignoreCheck(unit, on, "forkee")
-          local ignore_on = ignoreCheck(on, unit, "neddor")
-          if ignore_unit or ignore_on then
-            if timecheck(unit,"be","neddor") and timecheck(on,"be","forkee") then
-              if ignore_unit then
-                table.insert(to_destroy, unit)
-              end
-              if ignore_on then
-                table.insert(to_destroy, on)
-              end
-              playSound("break")
-              playSound("unlock")
-              shakeScreen(0.3, 0.1)
-            else
-              if ignore_unit then
-                table.insert(time_destroy,{unit.id,timeless})
-                addUndo({"time_destroy",unit.id})
-              end
-              if ignore_on then
-                table.insert(time_destroy,{on.id,timeless})
-                addUndo({"time_destroy",on.id})
-              end
-              table.insert(time_sfx,"break")
-              table.insert(time_sfx,"unlock")
-            end
-            if ignore_unit then
-              addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
-            end
-            if ignore_on then
-              addParticles("destroy", on.x, on.y, getUnitColor(on))
-            end
-            --unlike other destruction effects, keys and doors pair off one-by-one
-            to_destroy = handleDels(to_destroy)
-            break
-          end
-        end
-      end
-    end
-    
     local issnacc = matchesRule(nil, "snacc", "?")
     for _,ruleparent in ipairs(issnacc) do
       local unit = ruleparent[2]
@@ -1249,6 +1228,28 @@ function updateUnits(undoing, big_update)
             table.insert(time_sfx,"snacc")
           end
           addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+        end
+      end
+    end
+
+    local issnacclike = matchesRule(nil, "snaccish", "?")
+    for _,ruleparent in ipairs(issnacclike) do
+      local unit = ruleparent[2]
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if (unit ~= on or ruleparent[1].rule.object.name == "themself") and hasRule(unit, "snaccish", on) and sameFloat(unit, on) and ignoreCheck(on, unit) then
+          if timecheck(unit,"snaccish",on) and timecheck(on) then
+            table.insert(to_destroy, on)
+            playSound("snacc")
+            shakeScreen(0.3, 0.15)
+          else
+            table.insert(time_destroy,{on.id,timeless})
+            addUndo({"time_destroy",on.id})
+            table.insert(time_sfx,"snacc")
+          end
+          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+          destroyLevel("urded")
+          print("YOU LOSE!", unit.fullname)
         end
       end
     end
@@ -2853,7 +2854,7 @@ function readingOrderSort(a, b)
 end
 
 function destroyLevel(reason)
-	if reason == "infloop" or reason == "plsdont" or (not hasRule(outerlvl,"got","lvl") and not hasProperty(outerlvl,"protecc")) then
+	if reason == "infloop" or reason == "plsdont" or reason == "urded" or (not hasRule(outerlvl,"got","lvl") and not hasProperty(outerlvl,"protecc")) then
     level_destroyed = true
   end
   

@@ -798,7 +798,7 @@
     "sprite": ["sine"],
     "layer": 4,
     "color": [[6, 2]],
-    "desc": "the sine either says \"shoutouts to simpleflips\", or... \"Do not shit in the air like a god\"",
+    "desc": "the sine says \"shoutouts to simpleflips\"",
     "tags": ["sign"]
   },
   {

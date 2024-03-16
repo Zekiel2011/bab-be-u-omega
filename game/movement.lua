@@ -2144,9 +2144,6 @@ function canMove(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, push_
     return false,{},{}
   end
   local success, movers, specials = canMoveCore(unit,dx,dy,dir,o)
-  if specials == "yesgo" then
-    return true, movers, {}
-  end
   if thicc_units[unit] then
     local old_x, old_y = unit.x, unit.y;
     local thicc = thicc_units[unit]
@@ -2292,18 +2289,13 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
   local movers = {}
   local specials = {}
   table.insert(movers, {unit = unit, dx = x-unit.x, dy = y-unit.y, dir = dir, move_dx = move_dx, move_dy = move_dy, move_dir = move_dir, geometry_spin = geometry_spin, portal = portal_unit})
-
-  for _,v in ipairs(getUnitsOnTile(x, y, {checkmous = true})) do
-    if hasProperty(v,"yesgo") or hasRule(v, "alow", unit) then
-      return true, movers, {}
-    end
-  end
   
   if rules_with["ignor"] ~= nil and not ignoreCheck(unit,outerlvl) then
     return true,movers,{}
   end
   
   --STUB: We probably want to do something more explicit like synthesize bordr units around the border so they can be explicitly moved/created/destroyed/have conditional rules apply to them.
+
   if not inBounds(x,y) and (not (hasRule("bordr","ben't","nogo") or not ignoreCheck(unit,"bordr") or o.reason == "curse") or hasRule(unit,"liek",outerlvl)) then
     if o.pushing and hasProperty(unit, "ouch") and not hasProperty(unit, "protecc") and (o.reason ~= "walk" or hasProperty(unit, "stubbn")) then
       table.insert(specials, {"weak", {unit}})

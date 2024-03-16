@@ -62,15 +62,6 @@
     "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: icyyyy",
     "tags": ["stop"]
   },
- {
-    "name": "txt_yesgo",
-    "display": "yes go",
-    "sprite": ["txt/yesgo"],
-    "types": ["property"],
-    "color": [[2, 1]],
-    "desc": "YES GO: Can always be entered by objects. Overrides GO AWAY PLS!\nAnti: nogo",
-    "tags": ["unstop"]
-  },
   {
     "name": "txt_gomyway",
     "display": "go my way",
@@ -1239,24 +1230,6 @@
     "tags": ["bonus", "woah", "whoa", "face"]
   },
   {
-    "name": "txt_neddor",
-    "display": "ned dor",
-    "sprite": ["txt/neddor"],
-    "types": ["property"],
-    "color": [[1, 2]],
-    "desc": "NED DOR: When a NED DOR and FOR KEE unit move into each other or are on each other, they are both destroyed.\nAnti: forkee",
-    "tags": ["shut"]
-  },
-  {
-    "name": "txt_forkee",
-    "display": "for kee",
-    "sprite": ["txt/forkee"],
-    "types": ["property"],
-    "color": [[1, 4]],
-    "desc": "FOR KEE: When a NED DOR and FOR KEE unit move into each other or are on each other, they are both destroyed.\nAnti: neddor",
-    "tags": ["open"]
-  },
-  {
     "name": "txt_haethaet",
     "sprite": ["txt/haethaet"],
     "types": ["property"],
@@ -1537,5 +1510,16 @@
     "color": [[0, 1]],
     "desc": "VSEL: Controlled by U, the player!",
     "tags": ["you", "p1", "player", "vessel"]
+  },
+  {
+    "name": "txt_:(ish",
+    "sprite": ["txt2/defeatlike"],
+    "types": ["property"],
+    "color": [[0, 2]],
+    "features": {
+      "sans": {"x": 20, "y": 6, "w": 4, "h": 4}
+    },
+    "desc": ":(-ish: At end of turn, if a U object is on it, the level gets destroyed.",
+    "tags": ["defeat", "sad", "face", "aw", "defeatlike"]
   }
 ]

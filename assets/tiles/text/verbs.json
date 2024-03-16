@@ -43,6 +43,14 @@
     "tags": ["eat", "consume"]
   },
   {
+    "name": "txt_snaccish",
+    "sprite": ["txt2/snaccish"],
+    "types": ["verb_unit", "verb"],
+    "color": [[2, 2]],
+    "desc": "SNACC (Verb): Units destroy the level if its on any other unit that they SNACC on contact, like a conditional OUCH.\nAnti: creat",
+    "tags": ["eat", "consume"]
+  },
+  {
     "name": "txt_moov",
     "sprite": ["txt/moov"],
     "types": ["verb_unit", "verb_direction", "verb"],
