@@ -2052,7 +2052,7 @@
     "types": ["object"],
     "color": [[4, 1]],
     "desc": "\"Sno\". Bab",
-    "tags": ["chars", "baba", "snomba", "sno", "snow"],
+    "tags": ["chars", "baba", "snomba", "sno", "snow"]
   },
   {
     "name": "jely",
@@ -2075,7 +2075,7 @@
     "types": ["object"],
     "color": [[1, 4]],
     "desc": "\"JELY\". Its just... JELY",
-    "tags": ["chars", "jelly", "jellyfish", "fish"],
+    "tags": ["chars", "jelly", "jellyfish", "fish"]
   },
   {
     "name": "aba",
@@ -2633,7 +2633,7 @@
       "sans": {"x": 18, "y": 8, "w": 2, "h": 2}
     },
     "tags": ["anni", "chars", "devs"],
-    "desc": "the bab equivalent of anni",
+    "desc": "the bab equivalent of anni"
   },
   {
     "name": "txt_tot",
@@ -2641,7 +2641,7 @@
     "types": ["object"],
     "layer": 20,
     "color": [[4, 2]],
-    "tags": ["anni", "chars", "devs"],
+    "tags": ["anni", "chars", "devs"]
   },
   {
     "name": "blebl",
@@ -2763,7 +2763,7 @@
     "color": [[0, 3]],
     "rotate": true,
     "desc": "also bebe",
-    "tags": ["chars", "bebe"],
+    "tags": ["chars", "bebe"]
   },
   {
     "name": "txt_txt_bebe",
@@ -2771,7 +2771,7 @@
     "types": ["object"],
     "color": [[0, 3]],
     "desc": "the sequal to the sequel to bebe",
-    "tags": ["chars", "bebe"],
+    "tags": ["chars", "bebe"]
   },
   {
     "name": "tratra",
@@ -3049,5 +3049,5 @@
     "color": [[2, 3]],
     "desc": "Here at Omega inc. we make creatures, but sometimes we don't know what to name all of our creations, so we need a name for our S.B.C (Special Babber Creation)",
     "tags": ["chars", "baba"]
-  },
+  }
 ]
