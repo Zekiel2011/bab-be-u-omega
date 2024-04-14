@@ -51,6 +51,10 @@ function playMusic(music, volume)
     music = "sayonabab"
   end
 
+  if load_mode == "edit" and settings["editor_music"] then
+    music = "zez creat lvl"
+  end
+
   if music_source ~= nil then
     music_source:stop()
   end
@@ -90,6 +94,9 @@ function resetMusic(name,volume)
   else
     current_volume = volume
     old_volume = volume
+  end
+  if load_mode == "edit" and settings["editor_music"] then
+    music = "zez creat lvl"
   end
 end
 

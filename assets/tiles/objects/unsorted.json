@@ -3012,7 +3012,7 @@
   {
     "name": "ray",
     "sprite": ["ray_wood", "ray_rail"],
-    "layer": 6,
+    "layer": 5,
     "color": [[6, 1], [0, 1]],
     "rotate": true,
     "voice": "s_marim",
@@ -3504,5 +3504,68 @@
     "color": [[0, 3]],
     "desc": "special object",
     "tags": ["property", "square", "box"]
+  },
+  {
+    "name": "stomp",
+    "sprite": ["stomp"],
+    "layer": 4,
+    "color": [[6, 1]],
+    "rotate": true,
+    "desc": "extra ded extre...",
+    "tags": ["tree", "plants", "husk", "stump"]
+  },
+  {
+    "name": "txt_stomp",
+    "sprite": ["txt/stomp"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["tree", "plants", "husk", "stump"]
+  },
+  {
+    "name": "babfood",
+    "sprite": ["babfood"],
+    "layer": 6,
+    "color": [[3, 1]],
+    "desc": "babs other favorite snacc. very bouncy!",
+    "tags": ["square", "food", "babgotchi"]
+  },
+  {
+    "name": "txt_babfood",
+    "sprite": ["txt/babfood"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "tags": ["square", "food", "babgotchi"]
+  },
+  {
+    "name": "cd",
+    "sprite": ["cd"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "desc": "SO RETRO!",
+    "tags": ["disk", "disc", "cd"]
+  },
+  {
+    "name": "txt_cd",
+    "sprite": ["txt/cd"],
+    "types": ["object"],
+    "color": [[0, 2]],
+    "desc": "https://www.youtube.com/watch?v=2qD5OMMyaxY",
+    "tags": ["disk", "disc", "cd"]
+  },
+  {
+    "name": "ßar",
+    "sprite": ["levr"],
+    "layer": 10,
+    "color": [[0, 2]],
+    "desc": "puller",
+    "tags": ["lever", "bar", "levr"]
+  },
+  {
+    "name": "txt_ßar",
+    "sprite": ["txt/levr"],
+    "types": ["object"],
+    "color": [[0, 2]],
+    "desc": "special characters :pog:",
+    "tags": ["lever", "bar", "levr"]
   },
 ]

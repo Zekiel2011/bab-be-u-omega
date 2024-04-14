@@ -64,6 +64,9 @@ function clearRules()
   --half properties
   addBaseRule("halfu","be","u")
   addBaseRule("halfnogo","be","nogo")
+  --other stuff
+  addBaseRule("babfood","be","colrful")
+  addBaseRule("txt_babfood","be","colrful")
   --TODO: This will need to be automatic on levels with letters/combined words, since a selectr/bordr might be made in a surprising way, and it will need to have its implicit rules apply immediately.
   if (units_by_name["selctr"] or units_by_name["txt_selctr"] or units_by_name["lin"] or units_by_name["txt_lin"] or units_by_name["txt_pathz"]) then
     addBaseRule("selctr","be","curse")

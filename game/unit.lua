@@ -1061,27 +1061,6 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
-    local isweak2 = getUnitsWithEffect("template2")
-    for _,unit in ipairs(isweak2) do
-      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
-      for _,on in ipairs(stuff) do
-        if unit ~= on and on.fullname ~= "no1" and sameFloat(unit, on) then
-          if timecheck(unit,"be","template") and timecheck(on) then
-            table.insert(to_destroy, unit)
-            playSound("break")
-            shakeScreen(0.3, 0.1)
-          else
-            table.insert(time_destroy,{unit.id,timeless})
-						addUndo({"time_destroy",unit.id})
-            table.insert(time_sfx,"break")
-          end
-          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
-        end
-      end
-    end
-    
-    to_destroy = handleDels(to_destroy)
-    
     local isstrong = getUnitsWithEffect("anti ouch")
     for _,unit in ipairs(isstrong) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
@@ -1214,6 +1193,50 @@ function updateUnits(undoing, big_update)
           local ignore_on = ignoreCheck(on, unit, "nedkee")
           if ignore_unit or ignore_on then
             if timecheck(unit,"be","nedkee") and timecheck(on,"be","fordor") then
+              if ignore_unit then
+                table.insert(to_destroy, unit)
+              end
+              if ignore_on then
+                table.insert(to_destroy, on)
+              end
+              playSound("break")
+              playSound("unlock")
+              shakeScreen(0.3, 0.1)
+            else
+              if ignore_unit then
+                table.insert(time_destroy,{unit.id,timeless})
+                addUndo({"time_destroy",unit.id})
+              end
+              if ignore_on then
+                table.insert(time_destroy,{on.id,timeless})
+                addUndo({"time_destroy",on.id})
+              end
+              table.insert(time_sfx,"break")
+              table.insert(time_sfx,"unlock")
+            end
+            if ignore_unit then
+              addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+            end
+            if ignore_on then
+              addParticles("destroy", on.x, on.y, getUnitColor(on))
+            end
+            --unlike other destruction effects, keys and doors pair off one-by-one
+            to_destroy = handleDels(to_destroy)
+            break
+          end
+        end
+      end
+    end
+    
+    local isoput = getUnitsWithEffect("foeddee")
+    for _,unit in ipairs(isoput) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasProperty(on, "fordor") or hasProperty(on, "nedkee") and sameFloat(unit, on) then
+          local ignore_unit = ignoreCheck(unit, on, "fordor") or ignoreCheck(unit, on, "nedkee")
+          local ignore_on = ignoreCheck(on, unit, "foeddee")
+          if ignore_unit or ignore_on then
+            if timecheck(unit,"be","foeddee") and timecheck(on,"be","fordor") or timecheck(on,"be","nedkee") then
               if ignore_unit then
                 table.insert(to_destroy, unit)
               end

@@ -2016,7 +2016,7 @@
     "types": ["object"],
     "color": [[2, 1]],
     "desc": "syas ti tahw staht .\"BAB\"",
-    "tags": ["chars", "baba", "babanot", "bab"],
+    "tags": ["chars", "baba", "babanot", "bab"]
   },
   {
     "name": "babn't",
@@ -2986,5 +2986,68 @@
     "alias": ["borgitte!", "burgit.", "burgor", "baguitte", "burguritto"],
 	"desc": "We couldn't decide on a name...",
     "tags": ["it", "itte", "chars"]
+  },
+  {
+    "name": "jillt",
+    "sprite": ["jillt"],
+    "layer": 11,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "powered by ChatGPT",
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_jillt",
+    "sprite": ["txt/jilt"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "beep boop bap?",
+    "alias": ["jillt"],
+    "tags": ["chars", "jij", "llama", "robot", "jilt"]
+  },
+  {
+    "name": "beellt",
+    "sprite": ["beellt"],
+    "layer": 11,
+    "color": [[0, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "they are siblings with beeb",
+    "tags": ["chars", "balt", "baba", "belt", "beeb"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_beellt",
+    "sprite": ["txt/beellt"],
+    "types": ["object"],
+    "color": [[3, 2]],
+    "tags": ["chars", "balt", "baba", "belt", "beeb"]
+  },
+  {
+    "name": "nalß",
+    "sprite": ["nalb"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "voice": "s_doo",
+    "desc": "not to be confused witth BABEYE",
+    "tags": ["chars", "baba"],
+    "pronouns": ["ze", "hir"]
+  },
+  {
+    "name": "txt_nalß",
+    "sprite": ["txt/nalb"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "desc": "Here at Omega inc. we make creatures, but sometimes we don't know what to name all of our creations, so we need a name for our S.B.C (Special Babber Creation)",
+    "tags": ["chars", "baba"]
   },
 ]

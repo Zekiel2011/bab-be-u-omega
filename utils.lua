@@ -3961,6 +3961,7 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"on", true}, {"off", false}})
     scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
+    scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)

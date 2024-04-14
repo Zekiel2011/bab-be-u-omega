@@ -398,5 +398,26 @@
     "color": [[3, 4]],
     "desc": "QUICKLY!!!!!!!",
     "tags": ["mod", "qiqi", "quiqui"],
+  },
+  {
+    "name": "follt",
+    "sprite": ["modd/follt"],
+    "layer": 11,
+    "color": [[5, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "bellt but bush",
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_follt",
+    "sprite": ["modd/moddtxt/follt"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "desc": "see also: bef (not from portugal)",
+    "alias": ["jij"],
+    "tags": ["chars", "fofo", "bush"]
   }
 ]

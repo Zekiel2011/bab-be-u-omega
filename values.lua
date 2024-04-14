@@ -56,6 +56,7 @@ defaultsettings = {
   unfinished_words = false,
   max_wobble = false,
   true_wobble = false,
+  editor_music = false,
 }
 
 if love.filesystem.read("Settings.bab") ~= nil then
@@ -390,7 +391,7 @@ selector_grid_contents = {
     "letter_s","letter_t","letter_u","letter_v","letter_w","letter_x","letter_y","letter_z","letter_.","letter_colon","letter_parenthesis","letter_'","letter_/","letter_1","letter_2","letter_3","letter_4","letter_5",
     0,0,0,0,0,0,0,"letter_π","letter_$","letter_;","letter_>",0,0,"letter_6","letter_7","letter_8","letter_9","letter_o",
 	"letter_go","letter_come","letter_pls","letter_away","letter_my","letter_no","letter_way","letter_ee","letter_fren","letter_ll","letter_bolt","letter_ol",0,0,0,"letter_*","txt_numa","txt_lethers",
-	"txt_c_sharp","txt_d_sharp","txt_f_sharp","txt_g_sharp","txt_a_sharp","txt_sharp","txt_flat","letter_ae","letter_¢","letter_!",0,0,0,0,0,0,0,0,
+	"txt_c_sharp","txt_d_sharp","txt_f_sharp","txt_g_sharp","txt_a_sharp","txt_sharp","txt_flat","letter_ae","letter_¢","letter_!","letter_ß",0,0,0,0,0,0,0,
 	"letter_ba","letter_ke","letter_ek","letter_me","letter_em","letter_ga","letter_al","letter_ut","letter_lk","letter_wa",0,0,0,0,0,0,0,
   },
   -- page 3: ui / instructions
@@ -447,10 +448,10 @@ selector_grid_contents = {
     "colect","txt_colect","zig","txt_zig","pixl","txt_pixl","prop","txt_prop","qb","txt_qb","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod",
     "tobm","txt_tobm","steam","txt_steam","pois","txt_pois","tres","txt_tres","extres","txt_extres","decaey","txt_decaey","predayzy","txt_predayzy","couhc","txt_couhc","clif","txt_clif",
     "whee","txt_whee","joycon","txt_joycon","stik","txt_stik","rubbe","txt_rubbe","mhatt","txt_mhatt","noe","txt_noe","yea","txt_yea",0,0,0,0,
-    "furt","txt_furt","hous","txt_hous","¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana",0,0,0,0,0,0,0,0,
-    "flag","txt_flag","ray","txt_ray","cair","txt_cair","seewead","txt_seewead",0,0,0,0,0,0,0,0,0,0,
+    "furt","txt_furt","hous","txt_hous","¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana","stomp","txt_stomp",0,0,0,0,0,0,
+    "flag","txt_flag","ray","txt_ray","cair","txt_cair","seewead","txt_seewead","forutoo","txt_forutoo","babfood","txt_babfood",0,0,0,0,0,0,
     "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti",0,0,0,0,0,0,0,0,0,0,
-    "papr","txt_papr","cake","txt_cake","kees","txt_kees",0,0,0,0,0,0,0,0,0,0,0,0,
+    "papr","txt_papr","cake","txt_cake","kees","txt_kees","cd","txt_cd","ßar","txt_ßar",0,0,0,0,0,0,0,0,
     "spinklr","txt_spinklr",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -484,7 +485,7 @@ selector_grid_contents = {
     "aba","txt_aba","tratra","txt_tratra",0,0,"zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals",
     "maeryio","txt_maeryio","zez","txt_zez","duf","txt_duf","baab","txt_baab","keeeeeeke","txt_keeeeeeke","tzsh","txt_tzsh","tesho","txt_tesho","glebab","txt_glebab",0,0,
     "pwn","txt_pwn","rok","txt_rok","bihop","txt_bihop","foof","txt_foof","jim","txt_jim","joj","txt_joj","beu","txt_beu","xixe","txt_xixe",0,0,
-    "hempuli","txt_hempuli","arvi","txt_arvi","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!",0,0,0,0,0,0,0,0,0,0,
+    "hempuli","txt_hempuli","arvi","txt_arvi","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!","jillt","txt_jillt","beellt","txt_beellt","nalß","txt_nalß",0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -493,14 +494,14 @@ selector_grid_contents = {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "zezi","txt_zezi","zezzer","txt_zezzer",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "lokkeek","txt_lokkeek","dorrkeek","txt_dorrkeek","skulnbon","txt_skulnbon",0,0,":o","gomyway",0,0,0,0,0,"bebe","txt_bebe","txt_txt_bebe",
+    "lokkeek","txt_lokkeek","dorrkeek","txt_dorrkeek","skulnbon","txt_skulnbon",0,0,":o","gomyway","u",0,0,0,0,"bebe","txt_bebe","txt_txt_bebe",
   },
   -- page 9: Platfory's modds
   {
 	"platfory","txt_platfory","wiki","txt_wiki","whenthe","txt_whenthe","him","txt_him","bruhbruh","txt_bruhbruh","monokeek","txt_monokeek",0,0,"gunguy","txt_gunguy","bologna","txt_bologna",
 	"whiz","txt_whiz","monsert","txt_monsert",0,0,0,0,0,0,0,0,"it","txt_it","lol","txt_lol",0,0,
 	"ubu","txt_ubu",0,0,0,0,"waly","txt_waly",0,0,"wowbrutal","txt_wowbrutal",0,0,"heeh2","txt_heeh2",0,0,
-	"sammah","txt_sammah","sallt","txt_sallt","huro","txt_huro","chonke","txt_chonke","quiq","txt_quiq",0,0,0,0,0,0,0,0,
+	"sammah","txt_sammah","sallt","txt_sallt","huro","txt_huro","chonke","txt_chonke","quiq","txt_quiq","follt","txt_follt",0,0,0,0,0,0,
 	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic",0,"txt_did",0,0,0,0,0,0,0,0,0,0,
 	"muuv","pooosh","redbloodcell","tholl","stne",0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"be","goawaypls","nedkee","fordor","every1","every2","every3","txtify",":)",0,0,0,0,"direction",0,0,0,0,
@@ -515,7 +516,7 @@ selector_grid_contents = {
   },
   -- page 10: the extra propertys and stuff
   {
-    "txt_iscome","txt_befit",0,0,"txt_snaccish","txt_noswims",0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_iscome","txt_befit",0,0,"txt_snaccish","txt_noswims","txt_foeddee",0,0,0,0,0,0,0,0,0,0,0,
     "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish",0,0,0,0,"txt_huh",0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,0,0,0,0,"txt_unhuh",0,0,0,0,0,0,0,0,
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o",0,0,0,0,0,"txt_whuhd",0,0,

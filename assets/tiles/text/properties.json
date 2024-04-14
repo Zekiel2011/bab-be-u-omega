@@ -1530,5 +1530,14 @@
     "color": [[3, 1]],
     "desc": "NO SWIMISH: At end of turn, if a NO SWIMISH unit is touching another object, the object on the tile gets destroyed, sorta like if everything execpt that tile is FRIDG, and that tile is HOTTE.",
     "tags": ["sink", "sinklike"]
+  },
+  {
+    "name": "txt_foeddee",
+    "display": "foed dee",
+    "sprite": ["txt/foeddee"],
+    "types": ["property"],
+    "color": [[2, 3]],
+    "desc": "FOED DEE: When a NED KEE and FOR DOR unit move into each other or are on each other, they are both destroyed.\nAnti: nedkee",
+    "tags": ["oput"]
   }
 ]

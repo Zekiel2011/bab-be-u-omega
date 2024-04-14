@@ -510,4 +510,11 @@
     "color": [[0, 3]],
     "desc": "Warning"
   },
+  {
+    "name": "letter_ß",
+    "sprite": ["extra letters/letter_sharp s"],
+    "types": ["letter", "note"],
+    "color": [[0, 3]],
+    "desc": "Why is this called a lowercase sharp s when it looks like the letter B?"
+  },
 ]

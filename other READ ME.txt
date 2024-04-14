@@ -1,0 +1,1 @@
+This mod is tested with LOVE2D version 11.4 for win64 on Windows 11.
