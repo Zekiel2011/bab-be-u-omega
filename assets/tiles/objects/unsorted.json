@@ -3206,7 +3206,7 @@
     "types": ["object"],
     "color": [[0, 3]],
     "desc": "this is absolutely SOPPING",
-    "tags": ["mod"],
+    "tags": ["mod"]
   },
   {
     "name": "¢ont",
@@ -3231,7 +3231,7 @@
     "color": [[5, 4]],
     "rotate": true,
     "desc": "its a bok.",
-    "tags": ["book"],
+    "tags": ["book"]
   },
   {
     "name": "txt_bok",
@@ -3297,7 +3297,7 @@
     "layer": 2,
     "color": [[6, 1]],
     "desc": "be carful itt be sharp!",
-    "tags": ["cliff"],
+    "tags": ["cliff"]
   },
   {
     "name": "txt_clif",
@@ -3567,5 +3567,5 @@
     "color": [[0, 2]],
     "desc": "special characters :pog:",
     "tags": ["lever", "bar", "levr"]
-  },
+  }
 ]
