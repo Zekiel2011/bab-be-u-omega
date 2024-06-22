@@ -1456,6 +1456,7 @@
     "sprite": ["bad_body", "bad_metal", "bad_skateboard"],
     "color": [[1, 4], [2, 4], [2, 2]],
     "painted": [true, false, false],
+    "layer": 11,
     "rotate": true,
     "voice": "overdriven guitar",
     "desc": "bab's evil sk8r bro, can say heck 3 times per day",
@@ -1718,7 +1719,6 @@
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
     },
-    "voice": "s_doo",
     "desc": "menstr snacc bab oh noes",
     "tags": ["chars", "monster"],
     "pronouns": ["he", "him"]
@@ -1836,6 +1836,7 @@
     "sprite": ["baddy_body", "baddy_metal", "baddy_skateboard"],
     "color": [[1, 4], [2, 4], [2, 2]],
     "painted": [true, false, false],
+    "layer": 11,
     "rotate": true,
     "voice": "overdriven guitar",
     "desc": "\"BADDY\". young bad can say dubm 3 times per day",
@@ -1852,7 +1853,7 @@
   {
     "name": "iys",
     "sprite": ["iys"],
-    "layer": 11,
+    "layer": 20,
     "color": [[0, 3]],
     "rotate": true,
     "features": {
@@ -1921,7 +1922,7 @@
     "color": [[2, 2]],
     "rotate": true,
     "wobble": true,
-    "desc": "this fucker probably has 0 idea whats going on at any given moment they are pathetic and dumb and stupid and dumb"
+    "desc": "get keke'd lmao"
   },
   {
     "name": "txt_keke",
@@ -1929,7 +1930,7 @@
     "types": ["object"],
     "color": [[2, 2]],
     "wobble": true,
-    "desc": "Ingore the object description, they are actaully tanks and can murder you in cold bloo- wait hold up... uh-huh... So there not tanks? Well sorry about that, turns out that they are propane tanks.",
+    "desc": "From the hit game, Keke and the Caves of Peril.",
     "tags": ["chars", "baba", "keek"]
   },
   {
@@ -3037,7 +3038,7 @@
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
     },
-    "voice": "s_doo",
+    "voice": "s_adultdew",
     "desc": "not to be confused witth BABEYE",
     "tags": ["chars", "baba"],
     "pronouns": ["ze", "hir"]
@@ -3049,5 +3050,245 @@
     "color": [[2, 3]],
     "desc": "Here at Omega inc. we make creatures, but sometimes we don't know what to name all of our creations, so we need a name for our S.B.C (Special Babber Creation)",
     "tags": ["chars", "baba"]
+  },
+  {
+    "name": "sinx",
+    "sprite": ["shinx_body", "shinx_yellow"],
+    "layer": 20,
+    "color": [[1, 4], [2, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 26, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "Its forelegs create electricity through its muscle-based system, it becomes SINY when it is in danger.",
+    "tags": ["shinx", "chars", "pokemon"],
+  },
+  {
+    "name": "txt_sinx",
+    "sprite": ["txt/shinx"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "tags": ["shinx", "chars", "pokemon"]
+  },
+  {
+    "name": "bah",
+    "sprite": ["bah"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "Probaly old, and forgotten, now here to try and get a fresh start.",
+    "tags": ["chars", "ba"]
+  },
+  {
+    "name": "txt_bah",
+    "sprite": ["txt/bah"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "BA EZ YUO is just a forgotten memory... maybe...?",
+    "tags": ["chars", "ba"]
+  },
+  {
+    "name": "robwot",
+    "sprite": ["robwot"],
+    "layer": 11,
+    "color": [[6, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 17, "y": 7, "w": 2, "h": 4}
+    },
+    "voice": "bit2",
+    "desc": "babby robobot",
+    "tags": ["bwot", "chars"],
+	  "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_robwot",
+    "sprite": ["txt/robwot"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["bwot", "chars"]
+  },
+  {
+    "name": "nabby",
+    "sprite": ["nabby"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "voice": "s_dew",
+    "desc": "babby nalb",
+    "tags": ["chars", "baba"],
+    "pronouns": ["ze", "hir"]
+  },
+  {
+    "name": "txt_nabby",
+    "sprite": ["txt/nabby"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "BABBY ripoff kinda",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "404",
+    "sprite": ["404404404"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 23, "y": 9, "w": 4, "h": 4}
+    },
+    "desc": "Ļ̶͖͓͇̽̄̕͘O̶̟̤̐͐͆́Ō̷̖̯̼̰͐̓̉K̵̼̓ ̸̢̦̯͓̅͑͑B̸̺̝̐̾E̴̢̦̤̖͑̇́H̵̻̫̲̼̅Ị̶͒͋͘N̵̳̭̆̓D̵̟̙̉̀̂̕ ̴͍̝̮͑͋Ỳ̵̛͇͙͓͂ͅO̵̭̠͆̕Ų̵͎͙́̉̂ ̶͚̗̇L̴̙̀͊̈́͠O̵̫̭̔̉Õ̵̲̑͘K̸̬͆̈́ ̵̹̖̗̯̿̽͊̈́B̵̡̒̉̌̀E̶̻̿̾́H̶̨̠̠̀͂I̵̩̤̒͛N̵̜̰̭̑̈̓̇D̸̗͉̝̔̐͐̚ ̵̣̅̍̓͂Y̷̡̻͍̩͌̋͋͝O̶̢̝̺̯̽͂̎̋Ú̸̼̽͝ ̶̯̼̓̔̉L̸͎͓̽O̵͚͗͜Ó̴̥͌̏͑K̸͉͉̮̾̒̌͗ ̵̫͍̟̥͋̄Ḇ̸̧̢̙̓E̴̡̟̘͆̽̿H̶̗̟͇̒̇͜I̶̳̿N̵̡̮̭͉̽̒D̸̨͙̈̽ ̸͎͕͙́͊̈̚ͅY̸̥̊̈́Ȍ̷̩Ǘ̶͎̈́ ̷̥͖̖́̋",
+    "tags": ["chars", "error"]
+  },
+  {
+    "name": "txt_404",
+    "sprite": ["txt/404"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "404: Functions as a noun and a property, makes a object be like it was NOTRANFORM.",
+    "tags": ["chars", "error"]
+  },
+  {
+    "name": "pyuku",
+    "sprite": ["pyukumuku1", "pyukumuku2", "pyukumuku3"],
+    "layer": 10,
+    "color": [[1, 1], [4, 1], [0, 3]],
+    "painted": [true, false, false],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
+    },
+    "desc": "it can eject its internal organs to attack others. it has become a tradition to yeet pyukumuku back into their homes after a storm, where they wash ashore. szoob's favorite pokemon",
+    "tags": ["chars", "pokemon", "pyukumuku"]
+  },
+  {
+    "name": "txt_pyuku",
+    "sprite": ["txt/pyuku"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "I never relized how much Pokemon are in Bab-be-mon before.",
+    "tags": ["chars", "pokemon", "pyukumuku"]
+  },
+  {
+    "name": "babi",
+    "sprite": ["sprites2/babi"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
+    },
+    "desc": "in a fit of inspiration, bab grew another eye.",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "txt_babi",
+    "sprite": ["sprites2/txt/babi"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "bab2",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "babber",
+    "sprite": ["sprites2/babber"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
+    },
+    "desc": "it's rumored that babber is actually the bab attempting to split into two babs, because babs like company. bab doesn't seem upset about this outcome though.",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "txt_babber",
+    "sprite": ["sprites2/txt/babber"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "bab2",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "memem",
+    "sprite": ["memem1", "memem2"],
+    "layer": 10,
+    "color": [[3, 1], [3, 3]],
+    "painted": [true, false,],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
+    },
+    "desc": "a philosophical babber, it uses its big brain to control psychic energy move things, because it lacks arms. it's on a conquest to discover all that it can.",
+    "tags": ["chars", "me"]
+  },
+  {
+    "name": "txt_memem",
+    "sprite": ["txt/memem"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "tags": ["chars", "me"]
+  },
+  {
+    "name": "snoboy",
+    "sprite": ["sprites2/snoboy"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "features": {
+      "sans": {"x": 17, "y": 8, "w": 3, "h": 3}
+    },
+    "desc": "it wears its hat to protect it from the sun. while the hat itself doesn't do much, the propeller can spin to cool it down.",
+    "tags": ["chars", "snowman", "christmas"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_snoboy",
+    "sprite": ["txt/snoboy"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["chars", "snowman", "christmas"]
+  },
+  {
+    "name": "memeemem",
+    "sprite": ["memeemem2", "memeemem1"],
+    "layer": 10,
+    "color": [[3, 1], [3, 3]],
+    "painted": [true, false,],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
+    },
+    "desc": "its brain has grown incredibly, to the point that its capable of having a psychological influence on other things around it. memeemems can communicate telepathically over long distances to tell each other their discoveries.",
+    "tags": ["chars", "me"]
+  },
+  {
+    "name": "txt_memeemem",
+    "sprite": ["txt/memeemem"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "tags": ["chars", "me"]
+  },
+  {
+    "name": "wogotch",
+    "sprite": ["sprites2/wogotch"],
+    "layer": 10,
+    "color": [[2, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 16, "y": 9, "w": 3, "h": 3}
+    },
+    "voice": "s_strum",
+    "desc": "a wogotch can always be seen traveling with one other wogotch. just when scientists think they figured out woug's plural, this evolution comes by and throws everything off.",
+    "tags": ["wug", "chars", "bird"],
+	  "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_wogotch",
+    "sprite": ["txt/wogotch"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["wug", "chars", "bird"]
   }
 ]

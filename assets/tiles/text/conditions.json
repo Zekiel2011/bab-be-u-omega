@@ -398,5 +398,14 @@
     "color": [[3, 1]],
     "desc": "WHUHD: A prefix condition that's true if the unit is a whuhed level. If the unit isn't a level, then true if the current level is whuhd.",
     "tags": ["whuhed"]
+  },
+  {
+    "name": "txt_dat",
+    "sprite": ["txt/dat"],
+    "types": ["object", "cond_prefix"],
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "THE: Refers to the object it's pointing at.",
+    "tags": ["that", "those", "cg5", "the^", "the ->"]
   }
 ]

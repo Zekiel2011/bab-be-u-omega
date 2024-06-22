@@ -196,13 +196,11 @@ function scene.setupGooi()
     end)
   end):setBGImage(sprites["ui/camera"],sprites["ui/camera_h"], sprites["ui/camera_a"]):bg({0, 0, 0, 0})
   x = x + 40
-  if is_mobile then
-    gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
-      scene.keyPressed("tab")
-      scene.keyReleased("tab")
-    end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
-    x = x + 40
-  end
+  gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+    scene.keyPressed("tab")
+    scene.keyReleased("tab")
+  end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
+  x = x + 40
   
   paint_button = gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onPress(function()
     if paint_open then

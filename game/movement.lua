@@ -964,6 +964,34 @@ It is probably possible to do, but lily has decided that it's not important enou
                 dir = dirs8_by_offset[dx][dy]
                 data.dir = dir
               end
+            --dx/dy collation logic for copydog moves
+            elseif (data.reason == "copdog") then
+              --new 'move ALL the way' logic:
+              --1) Split the move into two parts - all the diagonal movement, then all the remaining orthogonal movement.
+              --2) Put the second half in as a new move after this one.
+              local diag_amt = math.min(math.abs(data.dx), math.abs(data.dy));
+              local ortho_amt = math.max(math.abs(data.dx), math.abs(data.dy)) - diag_amt;
+              if (diag_amt == 0 and ortho_amt == 0 or slippers[unit.id] ~= nil or hasProperty(unit, "slep")) then
+                data.times = 0;
+              elseif (diag_amt > 0 and ortho_amt == 0) or (ortho_amt > 0 and diag_amt == 0) then
+                data.times = math.max(diag_amt, ortho_amt);
+                local dir = dirs8_by_offset[sign(data.dx)][sign(data.dy)];
+                data.dir = dir;
+                data.reason = "copkat_result";
+              else
+                local newdir = dirs8_by_offset[sign(math.abs(data.dx)-diag_amt)][sign(math.abs(data.dy)-diag_amt)]
+                table.insert(copykat.moves, 2, {reason = "copkat_result", dir = newdir, times = ortho_amt})
+                data.times = diag_amt;
+                local dir = dirs8_by_offset[sign(data.dx)][sign(data.dy)];
+                data.dir = dir;
+                data.reason = "copkat_result";
+              end
+              if (data.times == 0) then
+                while #unit.moves > 0 and unit.moves[1].times <= 0 do
+                  table.remove(unit.moves, 1)
+                end
+                break
+              end
             end
             --movedebug("considering:"..unit.fullname..","..dir)
             local success,movers,specials = true,{},{}
@@ -1219,7 +1247,7 @@ function moveIt(mover, dx, dy, facing_dir, move_dir, geometry_spin, data, pullin
       end
       local found = false
       for i,move in ipairs(copykat.moves) do
-        if move.reason == "copkat" then
+        if move.reason == "copkat" or move.reason == "copdog" then
           if currently_moving then
             currently_moving = false
           else
@@ -1537,7 +1565,7 @@ end
 
 function findCopykats(unit)
   --fast track
-  if rules_with["copkat"] == nil then return {} end
+  if rules_with["copkat"] == nil and rules_with["copdog"] == nil then return {} end
   local result = {}
   local iscopykat = matchesRule("?", "copkat", unit)
   for _,ruleparent in ipairs(iscopykat) do
@@ -1546,6 +1574,16 @@ function findCopykats(unit)
     for _,copykat in ipairs(copykats) do
       if testConds(copykat, copykat_conds) and ignoreCheck(copykat,unit) then
         result[copykat] = "copkat"
+      end
+    end
+  end
+  local iscopykat = matchesRule("?", "copdog", unit);
+  for _,ruleparent in ipairs(iscopykat) do
+    local copykats = findUnitsByName(ruleparent.rule.subject.name)
+    local copykat_conds = ruleparent.rule.subject.conds
+    for _,copykat in ipairs(copykats) do
+      if testConds(copykat, copykat_conds) then
+        result[copykat] = "copdog";
       end
     end
   end
@@ -1905,6 +1943,53 @@ function doWrap(unit, px, py, move_dir, dir)
     if (dx ~= 0 or dy ~= 0) then
       px = px + (mapwidth/2-0.5-px)*2
       py = py + (mapheight/2-0.5-py)*2
+    end
+  end
+  if hasProperty(unit, "cilindr_up") or hasProperty(unit, "cilindr_down") then
+    if (px < 0) then
+      px = px + mapwidth
+    elseif (px >= mapwidth) then
+      px = px - mapwidth
+    end
+  end
+  if hasProperty(unit, "cilindr_left") or hasProperty(unit, "cilindr_right") then
+    if (py < 0) then
+      py = py + mapheight
+    elseif (py >= mapheight) then
+      py = py - mapheight
+    end
+  end
+  if hasProperty(unit, "cilindr_upleft") then
+    --bleh, i need to wait for portal to be implemented
+    --[[if (py < 0 and ((mapwidth > mapheight and px < mapheight) or (mapwidth <= mapheight))) then
+      dir = 2
+      py = py + 1
+      local temp = px
+      px = py
+      py = temp
+    elseif (px < 0 and ((mapheight > mapwidth and py < mapwidth) or (mapheight <= mapwidth))) then
+      px = px + 1
+      local temp = px
+      px = py
+      py = temp
+    end]]--
+  end
+  if hasProperty(unit, "mobyus_up") or hasProperty(unit, "mobyus_down") then
+    if (px < 0) then
+      px = px + mapwidth
+      py = mapheight - py - 1
+    elseif (px >= mapwidth) then
+      px = px - mapwidth
+      py = mapheight - py - 1
+    end
+  end
+  if hasProperty(unit, "mobyus_left") or hasProperty(unit, "mobyus_right") then
+    if (py < 0) then
+      py = py + mapheight
+      px = mapwidth - px - 1
+    elseif (py >= mapheight) then
+      py = py - mapheight
+      px = mapwidth - px - 1
     end
   end
   if (hasProperty(unit, "anti goarnd") or hasProperty(outerlvl, "anti goarnd")) and not thicc_units[unit] then
@@ -2640,6 +2725,8 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
         stopped = true
       elseif hasProperty(v, "nogo") and o.reason ~= "curse" then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogo"))
+      elseif hasProperty(v, "nogoish") and o.reason ~= "curse" and not hasProperty(v, "goawaypls") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
+        stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogoish"))
       elseif hasProperty(v, "sidekik") and not canpush and not would_swap_with and o.reason ~= "curse" then
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"sidekik"))
       elseif hasProperty(v, "diagkik") and not canpush and not would_swap_with and o.reason ~= "curse" then

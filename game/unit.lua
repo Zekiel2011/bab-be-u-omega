@@ -837,7 +837,7 @@ function updateUnits(undoing, big_update)
     local splits_per_tile = {}
     local split = getUnitsWithEffect("split")
     for _,unit in ipairs(split) do
-      if (unit.name ~= "lie" or hasProperty(unit,"notranform")) then
+      if (unit.name ~= "lie" or hasProperty(unit,"notranform") or hasProperty(unit,"404")) then
         local coords = tostring(unit.x)..","..tostring(unit.y)
         if (splits_per_tile[coords]) == nil then
           splits_per_tile[coords] = 0
@@ -1078,6 +1078,16 @@ function updateUnits(undoing, big_update)
           addParticles("destroy", on.x, on.y, getUnitColor(on))
         end
       end
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
+    local is404 = getUnitsWithEffect("404")
+    for _,unit in ipairs(is404) do
+      table.insert(to_destroy, unit)
+      playSound("break")
+      shakeScreen(1, 1)
+      addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
     end
     
     to_destroy = handleDels(to_destroy)
@@ -1575,6 +1585,11 @@ function updateUnits(undoing, big_update)
       destroyLevel("infloop")
     end
     
+    local isrickroll = getUnitsWithEffect(";)")
+    for _,unit in ipairs(isrickroll) do
+      love.system.openURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    end
+    
     local iswhen = getUnitsWithEffect("when")
     for _,unit in ipairs(iswhen) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -2049,6 +2064,18 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "bah" then
+        if unit.dir == 3 then
+          unit.sprite = {"bah_down"}
+        elseif unit.dir == 5 then
+          unit.sprite = {"bah_left"}
+        elseif unit.dir == 7 then
+          unit.sprite = {"bah_up"}
+        else
+          unit.sprite = {"bah"}
+        end
+      end
+      
       if unit.fullname == "tzsh" then
         if hasProperty(unit,"nogo") or hasProperty(unit,"goawaypls") then
           unit.sprite = {"tzsh"}
@@ -2099,7 +2126,7 @@ function miscUpdates(state_change)
         local props_to_check = {"stelth","sans","delet","dragbl","rong","wurd","nodrag","rithere","thr","ouch","protecc","noundo",
         "poortoll","go","folowal","tall","rave","colrful","torc","split","icyyyy","icy","hopovr","nuek","knightstep","diagstep","sidestep","notranform",
         "munwalk","visitfren","walk","noswim","haetflor","haetskye","glued","flye","enby","tranz","comepls","goawaypls","goooo",
-        "moar","nedkee","fordor","hotte","fridgd","nogo","thingify","y'all","utres","utoo","u",
+        "moar","nedkee","fordor","hotte","fridgd","nogo","thingify","w","y'all","utres","utoo","u",
         } --props are checked in order, so less common props should go in front
         for _,prop in ipairs(props_to_check) do
           if hasProperty(unit,prop) then
@@ -2179,6 +2206,15 @@ function miscUpdates(state_change)
         local it = unpack(card_for_id[unit.id])
         print("b")
         unit.sprite[1] = "txt/burgitt_"..it or "txt/burgit"
+      end
+
+      if unit.fullname == "goop" and scene ~= editor then
+        if not card_for_id[unit.id] then
+          card_for_id[unit.id] = {math.random(1,18)}
+        end
+        local it = unpack(card_for_id[unit.id])
+        print("b")
+        unit.sprite[1] = "goop_"..it or "goop"
       end
 
       if unit.fullname == "txt_katany" then
@@ -3174,7 +3210,7 @@ function convertLevel()
   local converts = matchesRule(outerlvl,"be","?")
   for _,match in ipairs(converts) do
     local object = match.rule.object
-    if not (hasProperty(outerlvl, "lvl") or hasProperty(outerlvl, "notranform")) and object.type and (object.type.object or object.name:starts("txt_")) and object.name ~= "no1" then
+    if not (hasProperty(outerlvl, "lvl") or hasProperty(outerlvl, "notranform") or hasProperty(outerlvl, "404")) and object.type and (object.type.object or object.name:starts("txt_")) and object.name ~= "no1" then
       if match.rule.object.name == "txt" then
         tile = getTile("txt_lvl")
       elseif match.rule.object.name:starts("this") then
@@ -3418,7 +3454,7 @@ function convertUnits(pass)
     local rules = match[1]
     local unit = match[2]
     local rule = rules.rule
-    if not hasProperty(unit, "notranform") then
+    if not hasProperty(unit, "notranform") or not hasProperty(unit, "404") then
       if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
         for _,cursor in ipairs(cursors) do
           if testConds(cursor, rule.subject.conds) then
@@ -3473,7 +3509,7 @@ function convertUnits(pass)
     local rules = match[1]
     local unit = match[2]
     local rule = rules.rule
-    if not hasProperty(unit, "notranform") then
+    if not hasProperty(unit, "notranform") or not hasProperty(unit, "404") then
       if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
         for _,cursor in ipairs(cursors) do
           if testConds(cursor, rule.subject.conds) then
@@ -3532,7 +3568,7 @@ function convertUnits(pass)
     local rules = match[1]
     local unit = match[2]
     local rule = rules.rule
-    if not hasProperty(unit, "notranform") then
+    if not hasProperty(unit, "notranform") or not hasProperty(unit, "404") then
       if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
         for _,cursor in ipairs(cursors) do
           if testConds(cursor, rule.subject.conds) then
@@ -3594,7 +3630,7 @@ function convertUnits(pass)
     local unit = match[2]
     local rule = rules.rule
     
-    if not hasProperty(unit, "notranform") then
+    if not hasProperty(unit, "notranform") or not hasProperty(unit,"404") then
       if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
         for _,cursor in ipairs(cursors) do
           if testConds(cursor, rule.subject.conds) then
@@ -3760,7 +3796,39 @@ function convertUnits(pass)
       end
     end
   end
-
+  
+  local dats = matchesRule(nil,"be","dat")
+  for _,ruleparent in ipairs(dats) do
+    local unit = ruleparent[2]
+    if not hasProperty(unit, "notranform") then
+      local the = ruleparent[1].rule.object.unit
+      
+      local tx = the.x
+      local ty = the.y
+      local dir = the.dir
+      local dx = dirs8[dir][1]
+      local dy = dirs8[dir][2]
+      dx,dy,dir,tx,ty = getNextTile(the,dx,dy,dir)
+      
+      local tfd = false
+      local tfs = getUnitsOnTile(tx,ty)
+      for _,other in ipairs(tfs) do
+        if not hasRule(unit,"be",unit.name) and not hasRule(unit,"ben't",other.fullname) then
+          local new_unit = createUnit(other.tile, unit.x, unit.y, unit.dir, true)
+          if new_unit ~= nil then
+            new_unit.special.customletter = other.special.customletter
+            tfd = true
+            addUndo({"create", new_unit.id, true, created_from_id = unit.id})
+          end
+        end
+      end
+      
+      if tfd and not unit.removed then
+        table.insert(converted_units, unit)
+      end
+    end
+  end
+  
   local deez = matchesRule(nil,"be","deez")
   for _,ruleparent in ipairs(deez) do
     local unit = ruleparent[2]
@@ -4287,6 +4355,12 @@ function updateDir(unit, dir, force)
         result = false
       end
     end
+  end
+  if unit.fullname == "text_cilindr" then
+    unit.textname = "cilindr_" .. dirs8_by_name[unit.dir];
+  end
+  if unit.fullname == "text_mobyus" then
+    unit.textname = "mobyus_" .. dirs8_by_name[unit.dir];
   end
   if unit.name == "mous" then
     unit.dir = dir

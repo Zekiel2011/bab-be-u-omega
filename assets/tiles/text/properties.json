@@ -1539,5 +1539,83 @@
     "color": [[2, 3]],
     "desc": "FOED DEE: When a NED KEE and FOR DOR unit move into each other or are on each other, they are both destroyed.\nAnti: nedkee",
     "tags": ["oput"]
+  },
+  {
+    "name": "txt_;)",
+    "sprite": ["txt/rickroll"],
+    "types": ["property"],
+    "color": [[4, 1]],
+    "desc": ";): I wonder what this does!",
+    "tags": ["rickroll", "best property ever", "wrecking games"]
+  },
+  {
+    "name": "txt_goawayish",
+    "display": "go awayish",
+    "sprite": ["txt/goaway"],
+    "types": ["property"],
+    "color": [[4, 2]],
+    "desc": "test",
+    "tags": ["push"]
+  },
+  {
+    "name": "txt_nogoish",
+    "display": "no go-ish",
+    "sprite": ["txt/nogoish"],
+    "types": ["property"],
+    "color": [[2, 1]],
+    "desc": "NO GO-ISH: Can't be entered by objects. Gets overridden by GO AWAY PLS!",
+    "tags": ["stoplike"]
+  },
+  {
+    "name": "txt_cilindr",
+    "sprite": ["txt/cilindr"],
+    "types": ["property"],
+    "color": [[3, 2]],
+    "rotate": true,
+    "desc": "CILINDR: CILINDR units wrap around the level, as though it were a cylinder with the indicated orientation."
+  },
+  {
+    "name": "txt_mobyus",
+    "sprite": ["txt/mobyus"],
+    "types": ["property"],
+    "color": [[3, 2]],
+    "rotate": true,
+    "desc": "MOBYUS: MOBYUS units wrap around the level, as though it were a mobius strip with the indicated orientation."
+  },
+  {
+    "name": "txt_daed",
+    "sprite": ["txt/daed"],
+    "types": ["property"],
+    "color": [[0, 1]],
+    "overlay": {
+      "sprite": "daed",
+      "colors": ["whit"]
+    },
+    "desc": "DAED: Probally not coded yet, but it's meant to be like PHANTOM.",
+    "tags": ["phantom", "dead"]
+  },
+  {
+    "name": "txt_red2",
+    "sprite": ["baba/red"],
+    "wobble": true,
+    "types": ["property", "gang_prefix"],
+    "color": [[2, 2]],
+    "overlay": {
+      "sprite": "red",
+      "colors": ["reed"]
+    },
+    "desc": "Wait, RED is already a object..."
+  },
+  {
+    "name": "txt_blue",
+    "sprite": ["baba/blue"],
+    "wobble": true,
+    "types": ["property", "gang_prefix"],
+    "color": [[3, 3]],
+    "overlay": {
+      "sprite": "blue",
+      "colors": ["bleu"]
+    },
+    "desc": "Unlike RED, there is no BLUE object."
   }
 ]

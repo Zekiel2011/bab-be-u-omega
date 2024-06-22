@@ -1,0 +1,190 @@
+[
+  {
+    "name": "obejt_bab",
+    "sprite": ["obejt/bab"],
+    "layer": 20,
+    "color": [[4, 0]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "bruhhhhhhhhhh",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_be",
+    "sprite": ["obejt/be"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "remember that obejts dont parse",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_keek",
+    "sprite": ["obejt/keek"],
+    "layer": 20,
+    "color": [[2, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "someones beist fren",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_flog",
+    "sprite": ["obejt/flog"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "u r da wenner!",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_til",
+    "sprite": ["obejt/til"],
+    "layer": 20,
+    "color": [[0, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "totally dat step",
+    "tags": ["obj"]
+  },
+  {
+    "name": "txt_obejt",
+    "sprite": ["obejt/obejt"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "Refers to all OBEJTs in the lvl mayb",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_watr",
+    "sprite": ["obejt/watr"],
+    "layer": 20,
+    "color": [[1, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "WAAAAAAAAH",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_boux",
+    "sprite": ["obejt/boux"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "MEIUXA!",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_fenss",
+    "sprite": ["obejt/fenss"],
+    "layer": 20,
+    "color": [[6, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "anti pushy thing",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_bellt",
+    "sprite": ["obejt/bellt"],
+    "layer": 20,
+    "color": [[1, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "iy choos u!",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_algay",
+    "sprite": ["obejt/algay"],
+    "layer": 20,
+    "color": [[5, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "...- . .-. -.-- / --. .- -.--",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_kee",
+    "sprite": ["obejt/kee"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "realism.png",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_buble",
+    "sprite": ["obejt/buble"],
+    "layer": 20,
+    "color": [[1, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "bloop blop",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_boll",
+    "sprite": ["obejt/boll"],
+    "layer": 20,
+    "color": [[2, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "budadabadahdah",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_meem",
+    "sprite": ["obejt/meem"],
+    "layer": 20,
+    "color": [[4, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "bff 3rd",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_wal",
+    "sprite": ["obejt/wal"],
+    "layer": 20,
+    "color": [[1, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "no psh",
+    "tags": ["obj"]
+  }
+]

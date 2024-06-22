@@ -107,6 +107,14 @@
     "tags": ["copycat", "lily"]
   },
   {
+    "name": "txt_copdog",
+    "sprite": ["txt/copdog"],
+    "types": ["verb_unit", "verb"],
+    "color": [[0, 3]],
+    "desc": "COPDOG: COPKAT, but it copies ALL of the movement (e.g. if COPDOG ROC and you push 3 ROCs, it moves 3 steps).",
+    "tags": ["copycat", "lily"]
+  },
+  {
     "name": "txt_ignor",
     "sprite": ["txt/ignor"],
     "types": ["verb_unit", "verb"],
@@ -292,5 +300,13 @@
     "color": [[1, 3]],
     "desc": "NOSWIMS (Verb): Acts like a verbified NO SWIM.",
     "tags": ["sinks"]
+  },
+  {
+    "name": "txt_were",
+    "sprite": ["txt/were"],
+    "types": ["verb_class", "verb_property", "verb"],
+    "color": [[0, 3]],
+    "desc": "WERE (Verb): Causes the subject to become an object or have a property if PAST was in progress.\nAnti: Behaves as BE if PAST is not in progress.",
+    "tags": ["was"]
   }
 ]

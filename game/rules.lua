@@ -865,6 +865,24 @@ function addRule(full_rule)
     end
     addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
   end
+  
+  if verb == "were" and doing_past_turns then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+  
+  if verb == "anti were" and not doing_past_turns then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
 
   if verb == "iscome" then
     local new_verb = copyTable(rules.verb)
@@ -1085,7 +1103,7 @@ function addRule(full_rule)
   end
 
   if verb_not > 0 then
-    if (verb == "be") and (object == "notranform" or subject == object or (subject:starts("txt_") and object == "txt") or object == "themself") then
+    if (verb == "be") and (object == "notranform" or object == "404" or subject == object or (subject:starts("txt_") and object == "txt") or object == "themself") then
       verb_not = verb_not + 1
     end
     if not not_rules[verb_not] then
@@ -1100,7 +1118,7 @@ function addRule(full_rule)
   elseif (verb == "be") and (subject == object or (subject:starts("txt_") and object == "txt") or object == "themself") and subject ~= "lvl" and object ~= "lvl" and subject ~= "sans" then
     --print("protecting: " .. subject .. ", " .. object)
     addRuleSimple(rules.subject, {"be"}, {"notranform", rules.object.conds}, units, dir)
-  elseif object == "notranform" or (subject == "lvl" and object == "lvl") then -- no "n't" here, but still blocks other rules so we need to count it
+  elseif object == "notranform" or object == "404" or (subject == "lvl" and object == "lvl") then -- no "n't" here, but still blocks other rules so we need to count it
     if not not_rules[1] then
       not_rules[1] = {}
       max_not_rules = math.max(max_not_rules, 1)
@@ -1139,9 +1157,9 @@ function postRules(no_sound)
         local has_conds = (#conds[1] > 0 or #conds[2] > 0)
         
         local specialmatch = 0
-        if rule.verb.name == "be" and rule.object.name == "notranform" then -- "bab be bab" should cross out "bab be keek"
+        if rule.verb.name == "be" and (rule.object.name == "notranform" or rule.object.name == "404") then -- "bab be bab" should cross out "bab be keek"
           specialmatch = 1
-        elseif rule.verb.name == "ben't" and rule.object.name == rule.subject.name or rule.object.name == "notranform" then -- "bab be n't bab" and 'bab be n't notranform' should cross out "bab be bab" (bab be notranform)
+        elseif rule.verb.name == "ben't" and rule.object.name == rule.subject.name or rule.object.name == "notranform" or rule.object.name == "404" then -- "bab be n't bab" and 'bab be n't notranform' should cross out "bab be bab" (bab be notranform)
           specialmatch = 2
         end
 
