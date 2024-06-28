@@ -3,7 +3,7 @@ function love.conf(t)
     t.window.icon = "assets/sprites/ui/bab.png"
     t.version = "11.1"
     t.release = false
-    t.window.title = 'bab be u omega 0.3'
+    t.window.title = 'bab be u omega 0.2'
     t.window.resizable = true
     t.window.vsync = false
     t.window.minwidth = 640
