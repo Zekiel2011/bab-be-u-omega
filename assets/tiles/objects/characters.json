@@ -2606,7 +2606,7 @@
     "name": "joj",
     "sprite": ["joj"],
     "layer": 11,
-    "color": [[6, 2]],
+    "color": [[2, 3]],
     "rotate": true,
     "features": {
       "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
@@ -2618,7 +2618,7 @@
     "name": "txt_joj",
     "sprite": ["txt/joj"],
     "types": ["object"],
-    "color": [[6, 2]],
+    "color": [[2, 3]],
     "desc": "means joj.",
     "alias": ["joj"],
     "tags": ["chars", "jij", "llama"]
@@ -3139,6 +3139,7 @@
     "features": {
       "sans": {"x": 23, "y": 9, "w": 4, "h": 4}
     },
+    "voice": "errir",
     "desc": "Ļ̶͖͓͇̽̄̕͘O̶̟̤̐͐͆́Ō̷̖̯̼̰͐̓̉K̵̼̓ ̸̢̦̯͓̅͑͑B̸̺̝̐̾E̴̢̦̤̖͑̇́H̵̻̫̲̼̅Ị̶͒͋͘N̵̳̭̆̓D̵̟̙̉̀̂̕ ̴͍̝̮͑͋Ỳ̵̛͇͙͓͂ͅO̵̭̠͆̕Ų̵͎͙́̉̂ ̶͚̗̇L̴̙̀͊̈́͠O̵̫̭̔̉Õ̵̲̑͘K̸̬͆̈́ ̵̹̖̗̯̿̽͊̈́B̵̡̒̉̌̀E̶̻̿̾́H̶̨̠̠̀͂I̵̩̤̒͛N̵̜̰̭̑̈̓̇D̸̗͉̝̔̐͐̚ ̵̣̅̍̓͂Y̷̡̻͍̩͌̋͋͝O̶̢̝̺̯̽͂̎̋Ú̸̼̽͝ ̶̯̼̓̔̉L̸͎͓̽O̵͚͗͜Ó̴̥͌̏͑K̸͉͉̮̾̒̌͗ ̵̫͍̟̥͋̄Ḇ̸̧̢̙̓E̴̡̟̘͆̽̿H̶̗̟͇̒̇͜I̶̳̿N̵̡̮̭͉̽̒D̸̨͙̈̽ ̸͎͕͙́͊̈̚ͅY̸̥̊̈́Ȍ̷̩Ǘ̶͎̈́ ̷̥͖̖́̋",
     "tags": ["chars", "error"]
   },
@@ -3290,5 +3291,144 @@
     "types": ["object"],
     "color": [[2, 4]],
     "tags": ["wug", "chars", "bird"]
+  },
+  {
+    "name": "aes",
+    "sprite": ["aes", "aes_blush"],
+    "color": [[0, 3], [4, 2]],
+    "painted": [true, false],
+    "layer": 11,
+    "rotate": true,
+    "desc": "sprite editor tool, clicky button as well.",
+    "tags": ["chars", "aseprite", "sprite editor"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_aes",
+    "sprite": ["txt/aes"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["chars", "aseprite", "sprite editor"]
+  },
+  {
+    "name": "wontapply",
+    "sprite": ["fuf"],
+    "layer": 11,
+    "color": [[5, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "he mini bush",
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_wontapply",
+    "sprite": ["txt/fuf"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "desc": "from smol portugal",
+    "tags": ["chars", "fufu", "bush"]
+  },
+  {
+    "name": "funni",
+    "sprite": ["funni"],
+    "layer": 11,
+    "color": [[2, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "its funni eeeeeeeeeeee",
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_funni",
+    "sprite": ["txt/funni"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "desc": "means 'funny' in english",
+    "tags": ["chars", "jij", "jaja", "jeje", "llama"]
+  },
+  {
+    "name": "itd",
+    "sprite": ["itd"],
+    "layer": 11,
+    "color": [[1, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "bab remakes offical it",
+    "tags": ["it", "chars"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_itd",
+    "sprite": ["txt/itd"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "alias": ["it'd", "itd"],
+    "tags": ["it", "chars"]
+  },
+  {
+    "name": "itevt",
+    "sprite": ["itevt"],
+    "layer": 11,
+    "color": [[4, 0]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "as ITT grows older, it becomes more droopy and solid.",
+    "pronouns": ["he", "him"]
+    },
+    {
+    "name": "txt_itevt",
+    "sprite": ["txt/itevt"],
+    "types": ["object"],
+    "color": [[4, 0]],
+    "desc": "I couldn't think of a name.",
+    "alias": ["itt"],
+    "tags": ["chars", "itt"]
+  },
+  {
+    "name": "datti",
+    "sprite": ["datti"],
+    "layer": 11,
+    "color": [[1, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "...how would baby slimes be like, like are they made out of less slime...?",
+    "tags": ["et", "chars"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_datti",
+    "sprite": ["txt/datti"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "desc": "do u guys liek da arro??? :)",
+    "tags": ["et", "chars"]
+  },
+  {
+    "name": "bob",
+    "sprite": ["bob"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "its bob bruh",
+    "tags": ["chars"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_bob",
+    "sprite": ["txt/bob"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "desc": "\"BOB\". thats what it says",
+    "tags": ["chars"]
   }
 ]
