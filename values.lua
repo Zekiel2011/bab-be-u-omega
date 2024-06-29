@@ -509,7 +509,7 @@ selector_grid_contents = {
   {
     0,0,"itt","txt_itt","spirt","txt_spirt","menstr","txt_menstr","kook","txt_kook","muum","txt_muum","badbad","txt_badbad","babbab","txt_babbab","bibi","txt_bibi","aes","txt_aes","wontapply","txt_wontapply","funni","txt_funni",
     "keke","txt_keke","baddy","txt_baddy","iys","txt_iys","kyyk","txt_kyyk","kmeem","txt_kmeem","hbab","txt_hbab","babnot","txt_babnot","snobab","txt_snobab","jely","txt_jely","itd","txt_itd","itevt","txt_itevt","datti","txt_datti",
-    "aba","txt_aba","tratra","txt_tratra",0,0,"zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals","bob","txt_bob",0,0,0,0,
+    "aba","txt_aba","tratra","txt_tratra",0,0,"zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals","bob","txt_bob","nice","txt_nice",0,0,
     "maeryio","txt_maeryio","zez","txt_zez","duf","txt_duf","baab","txt_baab","keeeeeeke","txt_keeeeeeke","tzsh","txt_tzsh","tesho","txt_tesho","glebab","txt_glebab",0,0,0,0,0,0,0,0,
     "pwn","txt_pwn","rok","txt_rok","bihop","txt_bihop","foof","txt_foof","jim","txt_jim","joj","txt_joj","beu","txt_beu","xixe","txt_xixe","bah","txt_bah",0,0,0,0,0,0,
     "hempuli","txt_hempuli","arvi","txt_arvi","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!","jillt","txt_jillt","beellt","txt_beellt","nalß","txt_nalß","nabby","txt_nabby",0,0,0,0,0,0,0,0,

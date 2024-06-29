@@ -3430,5 +3430,26 @@
     "color": [[3, 1]],
     "desc": "\"BOB\". thats what it says",
     "tags": ["chars"]
+  },
+  {
+    "name": "nice",
+    "sprite": ["nice"],
+    "layer": 11,
+    "color": [[3, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 18, "y": 3, "w": 2, "h": 2}
+    },
+    "voice": "s_organ",
+    "desc": "nice is the otho true philosopher of our time. babbybys 3ff",
+    "tags": ["chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_nice",
+    "sprite": ["txt/nice"],
+    "types": ["object"],
+    "color": [[3, 0]],
+    "tags": ["chars"]
   }
 ]
