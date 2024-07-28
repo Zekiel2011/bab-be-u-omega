@@ -350,5 +350,45 @@
     "color": [[5, 1]],
     "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: icyyyy",
     "tags": ["group"]
+  },
+  {
+    "name": "txt_omega",
+    "sprite": ["txt/omega"],
+    "types": ["anti"],
+    "color": [[2, 4]],
+    "desc": "OMEGA: Acts like ANTI, but instead makes it be more like a super counterpart. Does not work with nouns.\nEach text might have a custom effect when omega'd.",
+    "tags": ["double", "super"]
+  },
+  {
+    "name": "txt_clip",
+    "sprite": ["txt/clip"],
+    "types": ["object", "group", "property"],
+    "color": [[0, 3]],
+    "desc": "CLIP: Changes depending on what is in your clipboard.\nAnti: Copies stuff to your clipboard, nothing can go wrong here!!!!!!!! ;)",
+    "tags": ["clipboard"]
+  },
+  {
+    "name": "txt_ditto",
+    "sprite": ["txt2/ditto"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "desc": "DITTO: Refers to the Ditto object.",
+    "tags": ["ditto", "quotation marks", "\""]
+  },
+  {
+    "name": "txt_board",
+    "sprite": ["txt/board"],
+    "types": ["object", "group", "property"],
+    "color": [[0, 3]],
+    "desc": "BOARD: Acts like ANTI CLIP.",
+    "tags": ["clipboard"],
+  },
+  {
+    "name": "txt_nuhuh",
+    "sprite": ["txt/nuhuh"],
+    "types": ["cond_prefix"],
+    "color": [[2, 2]],
+    "desc": "NUHUH (PREFIX): Cancels any rules it is in.",
+    "tags": ["nuhuh", "cancel", "false", "rule"]
   }
 ]

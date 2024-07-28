@@ -186,5 +186,113 @@
     },
     "desc": "no psh",
     "tags": ["obj"]
+  },
+  {
+    "name": "obejt_txt_bab",
+    "sprite": ["obejt/txt_bab"],
+    "layer": 20,
+    "color": [[4, 0]],
+    "rotate": false,
+    "desc": "it might say something...?",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_txt_be",
+    "sprite": ["obejt/txt_be"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": false,
+    "desc": "I wonder what this does...?",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_dor",
+    "sprite": ["obejt/dor"],
+    "layer": 20,
+    "color": [[2, 2]],
+    "rotate": false,
+    "desc": "OPEN UP!!!",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt_bab",
+    "sprite": ["obejt/2bab"],
+    "layer": 20,
+    "color": [[2, 1]],
+    "rotate": true,
+    "desc": "bbbbbbrrrrrrruuuuuuuuuuuuuuuuuuuuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt_obejt_bab",
+    "sprite": ["obejt/3bab"],
+    "layer": 20,
+    "color": [[2, 0]],
+    "rotate": true,
+    "desc": "bbbbbbbbbbbbbbbbbbbbbbbbbbrrrrrrrrrrrrrrrrrrrrrrrrrrrruuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt_keek",
+    "sprite": ["obejt/2keek"],
+    "layer": 20,
+    "color": [[2, 3]],
+    "rotate": true,
+    "desc": "some dudes fren",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_txt_u",
+    "sprite": ["obejt/txt_u"],
+    "layer": 20,
+    "color": [[4, 0]],
+    "rotate": false,
+    "desc": "wasd",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_huro",
+    "sprite": ["obejt/huro"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "drpkgnjfdkmgbdrjkfrnikwsrPIHJGESDRMI ORHIghbfuaikeegf rbuaskeejn",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_platfory",
+    "sprite": ["obejt/platfory"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "platfory also make gud modd",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_meemto",
+    "sprite": ["obejt/meem2"],
+    "layer": 20,
+    "color": [[4, 1]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "desc": "3rd bff",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt",
+    "sprite": ["obejt/tobejt"],
+    "layer": 20,
+    "color": [[2, 2]],
+    "rotate": false,
+    "desc": "put these around the nonexistent bab orb parsers to parse rules!",
+    "tags": ["obj"]
   }
 ]

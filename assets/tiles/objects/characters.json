@@ -2383,15 +2383,15 @@
   },
   {
     "name": "zezi",
-    "sprite": ["zezi"],
+    "sprite": ["zezi1", "zezi2"],
     "layer": 11,
-    "color": [[0, 3]],
+    "color": [[6, 1], [1, 3]],
     "rotate": true,
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
     },
     "voice": "s_zdoo",
-    "desc": "over time zez's become more and more fluffier",
+    "desc": "over time zez's become more and more fluffier, they also grow tails that they only show when they are comfortable, or are ready to fight.",
     "tags": ["chars", "zeze"],
     "pronouns": ["he", "him"]
   },
@@ -2886,7 +2886,7 @@
     "name": "glebab",
     "sprite": ["glebab"],
     "layer": 11,
-    "color": [[0, 3]],
+    "color": [[4, 0]],
     "rotate": true,
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
@@ -3060,6 +3060,7 @@
     "features": {
       "sans": {"x": 26, "y": 10, "w": 2, "h": 2}
     },
+    "voice": "403",
     "desc": "Its forelegs create electricity through its muscle-based system, it becomes SINY when it is in danger.",
     "tags": ["shinx", "chars", "pokemon"],
   },
@@ -3451,5 +3452,181 @@
     "types": ["object"],
     "color": [[3, 0]],
     "tags": ["chars"]
+  },
+  {
+    "name": "flir",
+    "sprite": ["bab3/flir"],
+    "layer": 13,
+    "color": [[2, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 20, "y": 16, "w": 2, "h": 2}
+    },
+    "voice": "shi",
+    "desc": "Flir sometimes accidentally causes forest fires, however when it does, it tries to be responsible and get water in order to put the fire out.",
+    "tags": ["chars", "fire", "fir"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_flir",
+    "sprite": ["bab3/txt/flir"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "From the non-existent Bab Be U 3.",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "bahb",
+    "sprite": ["bahb"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "s_doo",
+    "desc": "Bahb's are creatures that like to walk around and explore the world around them, they are also a bit curious.",
+    "tags": ["chars", "baba"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_bahb",
+    "sprite": ["txt/bahb"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "What's a \"BAHB DO OU\"...?",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "meemto",
+    "sprite": ["meemto"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "voice": "s_organ",
+    "desc": "meemto is one of the most truest philosopher of this time, and is also beebs 3ff",
+    "tags": ["chars"],
+    "pronouns": ["ze", "zir"]
+  },
+  {
+    "name": "txt_meemto",
+    "sprite": ["txt/meemto"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["chars"]
+  },
+  {
+    "name": "dood",
+    "sprite": ["dood"],
+    "layer": 11,
+    "color": [[4, 4]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 19, "y": 7, "w": 2, "h": 2}
+    },
+    "voice": "s_saw",
+    "desc": "beebs bff",
+    "tags": ["keke", "chars"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_dood",
+    "sprite": ["txt/dood"],
+    "types": ["object"],
+    "color": [[4, 4]],
+    "tags": ["keke", "chars"],
+    "desc": "doods decided to become the form of a door because it liked how it feels, it often tries to put kee's inside of it for fun."
+  },
+  {
+    "name": "robert",
+    "sprite": ["robert"],
+    "layer": 11,
+    "color": [[0, 1]],
+    "rotate": true,
+    "desc": "beep boop bap",
+    "tags": ["chars", "robaba", "robab", "baba"],
+    "pronouns": ["ze", "zir"]
+  },
+  {
+    "name": "txt_robert",
+    "sprite": ["txt/robert"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "desc": "DizzyAndy came up with the name, likewise with NALB :)",
+    "tags": ["chars", "robaba", "robab", "baba"]
+  },
+  {
+    "name": "flaf",
+    "sprite": ["flaf"],
+    "layer": 11,
+    "color": [[2, 4]],
+    "rotate": true,
+    "voice": "s_marim",
+    "desc": "living flog?",
+    "tags": ["chars", "flafla"]
+  },
+  {
+    "name": "txt_flaf",
+    "sprite": ["txt/flaf"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "desc": "i want one!",
+    "tags": ["chars", "flafla"]
+  },
+  {
+    "name": "al23m",
+    "sprite": ["al23m"],
+    "layer": 11,
+    "color": [[2, 1]],
+    "rotate": true,
+    "desc": "!etti olley",
+    "tags": ["notjames", "chars"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_al23m",
+    "sprite": ["txt/al23m"],
+    "types": ["object"],
+    "color": [[2, 1]],
+    "tags": ["notjames", "chars"],
+    "desc": "Says sjame in reverse, kinda."
+  },
+  {
+    "name": "sham",
+    "sprite": ["sham_hair", "sham_face", "sham_hair"],
+    "layer": 11,
+    "color": [[5, 2], [0, 2], [5, 2]],
+    "painted": [true, false, true],
+    "voice": "sham_gatsample",
+    "rotate": true,
+    "features": {
+      "sans": {"x": 19, "y": 16, "w": 2, "h": 2}
+    },
+    "desc": "gon infect u",
+    "tags": ["chars", "ukstr", "shame", "virus"]
+  },
+  {
+    "name": "txt_sham",
+    "sprite": ["txt/sham"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["chars", "ukstr", "shame", "virus"],
+    "desc": "virus waifu, the old version of virus."
+  },
+  {
+    "name": "alpha",
+    "sprite": ["alpha"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "retro_doo",
+    "desc": "beta version of Baba but Bab Omegafied.",
+    "tags": ["chars", "baba", "beta"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_alpha",
+    "sprite": ["txt/alpha"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "So skidibi rizz",
+    "tags": ["chars", "baba", "beta"]
   }
 ]

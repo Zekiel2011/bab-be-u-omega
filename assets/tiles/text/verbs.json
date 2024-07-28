@@ -308,5 +308,30 @@
     "color": [[0, 3]],
     "desc": "WERE (Verb): Causes the subject to become an object or have a property if PAST was in progress.\nAnti: Behaves as BE if PAST is not in progress.",
     "tags": ["was"]
+  },
+  {
+    "name": "txt_truebe",
+    "display": "true be",
+    "sprite": ["txt/truebe"],
+    "types": ["verb_class", "verb_property", "verb"],
+    "color": [[0, 3]],
+    "desc": "BE (Verb): Causes the subject to become an object or have a property.\nAnti: mirror",
+    "tags": ["is"]
+  },
+  {
+    "name": "txt_cliverb",
+    "sprite": ["txt/cliverb"],
+    "types": ["verb_class", "verb_property", "verb"],
+    "color": [[0, 3]],
+    "desc": "CLIVERB (Verb): Like CLIP, but as a verb.",
+    "tags": ["clipboard"]
+  },
+  {
+    "name": "txt_png",
+    "sprite": ["txt/png"],
+    "types": ["verb_class", "verb"],
+    "color": [[4, 2]],
+    "desc": "PNG (Verb) (NOT IMPLIMENTED): Makes X uses the sprite for Y.",
+    "tags": ["sprite", "picture"]
   }
 ]

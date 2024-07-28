@@ -262,12 +262,11 @@
   },
   {
     "name": "txt_babtoo",
-    "sprite": ["txt/bab2", "mini/letter_2"],
-    "metasprite": ["txt/bab2 meta"],
+    "sprite": ["modd/moddtxt/babtoo"],
     "types": ["object"],
-    "color": [[4, 1], [4,1]],
+    "color": [[4, 1]],
     "desc": "new and improoved? doesn't that imply bab 1 is old and inferior",
-    "tags": ["mod", "bab"]
+    "tags": ["mod", "chars", "bab"]
   },
   {
     "name": "waly",

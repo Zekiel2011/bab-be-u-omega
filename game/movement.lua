@@ -366,6 +366,17 @@ function doMovement(movex, movey, key)
         end
       end
       )
+      moveAndAnti("step",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"walk",dirAdd(unit.dir,dir),1)
+          end
+        end
+      end
+      )
       moveAndAnti("vibe",
       function(word,dir)
         local walk = getUnitsWithEffectAndCount(word)
@@ -395,6 +406,28 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if slippers[unit.id] == nil and timecheck(unit,"be",word) then
             addMove(unit,"matic",dirAdd(3,0),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("stalkledge",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"matic",dirAdd(5,0),walkness)
+          end
+        end
+      end
+      )
+      moveAndAnti("stalkredge",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"matic",dirAdd(1,0),walkness)
           end
         end
       end
@@ -2723,7 +2756,7 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
       --if/elseif chain for everything that sets stopped to true if it's true - no need to check the remainders after all! (but if anything ignores flye, put it first, like haet!)
       if rules_with["haet"] ~= nil and hasRule(unit, "haet", v) and not hasRule(unit,"liek",v) and ignoreCheck(unit,v) then
         stopped = true
-      elseif hasProperty(v, "nogo") and o.reason ~= "curse" then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
+      elseif hasProperty(v, "nogo") and o.reason ~= "curse" or hasProperty(v, "doth") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogo"))
       elseif hasProperty(v, "nogoish") and o.reason ~= "curse" and not hasProperty(v, "goawaypls") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogoish"))

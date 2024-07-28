@@ -612,7 +612,7 @@ function matchesRule(rule1,rule2,rule3,stopafterone,debugging)
                 result = false
               end
               --boring check. stopafterone is to make sure there's no infloops since i have no clue how anything actually works
-              if not stopafterone and rules_with["boring"] and #matchesRule(rule_units[i],"be","boring",true)>0 and not (rules_with[rule.verb.name.."n'tn't"] and #matchesRule(rule_units[i], rule.verb.name.."n'tn't", rule.object.name, true)>0) then
+              if not stopafterone and ((rules_with["boring"] and #matchesRule(rule_units[i],"be","boring",true)>0) or (rules_with["doth"] and #matchesRule(rule_units[i],"be","doth",true)>0)) and not (rules_with[rule.verb.name.."n'tn't"] and #matchesRule(rule_units[i], rule.verb.name.."n'tn't", rule.object.name, true)>0) then
                 result = false
               end
             end
@@ -682,7 +682,7 @@ end
 
 function boringAndNotCheck(unit, effect)
   if hasRule(unit, "ben't", effect) then return false end
-  if not rules_with["boring"] or effect == "boring" then return true end
+  if not rules_with["boring"] or effect == "boring" or rules_with["doth"] or effect == "doth" then return true end
   if hasProperty(unit,"boring") then return hasRule(unit,"ben'tn't",effect) end
   return true
 end
@@ -879,7 +879,7 @@ end
 
 
 function hasRule(rule1,rule2,rule3, return_rule)
-  if rules_with["boring"] and rule3 ~= "boring" and #matchesRule(rule1,"be","boring",true) > 0 then return false end
+  if (rules_with["boring"] and rule3 ~= "boring" and #matchesRule(rule1,"be","boring",true) > 0) or (rules_with["doth"] and rule3 ~= "doth" and #matchesRule(rule1,"be","doth",true) > 0) then return false end
   local matches = matchesRule(rule1,rule2,rule3, true)
   if #matches > 0 then return true, (return_rule and matches[1] or nil) end
   if not rules_with["rp"] then return false end
@@ -930,7 +930,7 @@ end
 
 function hasProperty(unit,prop,return_rule)
   if not rules_with[prop] and prop ~= "?" then return false end
-  if rules_with["boring"] and prop ~= "boring" and hasProperty(unit,"boring") then return false end
+  if (rules_with["boring"] and prop ~= "boring" and hasProperty(unit,"boring")) or (rules_with["doth"] and prop ~= "doth" and hasProperty(unit,"doth")) then return false end
   if unit and unit.fullname == "babby" and prop == "thicc" and not hasRule(unit, "be", "notranform") then return false end
   local has_be_rule, be_rule = hasRule(unit, "be", prop, true)
   if has_be_rule then return true, (return_rule and be_rule or nil) end
@@ -1821,6 +1821,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = countProperty(v, "energy", true) > 0
     elseif condtype == "on2" then
       result = countProperty(v, "energy2", true) > 0
+    elseif condtype == "nuhuh" then
+      result = false
     else
       print("unknown condtype: " .. condtype)
       result = false
@@ -3098,6 +3100,9 @@ function getAbsolutelyEverythingExcept(except)
   if not except:starts("txt") then
     table.insert(result, "txt")
   end
+  if not except:starts("obejt") then
+    table.insert(result, "obejt")
+  end
   
   for i,ref in ipairs(referenced_objects) do
     if ref ~= except and (ref ~= "this" or not except:starts("this")) then
@@ -3962,6 +3967,13 @@ function buildOptions()
     scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
+    scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
+    scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
+  elseif global_menu_state == "sus" then
+    love.graphics.draw(sprites["ui/fukc"], 34, -50)
+    scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
+  elseif global_menu_state == "debug" then
+    scene.addOption("night", "Fake Nighttime", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)
@@ -3969,6 +3981,9 @@ function buildOptions()
     scene.addButton("editor options", function() global_menu_state = "editor"; scene.buildUI() end)
     scene.addButton("miscelleaneous options", function() global_menu_state = "misc"; scene.buildUI() end)
     scene.addButton("more miscelleaneous options", function() global_menu_state = "misc2"; scene.buildUI() end)
+    scene.addButton("???", function() global_menu_state = "sus"; scene.buildUI() end)
+    scene.addButton("DEBUG", function() global_menu_state = "debug"; scene.buildUI() end)
+    --scene.addOption("trueis", "turn TRUE BE on or off?", {{"on", true}, {"off", false}})
     scene.addButton("reset to default settings", function ()
       ui.overlay.confirm({
         text = "Reset all settings to default?",
@@ -4643,8 +4658,20 @@ function drawSprite(x, y, rotation, sx, sy, o)
       if current_palette == "garden" and o.wobble then
         palette = "babagarden"
       end
+      if current_palette == "default" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+        palette = "night"
+      end
+      if current_palette == "greenfault" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+        palette = "greennight"
+      end
+      if current_palette == "baba" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+        palette = "babanight"
+      end
       if settings["contrast"] then
         palette = "contrast"
+      end
+      if current_palette == "chocolate" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+        palette = "vanilla"
       end
       --if current_palette == "default" and o.sprite[1] == "jely" or o.sprite[1] == "txt/jely" then
         --palette = "ocean"

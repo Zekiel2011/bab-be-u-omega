@@ -1134,6 +1134,14 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    local minos = getUnitsWithEffect("jojmen")
+    for _,unit in ipairs(minos) do
+      table.insert(to_destroy,unit)
+      playSound("break")
+      addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+      shakeScreen(0.3, 10)
+    end
+    
     local isantidefeat = getUnitsWithEffect("anti :(")
     for _,unit in ipairs(isantidefeat) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -1580,6 +1588,24 @@ function updateUnits(undoing, big_update)
       end
     end
     
+    local iswin2 = getUnitsWithEffect("win2")
+    for _,unit in ipairs(iswin2) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, "win2") then
+          if timecheck(unit,"be","win2") and (timecheckUs(on)) then
+            wins = wins + 1
+            addParticles("movement-puff", unit.x, unit.y, {2, 4})
+          else
+            addUndo({"timeless_win_add", on.id})
+            table.insert(timeless_win,on.id)
+            waittime = 0
+            addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+    end
+    
     local iscrasher = getUnitsWithEffect("loep")
     for _,unit in ipairs(iscrasher) do
       destroyLevel("infloop")
@@ -1588,6 +1614,11 @@ function updateUnits(undoing, big_update)
     local isrickroll = getUnitsWithEffect(";)")
     for _,unit in ipairs(isrickroll) do
       love.system.openURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    end
+    
+    local ishellc = getUnitsWithEffect("board")
+    for _,unit in ipairs(ishellc) do
+      love.system.setClipboardText(unit.name)
     end
     
     local iswhen = getUnitsWithEffect("when")
@@ -1716,14 +1747,21 @@ function updateUnits(undoing, big_update)
       if (createe == "txt") then
         createe = "txt_"..creator.fullname
       end
+      if (createe == "obejt") then
+        createe = "obejt_"..creator.fullname
+      end
       
       local tile = getTile(createe)
       --let x ben't x txt prevent x be txt, and x ben't txt prevent x be y txt
       local overriden = false;
       if object == "txt" then
         overriden = hasRule(creator, "creatn't", "txt_" .. creator.fullname)
+      elseif object == "obejt" then
+        overriden = hasRule(creator, "creatn't", "obejt_" .. creator.fullname)
       elseif object:starts("txt_") then
         overriden = hasRule(creator, "creatn't", "txt")
+      elseif object:starts("obejt_") then
+        overriden = hasRule(creator, "creatn't", "obejt")
       end
       if tile ~= nil and not overriden then
         local others = getUnitsOnTile(creator.x, creator.y, {name = createe, not_destroyed = true, thicc = countProperty(creator,"thicc")})
@@ -1772,7 +1810,7 @@ function updateUnits(undoing, big_update)
         end
       end
     end
-
+    
     local revived_units = {}
     local zombies = matchesRule("?", "be", "zomb")
     for _,match in ipairs(zombies) do
@@ -1906,7 +1944,7 @@ function miscUpdates(state_change)
   for i,unit in ipairs(units) do
     if not deleted and not unit.removed_final then
       local tile = getTile(unit.tile)
-      unit.layer = unit.layer + (hasProperty(unit,"curse") and 24 or 0) + (hasProperty(unit,"anti stelth") and 130 or 0)
+      unit.layer = unit.layer + (hasProperty(unit,"curse") and 24 or 0) + (hasProperty(unit,"anti stelth") and 130 or 0) + (hasProperty(unit,"zup") and 130 or 0) - (hasProperty(unit,"zown") and 130 or 0)
       if (0 < (graphical_property_cache["flye"][unit] or 0)) then
         unit.layer = unit.layer + 15 + 5 * (graphical_property_cache["flye"][unit] or 0)
       end
@@ -2022,6 +2060,18 @@ function miscUpdates(state_change)
         unit.sprite = {"no1"}
       end
       
+      if unit.fullname == "blossom" then
+        unit.sprite = {"no1"}
+      end
+      
+      if unit.fullname == "blossom2" then
+        unit.sprite = {"no1"}
+      end
+      
+      if unit.fullname == "blossom3" then
+        unit.sprite = {"no1"}
+      end
+      
       if unit.fullname == "ches" then
         if hasProperty(unit,"nedkee") then
           unit.sprite = {"chest_close"}
@@ -2055,7 +2105,9 @@ function miscUpdates(state_change)
       end
       
       if unit.fullname == "bab" then
-        if hasProperty(unit,"crye") then
+        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"bab_tired"}
+        elseif hasProperty(unit,"crye") then
           unit.sprite = {"bab_crye"}
         --elseif hasProperty(unit,"down") or (unit.draw.rotation = 3) then
           --unit.sprite = {"bab_down"}
@@ -2081,6 +2133,32 @@ function miscUpdates(state_change)
           unit.sprite = {"tzsh"}
         else
           unit.sprite = {"tzsh_2"}
+        end
+      end
+      
+      if unit.fullname == "txt_:)" then
+        if hasProperty(unit,"slep") or (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"txt/yay_slep"}
+        else
+          unit.sprite = {"txt/yay"}
+        end
+      end
+      
+      if unit.fullname == "txt_:(" then
+        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"txt/aw_tired"}
+        end
+      end
+      
+      if unit.fullname == "son" then
+        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"muun"}
+        end
+      end
+      
+      if unit.fullname == "muun" then
+        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"son"}
         end
       end
       
@@ -2252,7 +2330,7 @@ function miscUpdates(state_change)
           unit.sprite = {"txt/niko", "no1"}
         end
       end
-
+      
       unit.overlay = {}
       for name,overlay in pairs(overlay_props) do
         if graphical_property_cache[name][unit] ~= nil then
@@ -2409,6 +2487,12 @@ function updateUnitColours()
     local unit = match[2]
     unitUnsetColours(unit)
     to_update[unit] = {}
+  end
+  
+  local png = matchesRule(nil, "png", "?")
+  for _,ruleparent in ipairs(png) do
+    local unit = ruleparent[2]
+    unit.sprite = sprites[ruleparent[2]]
   end
   
   for unit,colours in pairs(to_update) do
@@ -3077,6 +3161,7 @@ function destroyLevel(reason)
     end]]
     handleDels(units_to_destroy,true)
     if reason == "infloop" and #transform_results == 0 then
+    --[[
       local new_unit = createUnit("infloop", math.floor(mapwidth/2), math.floor(mapheight/2), 1)
       addUndo({"create", new_unit.id, false})
       local gotrule = matchesRule("infloop","got","?")
@@ -3092,8 +3177,12 @@ function destroyLevel(reason)
           end
         end
       end
+      --]]
+      infloop=true --infloop dowin here
+      doWin("infloop", false)
     end
     if reason == "plsdont" and #transform_results == 0 then
+    --[[
       local new_unit = createUnit("plsdont", math.floor(mapwidth/2), math.floor(mapheight/2), 1)
       addUndo({"create", new_unit.id, false})
       local gotrule = matchesRule("plsdont","got","?")
@@ -3109,6 +3198,9 @@ function destroyLevel(reason)
           end
         end
       end
+      --]]
+      complex=true
+      doWin("complex", false)
     end
   end
   
@@ -3128,6 +3220,9 @@ function dropGotUnit(unit, rule)
     if rule.object.name == "txt" then
       obj_name = "txt_" .. unit.fullname
     end
+    if rule.object.name == "obejt" then
+      obj_name = "obejt_" .. unit.fullname
+    end
     if object:starts("this") then
       obj_name = "this"
     end
@@ -3138,6 +3233,11 @@ function dropGotUnit(unit, rule)
       overriden = hasRule(unit, "gotn't", "txt_" .. unit.fullname)
     elseif object:starts("txt_") or object:starts("letter_") then
       overriden = hasRule(unit, "gotn't", "txt")
+    end
+    if object == "obejt" then
+      overriden = hasRule(unit, "gotn't", "obejt_" .. unit.fullname)
+    elseif object:starts("obejt_") or object:starts("letter_") then
+      overriden = hasRule(unit, "gotn't", "obejt")
     end
     if not overriden and (obj_name == "mous" or obj_name == "themself" or obj_tile ~= nil) then
       if obj_name == "themself" then
@@ -3600,6 +3700,8 @@ function convertUnits(pass)
           local tile
           if v == "txt" then
             tile = getTile("txt_" .. rule.subject.name)
+          elseif v == "obejt" then
+            tile = getTile("obejt_" .. rule.subject.name)
           else
             tile = getTile(v)
           end
@@ -3637,6 +3739,8 @@ function convertUnits(pass)
             local tile
             if rule.object.name == "txt" then
               tile = getTile("txt_" .. rule.subject.name)
+            elseif rule.object.name == "obejt" then
+              tile = getTile("obejt_" .. rule.subject.name)
             elseif rule.object.name:starts("this") and not rule.object.name:ends("n't") then
               tile = getTile("this")
             else
@@ -3666,6 +3770,8 @@ function convertUnits(pass)
         local tile
         if rule.object.name == "txt" then
           tile = getTile("txt_" .. rule.subject.name)
+        elseif rule.object.name == "obejt" then
+          tile = getTile("obejt_" .. rule.subject.name)
         elseif rule.object.name:starts("this") and not rule.object.name:ends("n't") then
           tile = getTile("this")
         else
@@ -4506,6 +4612,12 @@ function updateNameBasedOnDir(unit)
     elseif unit.rotatdir == 8 then
       unit.textname = "go8"
     end
+  elseif unit.fullname == "txt_clip" or unit.fullname == "txt_cliverb" then
+    if not (love.system.getClipboardText() == "lvl") then
+      unit.textname = love.system.getClipboardText()
+    end
+  elseif unit.fullname == "letter_clip" then
+    unit.textname = love.system.getClipboardText()
   end
 end
 
@@ -4551,7 +4663,21 @@ function doWin(result_, payload_)
         playSound("unwin")
         writeSaveFile(false, {"levels",level_filename,"won"})
       end
+    elseif result == "infloop" and payload == false then
+      infloop = true
+      complex = false
+      currently_winning = true
+      music_fading = true
+      win_size = 0
+    elseif result == "complex" and payload == false then
+      infloop = false
+      complex = true
+      currently_winning = true
+      music_fading = true
+      win_size = 0
     else
+      infloop = false
+      complex = false
       won_this_session = true
       win_reason = result
       currently_winning = true

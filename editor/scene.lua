@@ -201,6 +201,11 @@ function scene.setupGooi()
     scene.keyReleased("tab")
   end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
   x = x + 40
+  gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+    scene.keyPressed("tab")
+    scene.keyReleased("tab")
+  end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
+  x = x + 40
   
   paint_button = gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onPress(function()
     if paint_open then
@@ -392,6 +397,7 @@ w = w-h, h = h}):center():setGroup("settings")
   local y = love.graphics.getHeight()/2 - tile_grid_height*16 - 32
   
   for i=1,#tile_grid do
+    --#tile_grid
     local tab_name = custom_selector_tab == i and "custom" or i
     if tab_name == 11 then
       if settings["baba"] then
@@ -407,7 +413,7 @@ w = w-h, h = h}):center():setGroup("settings")
       if selector_page == custom_selector_tab then
         selector_tab_buttons_list[selector_page]:setBGImage(sprites["ui/selector_tab_custom"], sprites["ui/selector_tab_custom_h"])
       else
-        local image_to_use = selector_page
+        image_to_use = selector_page
         if selector_page == 11 then
           if settings["baba"] then
             image_to_use = "baba"

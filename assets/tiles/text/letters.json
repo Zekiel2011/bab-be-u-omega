@@ -517,4 +517,11 @@
     "color": [[0, 3]],
     "desc": "Why is this called a lowercase sharp s when it looks like the letter B?"
   },
+  {
+    "name": "letter_clip",
+    "sprite": ["clip"],
+    "types": ["letter"],
+    "color": [[6, 2]],
+    "desc": "CLIP (letter): TRUE FREEDOM!!!"
+  }
 ]

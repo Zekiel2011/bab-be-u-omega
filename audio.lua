@@ -55,6 +55,18 @@ function playMusic(music, volume)
     music = "zez creat lvl"
   end
 
+  if music == "bab be go" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "bab be slep"
+  end
+
+  if music == "forte be deepe" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "forte be darrk"
+  end
+
+  if music == "limon be swiit" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "limight"
+  end
+
   if music_source ~= nil then
     music_source:stop()
   end
@@ -97,6 +109,15 @@ function resetMusic(name,volume)
   end
   if load_mode == "edit" and settings["editor_music"] then
     music = "zez creat lvl"
+  end
+  if music == "bab be go" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "bab be slep"
+  end
+  if music == "forte be deepe" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "forte be darrk"
+  end
+  if music == "limon be swiit" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    music = "limight"
   end
 end
 

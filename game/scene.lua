@@ -250,7 +250,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "/:o", "bonus", 0.5, 0.8, 1, {4, 1})
   scene.doPassiveParticles(dt, "huh", "bonus", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "unhuh", "unwin", 0.25, 1, 1, {1, 2})
-  scene.doPassiveParticles(dt, "^o^", "unwin", 0.25, 1, 10, {1, 4})
+  scene.doPassiveParticles(dt, "^o^", "unwin", 0.25, 1, 1, {0, 3})
   scene.doPassiveParticles(dt, "crye", "cry", 0.25, 1, 2, {1, 3})
   scene.doPassiveParticles(dt, "crye", "cry2", 0.25, 1, 2, {1, 3})
   scene.doPassiveParticles(dt, "scream", "bain", 0.25, 1, 2, {0, 3})
@@ -261,7 +261,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "energy", "movement-puff", 0.5, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy2", "blood", 0.5, 2.5, 1, {5, 3})
   scene.doPassiveParticles(dt, "energy2", "movement-puff", 0.5, 1, 1, {5, 3})
-
+  scene.doPassiveParticles(dt, "win2", "bonus", 0.25, 1, 1, {2, 4})
 	
   doReplay(dt)
   if rules_with and rules_with["rythm"] then
@@ -991,6 +991,22 @@ function scene.draw(dt)
       end
     end
 
+    if unit.fullname == "txt_ehceec" then
+      if doing_past_turns then
+        unit.sprite = {"txt/yehyeh"}
+      else
+        unit.sprite = {"txt/ehceec"}
+      end
+    end
+
+    if unit.fullname == "ehceec" then
+      if doing_past_turns then
+        unit.sprite = {"sehseh"}
+      else
+        unit.sprite = {"ehceec"}
+      end
+    end
+
     if unit.fullname == "txt_when" then
       if doing_past_turns then
         unit.sprite = {"txt/now2"}
@@ -1151,7 +1167,7 @@ function scene.draw(dt)
     --performance todos: each line gets drawn twice (both ways), so there's probably a way to stop that. might not be necessary though, since there is no lag so far
     --in fact, the double lines add to the pixelated look, so for now i'm going to make it intentional and actually add it in a couple places to be consistent
     local has_lin = false
-    if unit.name == "lin" and (not unit.special.pathlock or unit.special.pathlock == "none") and scene ~= editor then
+    if (unit.name == "lin" or unit.name == "lin2") and (not unit.special.pathlock or unit.special.pathlock == "none") and scene ~= editor then
       love.graphics.setLineWidth(4)
       love.graphics.setLineStyle("rough")
       local orthos = {}
@@ -1175,7 +1191,7 @@ function scene.draw(dt)
         local dx,dy,dir,px,py,portal = getNextTile(unit,nx,ny,ndir)
         local around = getUnitsOnTile(px,py)
         for _,other in ipairs(around) do
-          if (other.name == "lin" or other.name == "lvl") and not orthos[ndir/2] and not orthos[dirAdd(ndir,2)/2] then
+          if (other.name == "lin" or other.name == "lvl" or other.name == "lin2") and not orthos[ndir/2] and not orthos[dirAdd(ndir,2)/2] then
             table.insert(line,{unit.x*2-unit.draw.x+nx+other.draw.x-other.x, unit.y*2-unit.draw.y+ny+other.draw.y-other.y, portal})
             break
           end
@@ -1326,7 +1342,39 @@ function scene.draw(dt)
         love.graphics.draw(sprites["kat_eyes"], fulldrawx, fulldrawy, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
       end
     end
-
+    
+    if unit.fullname == "txt_ehceec" then
+      if doing_past_turns then
+       love.graphics.setColor(getPaletteColor(2,3))
+       love.graphics.draw(sprites["txt/yehyeh"], fulldrawx, fulldrawy, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      else
+       love.graphics.setColor(getPaletteColor(2,2))
+       love.graphics.draw(sprites["txt/ehceec"], fulldrawx, fulldrawy, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      end
+    end
+    
+    if unit.fullname == "ehceec" then
+      if doing_past_turns then
+       love.graphics.setColor(getPaletteColor(2,3))
+       love.graphics.draw(sprites["sehseh"], fulldrawx, fulldrawy, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      else
+       love.graphics.setColor(getPaletteColor(2,2))
+       love.graphics.draw(sprites["ehceec"], fulldrawx, fulldrawy, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      end
+    end
+    
+    if unit.fullname == "gaem" then
+      if hasProperty(unit,"gone") then
+        for i=1,5 do
+          love.window.setPosition(math.random(0,love.graphics.getWidth()/2), math.random(0,love.graphics.getHeight()/2), 0)
+        end
+        love.timer.sleep(5)
+        for i=1,10 do
+          love.window.setPosition(math.random(0,love.graphics.getWidth()), math.random(0,love.graphics.getHeight()), 0)
+        end
+      end
+    end
+    
     local cool_gang, cool_gang_rule = hasRule(unit,"be","cool gang",true)
     
     if hasProperty(unit,"cool") then unit.cool = true end
@@ -1522,7 +1570,52 @@ function scene.draw(dt)
       sprite = sprites["yea outline"]
       love.graphics.draw(sprite, 0, 0, rotation, rotation*10, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
     end
+    
+    if unit.fullname == "blossom" then
 
+      local rotation = love.timer.getTime()*0.9
+
+      setColor(getUnitColor(unit))
+
+      local sprite = sprites["blossum1"]
+      love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      
+      setColor(getUnitColor(unit))
+
+      sprite = sprites["blossum2"]
+      love.graphics.draw(sprite, 0, 0, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+    end
+    
+    if unit.fullname == "blossom2" then
+
+      local rotation = love.timer.getTime()*0.75
+
+      setColor(getUnitColor(unit))
+
+      local sprite = sprites["blossum3"]
+      love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      
+      setColor(getUnitColor(unit))
+
+      sprite = sprites["blossum4"]
+      love.graphics.draw(sprite, 0, 0, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+    end
+    
+    if unit.fullname == "blossom3" then
+
+      local rotation = love.timer.getTime()*0.5
+
+      setColor(getUnitColor(unit))
+
+      local sprite = sprites["blossumbig1"]
+      love.graphics.draw(sprite, 0, 0, rotation, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+      
+      setColor(getUnitColor(unit))
+
+      sprite = sprites["blossumbig2"]
+      love.graphics.draw(sprite, 0, 0, 0, unit.draw.scalex, unit.draw.scaley, sprite:getWidth() / 2, sprite:getHeight() / 2)
+    end
+    
     love.graphics.pop()
   end
   
@@ -1760,7 +1853,7 @@ function scene.draw(dt)
   love.graphics.setColor(1, 1, 1)
   love.graphics.translate(love.graphics.getWidth() / 2, love.graphics.getHeight() / 2)
   love.graphics.scale(win_size, win_size)
-  local win_sprite = #win_sprite_override > 0 and sprites["ui/u_r_thing"] or sprites["ui/u_r_win"]
+  local win_sprite = (infloop and sprites["ui/infloop"]) or (complex and sprites["ui/plsdont"]) or (#win_sprite_override > 0 and sprites["ui/u_r_thing"]) or sprites["ui/u_r_win"]
   love.graphics.draw(win_sprite, -win_sprite:getWidth() / 2, -win_sprite:getHeight() / 2, 0, 1, 1)
 
   if currently_winning and win_size < 1 then

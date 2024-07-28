@@ -58,6 +58,16 @@ function clearRules()
   addBaseRule("muuv","rp","cell")
   addBaseRule("stne","be","nogo")
   addBaseRule("stne","rp","cell")
+  addBaseRule("treesh","be","noswimish")
+  addBaseRule("treesh","rp","cell")
+  addBaseRule("treesh","arond","roatat","be","spin")
+  addBaseRule("stne","arond","roatat","be","spin")
+  addBaseRule("muuv","arond","roatat","be","spin")
+  addBaseRule("tholl","arond","roatat","be","spin")
+  addBaseRule("pooosh","arond","roatat","be","spin")
+  addBaseRule("redbloodcell","arond","roatat","be","spin")
+  addBaseRule("roatat","rp","cell")
+  addBaseRule("roatat","be","goawaypls")
   --kees baserules
   addBaseRule("kees","rp","kee")
   addBaseRule("kees","got","kee")
@@ -245,7 +255,7 @@ function parseRules(undoing)
   
   --TODO: This works in non-contrived examples, but isn't necessarily robust - for example, if after reparsing, you add one word rule while subtracting another word rule, it'll think nothing has changed. The only way to be ABSOLUTELY robust is to compare that the exact set of parsing effecting rules hasn't changed.
   local function reparseRuleCounts()
-    local props_table = {"wurd", "anti wurd", "poortoll", "goarnd", "mirrarnd", "ortho", "diag", "zawarudo", "rong", "slep", "boring"}
+    local props_table = {"wurd", "anti wurd", "poortoll", "goarnd", "mirrarnd", "ortho", "diag", "zawarudo", "rong", "slep", "boring", "doth"}
     local verbs_table = {"be", "giv"}
     local result = {}
     for _,prop in ipairs(props_table) do
@@ -866,6 +876,15 @@ function addRule(full_rule)
     addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
   end
   
+  if verb == "truebe" and settings["trueis"] then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+  
   if verb == "were" and doing_past_turns then
     local new_verb = copyTable(rules.verb)
     new_verb.name = "be"
@@ -1282,6 +1301,7 @@ function shouldReparseRules()
     {"?","be","rong"},
     {"?","be","slep"},
     {"?","be","boring"},
+    {"?","be","doth"},
   }
   if rules_with["poortoll"] then
     table.insert(rules_to_check, {"?","be","poortoll"})
