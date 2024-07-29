@@ -262,6 +262,8 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "energy2", "blood", 0.5, 2.5, 1, {5, 3})
   scene.doPassiveParticles(dt, "energy2", "movement-puff", 0.5, 1, 1, {5, 3})
   scene.doPassiveParticles(dt, "win2", "bonus", 0.25, 1, 1, {2, 4})
+  scene.doPassiveParticles(dt, "energy3", "blood", 0.5, 2.5, 1, {3, 3})
+  scene.doPassiveParticles(dt, "energy3", "movement-puff", 0.5, 1, 1, {3, 3})
 	
   doReplay(dt)
   if rules_with and rules_with["rythm"] then

@@ -1821,6 +1821,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = countProperty(v, "energy", true) > 0
     elseif condtype == "on2" then
       result = countProperty(v, "energy2", true) > 0
+    elseif condtype == "on3" then
+      result = countProperty(v, "energy3", true) > 0
     elseif condtype == "nuhuh" then
       result = false
     else

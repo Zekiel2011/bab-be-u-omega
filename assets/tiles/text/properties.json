@@ -1725,5 +1725,21 @@
     "wobble": true,
     "desc": "WIN: At end of turn, if U is on WIN and survives, U R :)!\nAnti: un:)",
     "tags": ["win", "baba"]
+  },
+  {
+    "name": "txt_on3",
+    "sprite": ["txt/on", "mini/letter_3"],
+    "types": ["cond_prefix"],
+    "color": [[3, 3], [3,3]],
+    "desc": "ON3: True if a object is ENERGY3, acts like POWERED.",
+    "tags": ["txt", "powered", "eletricitized", "powrd"]
+  },
+  {
+    "name": "txt_energy3",
+    "sprite": ["txt/energy", "mini/letter_3"],
+    "types": ["property"],
+    "color": [[3, 3], [3,3]],
+    "desc": "ENERGY3: Powers and activates any ON3 conditions, like POWER.",
+    "tags": ["power", "eletricity", "powr"]
   }
 ]

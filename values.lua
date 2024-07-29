@@ -560,7 +560,7 @@ selector_grid_contents = {
     "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld",0,0,0,0,0,0,
     "txt_uhhh","txt_scary",0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6","txt_xwx","txt_crye",0,0,0,"txt_bigender","txt_gaymen",0,0,0,0,0,0,
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
-    "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_on","txt_on2",0,0,0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",0,0,0,0,0,0,
+    "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",0,0,0,0,0,0,
   },
   {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_camra","camra",0,0,0,0,0,0,
