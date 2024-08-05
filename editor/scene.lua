@@ -201,11 +201,6 @@ function scene.setupGooi()
     scene.keyReleased("tab")
   end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
   x = x + 40
-  gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
-    scene.keyPressed("tab")
-    scene.keyReleased("tab")
-  end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
-  x = x + 40
   
   paint_button = gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onPress(function()
     if paint_open then
@@ -778,6 +773,10 @@ function scene.keyPressed(key)
     selector_page = (selector_page - 2) % #tile_grid + 1
   elseif selector_open and tonumber(key) and tonumber(key) <= #tile_grid and tonumber(key) > 0 and (key_down["lctrl"] or key_down["rctrl"]) then
     selector_page = tonumber(key)
+  elseif selector_open and key_down["pageup"] and not (selector_page > 12) then
+    selector_page = selector_page + 12
+  elseif selector_open and key_down["pagedown"] and (selector_page > 12) then
+    selector_page = selector_page - 12
   end
   
   --only refresh tile grid if the page actually changed to preserve meta text levels
@@ -789,7 +788,7 @@ function scene.keyPressed(key)
     else
       local image_to_use = selector_page
       if selector_page == 11 then
-        if settings["baba"] then
+        if selector_page == 0 then
           image_to_use = "baba"
         else
           image_to_use = "unfinished"
@@ -919,11 +918,11 @@ function scene.mouseReleased(x, y, button)
       end
       if mouseOverBox(-38, -95, 16, 16, t) then
         level_dialogue.unit.special.iconstyle = "dots"
-        if level_dialogue.unit.special.number and level_dialogue.unit.special.number < 1 then
-          level_dialogue.unit.special.number = 1
+        if level_dialogue.unit.special.number and level_dialogue.unit.special.number < 13 then
+          level_dialogue.unit.special.number = 13
         end
-        if level_dialogue.unit.special.number and level_dialogue.unit.special.number > 9 then
-          level_dialogue.unit.special.number = 9
+        if level_dialogue.unit.special.number and level_dialogue.unit.special.number > 11 then
+          level_dialogue.unit.special.number = 11
         end
         level_dialogue.iconnamebox:setVisible(false)
         level_dialogue.iconnamebox:setEnabled(false)
@@ -955,7 +954,7 @@ function scene.mouseReleased(x, y, button)
         end
         if mouseOverBox(3, -70, 11, 16, t) then
           local max = 99
-          if level_dialogue.unit.special.iconstyle == "dots" then max = 9 end
+          if level_dialogue.unit.special.iconstyle == "dots" then max = 13 end
           if level_dialogue.unit.special.iconstyle == "letter" then max = 26 end
           level_dialogue.unit.special.number = (level_dialogue.unit.special.number or 1) + (shift and 10 or 1)
           if (level_dialogue.unit.special.number or 1) > max then

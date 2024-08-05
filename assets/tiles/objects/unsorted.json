@@ -2960,7 +2960,7 @@
   {
     "name": "hous",
     "sprite": ["hous"],
-    "layer": 2,
+    "layer": 5,
     "color": [[6, 2]],
     "desc": "place wher peple liev",
     "tags": ["house"],
@@ -3974,5 +3974,52 @@
     "color": [[2, 4]],
     "desc": "Btw the revival objects don't use custom sprites for text unless it doesn't have any, as seen with Wrench.",
     "tags": ["lemonaid", "revive"]
+  },
+  {
+    "name": "hil",
+    "sprite": ["hil"],
+    "layer": 10,
+    "color": [[0, 3]],
+    "desc": "form mobil sueti bab",
+    "tags": ["hill", "mountain", "msb", "mobile suit baba"]
+  },
+  {
+    "name": "txt_hil",
+    "sprite": ["txt/hil"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["hill", "mountain", "msb", "mobile suit baba"]
+  },
+  {
+    "name": "cherri",
+    "sprite": ["cherri"],
+    "layer": 6,
+    "color": [[2, 2]],
+    "rotate": true,
+    "desc": "would this be two cherries, or just one...?",
+    "tags": ["fruit", "cherry", "plants", "food"]
+  },
+  {
+    "name": "txt_cherri",
+    "sprite": ["txt/cherri"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "tags": ["fruit", "cherry", "plants", "food"]
+  },
+  {
+    "name": "loc",
+    "sprite": ["loc"],
+    "layer": 10,
+    "color": [[0, 2]],
+    "desc": "How many things are there going to be for Kees?!?",
+    "tags": ["lock", "forkee", "4kee", "dor", "door"]
+  },
+  {
+    "name": "txt_loc",
+    "sprite": ["txt/loc"],
+    "types": ["object"],
+    "color": [[0, 2]],
+    "desc": "L KEE C",
+    "tags": ["lock", "forkee", "4kee", "dor", "door"]
   }
 ]

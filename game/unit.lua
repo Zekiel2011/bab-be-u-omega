@@ -3456,6 +3456,29 @@ function convertUnits(pass)
       end
     end
   end
+  
+  local demeta2 = getUnitsWithEffectAndCount("deobe")
+  for unit,amt in pairs(demeta2) do
+    unit = units_by_id[unit] or cursors_by_id[unit]
+    if not unit.new and unit.type ~= "outerlvl" and timecheck(unit,"be","deobe") then
+      --remove "txt_" as many times as we're de-metaing
+      local nametocreate = unit.fullname
+      for i = 1,amt do
+        local newname = nametocreate
+        local tile = getTile(nametocreate)
+        if nametocreate:starts("obejt_") then
+          newname = nametocreate:sub(7, -1)
+        end
+        if not getTile(newname) then
+          break
+        end
+        nametocreate = newname
+      end
+      if nametocreate ~= unit.fullname then
+        addTile(nametocreate,unit)
+      end
+    end
+  end
 
   local ntify = getUnitsWithEffectAndCount("n'tify")
   for unit,amt in pairs(ntify) do

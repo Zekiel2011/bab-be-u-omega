@@ -3628,5 +3628,81 @@
     "color": [[0, 3]],
     "desc": "So skidibi rizz",
     "tags": ["chars", "baba", "beta"]
+  },
+  {
+    "name": "emme",
+    "sprite": ["emme1", "emme2"],
+    "layer": 11,
+    "color": [[3, 0], [0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 18, "y": 3, "w": 2, "h": 2}
+    },
+    "voice": "s_organ",
+    "desc": "Does it evolve into GOLEMME at level 22?",
+    "tags": ["chars", "em"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_emme",
+    "sprite": ["txt/emme"],
+    "types": ["object"],
+    "color": [[3, 0]],
+    "tags": ["chars", "em"]
+  },
+  {
+    "name": "bobua",
+    "sprite": ["bobua"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "s_doo",
+    "desc": "Would you call it \"BOBUA\" or \"KIIK\"?",
+    "tags": ["chars", "baba", "bouba"],
+    "pronouns": ["ze", "zir"]
+  },
+  {
+    "name": "txt_bobua",
+    "sprite": ["txt/bobua"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "I was thinking of naming it \"BOBA\" but I desided not to.",
+    "tags": ["chars", "baba", "bobua"]
+  },
+  {
+    "name": "kiik",
+    "sprite": ["kiik"],
+    "layer": 11,
+    "color": [[2, 2]],
+    "rotate": true,
+    "voice": "s_saw",
+    "desc": "Would you call it \"KIIK\" or \"BOBUA\"?",
+    "tags": ["keke", "chars", "kiki"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_kiik",
+    "sprite": ["txt/kiik"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "tags": ["keke", "chars", "kiki"]
+  },
+  {
+    "name": "baskitt",
+    "sprite": ["baskitt"],
+    "layer": 11,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "It has been a tradition to bounce BASKITT's on hollidays, it doesn't seem to mind however.",
+    "tags": ["it", "itt", "baskitball", "chars"],
+    "pronouns": ["it"]
+  },
+  {
+    "name": "txt_baskitt",
+    "sprite": ["txt/baskitt"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "boll",
+    "tags": ["it", "itt", "baskitball", "chars"]
   }
 ]

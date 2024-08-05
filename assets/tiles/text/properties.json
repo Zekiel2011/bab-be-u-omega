@@ -1741,5 +1741,29 @@
     "color": [[3, 3], [3,3]],
     "desc": "ENERGY3: Powers and activates any ON3 conditions, like POWER.",
     "tags": ["power", "eletricity", "powr"]
+  },
+  {
+    "name": "txt_holde",
+    "sprite": ["txt/holde"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "HOLDE: Takes a object and doesn't let it go.",
+    "tags": ["hold", "grab", "baba"]
+  },
+  {
+    "name": "txt_deobe",
+    "sprite": ["txt/deobe"],
+    "types": ["property"],
+    "color": [[0, 2]],
+    "desc": "DEOBE: Causes a OBEJT to become its normal OBJECT counterpart.",
+    "tags": ["deobj"]
+  },
+  {
+    "name": "txt_classs",
+    "sprite": ["txt/classs"],
+    "types": ["property"],
+    "color": [[3, 3]],
+    "desc": "CLASSS: Makes OBEJT's parse... well kinda. It's meant to be funny.",
+    "tags": ["class", "word", "object", "obj"]
   }
 ]

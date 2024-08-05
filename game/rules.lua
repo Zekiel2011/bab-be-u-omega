@@ -1045,6 +1045,18 @@ function addRule(full_rule)
         end
       end
     end
+  elseif subject == "obejt" then
+    for _,v in ipairs(referenced_objects) do
+      if subject_not % 2 == 1 then
+        if not v:starts("obejt_") then
+          addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+        end
+      else
+        if v:starts("obejt_") then
+          addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+        end
+      end
+    end
   elseif subject_not % 2 == 1 then
     if getTile(subject) or subject == "txt" then
       local new_subjects = getEverythingExcept(subject)

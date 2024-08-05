@@ -294,5 +294,86 @@
     "rotate": false,
     "desc": "put these around the nonexistent bab orb parsers to parse rules!",
     "tags": ["obj"]
+  },
+  {
+    "name": "obejt_starr",
+    "sprite": ["obejt/starr"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "begin",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_letter_a",
+    "sprite": ["obejt/letter_a"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": true,
+    "desc": "shh secret?",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_txt_a",
+    "sprite": ["obejt/txt_a"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": true,
+    "desc": "AAAAAAAAA",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_lesbab",
+    "sprite": ["obejt/lesbab"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": true,
+    "desc": "there is less of Bab",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_fof",
+    "sprite": ["obejt/fof"],
+    "layer": 20,
+    "color": [[5, 2]],
+    "rotate": true,
+    "desc": "from a place",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_u",
+    "sprite": ["obejt/u"],
+    "layer": 20,
+    "color": [[4, 0]],
+    "rotate": true,
+    "desc": "esdf",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_arro",
+    "sprite": ["obejt/arro"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "rotate": true,
+    "desc": "pointy",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_hedg",
+    "sprite": ["obejt/hedg"],
+    "layer": 20,
+    "color": [[5, 3]],
+    "rotate": false,
+    "desc": "anti sharp",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_gras",
+    "sprite": ["obejt/gras"],
+    "layer": 20,
+    "color": [[5, 3]],
+    "rotate": false,
+    "desc": "touch?",
+    "tags": ["obj"]
   }
 ]
