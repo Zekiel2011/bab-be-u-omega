@@ -3343,7 +3343,7 @@
     "sprite": ["spinklr"],
     "layer": 3,
     "color": [[0, 2]],
-    "desc": "It sprinkles watr",
+    "desc": "It sprinkles watr\nAlso, I didn't make the sprite for it, it was in Bab's sprites folder but not in the game as a object.",
     "tags": ["sprinkler", "revive"]
   },
   {
@@ -3449,6 +3449,7 @@
     "name": "noe",
     "sprite": ["no bad dont"],
     "layer": 90,
+    "voice": "wrong",
     "color": [[2, 2]],
     "desc": "Don't you dare!",
     "tags": ["no", "no bad dont"],
@@ -3466,6 +3467,7 @@
     "name": "yea",
     "sprite": ["yea"],
     "layer": 90,
+    "voice": "correct",
     "color": [[5, 3]],
     "desc": "Do you dare!",
     "tags": ["yes", "yes bab do"],
@@ -4021,5 +4023,84 @@
     "color": [[0, 2]],
     "desc": "L KEE C",
     "tags": ["lock", "forkee", "4kee", "dor", "door"]
+  },
+  {
+    "name": "placeholder",
+    "sprite": ["placeholder"],
+    "layer": 15,
+    "color": [[0, 3]],
+    "desc": "error 404 object not found",
+    "tags": ["what", "error", "pee", "placeholder", "placholdr", "placehldr"]
+  },
+  {
+    "name": "txt_placeholder",
+    "sprite": ["txt/placeholder"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["what", "error", "pee", "placeholder", "placholdr", "placehldr"]
+  },
+  {
+    "name": "dangoh",
+    "sprite": ["dangoh1", "dangoh2", "dangoh3", "dangoh4"],
+    "layer": 10,
+    "color": [[6, 1], [5, 3], [4, 2], [2, 4]],
+    "painted": [false, true, false, false],
+    "rotate": true,
+    "desc": "It also got kat from",
+    "tags": ["turbowarp", "food"]
+  },
+  {
+    "name": "txt_dangoh",
+    "sprite": ["txt/dangoh"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "Aw dang it!",
+    "tags": ["dango", "food"]
+  },
+  {
+    "name": "gras2",
+    "sprite": ["gras2"],
+    "layer": 3,
+    "color": [[5, 2]],
+    "desc": "it kinda tiles",
+    "tags": ["grass", "plants"]
+  },
+  {
+    "name": "txt_gras2",
+    "sprite": ["txt/gras2"],
+    "types": ["object"],
+    "color": [[5, 4]],
+    "tags": ["grass", "plants"]
+  },
+  {
+    "name": "txt_squar",
+    "sprite": ["txt/squar"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "tags": ["square"]
+  },
+  {
+    "name": "squar",
+    "sprite": ["squar"],
+    "layer": 6,
+    "color": [[4, 1]],
+    "desc": "0 out of 10, not a true square.",
+    "tags": ["squar"]
+  },
+  {
+    "name": "turnep",
+    "sprite": ["turnep"],
+    "layer": 9,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "No, this isn't the turnip that commited tax evasion and also robbed a bank.",
+    "tags": ["turnip", "plants", "food", "vegetable"]
+  },
+  {
+    "name": "txt_turnep",
+    "sprite": ["txt/turnep"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["turnip", "plants", "food", "vegetable"]
   }
 ]

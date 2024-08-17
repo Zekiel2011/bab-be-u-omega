@@ -3503,7 +3503,7 @@
     "voice": "s_organ",
     "desc": "meemto is one of the most truest philosopher of this time, and is also beebs 3ff",
     "tags": ["chars"],
-    "pronouns": ["ze", "zir"]
+    "pronouns": ["ze", "hir"]
   },
   {
     "name": "txt_meemto",
@@ -3542,7 +3542,7 @@
     "rotate": true,
     "desc": "beep boop bap",
     "tags": ["chars", "robaba", "robab", "baba"],
-    "pronouns": ["ze", "zir"]
+    "pronouns": ["ze", "hir"]
   },
   {
     "name": "txt_robert",
@@ -3659,7 +3659,7 @@
     "voice": "s_doo",
     "desc": "Would you call it \"BOBUA\" or \"KIIK\"?",
     "tags": ["chars", "baba", "bouba"],
-    "pronouns": ["ze", "zir"]
+    "pronouns": ["ze", "hir"]
   },
   {
     "name": "txt_bobua",
@@ -3704,5 +3704,111 @@
     "color": [[6, 2]],
     "desc": "boll",
     "tags": ["it", "itt", "baskitball", "chars"]
+  },
+  {
+    "name": "zarj",
+    "sprite": ["zarj"],
+    "layer": 11,
+    "color": [[5, 2]],
+    "rotate": true,
+    "desc": "The trick is that the sprite isn't just white, its blue, so that way the green overlay makes it appear teal.",
+    "tags": ["zarjo", "chars"]
+  },
+  {
+    "name": "txt_zarj",
+    "sprite": ["txt/zarj"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["zarjo", "chars"],
+    "desc": "idk the color is kinda on the palette"
+  },
+  {
+    "name": "kuewee",
+    "sprite": ["kuewee"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "voice": "s_doo",
+    "desc": "another user wanted me to add this basicly",
+    "tags": ["chars", "baba", "kuwi"],
+    "pronouns": ["ze", "zer"]
+  },
+  {
+    "name": "txt_kuewee",
+    "sprite": ["txt/kuewee"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "}t somethingyouthinkishouldaddtobabbeuomega",
+    "tags": ["chars", "baba", "kuwi"]
+  },
+  {
+    "name": "datteve",
+    "sprite": ["datteve"],
+    "layer": 11,
+    "color": [[1, 3]],
+    "rotate": true,
+    "desc": "baby itt, not to be confused with Datti!",
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_datteve",
+    "sprite": ["txt/datteve"],
+    "types": ["object"],
+    "color": [[1, 3]],
+    "desc": "Datteve babby itt!",
+    "tags": ["chars", "itt"]
+  },
+  {
+    "name": "vaaver",
+    "sprite": ["vaaver"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "desc": "Lives for 100 days, a evolved JELY.",
+    "tags": ["chars", "jelly", "jellyfish", "fish", "vava", "vaav"],
+    "pronouns": ["ze", "hir"]
+  },
+  {
+    "name": "txt_vaaver",
+    "sprite": ["txt/vaaver"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "desc": "Pat da Vaaver",
+    "tags": ["chars", "jelly", "jellyfish", "fish", "vava", "vaav"]
+  },
+  {
+    "name": "acron",
+    "sprite": ["acron1", "acron2"],
+    "color": [[6, 1], [5, 3]],
+    "painted": [true, false],
+    "layer": 11,
+    "rotate": true,
+    "desc": "my land\nget off my property",
+    "tags": ["chars", "acorn", "turnip boy commits tax evasion", "turnip boy robs a bank", "real estate"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_acron",
+    "sprite": ["txt/acron"],
+    "types": ["object"],
+    "color": [[5, 1]],
+    "tags": ["chars", "acorn", "turnip boy commits tax evasion", "turnip boy robs a bank", "real estate"]
+  },
+  {
+    "name": "musrur",
+    "sprite": ["musrur"],
+    "layer": 11,
+    "color": [[6, 1]],
+    "rotate": true,
+    "desc": "actually very fun guys.",
+    "tags": ["musururu", "fungus", "mushroom", "chars"],
+	  "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_musrur",
+    "sprite": ["txt/musrur"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["musururu", "fungus", "mushroom", "chars"]
   }
 ]

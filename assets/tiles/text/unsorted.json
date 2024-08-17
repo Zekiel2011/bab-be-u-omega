@@ -390,5 +390,13 @@
     "color": [[2, 2]],
     "desc": "NUHUH (PREFIX): Cancels any rules it is in.",
     "tags": ["nuhuh", "cancel", "false", "rule"]
+  },
+  {
+    "name": "txt_east2",
+    "sprite": ["txt/east"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "EAST (Unimplemented): Not to be confused with RIGHT, a noun that refers to any object facing right.",
+    "tags": ["right"],
   }
 ]

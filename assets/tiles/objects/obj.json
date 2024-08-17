@@ -375,5 +375,14 @@
     "rotate": false,
     "desc": "touch?",
     "tags": ["obj"]
+  },
+  {
+    "name": "obejt_skul",
+    "sprite": ["obejt/skul"],
+    "layer": 20,
+    "color": [[2, 1]],
+    "rotate": true,
+    "desc": "rip",
+    "tags": ["obj"]
   }
 ]

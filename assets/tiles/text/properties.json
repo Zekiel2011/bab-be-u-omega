@@ -1765,5 +1765,16 @@
     "color": [[3, 3]],
     "desc": "CLASSS: Makes OBEJT's parse... well kinda. It's meant to be funny.",
     "tags": ["class", "word", "object", "obj"]
+  },
+  {
+    "name": "txt_crystal",
+    "sprite": ["txt/crystal"],
+    "types": ["property"],
+    "overlay": {
+      "sprite": "crystal",
+    },
+    "color": [[0, 3]],
+    "desc": "CRYSTAL: Destroys any objects on it if there are 2 or more on it, also has a overlay.",
+    "tags": ["sharp", "destroy", "crystal", "overlay"]
   }
 ]

@@ -4385,7 +4385,7 @@ function getTileSprite(name, tile, o)
       return sprites[try_name], try_name
     end
   end
-  return sprites["wat"], "wat"
+  return sprites["placeholder"], "placeholder"
 end
 
 function getTileSprites(tile)
@@ -4783,7 +4783,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
       local letter = ("abcdefghijklmnopqrstuvwxyz"):sub(num, num)
       love.graphics.draw(sprites["letter_"..letter], x, y, 0, sx*3/4, sy*3/4, max_w / 2, max_h / 2)
     elseif o.special.iconstyle == "other" then
-      local sprite = sprites[o.special.iconname or "wat"] or sprites["wat"]
+      local sprite = sprites[o.special.iconname or "placeholder"] or sprites["placeholder"]
       love.graphics.draw(sprite, x, y, 0, sx*3/4, sy*3/4, sprite:getWidth() / 2, sprite:getHeight() / 2)
     end
     love.graphics.pop()
