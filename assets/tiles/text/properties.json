@@ -1774,7 +1774,26 @@
       "sprite": "crystal",
     },
     "color": [[0, 3]],
-    "desc": "CRYSTAL: Destroys any objects on it if there are 2 or more on it, also has a overlay.",
+    "desc": "CRYSTAL: (UNIMPLIMENTED) Destroys any objects on it if there are 2 or more on it, also has a overlay.",
     "tags": ["sharp", "destroy", "crystal", "overlay"]
+  },
+  {
+    "name": "txt_smash",
+    "sprite": ["txt/smash"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "SMASH: Causes the unit to destroy the object it's facing.",
+    "tags": ["bang", "smash or pass", "markiplier"]
+  },
+  {
+    "name": "txt_no:)",
+    "sprite": ["txt/noyay"],
+    "types": ["property"],
+    "color": [[1, 2]],
+    "features": {
+      "sans": {"x": 19, "y": 14, "w": 2, "h": 4}
+    },
+    "desc": "NO:): If a NO:) object is in the level, you cannot :).",
+    "tags": ["evil"]
   }
 ]

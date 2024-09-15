@@ -177,8 +177,12 @@ corl = {4, 2},
 graey = {0, 1},
 brwn = {6, 0},
 golld = {6, 2},
+viloet = {3, 3},
+extra = {0, 0},
+pushy = {6, 1},
+darkgrun = {5, 1},
 }
-color_names = {"reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc", "whit", "blacc", "graey", "brwn", "corl", "limeme", "golld"}
+color_names = {"reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc", "whit", "blacc", "graey", "brwn", "corl", "limeme", "golld", "viloet", "extra", "pushy", "darkgrun"}
 
 colour_for_palette = {}
 colour_for_palette[0] = {}
@@ -203,7 +207,7 @@ colour_for_palette[3] = {}
 colour_for_palette[3][0] = "pinc"
 colour_for_palette[3][1] = "purp"
 colour_for_palette[3][2] = "purp"
-colour_for_palette[3][3] = "purp"
+colour_for_palette[3][3] = "viloet"
 colour_for_palette[3][4] = nil
 colour_for_palette[4] = {}
 colour_for_palette[4][0] = "pinc"
@@ -512,7 +516,7 @@ selector_grid_contents = {
   {
     0,0,"itt","txt_itt","spirt","txt_spirt","menstr","txt_menstr","kook","txt_kook","muum","txt_muum","badbad","txt_badbad","babbab","txt_babbab","bibi","txt_bibi","aes","txt_aes","wontapply","txt_wontapply","funni","txt_funni",
     "keke","txt_keke","baddy","txt_baddy","iys","txt_iys","kyyk","txt_kyyk","kmeem","txt_kmeem","hbab","txt_hbab","babnot","txt_babnot","snobab","txt_snobab","jely","txt_jely","itd","txt_itd","itevt","txt_itevt","datti","txt_datti",
-    "aba","txt_aba","tratra","txt_tratra",0,0,"zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals","bob","txt_bob","nice","txt_nice","bahb","txt_bahb",
+    "aba","txt_aba","tratra","txt_tratra","fukc","txt_fukc","zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals","bob","txt_bob","nice","txt_nice","bahb","txt_bahb",
     "maeryio","txt_maeryio","zez","txt_zez","duf","txt_duf","baab","txt_baab","keeeeeeke","txt_keeeeeeke","tzsh","txt_tzsh","tesho","txt_tesho","glebab","txt_glebab","meemto","txt_meemto","dood","txt_dood","robert","txt_robert","emme","txt_emme",
     "pwn","txt_pwn","rok","txt_rok","bihop","txt_bihop","foof","txt_foof","jim","txt_jim","joj","txt_joj","beu","txt_beu","xixe","txt_xixe","bah","txt_bah","musrur","txt_musrur",0,0,0,0,
     "hempuli","txt_hempuli","arvi","txt_arvi","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!","jillt","txt_jillt","beellt","txt_beellt","nalß","txt_nalß","nabby","txt_nabby",0,0,0,0,0,0,0,0,
@@ -522,9 +526,9 @@ selector_grid_contents = {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "zezi","txt_zezi","zezzer","txt_zezzer",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,":o","gomyway","u",0,0,0,0,"bebe","txt_bebe","txt_txt_bebe",0,0,0,0,0,0,
+    0,0,0,0,0,0,"spoop","creat","the","reed","orang","w/fren",0,0,0,0,0,0,0,0,0,0,0,0,
+    "zezi","txt_zezi","zezzer","txt_zezzer",0,0,"nuek","fridgd","energy","hotte","behinu","arond","icy","nxt",0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,"got","nt",":o","gomyway","u",":(","utoo","stelth",0,"bebe","txt_bebe","txt_txt_bebe",0,0,0,0,0,0,
   },
   -- page 9: Platfory's modds
   {
@@ -535,7 +539,7 @@ selector_grid_contents = {
 	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic",0,"txt_did",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"muuv","pooosh","redbloodcell","tholl","stne",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"be","goawaypls","nedkee","fordor","every1","every2","every3","txtify",":)",0,0,0,0,"direction",0,0,0,0,0,0,0,0,0,0,
-	"snacc","ouch","lookat","nogo","walk","flye",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	"snacc","ouch","lookat","nogo","walk","flye","go",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"beb","txt_beb","dad","txt_dad","day","txt_day","getboux","txt_getboux","obby","txt_obby","tu","txt_tu","then","txt_then","hey","txt_hey",0,0,0,0,0,0,0,0,
 	"zekiel2","txt_zekiel2","menstr2","txt_menstr2","jely2","txt_jely2","babtoo","txt_babtoo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -547,17 +551,17 @@ selector_grid_contents = {
   -- page 10: the extra propertys and stuff
   {
     "txt_iscome","txt_befit","txt_dat",0,"txt_snaccish","txt_noswims","txt_foeddee","txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,"obejt_bab","obejt_be","obejt_keek","obejt_watr","obejt_fenss","obejt_algay","obejt_buble","obejt_meem","obejt_dor",
-    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal",0,0,"txt_huh","txt_spark",0,0,0,0,"txt_obejt","obejt_til","obejt_flog","obejt_boux","obejt_bellt","obejt_kee","obejt_boll","obejt_wal","obejt_obejt_bab",
+    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,"txt_huh","txt_spark",0,0,0,0,"txt_obejt","obejt_til","obejt_flog","obejt_boux","obejt_bellt","obejt_kee","obejt_boll","obejt_wal","obejt_obejt_bab",
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,"txt_unhuh","txt_zup",0,0,0,0,"txt_classs","txt_deobe","obejt_huro","obejt_platfory","obejt_txt_u","obejt_obejt_keek","obejt_obejt_obejt_bab","obejt_txt_bab","obejt_txt_be",
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o","txt_zown",0,0,0,0,"txt_whuhd","txt_png",0,"obejt_lesbab","obejt_txt_a","obejt_letter_a","obejt_starr","obejt_obejt","obejt_meemto",
     "txt_dirgo","txt_nogoish",0,0,"txt_step","txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,"obejt_skul","obejt_gras","obejt_hedg","obejt_arro","obejt_u","obejt_fof",
     "txt_living","txt_vsel","txt_stalkskye","txt_stalkflor","txt_clip","txt_board","txt_cliverb","letter_clip",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_doth",0,"txt_stalkledge","txt_stalkredge",0,0,0,0,"txt_ufor",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "treesh",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "treesh","txt_beok","txt_uok","txt_nogook","txt_:)ok",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_omega",0,"txt_east2","txt_vibe",0,0,0,0,0,0,"txt_scream",0,"txt_golden_be",0,0,0,0,0,0,0,0,0,0,0,
     "txt_loep",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld",0,0,0,0,0,0,
+    "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld","txt_viloet",0,0,0,0,0,
     "txt_uhhh","txt_scary",0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6","txt_xwx","txt_crye",0,0,0,"txt_bigender","txt_gaymen",0,0,0,0,0,0,
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
     "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",0,0,0,0,0,0,
@@ -652,9 +656,9 @@ selector_grid_contents = {
   },
   -- page 4.5: characters and special objects
   {
-    "bobua","txt_bobua","kiik","txt_kiik","baskitt","txt_baskitt","vaaver","txt_vaaver",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "bobua","txt_bobua","kiik","txt_kiik","baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie",0,0,0,0,0,0,0,0,0,0,0,0,
     "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -670,10 +674,10 @@ selector_grid_contents = {
   },
   -- page 5.5: inanimate objects
   {
-    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "gras2","txt_gras2","squar","txt_squar",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "turnep","txt_turnep",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad","water","txt_water",0,0,0,0,0,0,0,0,0,0,0,0,
+    "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart",0,0,0,0,0,0,0,0,0,0,0,0,
+    "turnep","txt_turnep","mgama","txt_mgama","move","txt_move",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

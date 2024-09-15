@@ -407,5 +407,16 @@
     "rotate": true,
     "desc": "THE: Refers to the object it's pointing at.",
     "tags": ["that", "those", "cg5", "the^", "the ->"]
+  },
+  {
+    "name": "txt_viloet",
+    "sprite": ["txt/viloet_cond"],
+    "sprite_transforms": {
+      "property": "txt/viloet"
+    },
+    "types": ["class_prefix", "cond_prefix", "property"],
+    "color": [[3, 3]],
+    "desc": "VILOET: Causes the unit to appear violet.",
+    "tags": ["colors", "colours", "violet", "daisy", "dayzy"]
   }
 ]

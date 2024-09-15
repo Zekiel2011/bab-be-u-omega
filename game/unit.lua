@@ -1573,16 +1573,19 @@ function updateUnits(undoing, big_update)
     end
     
     local iswin = getUnitsWithEffect(":)")
+    local isnowin = getUnitsWithEffect("no:)")
     for _,unit in ipairs(iswin) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
       for _,on in ipairs(stuff) do
-        if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, ":)") then
-          if timecheck(unit,"be",":)") and (timecheckUs(on)) then
-            wins = wins + 1
-          else
-            addUndo({"timeless_win_add", on.id})
-            table.insert(timeless_win,on.id)
-            addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+        if not (#isnowin > 0) then
+          if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, ":)") then
+            if timecheck(unit,"be",":)") and (timecheckUs(on)) then
+              wins = wins + 1
+            else
+              addUndo({"timeless_win_add", on.id})
+              table.insert(timeless_win,on.id)
+              addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+            end
           end
         end
       end
@@ -2128,6 +2131,18 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "keekie" then
+        if unit.dir == 3 then
+          unit.sprite = {"keekie_down"}
+        elseif unit.dir == 5 then
+          unit.sprite = {"keekie_left"}
+        elseif unit.dir == 7 then
+          unit.sprite = {"keekie_up"}
+        else
+          unit.sprite = {"keekie"}
+        end
+      end
+      
       if unit.fullname == "tzsh" then
         if hasProperty(unit,"nogo") or hasProperty(unit,"goawaypls") then
           unit.sprite = {"tzsh"}
@@ -2285,7 +2300,7 @@ function miscUpdates(state_change)
         print("b")
         unit.sprite[1] = "txt/burgitt_"..it or "txt/burgit"
       end
-
+      
       if unit.fullname == "goop" and scene ~= editor then
         if not card_for_id[unit.id] then
           card_for_id[unit.id] = {math.random(1,18)}
@@ -2329,6 +2344,12 @@ function miscUpdates(state_change)
         else
           unit.sprite = {"txt/niko", "no1"}
         end
+      end
+      
+      local png = matchesRule(unit, "png", nil)
+      for _,ruleparent in ipairs(png) do
+        print(ruleparent[2])
+        unit.sprite[1] = ruleparent[1].rule.object.name
       end
       
       unit.overlay = {}
@@ -2489,12 +2510,6 @@ function updateUnitColours()
     to_update[unit] = {}
   end
   
-  local png = matchesRule(nil, "png", "?")
-  for _,ruleparent in ipairs(png) do
-    local unit = ruleparent[2]
-    unit.sprite = sprites[ruleparent[2]]
-  end
-  
   for unit,colours in pairs(to_update) do
     unitUnsetColours(unit)
     for _,colour in ipairs(colours) do
@@ -2541,6 +2556,8 @@ function updateUnitColourOverride(unit)
     unit.color_override = {6, 0}
   elseif unit.reed then
     unit.color_override = {2, 2}
+  elseif unit.viloet then
+    unit.color_override = {3, 3}
   elseif unit.grun then
     unit.color_override = {5, 2}
   elseif unit.bleu then
@@ -4641,6 +4658,14 @@ function updateNameBasedOnDir(unit)
     end
   elseif unit.fullname == "letter_clip" then
     unit.textname = love.system.getClipboardText()
+  elseif unit.fullname == "txt_beok" then
+    unit.textname = "be"
+  elseif unit.fullname == "txt_uok" then
+    unit.textname = "u"
+  elseif unit.fullname == "txt_nogook" then
+    unit.textname = "nogo"
+  elseif unit.fullname == "txt_:)ok" then
+    unit.textname = ":)"
   end
 end
 

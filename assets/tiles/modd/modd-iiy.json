@@ -179,5 +179,14 @@
     "desc": "beautiful legs",
     "tags": ["chars", "thingify", "mod"],
 	"pronouns": ["it"]
+  },
+  {
+    "name": "go",
+    "sprite": ["modd/iiy/go"],
+    "color": [[5, 1]],
+    "convertible": false,
+    "rotate": true,
+    "desc": "ggogogogogooogogoogogogooooogoogggggg",
+    "tags": ["chars", "-oc", "iiy", "gogo", "mod"]
   }
 ]

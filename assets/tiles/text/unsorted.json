@@ -398,5 +398,37 @@
     "color": [[4, 1]],
     "desc": "EAST (Unimplemented): Not to be confused with RIGHT, a noun that refers to any object facing right.",
     "tags": ["right"],
+  },
+  {
+    "name": "txt_beok",
+    "sprite": ["txt/beok"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "BE-OK: Refers to the OC BE.",
+    "tags": ["is"]
+  },
+  {
+    "name": "txt_uok",
+    "sprite": ["txt/uok"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "U-OK: Refers to the OC U.",
+    "tags": ["you"]
+  },
+  {
+    "name": "txt_nogook",
+    "sprite": ["txt/nogook"],
+    "types": ["object"],
+    "color": [[1, 2]],
+    "desc": "NOGO-OK: Refers to the OC NOGO.",
+    "tags": ["stop"]
+  },
+  {
+    "name": "txt_:)ok",
+    "sprite": ["txt/yayok"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "desc": ":)-OK: Refers to the OC :).",
+    "tags": ["win"]
   }
 ]

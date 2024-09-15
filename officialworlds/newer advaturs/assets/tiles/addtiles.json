@@ -1,0 +1,11 @@
+[
+  {
+    "name": "clode",
+    "sprite": ["clode"],
+    "layer": 22,
+    "color": [[3, 3]],
+    "rotate": true,
+    "desc": "just for the map",
+    "tags": ["please ignore"]
+  }
+]
