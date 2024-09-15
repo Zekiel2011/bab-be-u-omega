@@ -331,7 +331,7 @@
     "sprite": ["txt/png"],
     "types": ["verb_class", "verb"],
     "color": [[4, 2]],
-    "desc": "PNG (Verb) (NOT IMPLIMENTED): Makes X uses the sprite for Y.",
+    "desc": "PNG (Verb): Makes X uses the sprite for Y.",
     "tags": ["sprite", "picture"]
   }
 ]
