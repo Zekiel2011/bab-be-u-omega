@@ -1,0 +1,57 @@
+[
+  {
+    "name": "txt_uno",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_dos",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_cuatro",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_cinco",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_seis",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_siete",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_ocho",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_nueve",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "turnrod",
+    "sprite": ["turnrod"],
+    "types": ["object"],
+    "rotate": true,
+    "color": [[0, 3]]
+  }
+]

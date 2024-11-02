@@ -81,6 +81,16 @@
     "tags": ["push"]
   },
   {
+    "name": "txt_goawayplsdir",
+    "display": "go away pls",
+    "sprite": ["txt/goaway", "arro"],
+    "types": ["property"],
+    "rotate": true,
+    "color": [[6, 1], [6, 2]],
+    "desc": "GO AWAY PLS DIRECTIONAL: Pushed by movement into its tile, but only in that direction.\nAnti: comepls",
+    "tags": ["push"]
+  },
+  {
     "name": "txt_push",
     "sprite": ["txt/push"],
     "types": ["property"],
@@ -1783,7 +1793,7 @@
     "types": ["property"],
     "color": [[2, 2]],
     "desc": "SMASH: Causes the unit to destroy the object it's facing.",
-    "tags": ["bang", "smash or pass", "markiplier"]
+    "tags": ["bang"]
   },
   {
     "name": "txt_no:)",
@@ -1795,5 +1805,45 @@
     },
     "desc": "NO:): If a NO:) object is in the level, you cannot :).",
     "tags": ["evil"]
+  },
+  {
+    "name": "txt_out",
+    "sprite": ["txt/out"],
+    "types": ["property"],
+    "color": [[2, 4]],
+    "desc": "OUT: Makes the unit appear big, like THICC."
+  },
+  {
+    "name": "txt_in",
+    "sprite": ["txt/in"],
+    "types": ["property"],
+    "color": [[2, 4]],
+    "desc": "IN: Makes the unit appear small, like BABBY."
+  },
+  {
+    "name": "txt_se",
+    "sprite": ["txt/se"],
+    "types": ["property", "direction"],
+    "color": [[1, 4]],
+    "rotate": true,
+    "desc": "It looks funny",
+    "tags": ["idk"]
+  },
+  {
+    "name": "txt_toss",
+    "sprite": ["txt/toss"],
+    "types": ["property"],
+    "color": [[4, 0]],
+    "desc": "TOSS: UNIMPLIMENTED, Like GO, but it tosses the object 2 spaces ingoring any NOGO objects between the throw in the way.",
+    "tags": ["throw"]
+  },
+  {
+    "name": "txt_toad",
+    "sprite": ["txt/toad"],
+    "types": ["property", "direction"],
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "TOAD: causes the unit to move in the texts direction(?), ingoring walls.",
+    "tags": ["todd", "toad", "bup"]
   }
 ]

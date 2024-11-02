@@ -364,7 +364,7 @@
     "sprite": ["txt/clip"],
     "types": ["object", "group", "property"],
     "color": [[0, 3]],
-    "desc": "CLIP: Changes depending on what is in your clipboard.\nAnti: Copies stuff to your clipboard, nothing can go wrong here!!!!!!!! ;)",
+    "desc": "CLIP: Changes depending on what is in your clipboard, keep in mind it only updates when the txt's direction changes.\nAnti: Copies stuff to your clipboard, nothing can go wrong here!!!!!!!! ;)",
     "tags": ["clipboard"]
   },
   {

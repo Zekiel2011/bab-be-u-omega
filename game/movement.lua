@@ -366,6 +366,102 @@ function doMovement(movex, movey, key)
         end
       end
       )
+      moveAndAnti("toad1",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x+1, unit.y)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad2",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x+1, unit.y+1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad3",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x, unit.y+1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad4",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x-1, unit.y+1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad5",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x-1, unit.y)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad6",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x-1, unit.y-1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad7",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x, unit.y-1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
+      moveAndAnti("toad8",
+      function(word,dir)
+        local walk = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(walk) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            moveUnit(unit, unit.x+1, unit.y-1)
+            addParticles("toad", unit.x, unit.y, getUnitColor(unit))
+          end
+        end
+      end
+      )
       moveAndAnti("step",
       function(word,dir)
         local walk = getUnitsWithEffectAndCount(word)
@@ -2695,6 +2791,14 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
                   or (hasProperty(v, "anti sidekik") and ignoreCheck(unit,v,"anti sidekik"))
                   or (hasProperty(v, "anti diagkik") and ignoreCheck(unit,v,"anti diagkik"))
                   or (hasProperty(v, "push") and ignoreCheck(unit,v,"push"))
+                  or (hasProperty(v, "goawayplsdir1") and ignoreCheck(unit,v,"goawayplsdir1")) and dir == 1
+                  or (hasProperty(v, "goawayplsdir2") and ignoreCheck(unit,v,"goawayplsdir2")) and dir == 2
+                  or (hasProperty(v, "goawayplsdir3") and ignoreCheck(unit,v,"goawayplsdir3")) and dir == 3
+                  or (hasProperty(v, "goawayplsdir4") and ignoreCheck(unit,v,"goawayplsdir4")) and dir == 4
+                  or (hasProperty(v, "goawayplsdir5") and ignoreCheck(unit,v,"goawayplsdir5")) and dir == 5
+                  or (hasProperty(v, "goawayplsdir6") and ignoreCheck(unit,v,"goawayplsdir6")) and dir == 6
+                  or (hasProperty(v, "goawayplsdir7") and ignoreCheck(unit,v,"goawayplsdir7")) and dir == 7
+                  or (hasProperty(v, "goawayplsdir8") and ignoreCheck(unit,v,"goawayplsdir8")) and dir == 8
         local moov = hasRule(unit, "moov", v) and ignoreCheck(unit,v);
         if (push or moov) and not would_swap_with then
           if o.pushing and ignoreCheck(v,unit) then

@@ -240,7 +240,7 @@
     "sprite": ["txt/golden/be"],
     "types": ["verb_class", "verb_property", "verb", "and", "golden"],
     "color": [[0, 3]],
-    "desc": "BE (Verb): Causes the subject to become an object or have a property.\nAnti: mirror",
+    "desc": "GOLDEN BE (Verb): Acts both as BE text and & text at the same time.\nAnti: mirror",
     "tags": ["is"]
   },
   {

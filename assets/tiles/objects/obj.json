@@ -384,5 +384,23 @@
     "rotate": true,
     "desc": "rip",
     "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt_flog",
+    "sprite": ["obejt/2flog"],
+    "layer": 20,
+    "color": [[6, 1]],
+    "rotate": false,
+    "desc": "do dada do da duh!",
+    "tags": ["obj"]
+  },
+  {
+    "name": "obejt_obejt_watr",
+    "sprite": ["obejt/2watr"],
+    "layer": 20,
+    "color": [[1, 3]],
+    "rotate": true,
+    "desc": "WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+    "tags": ["obj"]
   }
 ]

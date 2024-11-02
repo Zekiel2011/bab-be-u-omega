@@ -256,7 +256,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "scream", "bain", 0.25, 1, 2, {0, 3})
   scene.doPassiveParticles(dt, "txt_:)", "bonusmeta", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "txt_:o", "bonusmeta", 0.5, 0.8, 1, {4, 1})
-  scene.doPassiveParticles(dt, "hotte", "smoke", 1, 8, 1, {0, 1})
+  scene.doPassiveParticles(dt, "hotte", "smoke", 1, 2, 1, {0, 1})
   scene.doPassiveParticles(dt, "energy", "blood", 0.5, 2.5, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy", "movement-puff", 0.5, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy2", "blood", 0.5, 2.5, 1, {5, 3})
@@ -264,6 +264,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "win2", "bonus", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy3", "blood", 0.5, 2.5, 1, {3, 3})
   scene.doPassiveParticles(dt, "energy3", "movement-puff", 0.5, 1, 1, {3, 3})
+  scene.doPassiveParticles(dt, "visitfren", "tele", 0.75, 2, 1, {1, 4})
 	
   doReplay(dt)
   if rules_with and rules_with["rythm"] then
@@ -1102,9 +1103,9 @@ function scene.draw(dt)
       fulldrawy = fulldrawy + (unit.draw.thicc-1)*TILE_SIZE/2
     end
 
-    if graphical_property_cache["flye"][unit] ~= nil or (unit.parent and graphical_property_cache["flye"][unit.parent] ~= nil) or unit.name == "o" or unit.name == "square" or unit.name == "triangle" then
+    if graphical_property_cache["flye"][unit] ~= nil or (unit.parent and graphical_property_cache["flye"][unit.parent] ~= nil) or unit.name == "oat" or unit.name == "square" or unit.name == "triangle" or unit.name == "high." then
       local flyenes = graphical_property_cache["flye"][unit] or (unit.parent and graphical_property_cache["flye"][unit.parent]) or 0
-      if unit.name == "o" or unit.name == "square" or unit.name == "triangle" then
+      if unit.name == "oat" or unit.name == "square" or unit.name == "triangle" or unit.name == "high." then
         flyenes = flyenes + 1
       end
       if flyenes > 0 then 

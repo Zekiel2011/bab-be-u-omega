@@ -1776,6 +1776,9 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
     elseif condtype == "wun" then
       local name = unit.special.level or level_filename
       result = readSaveFile{"levels",name,"won"}
+    elseif condtype == "bunosd" then
+      local name = unit.special.level or level_filename
+      result = readSaveFile{"levels",name,"bonus"}
     elseif condtype == "whuhd" then
       local name = unit.special.level or level_filename
       result = readSaveFile{"levels",name,"whunus"}
@@ -2626,6 +2629,39 @@ function addParticles(ptype,x,y,color,count)
     ps:setColors(unpack(particle_colors))
     ps:start()
     ps:emit(count or 1)
+    table.insert(particles, ps)
+  elseif ptype == "toad" then
+    local ps = love.graphics.newParticleSystem(sprites["bup"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    local size = 0.3
+    ps:setPosition(px, py)
+    ps:setSpread(0.3)
+    ps:setEmissionArea("borderrectangle", TILE_SIZE/4, TILE_SIZE/4, 0, true)
+    ps:setSizes(size, size, size, 0)
+    ps:setSpeed(math.random(60, 80))
+    ps:setLinearDamping(5)
+    ps:setParticleLifetime(math.random(0.50, 1.10))
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 1)
+    table.insert(particles, ps)
+  elseif ptype == "tele" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["tele"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.6)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x * TILE_SIZE / 4)
+    --og speed is 30
+    ps:setLinearDamping(2)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
     table.insert(particles, ps)
   elseif ptype == "stink" then
     local ps = love.graphics.newParticleSystem(sprites["modd/indotherm"])

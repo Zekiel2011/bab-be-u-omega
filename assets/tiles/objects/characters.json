@@ -2322,7 +2322,7 @@
     "name": "skulnbon",
     "sprite": ["sprites2/skulnbon"],
     "layer": 9,
-    "color": [[0, 3]],
+    "color": [[2, 1]],
     "rotate": true,
     "features": {
       "sans": {"x": 21, "y": 8, "w": 4, "h": 4}
@@ -2634,7 +2634,7 @@
       "sans": {"x": 18, "y": 8, "w": 2, "h": 2}
     },
     "tags": ["anni", "chars", "devs"],
-    "desc": "the bab equivalent of anni"
+    "desc": "bully that used to be the bab equivalent of anni"
   },
   {
     "name": "txt_tot",
@@ -3945,5 +3945,285 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["ear", "body part"]
+  },
+  {
+    "name": "cbab",
+    "sprite": ["cbab"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "s_doo",
+    "desc": "its cbab bruh",
+    "tags": ["chars", "baba", "ceba", "ceb"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_cbab",
+    "sprite": ["txt/cbab"],
+    "types": ["object"],
+    "color": [[0, 2]],
+    "desc": "\"CBAB\". thats what it says",
+    "tags": ["chars", "baba", "ceba", "ceb"]
+  },
+  {
+    "name": "2fiv",
+    "sprite": ["2fiv"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "she looks very qt!!!",
+    "tags": ["chars", "ric", "generated", "25", "char_25"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_2fiv",
+    "sprite": ["txt/2fiv"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "It would be black, but... that is unseeable.",
+    "tags": ["chars", "ric", "generated", "25", "char_25"]
+  },
+  {
+    "name": "glitch",
+    "sprite": ["glitch"],
+    "layer": 11,
+    "convertible": false,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": ":pog:",
+    "tags": ["chars", "error"]
+  },
+  {
+    "name": "txt_glitch",
+    "sprite": ["txt/glitch"],
+    "types": ["object"],
+    "unsearchable": true,
+    "color": [[0, 3]],
+    "desc": "GLITCH: When used at the begining of a rule, it refers to the glitch object, however when used as a property, causes the unit to destroy itself.",
+    "tags": ["chars", "error"]
+  },
+  {
+    "name": "buf",
+    "sprite": ["buf"],
+    "layer": 9,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "very anti ouch",
+    "tags": ["arm", "strong", "buff", "body part"],
+	  "pronouns": ["it", "they", "them"]
+  },
+  {
+    "name": "txt_buf",
+    "sprite": ["txt/buf"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["arm", "strong", "buff", "body part"]
+  },
+  {
+    "name": "kib",
+    "sprite": ["kib"],
+    "layer": 11,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "living lite",
+    "tags": ["lamp", "laamp", "lammp", "bright", "candle", "fire", "kibi"],
+	  "pronouns": ["it", "they", "them"]
+  },
+  {
+    "name": "txt_kib",
+    "sprite": ["txt/kib"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["lamp", "laamp", "lammp", "bright", "candle", "fire", "kibi"]
+  },
+  {
+    "name": "kez",
+    "sprite": ["kez1", "kez2"],
+    "layer": 11,
+    "color": [[6, 1], [1, 3]],
+    "rotate": true,
+    "voice": "s_zdoo",
+    "desc": "Excuse me, who are you?",
+    "tags": ["chars", "keze"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_kez",
+    "sprite": ["txt/kez"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "desc": "Zez's bff that zez forgot about.",
+    "tags": ["chars", "keze"]
+  },
+  {
+    "name": "mez",
+    "sprite": ["kez1", "mez"],
+    "layer": 11,
+    "color": [[3, 1], [1, 3]],
+    "rotate": true,
+    "voice": "s_zdoo",
+    "desc": "kez's sis",
+    "tags": ["chars", "meze"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_mez",
+    "sprite": ["txt/mez"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "tags": ["chars", "meze"]
+  },
+  {
+    "name": "lil",
+    "sprite": ["lil"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "desc": "somehow related to babby",
+    "tags": ["lili", "helicopter", "fly", "float"],
+	  "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_lil",
+    "sprite": ["txt/lil"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["lili", "helicopter", "fly", "float"]
+  },
+  {
+    "name": "sixx",
+    "sprite": ["sixx"],
+    "layer": 11,
+    "color": [[2, 0]],
+    "rotate": true,
+    "desc": "smol bab",
+    "tags": ["chars", "ric", "generated", "6", "char_6"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_sixx",
+    "sprite": ["txt/sixx"],
+    "types": ["object"],
+    "color": [[2, 0]],
+    "desc": "xx_xx renfrence?",
+    "tags": ["chars", "ric", "generated", "6", "char_6"]
+  },
+  {
+    "name": "210",
+    "sprite": ["210"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "rotate": true,
+    "desc": "2fiv's brother",
+    "tags": ["chars", "ric", "generated", "210", "char_210"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_210",
+    "sprite": ["txt/210"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "numbers",
+    "tags": ["chars", "ric", "generated", "210", "char_210"]
+  },
+  {
+    "name": "nemee",
+    "sprite": ["nemee"],
+    "layer": 18,
+    "color": [[4, 2]],
+    "rotate": true,
+    "desc": "wears different hats",
+    "tags": ["nimi", "garden", "nimis garden"]
+  },
+  {
+    "name": "txt_nemee",
+    "sprite": ["txt/nemee"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["nimi", "garden", "nimis garden"]
+  },
+  {
+    "name": "tridoge",
+    "sprite": ["tridoge"],
+    "layer": 11,
+    "color": [[2, 4]],
+    "rotate": true,
+    "desc": "dogge in bab but 3 iys",
+    "pronouns": ["she", "her"],
+    "tags": ["chars", "quaqua", "taking inventory"]
+  },
+  {
+    "name": "txt_tridoge",
+    "sprite": ["txt/tridoge"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "desc": "dog",
+    "tags": ["chars", "quaqua", "taking inventory"]
+  },
+  {
+    "name": "hey.",
+    "sprite": ["hey"],
+    "layer": 14,
+    "color": [[1, 4]],
+    "rotate": true,
+    "desc": "Will lead you to a treasure chest that may or may not have traps",
+    "tags": ["fairy", "garden", "nimis garden"]
+  },
+  {
+    "name": "txt_hey.",
+    "sprite": ["txt/hey"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "desc": "Hey, listen!",
+    "tags": ["fairy", "garden", "nimis garden"]
+  },
+  {
+    "name": "bohpel",
+    "sprite": ["bohpel1", "bohpel2"],
+    "layer": 14,
+    "color": [[2, 4], [0, 3]],
+    "rotate": true,
+    "desc": "got abilities 2 coemboe w/ & coems ien moar then 1 color!",
+    "tags": ["bopl", "bopl battle", "slime"]
+  },
+  {
+    "name": "txt_bohpel",
+    "sprite": ["txt/bohpel"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["bopl", "bopl battle", "slime"]
+  },
+  {
+    "name": "wahaw",
+    "sprite": ["wahaw"],
+    "layer": 14,
+    "color": [[1, 3]],
+    "voice": "mous special 10",
+    "rotate": true,
+    "desc": "Be carful 4 ur wahaw to getn't splashed when opining a botl of wawatr",
+    "tags": ["wawa"]
+  },
+  {
+    "name": "txt_wahaw",
+    "sprite": ["txt/wahaw"],
+    "types": ["object"],
+    "color": [[1, 3]],
+    "tags": ["wawa"]
+  },
+  {
+    "name": "high.",
+    "sprite": ["high"],
+    "layer": 14,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "YOUR HI!!?",
+    "tags": ["hi!"]
+  },
+  {
+    "name": "txt_high.",
+    "sprite": ["txt/high"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["hi!"]
   }
 ]

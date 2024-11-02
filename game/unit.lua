@@ -299,8 +299,10 @@ function moveBlock()
     end
   end
   for a,b in pairs(tele_targets) do
+    playSound("tele")
     addUndo({"update", a.id, a.x, a.y, a.dir})
     moveUnit(a, b.x, b.y)
+    addParticles("tele", b.x, b.y, {1, 4})
   end
   
   local isthere, thererules = getUnitsWithEffect("thr", true)
@@ -618,10 +620,23 @@ function updateUnits(undoing, big_update)
     
     local isgone = getUnitsWithEffect("gone")
     for _,unit in ipairs(isgone) do
+      playSound("gone2")
       unit.destroyed = true
       unit.removed = true
     end
     deleteUnits(isgone, false, true)
+    
+    local isout = getUnitsWithEffect("out")
+    for _,unit in ipairs(isout) do
+      unit.draw.thicc = 2
+      addTween(tween.new(0.35, unit.draw, {thicc = 2}), "unit:thicc:" .. unit.tempid)
+    end
+    
+    local isout2 = getUnitsWithEffect("in")
+    for _,unit in ipairs(isout2) do
+      unit.draw.thicc = 0.5
+      addTween(tween.new(0.35, unit.draw, {thicc = 0.5}), "unit:thicc:" .. unit.tempid)
+    end
     
     --moar remake: based on the scent map distance in brogue (thanks notnat/pata for inspiration)
     local already_grown = {}
@@ -1061,6 +1076,21 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    local issmash = getUnitsWithEffect("smash")
+    for _,unit in ipairs(issmash) do
+      local dx = dirs8[unit.dir][1]
+      local dy = dirs8[unit.dir][2]
+      local dir = unit.dir
+      local tx = unit.x
+      local ty = unit.y
+      local smashed = getNextTile(deez,dx,dy,dir,nil,tx,ty)
+      playSound("break")
+      shakeScreen(0.3, 0.1)
+      table.insert(to_destroy, on)
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
     local isstrong = getUnitsWithEffect("anti ouch")
     for _,unit in ipairs(isstrong) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
@@ -1092,6 +1122,14 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    local isglitch = getUnitsWithEffect("glitch")
+    for _,unit in ipairs(isglitch) do
+      table.insert(to_destroy, unit)
+      addParticles("bonus", unit.x, unit.y, getUnitColor(unit))
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
     local ishot = getUnitsWithEffect("hotte")
     for _,unit in ipairs(ishot) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -1112,6 +1150,11 @@ function updateUnits(undoing, big_update)
     end
     
     to_destroy = handleDels(to_destroy)
+    
+    local islua = getUnitsWithEffect("lua")
+    for _,unit in ipairs(islua) do
+      love.window.showMessageBox("Lua error", "bab-be-u-omega/game/unit.lua:1126", "warning")
+    end
     
     local isdefeat = getUnitsWithEffect(":(")
     for _,unit in ipairs(isdefeat) do
@@ -1727,7 +1770,7 @@ function updateUnits(undoing, big_update)
         doWin("transform", lvltransforms)
       end
     end
-
+    
     local isnxt = getUnitsWithEffect("nxt")
     for _,unit in ipairs(isnxt) do
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
@@ -2107,6 +2150,18 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "imag" then
+        if hasProperty(unit,"uno") then
+          unit.sprite = {"imag_1"}
+        elseif hasProperty(unit,"dos") then
+          unit.sprite = {"imag_2"}
+        elseif hasProperty(unit,"cuatro") then
+          unit.sprite = {"imag_3"}
+        else
+          unit.sprite = {"imag"}
+        end
+      end
+      
       if unit.fullname == "bab" then
         if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
           unit.sprite = {"bab_tired"}
@@ -2234,6 +2289,9 @@ function miscUpdates(state_change)
             unit.sprite = {"ditto_qt_icy"}
           elseif hasProperty(unit,"hopovr") then
             unit.sprite = {"ditto_qt_hopovr"}
+          elseif hasProperty(unit,"icyyyy") then
+            --Spheal, not a eeveelution but why not :)
+            unit.sprite = {"ditto_qt_icyyy"}
           else
             unit.sprite = {"ditto_qt"}
           end
@@ -4651,6 +4709,42 @@ function updateNameBasedOnDir(unit)
       unit.textname = "go7"
     elseif unit.rotatdir == 8 then
       unit.textname = "go8"
+    end
+  elseif unit.fullname == "txt_goawayplsdir" then
+    if unit.rotatdir == 1 then
+      unit.textname = "goawayplsdir1"
+    elseif unit.rotatdir == 2 then
+      unit.textname = "goawayplsdir2"
+    elseif unit.rotatdir == 3 then
+      unit.textname = "goawayplsdir3"
+    elseif unit.rotatdir == 4 then
+      unit.textname = "goawayplsdir4"
+    elseif unit.rotatdir == 5 then
+      unit.textname = "goawayplsdir5"
+    elseif unit.rotatdir == 6 then
+      unit.textname = "goawayplsdir6"
+    elseif unit.rotatdir == 7 then
+      unit.textname = "goawayplsdir7"
+    elseif unit.rotatdir == 8 then
+      unit.textname = "goawayplsdir8"
+    end
+  elseif unit.fullname == "txt_toad" then
+    if unit.rotatdir == 1 then
+      unit.textname = "toad1"
+    elseif unit.rotatdir == 2 then
+      unit.textname = "toad2"
+    elseif unit.rotatdir == 3 then
+      unit.textname = "toad3"
+    elseif unit.rotatdir == 4 then
+      unit.textname = "toad4"
+    elseif unit.rotatdir == 5 then
+      unit.textname = "toad5"
+    elseif unit.rotatdir == 6 then
+      unit.textname = "toad6"
+    elseif unit.rotatdir == 7 then
+      unit.textname = "toad7"
+    elseif unit.rotatdir == 8 then
+      unit.textname = "toad8"
     end
   elseif unit.fullname == "txt_clip" or unit.fullname == "txt_cliverb" then
     if not (love.system.getClipboardText() == "lvl") then

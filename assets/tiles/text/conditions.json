@@ -400,6 +400,14 @@
     "tags": ["whuhed"]
   },
   {
+    "name": "txt_bunosd",
+    "sprite": ["txt/bunosd"],
+    "types": ["cond_prefix"],
+    "color": [[4, 1]],
+    "desc": "BUNOSD: A prefix condition that's true if the unit is a bonused level. If the unit isn't a level, then true if the current level is bonused.",
+    "tags": ["bonused", "whoaed", ":o"]
+  },
+  {
     "name": "txt_dat",
     "sprite": ["txt/dat"],
     "types": ["object", "cond_prefix"],

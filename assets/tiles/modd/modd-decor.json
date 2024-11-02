@@ -202,5 +202,20 @@
     "color": [[2, 4]],
     "desc": "added this because it felt weird to rename victoria and break all those old levels",
     "tags": ["mod", "key"],
+  },
+  {
+    "name": "oiter",
+    "sprite": ["modd/oiter"],
+    "color": [[1, 4]],
+    "desc": "stay hydrated",
+    "tags": ["mod", "bottle", "water"],
+    "rotate": true
+  },
+  {
+    "name": "txt_oiter",
+    "sprite": ["modd/moddtxt/oiter"],
+    "color": [[1, 4]],
+    "desc": "but do you dink it",
+    "tags": ["mod", "bottle", "water"]
   }
 ]
