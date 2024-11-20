@@ -1103,7 +1103,7 @@
     "sprite": ["txt/xwx"],
     "types": ["property"],
     "color": [[3, 2]],
-    "desc": "XWX: crashes your game.",
+    "desc": "XWX: At end of turn, if U is on XWX, the game crashes.",
     "tags": ["crash", "oops", "fucky wucky", "xwx", "delete"]
   },
   {
@@ -1161,7 +1161,7 @@
     "sprite": ["txt/zip"],
     "types": ["property"],
     "color": [[5, 3]],
-    "desc": "ZIP: At end of turn, if it is on a tile it couldn't enter or shares a tile with another object of its name, it finds the nearest free tile (preferencing backwards directions) and ejects to it",
+    "desc": "ZIP: UNIMPLIMENTED, At end of turn, if it is on a tile it couldn't enter or shares a tile with another object of its name, it finds the nearest free tile (preferencing backwards directions) and ejects to it",
     "tags": ["zip"]
   },
   {
@@ -1845,5 +1845,83 @@
     "rotate": true,
     "desc": "TOAD: causes the unit to move in the texts direction(?), ingoring walls.",
     "tags": ["todd", "toad", "bup"]
+  },
+  {
+    "name": "txt_letr",
+    "sprite": ["txt/letr"],
+    "types": ["property"],
+    "color": [[1, 4]],
+    "desc": "LETR: UNIMPLIMENTED, Acts like WURD, but with letters instead.",
+    "tags": ["letter", "letters+"]
+  },
+  {
+    "name": "txt_flogus",
+    "sprite": ["txt/us"],
+    "types": ["property", "gang_prefix"],
+    "color": [[1, 3]],
+    "overlay": {
+      "sprite": "flog/us",
+    },
+  },
+  {
+    "name": "txt_flogvn",
+    "sprite": ["txt/vn"],
+    "types": ["property", "gang_prefix"],
+    "color": [[2, 2]],
+    "overlay": {
+      "sprite": "flog/vn",
+    }
+  },
+  {
+    "name": "txt_flogsg",
+    "sprite": ["txt/sg"],
+    "types": ["property", "gang_prefix"],
+    "color": [[2, 2]],
+    "overlay": {
+      "sprite": "flog/sg",
+    }
+  },
+  {
+    "name": "txt_floggs",
+    "sprite": ["txt/gs"],
+    "types": ["property", "gang_prefix"],
+    "color": [[1, 3]],
+    "overlay": {
+      "sprite": "flog/gs",
+    }
+  },
+  {
+    "name": "txt_flogjp",
+    "sprite": ["txt/jp"],
+    "types": ["property", "gang_prefix"],
+    "color": [[0, 3]],
+    "overlay": {
+      "sprite": "flog/jp",
+    }
+  },
+  {
+    "name": "txt_floggb-eng",
+    "sprite": ["txt/gb-eng"],
+    "types": ["property", "gang_prefix"],
+    "color": [[0, 3]],
+    "overlay": {
+      "sprite": "flog/gb-eng",
+    }
+  },
+  {
+    "name": "txt_stoop",
+    "sprite": ["txt/stoop"],
+    "types": ["property"],
+    "color": [[5, 1]],
+    "desc": "STOOP: (Kinda works) Stops THE, and DEEZ.",
+    "tags": ["block", "pointer cancel", "stop"]
+  },
+  {
+    "name": "txt_ifyyy",
+    "sprite": ["txt/ifyyy"],
+    "types": ["property"],
+    "color": [[4, 2]],
+    "desc": "IFYYY: BE IFYYY causes that object or text to turn into 2 of itself. Specifically, if also transforming into something else, it also stays there in addition to transforming.",
+    "tags": ["why", "mse"]
   }
 ]

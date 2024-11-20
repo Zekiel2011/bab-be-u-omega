@@ -4593,5 +4593,99 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["milk"]
+  },
+  {
+    "name": "lug",
+    "sprite": ["lug"],
+    "rotate": true,
+    "layer": 2,
+    "color": [[6, 1]],
+    "voice": "s_spian",
+    "desc": "use this 2 creat wuud",
+    "tags": ["log", "wood"]
+  },
+  {
+    "name": "txt_lug",
+    "sprite": ["txt/lug"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["log", "wood"]
+  },
+  {
+    "name": "mblok",
+    "sprite": ["mblok"],
+    "layer": 20,
+    "color": [[2, 4]],
+    "desc": "creat dling sound wehn hit",
+    "tags": ["?-block", "mblock", "question mark block", "? mark block"]
+  },
+  {
+    "name": "txt_mblok",
+    "sprite": ["txt/mblok"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["?-block", "mblock", "question mark block", "? mark block"]
+  },
+  {
+    "name": "turnrod",
+    "sprite": ["turnrod"],
+    "types": ["object"],
+    "rotate": true,
+    "desc": "alows u too conekt rods",
+    "color": [[0, 3]],
+    "tags": ["city", "street", "road"]
+  },
+  {
+    "name": "txt_turnrod",
+    "sprite": ["txt/turnrod"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["city", "street", "road"]
+  },
+  {
+    "name": "floew",
+    "sprite": ["floew"],
+    "layer": 4,
+    "color": [[3, 3]],
+    "desc": "DAYZY from a alternate universe",
+    "tags": ["violet", "daisy", "flower", "plants"]
+  },
+  {
+    "name": "txt_floew",
+    "sprite": ["txt/floew"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "tags": ["violet", "daisy", "flower", "plants"]
+  },
+  {
+    "name": "curser",
+    "sprite": ["curser"],
+    "layer": 10,
+    "rotate": true,
+    "color": [[3, 3]],
+    "desc": "ABRA KADABR- Wait WHY IS MY KADABRA EVOLVING, I DIDN'T EVEN TRADE IT?!?",
+    "tags": ["magic", "nimis garden"]
+  },
+  {
+    "name": "txt_curser",
+    "sprite": ["txt/curser"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "tags": ["magic", "nimis garden"]
+  },
+  {
+    "name": "bhridg",
+    "sprite": ["bhridg"],
+    "layer": 10,
+    "color": [[2, 3]],
+    "desc": "poly bridge",
+    "tags": ["bridge"]
+  },
+  {
+    "name": "txt_bhridg",
+    "sprite": ["txt/bhridg"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["bridge"]
   }
 ]

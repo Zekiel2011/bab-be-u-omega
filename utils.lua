@@ -3999,6 +3999,7 @@ function buildOptions()
     scene.addOption("autoupdate", "autoupdate (experimental)", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc2" then
+    scene.addButton("super misc settings", function() global_menu_state = "misc3"; scene.buildUI() end)
     scene.addOption("contrast", "High contrasted colors", {{"on", true}, {"off", false}})
     scene.addOption("savefile", "Current Save File", {{"Bab", bab}, {"Keek", keek}, {"Meem", meem}})
     scene.addOption("ads", "Ads", {{"on", true}, {"off", false}})
@@ -4007,6 +4008,9 @@ function buildOptions()
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
+  elseif global_menu_state == "misc3" then
+    scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
+    scene.addButton("back", function() global_menu_state = "misc2"; scene.buildUI() end)
   elseif global_menu_state == "sus" then
     love.graphics.draw(sprites["ui/fukc"], 34, -50)
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
@@ -4019,7 +4023,6 @@ function buildOptions()
     scene.addButton("editor options", function() global_menu_state = "editor"; scene.buildUI() end)
     scene.addButton("miscelleaneous options", function() global_menu_state = "misc"; scene.buildUI() end)
     scene.addButton("more miscelleaneous options", function() global_menu_state = "misc2"; scene.buildUI() end)
-    scene.addButton("???", function() global_menu_state = "sus"; scene.buildUI() end)
     scene.addButton("DEBUG", function() global_menu_state = "debug"; scene.buildUI() end)
     --scene.addOption("trueis", "turn TRUE BE on or off?", {{"on", true}, {"off", false}})
     scene.addButton("reset to default settings", function ()
@@ -4646,6 +4649,7 @@ function drawUnitSprite(unit, x, y, rotation, sx, sy, o)
     frame = unit.frame,
     wobble = unit.wobble,
     delet = unit.delet,
+    delet = unit.xwx,
     really_smol = unit.fullname == "babby",
     lvl = unit.fullname == "lvl",
   })
@@ -4668,6 +4672,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
     wobble = false,
     anti_wobble = false,
     delet = false,
+    xwx = false,
     really_smol = false,
     lvl = false,
   })
@@ -4779,7 +4784,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
     love.graphics.translate(-x - max_w/TILE_SIZE/2, -y - max_h/TILE_SIZE/2)
   end
 
-  if (o.delet or spookmode) and (math.floor(love.timer.getTime() * 9) % 9 == 0) then -- if we're delet, apply the special shader to our object
+  if (o.delet or o.xwx or spookmode) and (math.floor(love.timer.getTime() * 9) % 9 == 0) then -- if we're delet, apply the special shader to our object
     pcallSetShader(xwxShader)
     drawSpriteMaybeOverlay()
     love.graphics.setShader()

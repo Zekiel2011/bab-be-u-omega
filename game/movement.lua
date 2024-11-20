@@ -373,6 +373,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x+1, unit.y)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -385,6 +386,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x+1, unit.y+1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -397,6 +399,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x, unit.y+1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -409,6 +412,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x-1, unit.y+1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -421,6 +425,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x-1, unit.y)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -433,6 +438,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x-1, unit.y-1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -445,6 +451,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x, unit.y-1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end
@@ -457,6 +464,7 @@ function doMovement(movex, movey, key)
           unit = units_by_id[unit] or cursors_by_id[unit]
           if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
             moveUnit(unit, unit.x+1, unit.y-1)
+            playSound("bup")
             addParticles("toad", unit.x, unit.y, getUnitColor(unit))
           end
         end

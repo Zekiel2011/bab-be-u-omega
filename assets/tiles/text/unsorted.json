@@ -356,7 +356,7 @@
     "sprite": ["txt/omega"],
     "types": ["anti"],
     "color": [[2, 4]],
-    "desc": "OMEGA: Acts like ANTI, but instead makes it be more like a super counterpart. Does not work with nouns.\nEach text might have a custom effect when omega'd.",
+    "desc": "OMEGA: (Currently isn't inplemented, but acts the same as ANTI) Acts like ANTI, but instead makes it be more like a super counterpart. Does not work with nouns.\nEach text might have a custom effect when omega'd.",
     "tags": ["double", "super"]
   },
   {
@@ -430,5 +430,15 @@
     "color": [[1, 4]],
     "desc": ":)-OK: Refers to the OC :).",
     "tags": ["win"]
+  },
+  {
+    "name": "txt_frensend",
+    "sprite": ["txt/frens"],
+    "types": ["object", "group"],
+    "color": [[3, 3]],
+    "unsearchable": true,
+    "convertible": false,
+    "desc": "Please don't use in normal levels, acts like FRENS but is used for the EVERY1 BE FRENS ending.",
+    "tags": ["group", "friends"]
   }
 ]

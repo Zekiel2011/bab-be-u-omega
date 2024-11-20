@@ -1170,7 +1170,7 @@ function scene.draw(dt)
     --performance todos: each line gets drawn twice (both ways), so there's probably a way to stop that. might not be necessary though, since there is no lag so far
     --in fact, the double lines add to the pixelated look, so for now i'm going to make it intentional and actually add it in a couple places to be consistent
     local has_lin = false
-    if (unit.name == "lin" or unit.name == "lin2") and (not unit.special.pathlock or unit.special.pathlock == "none") and scene ~= editor then
+    if (unit.name == "lin" or unit.name == "lin2" or unit.name == "lin3") and (not unit.special.pathlock or unit.special.pathlock == "none") and scene ~= editor then
       love.graphics.setLineWidth(4)
       love.graphics.setLineStyle("rough")
       local orthos = {}
@@ -1180,7 +1180,7 @@ function scene.draw(dt)
         local dx,dy,dir,px,py,portal = getNextTile(unit,nx,ny,2*ndir-1)
         local around = getUnitsOnTile(px,py)
         for _,other in ipairs(around) do
-          if other.name == "lin" or other.name == "lvl" then
+          if other.name == "lin" or other.name == "lin3" or other.name == "lvl" then
             orthos[ndir] = true
             table.insert(line,{unit.x*2-unit.draw.x+nx+other.draw.x-other.x, unit.y*2-unit.draw.y+ny+other.draw.y-other.y, portal})
             break
@@ -1194,7 +1194,7 @@ function scene.draw(dt)
         local dx,dy,dir,px,py,portal = getNextTile(unit,nx,ny,ndir)
         local around = getUnitsOnTile(px,py)
         for _,other in ipairs(around) do
-          if (other.name == "lin" or other.name == "lvl" or other.name == "lin2") and not orthos[ndir/2] and not orthos[dirAdd(ndir,2)/2] then
+          if (other.name == "lin" or other.name == "lvl" or other.name == "lin2" or other.name == "lin3") and not orthos[ndir/2] and not orthos[dirAdd(ndir,2)/2] then
             table.insert(line,{unit.x*2-unit.draw.x+nx+other.draw.x-other.x, unit.y*2-unit.draw.y+ny+other.draw.y-other.y, portal})
             break
           end
@@ -1207,8 +1207,12 @@ function scene.draw(dt)
           --no need to change the rendering to account for movement, since all halflines are drawn to static objects (portals and oob)
           local dx = unit.x-point[1]
           local dy = unit.y-point[2]
-          local odx = TILE_SIZE*dx/(point[3] and 1 or 2)
-          local ody = TILE_SIZE*dy/(point[3] and 1 or 2)
+          local odx = TILE_SIZE*dx/2
+          local ody = TILE_SIZE*dy/2
+          if unit.name == "lin3" then
+            odx = TILE_SIZE*dx/4
+            ody = TILE_SIZE*dy/4
+          end
           
           --draws it twice to make it look the same as the other lines. should be reduced to one if we figure out that performance todo above
           --   love.graphics.setLineWidth(3)

@@ -855,7 +855,7 @@ function addRule(full_rule)
     addRuleSimple({"bordr", rules.subject.conds}, rules.verb, rules.object, units, dir)
     return
   end
-
+  
   if subject:find("letter_custom") and subject.unit then
     rules.subject.conds = copyTable(rules.subject.conds) or {};
     table.insert(rules.subject.conds, rules.subject);

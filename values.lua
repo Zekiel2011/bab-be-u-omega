@@ -59,6 +59,7 @@ defaultsettings = {
   editor_music = false,
   day = true,
   night = false,
+  randomize = false,
 }
 
 if love.filesystem.read("Settings.bab") ~= nil then
@@ -495,13 +496,13 @@ selector_grid_contents = {
   },
   -- page 7: properties, verbs and conditions
   {
-    "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat",0,"txt_idk","txt_knobout","txt_jojmen",0,0,
-    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_copdog","txt_rp",0,"txt_lookaway",0,"txt_toad",0,0,0,0,
+    "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat",0,"txt_idk","txt_knobout","txt_jojmen","txt_stoop",0,
+    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_copdog","txt_rp",0,"txt_lookaway",0,"txt_toad","txt_letr","txt_xwx",0,0,
     "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd",0,"txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
     "txt_nogo","txt_goawaypls","txt_comepls","txt_sidekik","txt_diagkik","txt_delet","txt_hotte","txt_fridgd","txt_thingify",0,"txt_rythm","txt_curse","txt_alt","txt_clikt","txt_past","txt_wun","txt_an","txt_mayb",0,0,0,0,0,0,
     "txt_visitfren","txt_slep","txt_shy...","txt_behinu","txt_walk","txt_:o","txt_moar","txt_split","txt_txtify",0,"txt_dragbl","txt_nodrag",0,"txt_wait...","txt_samefloat","txt_samepaint","txt_sameface",0,0,0,0,0,0,0,
-    "txt_flye","txt_tall","txt_haetskye","txt_haetflor","txt_zomb","txt_un:)","txt_gone","txt_nuek","txt_n'tify",0,0,0,0,"txt_w/fren","txt_arond","txt_sans","txt_seenby","txt_behind",0,0,0,0,0,0,
-    "txt_diag","txt_ortho","txt_gomyway",0,0,"txt_boring","txt_bce","txt_notranform","txt_ify",0,0,0,0,"txt_that","txt_thatbe","txt_thatgot","txt_meow","txt_beside",0,0,0,0,0,0,
+    "txt_flye","txt_tall","txt_haetskye","txt_haetflor","txt_zomb","txt_un:)","txt_gone","txt_nuek","txt_n'tify","txt_n'tifyyy",0,0,0,"txt_w/fren","txt_arond","txt_sans","txt_seenby","txt_behind",0,0,0,0,0,0,
+    "txt_diag","txt_ortho","txt_gomyway",0,0,"txt_boring","txt_bce","txt_notranform","txt_ify","txt_ifyyy",0,0,0,"txt_that","txt_thatbe","txt_thatgot","txt_meow","txt_beside",0,0,0,0,0,0,
     "txt_turncornr","txt_folowal","txt_hopovr","txt_reflecc",0,0,0,0,0,0,0,0,0,"txt_reed","txt_orang","txt_yello","txt_grun","txt_cyeann",0,0,0,0,0,0,
     "txt_munwalk","txt_sidestep","txt_diagstep","txt_knightstep",0,"txt_tryagain","txt_noundo","txt_undo","txt_zawarudo","txt_brite","txt_torc","txt_tranparnt",0,"txt_bleu","txt_purp","txt_pinc","txt_whit","txt_graey",0,0,0,0,0,0,
     "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,0,"txt_rave","txt_colrful","txt_blacc","txt_brwn",0,0,0,0,0,0,
@@ -563,7 +564,7 @@ selector_grid_contents = {
     "txt_omega",0,"txt_east2","txt_vibe",0,0,0,0,0,0,"txt_scream",0,"txt_golden_be",0,0,0,0,0,0,0,0,0,0,0,
     "txt_loep","txt_toss",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld","txt_viloet",0,0,0,0,0,
-    "txt_uhhh","txt_scary",0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6","txt_xwx","txt_crye",0,0,0,"txt_bigender","txt_gaymen",0,0,0,0,0,0,
+    "txt_uhhh","txt_scary",0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6",0,"txt_crye",0,0,0,"txt_bigender","txt_gaymen",0,0,0,0,0,0,
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
     "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",0,0,0,0,0,0,
   },
@@ -659,9 +660,9 @@ selector_grid_contents = {
   {
     "bobua","txt_bobua","kiik","txt_kiik","baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge",0,0,0,0,0,0,0,0,
     "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron","kib","txt_kib","nemee","txt_nemee","wahaw","txt_wahaw",0,0,0,0,0,0,0,0,0,0,
-    "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.",0,0,0,0,0,0,0,0,0,0,
-    "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba",0,0,0,0,0,0,0,0,
+    "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg",0,0,0,0,0,0,0,0,0,0,0,0,
+    "aent","txt_aent","citten","txt_citten",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -681,10 +682,10 @@ selector_grid_contents = {
     "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "lua","txt_lua","scizor","txt_scizor","lite","txt_lite","zzz","txt_zzz","bulett","txt_bulett","milck","txt_milck",0,0,0,0,0,0,0,0,0,0,0,0,
     "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -711,7 +712,7 @@ selector_grid_contents = {
   },
   -- page 7.5 properties and stuff
   {
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_flogus","txt_flogvn","txt_flogjp","txt_flogsg","txt_floggs","txt_floggb-eng",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -729,7 +730,7 @@ selector_grid_contents = {
   },
   -- page 8.8 extra chars
   {
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "twooo","txt_twooo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -748,6 +749,42 @@ selector_grid_contents = {
   -- page 9.5 platforys modds
   {
     "hey.","txt_hey.",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+  },
+  -- page 10.5
+  {
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+  },
+  -- page 11.5
+  {
+    "txt_frensend",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

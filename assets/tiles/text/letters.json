@@ -423,7 +423,7 @@
     "sprite": ["letter_ae"],
     "types": ["letter"],
     "color": [[0, 3]],
-    "desc": "can only be used in the haet's & graey unless you are trying to prove me wrong, but good luck trying to do that. lol"
+    "desc": "can only be used in the haet's & graey unless you are trying to prove me wrong, but good luck trying to do that. lol... wait aent exists now."
   },
   {
     "name": "letter_¢",
@@ -434,7 +434,7 @@
   },
   {
     "name": "letter_ba",
-    "sprite": ["txt/ba"],
+    "sprite": ["letter_ba"],
     "types": ["letter"],
     "color": [[4, 1]],
     "desc": "you can't spell bab without ba"

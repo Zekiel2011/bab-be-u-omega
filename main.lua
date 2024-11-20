@@ -239,7 +239,7 @@ bab arguments!
 
   randomize_assets = false or cmdargs["randomize"]
   math.randomseed(love.timer.getTime())
-  if randomize_assets then
+  if randomize_assets or settings["randomize"] then
     local names = {}
     local spr = {}
     for n,s in pairs(sprites) do

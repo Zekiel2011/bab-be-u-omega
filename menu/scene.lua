@@ -339,7 +339,7 @@ function scene.draw(dt)
     elseif splash < 0.3 then
       splashtext = "bab craet lvl!"
     elseif splash < 0.4 then
-      splashtext = "I finally got the wildfire in my sock drawer under control!"
+      splashtext = "the be splash 0.4!"
     elseif splash < 0.5 then
       splashtext = "dude, it's called Bab Be U Omega, not Bab Be Omega."
     elseif splash < 0.6 then

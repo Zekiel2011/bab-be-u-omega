@@ -1006,6 +1006,25 @@
     "tags": ["chars", "cat", "sis", "sister", "nya"]
   },
   {
+    "name": "citten",
+    "sprite": ["citten"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "cat",
+    "desc": "bab's babby sister",
+    "tags": ["chars", "cat", "sis", "sister", "nya", "kitten"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_citten",
+    "sprite": ["txt/citten"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "meow :)",
+    "tags": ["chars", "cat", "sis", "sister", "nya", "kitten"]
+  },
+  {
     "name": "swan",
     "sprite": ["swan"],
     "layer": 11,
@@ -2018,20 +2037,6 @@
     "color": [[2, 1]],
     "desc": "syas ti tahw staht .\"BAB\"",
     "tags": ["chars", "baba", "babanot", "bab"]
-  },
-  {
-    "name": "babn't",
-    "sprite": ["babnot"],
-    "layer": 11,
-    "color": [[2, 0]],
-    "rotate": true,
-    "features": {
-      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
-    },
-    "voice": "s_ood",
-    "desc": "babs backwards twin",
-    "tags": ["chars", "baba", "babanot", "bab"],
-    "pronouns": ["she", "her"]
   },
   {
     "name": "snobab",
@@ -3571,6 +3576,24 @@
     "tags": ["chars", "flafla"]
   },
   {
+    "name": "txt_twooo",
+    "sprite": ["txt/twooo"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "shapeshifter",
+    "tags": ["chars", "flafla", "2", "two"]
+  },
+  {
+    "name": "twooo",
+    "sprite": ["twooo"],
+    "layer": 11,
+    "color": [[4, 2]],
+    "desc": "shapeshifter",
+    "rotate": true,
+    "voice": "s_marim",
+    "tags": ["chars", "flafla", "2", "two"]
+  },
+  {
     "name": "al23m",
     "sprite": ["al23m"],
     "layer": 11,
@@ -4225,5 +4248,40 @@
     "types": ["object"],
     "color": [[6, 2]],
     "tags": ["hi!"]
+  },
+  {
+    "name": "ba",
+    "sprite": ["ba"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "voice": "s_doo",
+    "desc": "droopy bab",
+    "tags": ["chars", "baba"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_ba",
+    "sprite": ["txt/ba"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "?",
+    "tags": ["chars", "baba"]
+  },
+  {
+    "name": "aent",
+    "sprite": ["aent"],
+    "layer": 18,
+    "color": [[0, 1]],
+    "rotate": true,
+    "desc": "mini bog",
+    "tags": ["chars", "ant"]
+  },
+  {
+    "name": "txt_aent",
+    "sprite": ["txt/aent"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["chars", "ant"]
   }
 ]

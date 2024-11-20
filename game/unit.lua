@@ -1338,7 +1338,7 @@ function updateUnits(undoing, big_update)
       local unit = ruleparent[2]
       local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, checkmous = true, thicc = thicc_units[unit]})
       for _,on in ipairs(stuff) do
-        if (unit ~= on or ruleparent[1].rule.object.name == "themself") and hasRule(unit, "snacc", on) and sameFloat(unit, on) and ignoreCheck(on, unit) then
+        if (unit ~= on or ruleparent[1].rule.object.name == "themself") and hasRule(unit, "snacc", on) and sameFloat(unit, on) and ignoreCheck(on, unit) and not hasProperty(on, "anti lesbad") and not hasProperty(unit, "anti lesbad")  then
           if timecheck(unit,"snacc",on) and timecheck(on) then
             table.insert(to_destroy, on)
             playSound("snacc")
@@ -1489,8 +1489,8 @@ function updateUnits(undoing, big_update)
 
         to_destroy = handleDels(to_destroy)
     
-    local iscrash = matchesRule(nil,"be","xwx")
-    for _,ruleparent in ipairs(iscrash) do
+    local iscrash2 = matchesRule(nil,"be","xwx")
+    for _,ruleparent in ipairs(iscrash2) do
       local unit = ruleparent[2]
       if not hasProperty(ruleparent[1].rule.object,"slep") then
         local stuff = getUnitsOnTile(unit.x, unit.y, nil, true)
@@ -1498,7 +1498,8 @@ function updateUnits(undoing, big_update)
           is_u = hasProperty(on, "u") or hasProperty(on, "u too") or hasProperty(on, "u tres")
           if is_u and sameFloat(unit, on) then
             if timecheck(unit,"be","xwx") and (timecheck(on,"be","u") or timecheck(on,"be","u too") or timecheck(on,"be","u tres") or timecheck(on,"be","living")) then
-              error(INVALID_VALUE)
+              love.timer.sleep(1)
+              love.event.quit()
             else
               addUndo({"timeless_crash_add"})
               timeless_crash = true
@@ -2366,6 +2367,15 @@ function miscUpdates(state_change)
         local it = unpack(card_for_id[unit.id])
         print("b")
         unit.sprite[1] = "goop_"..it or "goop"
+      end
+      
+      if unit.fullname == "twooo" and scene ~= editor then
+        if not card_for_id[unit.id] then
+          card_for_id[unit.id] = {math.random(1,37)}
+        end
+        local it = unpack(card_for_id[unit.id])
+        print("b")
+        unit.sprite[1] = "twooo_a"..it or "twooo"
       end
 
       if unit.fullname == "txt_katany" then
@@ -3588,6 +3598,18 @@ function convertUnits(pass)
     end
   end
 
+  local ntifynt = getUnitsWithEffectAndCount("ifyyy")
+  for unit,amt in pairs(ntifynt) do
+    unit = units_by_id[unit] or cursors_by_id[unit]
+    if not unit.new and unit.type ~= "outerlvl" and timecheck(unit,"be","ifyyy") then
+      local nametocreate = unit.fullname
+      if getTile(nametocreate) then
+        addTile(nametocreate,unit)
+        addTile(nametocreate,unit)
+      end
+    end
+  end
+
   local ntifyyy = getUnitsWithEffectAndCount("n'tifyyy")
   for unit,amt in pairs(ntifyyy) do
     unit = units_by_id[unit] or cursors_by_id[unit]
@@ -3985,7 +4007,7 @@ function convertUnits(pass)
       local tfd = false
       local tfs = getUnitsOnTile(tx,ty)
       for _,other in ipairs(tfs) do
-        if not hasRule(unit,"be",unit.name) and not hasRule(unit,"ben't",other.fullname) then
+        if not hasRule(unit,"be",unit.name) and not hasRule(unit,"ben't",other.fullname) and not hasRule(other.fullname,"be","stoop") then
           local new_unit = createUnit(other.tile, unit.x, unit.y, unit.dir, true)
           if new_unit ~= nil then
             new_unit.special.customletter = other.special.customletter
@@ -4058,7 +4080,7 @@ function convertUnits(pass)
         else
           local tfs = getUnitsOnTile(tx,ty)
           for _,other in ipairs(tfs) do
-            if not transform_deez[other] and not hasRule(unit,"be",unit.name) and not hasRule(unit,"ben't",other.fullname) then
+            if not transform_deez[other] and not hasRule(unit,"be",unit.name) and not hasRule(unit,"ben't",other.fullname) and not hasRule(other.fullname,"be","stoop") then
               transform_deez[other] = true
             end
           end
