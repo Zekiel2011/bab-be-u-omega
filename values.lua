@@ -659,10 +659,10 @@ selector_grid_contents = {
   -- page 4.5: characters and special objects
   {
     "bobua","txt_bobua","kiik","txt_kiik","baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge",0,0,0,0,0,0,0,0,
-    "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron","kib","txt_kib","nemee","txt_nemee","wahaw","txt_wahaw",0,0,0,0,0,0,0,0,0,0,
+    "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron","kib","txt_kib","nemee","txt_nemee","wahaw","txt_wahaw","monte","txt_monte",0,0,0,0,0,0,0,0,
     "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba",0,0,0,0,0,0,0,0,
     "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg",0,0,0,0,0,0,0,0,0,0,0,0,
-    "aent","txt_aent","citten","txt_citten",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "aent","txt_aent","citten","txt_citten","snomstr","txt_snomstr","fren","txt_fren",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -676,13 +676,13 @@ selector_grid_contents = {
   },
   -- page 5.5: inanimate objects
   {
-    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad","water","txt_water","durm","txt_durm",0,0,0,0,0,0,0,0,0,0,
-    "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart","nes","txt_nes",0,0,0,0,0,0,0,0,0,0,
-    "turnep","txt_turnep","mgama","txt_mgama","move","txt_move","paino","txt_paino","airkar","txt_airkar",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad","water","txt_water","durm","txt_durm","maell","txt_maell",0,0,0,0,0,0,0,0,
+    "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart","nes","txt_nes","catpul","txt_catpul",0,0,0,0,0,0,0,0,
+    "turnep","txt_turnep","mgama","txt_mgama","move","txt_move","paino","txt_paino","airkar","txt_airkar","wandrrs","txt_wandrrs",0,0,0,0,0,0,0,0,0,0,0,0,
+    "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly","big","txt_big","sheild","txt_sheild",0,0,0,0,0,0,0,0,0,0,
     "lua","txt_lua","scizor","txt_scizor","lite","txt_lite","zzz","txt_zzz","bulett","txt_bulett","milck","txt_milck",0,0,0,0,0,0,0,0,0,0,0,0,
-    "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee","tnt","txt_tnt",0,0,0,0,0,0,0,0,0,0,0,0,
+    "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser","comnnd","txt_comnnd",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,

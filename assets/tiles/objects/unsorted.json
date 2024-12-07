@@ -3937,6 +3937,7 @@
     "sprite": ["sord"],
     "layer": 10,
     "color": [[6, 1]],
+    "rotate": true,
     "desc": "unevolved kantata",
     "tags": ["sword", "revive"]
   },
@@ -4687,5 +4688,116 @@
     "types": ["object"],
     "color": [[2, 3]],
     "tags": ["bridge"]
+  },
+  {
+    "name": "comnnd",
+    "sprite": ["comnnd1", "comnnd2"],
+    "layer": 17,
+    "color": [[2, 3], [0, 3]],
+    "desc": "/settblok 0,0 aeir",
+    "tags": ["command block", "minecraft"]
+  },
+  {
+    "name": "txt_comnnd",
+    "sprite": ["txt/comnnd"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["command block", "minecraft"]
+  },
+  {
+    "name": "tnt",
+    "sprite": ["tnt1", "tnt2"],
+    "layer": 17,
+    "color": [[2, 2], [0, 3]],
+    "desc": "Kaboem!!!",
+    "tags": ["tnt", "explosive", "minecraft"]
+  },
+  {
+    "name": "txt_tnt",
+    "sprite": ["txt/tnt"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "tags": ["tnt", "explosive", "minecraft"]
+  },
+  {
+    "name": "wandrrs",
+    "sprite": ["wandrrs"],
+    "layer": 19,
+    "rotate": true,
+    "color": [[2, 3]],
+    "desc": "saturn moment",
+    "tags": ["planet", "wanderers", "planetai", "space"]
+  },
+  {
+    "name": "txt_wandrrs",
+    "sprite": ["txt/wandrrs"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["planet", "wanderers", "planetai", "space"]
+  },
+  {
+    "name": "big",
+    "sprite": ["big"],
+    "layer": 20,
+    "rotate": true,
+    "color": [[4, 0]],
+    "desc": "AAAAAAAAAAAAAA",
+    "tags": ["mega", "megaphone"]
+  },
+  {
+    "name": "txt_big",
+    "sprite": ["txt2/big"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "desc": "old name for THICC",
+    "tags": ["mega", "megaphone", "thicc"]
+  },
+  {
+    "name": "maell",
+    "sprite": ["maell"],
+    "layer": 15,
+    "rotate": false,
+    "color": [[0, 3]],
+    "desc": "iy juest got ay letr, iy juest got ay letr, who be itte froem?",
+    "tags": ["mail", "envelope", "letter", "alphons allstars"]
+  },
+  {
+    "name": "txt_maell",
+    "sprite": ["txt/maell"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["mail", "envelope", "letter", "alphons allstars"]
+  },
+  {
+    "name": "sheild",
+    "sprite": ["sheild"],
+    "layer": 14,
+    "color": [[6, 2]],
+    "desc": "sheild protecc u",
+    "tags": ["shield"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_sheild",
+    "sprite": ["txt/sheild"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["shield"]
+  },
+  {
+    "name": "catpul",
+    "sprite": ["catpul"],
+    "rotate": true,
+    "layer": 15,
+    "color": [[2, 3]],
+    "desc": "shooty thing",
+    "tags": ["catapult"]
+  },
+  {
+    "name": "txt_catpul",
+    "sprite": ["txt/catpul"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["catapult"]
   }
 ]

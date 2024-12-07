@@ -1,5 +1,6 @@
 local scene = {}
 window_dir = 0
+local bgwait = 0
 
 mask_shader = pcallNewShader[[
   vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 screen_coords) {
@@ -265,7 +266,48 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "energy3", "blood", 0.5, 2.5, 1, {3, 3})
   scene.doPassiveParticles(dt, "energy3", "movement-puff", 0.5, 1, 1, {3, 3})
   scene.doPassiveParticles(dt, "visitfren", "tele", 0.75, 2, 1, {1, 4})
-	
+  
+  if not (level_bg_effect == "" or level_bg_effect == " ") then
+    bgwait = bgwait + 1
+  end
+  
+  if level_bg_effect == "bubbles" and bgwait > 20 then
+    addParticles("bubble", 0, 0, {1, 1}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "soot" and bgwait > 20 then
+    addParticles("sootbg", 0, 0, {0, 1}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "world" and bgwait > 10 then
+    addParticles("worldbg", 0, 0, {4, 0}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "stars" and bgwait > 30 then
+    addParticles("stars", 0, 0, {1, love.math.random(2,4)}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "rain" and bgwait > 20 then
+    addParticles("rainbg", 0, 0, {1, 3}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "snow" and bgwait > 20 then
+    addParticles("snowbg", 0, 0, {0, 3}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "leaves" and bgwait > 10 then
+    addParticles("leafbg", 0, 0, {6, 2}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "infinite" and bgwait > 50 then
+    addParticles("infup", 0, 0, {4, 1}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "hail" and bgwait > 30 then
+    addParticles("hailbg", 0, 0, {1, 3}, 1)
+    bgwait = 0
+  end
+  
   doReplay(dt)
   if rules_with and rules_with["rythm"] then
     doRhythm()

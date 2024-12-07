@@ -4283,5 +4283,54 @@
     "types": ["object"],
     "color": [[0, 1]],
     "tags": ["chars", "ant"]
+  },
+  {
+    "name": "snomstr",
+    "sprite": ["snomstr"],
+    "layer": 19,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "I can't think of a good description for this tbh ._.",
+    "tags": ["chars", "yeti", "yety", "snow monster", "sno menstr", "alphons allstars"]
+  },
+  {
+    "name": "txt_snomstr",
+    "sprite": ["txt/snomstr"],
+    "types": ["object"],
+    "display": "sno mstr",
+    "color": [[0, 3]],
+    "tags": ["chars", "yeti", "yety", "snow monster", "sno menstr", "alphons allstars"]
+  },
+  {
+    "name": "fren",
+    "sprite": ["fren"],
+    "layer": 20,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "Scientists aren't too sure what this is, but their research currently shows it might be a predicursor of Bab and Keek.",
+    "tags": ["chars", "friend", "planet keke"]
+  },
+  {
+    "name": "txt_fren",
+    "sprite": ["txt/fren"],
+    "types": ["object"],
+    "color": [[3, 3]],
+    "tags": ["chars", "friend", "planet keke"]
+  },
+  {
+    "name": "monte",
+    "sprite": ["monte"],
+    "layer": 20,
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "goawaypls... bouxs...",
+    "tags": ["chars", "monty", "covemount"]
+  },
+  {
+    "name": "txt_monte",
+    "sprite": ["txt/monte"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["chars", "monty", "covemount"]
   }
 ]

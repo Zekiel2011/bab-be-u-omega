@@ -12,7 +12,7 @@ local saved_settings = false
 
 local settings_open, settings_ui, properties
 local label_palette, label_music
-local input_name, input_author, input_palette, input_music, input_width, input_height, input_extra, input_parent_level, input_next_level, input_is_overworld, input_puffs_to_clear, input_background_sprite
+local input_name, input_author, input_palette, input_music, input_width, input_height, input_extra, input_parent_level, input_next_level, input_is_overworld, input_puffs_to_clear, input_background_sprite, input_bg_effect
 
 local capturing, start_drag, end_drag
 local screenshot, screenshot_image
@@ -85,6 +85,9 @@ function scene.load()
   end
   if not level_level_sprite then
     level_level_sprite = ""
+  end
+  if not level_bg_effect then
+    level_bg_effect = ""
   end
   if not level_level_number then
     level_level_number = 0
@@ -288,6 +291,11 @@ function scene.setupGooi()
   label_music = gooi.newLabel({text = "Music", x = 4+dx*i, y = y, w = w, h = h}):center():setGroup("settings")
   y = y + h + p
   input_music = gooi.newText({text = map_music, x = 4+dx*i, y = y, w = w, h = h}):setGroup("settings")
+
+  y = y + h + p
+  label_bg_effect = gooi.newLabel({text = "Fg Effect", x = 4+dx*i, y = y, w = w, h = h}):center():setGroup("settings")
+  y = y + h + p
+  input_bg_effect = gooi.newText({text = bg_effect, x = 4+dx*i, y = y, w = w, h = h}):setGroup("settings")
 
   if is_mobile then
     y = y_top - h
@@ -910,8 +918,8 @@ function scene.mouseReleased(x, y, button)
       -- icon style
       if mouseOverBox(-56, -95, 16, 16, t) then
         level_dialogue.unit.special.iconstyle = "number"
-        if level_dialogue.unit.special.number and level_dialogue.unit.special.number > 99 then
-          level_dialogue.unit.special.number = 99
+        if level_dialogue.unit.special.number and level_dialogue.unit.special.number > 999 then
+          level_dialogue.unit.special.number = 999
         end
         level_dialogue.iconnamebox:setVisible(false)
         level_dialogue.iconnamebox:setEnabled(false)
@@ -944,19 +952,20 @@ function scene.mouseReleased(x, y, button)
       -- number
       if level_dialogue.unit.special.iconstyle ~= "other" then
         local shift = key_down["lshift"] or key_down["rshift"]
+        local ctrl = key_down["lctrl"]
         if mouseOverBox(-38, -70, 11, 16, t) then
           local min = 1
           if not level_dialogue.unit.special.iconstyle or level_dialogue.unit.special.iconstyle == "number" then min = 0 end
-          level_dialogue.unit.special.number = (level_dialogue.unit.special.number or 1) - (shift and 10 or 1)
+          level_dialogue.unit.special.number = (level_dialogue.unit.special.number or 1) - (ctrl and 100 or shift and 10 or 1)
           if (level_dialogue.unit.special.number or 1) < min then
             level_dialogue.unit.special.number = min
           end
         end
         if mouseOverBox(3, -70, 11, 16, t) then
-          local max = 99
+          local max = 999
           if level_dialogue.unit.special.iconstyle == "dots" then max = 13 end
           if level_dialogue.unit.special.iconstyle == "letter" then max = 26 end
-          level_dialogue.unit.special.number = (level_dialogue.unit.special.number or 1) + (shift and 10 or 1)
+          level_dialogue.unit.special.number = (level_dialogue.unit.special.number or 1) + (ctrl and 100 or shift and 10 or 1)
           if (level_dialogue.unit.special.number or 1) > max then
             level_dialogue.unit.special.number = max
           end
@@ -2100,6 +2109,7 @@ function scene.updateMap()
     is_overworld = level_is_overworld,
     puffs_to_clear = level_puffs_to_clear,
     background_sprite = level_background_sprite,
+    bg_effect = level_bg_effect,
   }
   map = serpent.dump(map)
   maps = {{data = map, info = info}}
@@ -2192,6 +2202,7 @@ function scene.openSettings()
     input_puffs_to_clear:setValue(level_puffs_to_clear)
     input_background_sprite:setText(level_background_sprite)
     input_extra.checked = level_extra
+    input_bg_effect:setText(level_bg_effect)
 
     gooi.setGroupVisible("settings", true)
     gooi.setGroupEnabled("settings", true)
@@ -2236,6 +2247,7 @@ function scene.saveSettings()
   level_is_overworld = input_is_overworld.checked
   level_puffs_to_clear = input_puffs_to_clear:getValue()
   level_background_sprite = input_background_sprite:getText()
+  level_bg_effect = input_bg_effect:getText()
 
   mapwidth = input_width:getValue()
   mapheight = input_height:getValue()
@@ -2323,6 +2335,7 @@ function love.filedropped(file)
   level_is_overworld = mapdata.is_overworld or false
   level_puffs_to_clear = mapdata.level_puffs_to_clear or 0
   level_background_sprite = mapdata.background_sprite or ""
+  level_bg_effect = mapdata.bg_effect or ""
 
   if map_ver == 0 then
     maps = {{data = loadstring("return " .. mapstr)(), info = mapdata}}

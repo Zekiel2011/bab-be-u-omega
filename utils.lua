@@ -2599,6 +2599,150 @@ function addParticles(ptype,x,y,color,count)
     ps:start()
     ps:emit(count or 10)
     table.insert(particles, ps)
+  elseif ptype == "bubble" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["bubbleprtc"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = (mapheight*TILE_SIZE)
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE)/2, 2, 0)
+    ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(250*speed, 300*speed)
+    ps:setSpin(0, 0)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(3)
+    ps:setDirection(1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "sootbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["blossum2"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = (mapheight*TILE_SIZE)
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE), (mapwidth*TILE_SIZE), 0)
+    ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(love.math.random(3,-3)*(speed*20))
+    ps:setSpin(0, 0)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(3)
+    ps:setDirection(1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "worldbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["blossom"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = (mapheight*TILE_SIZE)
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE), (mapwidth*TILE_SIZE), 0)
+    ps:setSizes(0.2, 1, 2, love.math.random(2.1, 4), 2, 1,0.5, 0.2)
+    ps:setSpeed(0)
+    ps:setSpin(0,5)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(5)
+    ps:setDirection(1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "rainbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["dropprtc"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = 0-(mapheight*TILE_SIZE)/2
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE)/2, 2, 0)
+    ps:setSizes(0.75, 0.5, 0.1)
+    ps:setSpeed(350*speed, 350*speed)
+    ps:setSpin(0, 0)
+    ps:setLinearDamping(0.25)
+    ps:setParticleLifetime(3)
+    ps:setDirection(-1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "hailbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["hailbg"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = 0-(mapheight*TILE_SIZE)/2
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE)/2, 2, 0)
+    ps:setSizes(0.75, 0.5, 0.1)
+    ps:setSpeed(700*speed)
+    ps:setSpin(0, 0)
+    ps:setLinearDamping(0.25)
+    ps:setParticleLifetime(1.5)
+    ps:setDirection(-1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "snowbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["snoflakpt"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = 0-(mapheight*TILE_SIZE)/2
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE)/2, 2, 0)
+    ps:setSizes(0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(150*speed, 175*speed)
+    ps:setSpin(0, 1)
+    ps:setLinearDamping(0.25)
+    ps:setParticleLifetime(10)
+    ps:setDirection(-1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "leafbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["leef"])
+    local px = (mapwidth*TILE_SIZE)
+    local py = (mapheight*TILE_SIZE)
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", ((mapwidth)*TILE_SIZE), ((mapwidth)*TILE_SIZE), 0)
+    ps:setSizes(0.2, 0.75, 0.6, 0.4, 0.1)
+    ps:setSpeed(250*speed, 300*speed)
+    ps:setSpin(0, 90)
+    ps:setLinearDamping(0.25)
+    ps:setParticleLifetime(8)
+    ps:setDirection(2.25*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "stars" then
+    local speed = (TILE_SIZE*mapwidth)/350
+    local ps = love.graphics.newParticleSystem(sprites["starr"])
+    local px = (mapheight*TILE_SIZE)/2
+    local py = (mapwidth*TILE_SIZE)
+    ps:setPosition(py, px)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", 2, (mapheight*TILE_SIZE)/2, 0)
+    ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(130*speed)
+    ps:setSpin(0, 5)
+    ps:setLinearDamping(0.25)
+    ps:setParticleLifetime(8)
+    ps:setDirection(1*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
   elseif ptype == "sing" then
     local ps = love.graphics.newParticleSystem(sprites["noet"])
     local px = (x + 1) * TILE_SIZE
@@ -3308,6 +3452,7 @@ function loadLevels(levels, mode, level_objs, xwx)
     
     level_name = level_name:sub(1, 100)
     level_author = data.author or ""
+    level_bg_effect = data.bg_effect or ""
     level_extra = data.extra or false
     current_palette = data.palette or "default"
     map_music = data.music or "bab be u them"
@@ -3999,10 +4144,10 @@ function buildOptions()
     scene.addOption("autoupdate", "autoupdate (experimental)", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc2" then
-    scene.addButton("super misc settings", function() global_menu_state = "misc3"; scene.buildUI() end)
+    scene.addButton("SUPER MISC SETTINGS", function() global_menu_state = "misc3"; scene.buildUI() end)
     scene.addOption("contrast", "High contrasted colors", {{"on", true}, {"off", false}})
     scene.addOption("savefile", "Current Save File", {{"Bab", bab}, {"Keek", keek}, {"Meem", meem}})
-    scene.addOption("ads", "Ads", {{"on", true}, {"off", false}})
+    scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
@@ -4814,8 +4959,14 @@ function drawSprite(x, y, rotation, sx, sy, o)
       if #num == 1 then
         num = "0"..num
       end
-      love.graphics.draw(sprites["levelicon_"..num:sub(1,1)], x+(4*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
-      love.graphics.draw(sprites["levelicon_"..num:sub(2,2)], x+(16*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+      if num:sub(3,3) == "" then
+        love.graphics.draw(sprites["levelicon_"..num:sub(1,1)], x+(4*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+        love.graphics.draw(sprites["levelicon_"..num:sub(2,2)], x+(16*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+      else
+        love.graphics.draw(sprites["levelicon_small_"..num:sub(1,1)], x+(3*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+        love.graphics.draw(sprites["levelicon_small_"..num:sub(2,2)], x+(10*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+        love.graphics.draw(sprites["levelicon_small_"..num:sub(3,3)], x+(19*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)
+      end
     elseif o.special.iconstyle == "dots" then
       local num = tostring(o.special.number or 1)
       love.graphics.draw(sprites["levelicon_dots_"..num], x+(4*sx), y+(4*sy), 0, sx, sy, max_w / 2, max_h / 2)

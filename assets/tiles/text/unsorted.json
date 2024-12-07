@@ -438,7 +438,7 @@
     "color": [[3, 3]],
     "unsearchable": true,
     "convertible": false,
-    "desc": "Please don't use in normal levels, acts like FRENS but is used for the EVERY1 BE FRENS ending.",
+    "desc": "(UNIMPLIMENTED, only acts like FRENS currently.) Please don't use in normal levels, acts like FRENS but is used for the EVERY1 BE FRENS ending.",
     "tags": ["group", "friends"]
   }
 ]
