@@ -426,5 +426,37 @@
     "color": [[3, 3]],
     "desc": "VILOET: Causes the unit to appear violet.",
     "tags": ["colors", "colours", "violet", "daisy", "dayzy"]
+  },
+  {
+    "name": "txt_below",
+    "sprite": ["txt/below"],
+    "types": ["cond_infix"],
+    "color": [[1, 4]],
+    "desc": "BELOW (Infix Condition): True if X is one tile below Y.",
+    "tags": ["on", "wfren", "below", "down", "above", "up", "beside", "left", "right"]
+  },
+  {
+    "name": "txt_abov",
+    "sprite": ["txt/abov"],
+    "types": ["cond_infix"],
+    "color": [[1, 4]],
+    "desc": "ABOV (Infix Condition): True if X is one tile above Y.",
+    "tags": ["on", "wfren", "below", "down", "above", "up", "beside", "left", "right"]
+  },
+  {
+    "name": "txt_sid>",
+    "sprite": ["txt/sidr"],
+    "types": ["cond_infix"],
+    "color": [[1, 4]],
+    "desc": "SID> (Infix Condition): True if X is one tile to the right of Y.",
+    "tags": ["on", "wfren", "below", "down", "above", "up", "beside", "left", "right"]
+  },
+  {
+    "name": "txt_sid<",
+    "sprite": ["txt/sidl"],
+    "types": ["cond_infix"],
+    "color": [[1, 4]],
+    "desc": "SID< (Infix Condition): True if X is one tile to the left of Y.",
+    "tags": ["on", "wfren", "below", "down", "above", "up", "beside", "left", "right"]
   }
 ]

@@ -768,6 +768,16 @@ function addRule(full_rule)
     rules.verb.name = verb:sub(6,-1)
   end
   
+  if object:starts("omega ") and omega_word_replacements[object:sub(6,-1)] then
+    rules.object.name = omega_word_replacements[object:sub(6,-1)]
+    object = omega_word_replacements[object:sub(6,-1)]
+  end
+  
+  if verb:starts("omega ") and omega_word_replacements[verb:sub(6,-1)] then
+    rules.verb.name = omega_word_replacements[verb:sub(6,-1)]
+    verb = omega_word_replacements[verb:sub(6,-1)]
+  end
+  
   if rule_id ~= "" and new_rule and not past_rules[rule_id] and not undoing then
     -- actually i dont know how rule stacking works ehehe
     local r1, subject_conds = getPastConds(rules.subject.conds or {})
@@ -925,6 +935,15 @@ function addRule(full_rule)
   if verb == "bebe" then
     local new_verb = copyTable(rules.verb)
     new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+
+  if verb == "gat" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "got"
     for i = 1, verb_not do
       new_verb.name = new_verb.name .. "n't"
     end

@@ -275,8 +275,16 @@ function scene.update(dt)
     addParticles("bubble", 0, 0, {1, 1}, 1)
     bgwait = 0
   end
+  if level_bg_effect == "glitter" and bgwait > 10 then
+    addParticles("glitterbg", 0, 0, {4, 2}, 1)
+    bgwait = 0
+  end
   if level_bg_effect == "soot" and bgwait > 20 then
     addParticles("sootbg", 0, 0, {0, 1}, 1)
+    bgwait = 0
+  end
+  if level_bg_effect == "dust" and bgwait > 20 then
+    addParticles("dustbg", 0, 0, {0, 1}, 1)
     bgwait = 0
   end
   if level_bg_effect == "world" and bgwait > 10 then

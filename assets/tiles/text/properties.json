@@ -1211,24 +1211,6 @@
     "tags": ["you", "p1", "player"]
   },
   {
-    "name": "txt_all1",
-    "sprite": ["txt2/all1"],
-    "types": ["property"],
-    "color": [[0, 3]],
-    "features": {
-      "sans": {"x": 21, "y": 6, "w": 3, "h": 4}
-    },
-    "desc": "every property (maybe) in the game",
-    "tags": [""]
-  },
-  {
-    "name": "txt_babbyprop",
-    "sprite": ["txt/prop", "txt/babby"],
-    "types": ["property"],
-    "color": [[3, 3],[4, 3]],
-    "desc": "BABBY: Thicc things take up a 2x2 space. Expands to the lower right. Stacks additively. Also disables all spatial darnery (poor toll and go/mirrarnd).\nAnti: babby (yes, the noun)"
-  },
-  {
     "name": "txt_/:o",
     "sprite": ["txt2/wow"],
     "types": ["property"],
@@ -1238,14 +1220,6 @@
     },
     "desc": "/:o is just another effect property, bruh. ",
     "tags": ["bonus", "woah", "whoa", "face"]
-  },
-  {
-    "name": "txt_haethaet",
-    "sprite": ["txt/haethaet"],
-    "types": ["property"],
-    "color": [[2, 4]],
-    "desc": "HAET HAET: what\nAnti: haethaet",
-    "tags": ["fall", "rise", "gravity"]
   },
   {
     "name": "txt_crye",

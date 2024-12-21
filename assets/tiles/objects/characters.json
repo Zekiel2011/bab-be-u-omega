@@ -4332,5 +4332,89 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["chars", "monty", "covemount"]
+  },
+  {
+    "name": "whar",
+    "sprite": ["whar"],
+    "layer": 20,
+    "voice": "whar",
+    "color": [[0, 3]],
+    "rotate": true,
+    "desc": "THE SFX REAL QT!!!",
+    "tags": ["chars", "fox", "fax", "whar"]
+  },
+  {
+    "name": "txt_whar",
+    "sprite": ["txt/whar"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "tags": ["chars", "fox", "fax", "whar"]
+  },
+  {
+    "name": "fax",
+    "sprite": ["fax"],
+    "layer": 5,
+    "color": [[3, 1]],
+    "desc": "faxs wurld",
+    "features": {
+      "sans": {"x": 21, "y": 13, "w": 2, "h": 3}
+    },
+    "tags": ["chars", "fox", "unused", "removed"]
+  },
+  {
+    "name": "txt_fax",
+    "sprite": ["txt/fax"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "tags": ["chars", "fox", "unused", "removed"]
+  },
+  {
+    "name": "sedl",
+    "sprite": ["sedl"],
+    "layer": 20,
+    "color": [[6, 2]],
+    "rotate": true,
+    "desc": "litl sed",
+    "tags": ["chars", "seedle", "hydro seedle", "seedle r", "seedlusa", "mario", "mario & luigi", "brothership", "luigi", "mario & luigi brothership"]
+  },
+  {
+    "name": "txt_sedl",
+    "sprite": ["txt/sedl"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["chars", "seedle", "hydro seedle", "seedle r", "seedlusa", "mario", "mario & luigi", "brothership", "luigi", "mario & luigi brothership"]
+  },
+  {
+    "name": "man",
+    "sprite": ["man1", "man2", "man3"],
+    "layer": 20,
+    "color": [[6, 2], [5, 2], [0, 3]],
+    "rotate": true,
+    "desc": "brik + him",
+    "tags": ["chars", "gromba", "dromba", "mario", "mario & luigi", "dream team", "luigi", "mario & luigi dream team"]
+  },
+  {
+    "name": "txt_man",
+    "sprite": ["txt/man"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["chars", "gromba", "dromba", "mario", "mario & luigi", "dream team", "luigi", "mario & luigi dream team"]
+  },
+  {
+    "name": "gat",
+    "sprite": ["gat"],
+    "layer": 20,
+    "color": [[2, 4]],
+    "rotate": true,
+    "desc": "I don't know what this thing is.",
+    "tags": ["chars", "his", "got", "has"]
+  },
+  {
+    "name": "txt_gat",
+    "sprite": ["txt/gat"],
+    "types": ["object", "verb_class", "verb"],
+    "color": [[0, 3]],
+    "desc": "GAT: A noun and verb, refers to the GAT object, and as a verb acts like GOT.",
+    "tags": ["chars", "his", "got", "has"]
   }
 ]

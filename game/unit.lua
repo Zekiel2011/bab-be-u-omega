@@ -2160,6 +2160,28 @@ function miscUpdates(state_change)
           end
         end
       end
+
+      if unit.fullname == "sedl" then
+        if unit.color_override then
+          local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
+          if color == "whit" then
+            unit.sprite = {"sedluas"}
+          else
+            unit.sprite = {"sedl"}
+          end
+        end
+      end
+
+      if unit.fullname == "man" then
+        if unit.color_override then
+          local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
+          if color == "purp" then
+            unit.sprite = {"man1","man2","man4"}
+          else
+            unit.sprite = {"man1","man2","man3"}
+          end
+        end
+      end
       
       if unit.fullname == "noe" then
         unit.sprite = {"no1"}

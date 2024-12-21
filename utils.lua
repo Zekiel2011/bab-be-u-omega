@@ -1196,6 +1196,210 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
           end
         end
       end
+    elseif condtype == "below" then
+      if unit == outerlvl then
+        for _,other in ipairs(sets) do
+          local found = 0
+          for _,fren in ipairs(units) do
+            if inBounds(fren.x,fren.y) and other[fren] then
+              found = found+1
+              if found >= count then break end
+            end
+          end
+          if found < count then
+            result = false
+            break
+          end
+        end
+        --something something surrounds maybe?
+        --[[if unit == outerlvl and surrounds ~= nil and surrounds_name == level_name then
+          --use surrounds to remember what was around the level
+          for __,on in ipairs(surrounds[0][0]) do
+            if nameIs(on, param) then
+              table.insert(others, on)
+            end
+          end]]
+        for _,other in ipairs(lists) do
+          if #other == 0 then
+            result = false
+            break
+          end
+        end
+      else
+        local frens = getUnitsOnTile(x, y-1, {exclude = unit, checkmous = true, thicc = thicc_units[unit]})
+        for _,other in ipairs(sets) do
+          if other[outerlvl] then
+            if not inBounds(unit.x,unit.y) or count > 1 then
+              result = false
+            end
+          else
+            local found = 0
+            for _,fren in ipairs(frens) do
+              if other[fren] then
+                found = found+1
+                if found >= count then break end
+              end
+            end
+            if found < count then
+              result = false
+              break
+            end
+          end
+        end
+      end
+    elseif condtype == "abov" then
+      if unit == outerlvl then
+        for _,other in ipairs(sets) do
+          local found = 0
+          for _,fren in ipairs(units) do
+            if inBounds(fren.x,fren.y) and other[fren] then
+              found = found+1
+              if found >= count then break end
+            end
+          end
+          if found < count then
+            result = false
+            break
+          end
+        end
+        --something something surrounds maybe?
+        --[[if unit == outerlvl and surrounds ~= nil and surrounds_name == level_name then
+          --use surrounds to remember what was around the level
+          for __,on in ipairs(surrounds[0][0]) do
+            if nameIs(on, param) then
+              table.insert(others, on)
+            end
+          end]]
+        for _,other in ipairs(lists) do
+          if #other == 0 then
+            result = false
+            break
+          end
+        end
+      else
+        local frens = getUnitsOnTile(x, y+1, {exclude = unit, checkmous = true, thicc = thicc_units[unit]})
+        for _,other in ipairs(sets) do
+          if other[outerlvl] then
+            if not inBounds(unit.x,unit.y) or count > 1 then
+              result = false
+            end
+          else
+            local found = 0
+            for _,fren in ipairs(frens) do
+              if other[fren] then
+                found = found+1
+                if found >= count then break end
+              end
+            end
+            if found < count then
+              result = false
+              break
+            end
+          end
+        end
+      end
+    elseif condtype == "sid>" then
+      if unit == outerlvl then
+        for _,other in ipairs(sets) do
+          local found = 0
+          for _,fren in ipairs(units) do
+            if inBounds(fren.x,fren.y) and other[fren] then
+              found = found+1
+              if found >= count then break end
+            end
+          end
+          if found < count then
+            result = false
+            break
+          end
+        end
+        --something something surrounds maybe?
+        --[[if unit == outerlvl and surrounds ~= nil and surrounds_name == level_name then
+          --use surrounds to remember what was around the level
+          for __,on in ipairs(surrounds[0][0]) do
+            if nameIs(on, param) then
+              table.insert(others, on)
+            end
+          end]]
+        for _,other in ipairs(lists) do
+          if #other == 0 then
+            result = false
+            break
+          end
+        end
+      else
+        local frens = getUnitsOnTile(x+1, y, {exclude = unit, checkmous = true, thicc = thicc_units[unit]})
+        for _,other in ipairs(sets) do
+          if other[outerlvl] then
+            if not inBounds(unit.x,unit.y) or count > 1 then
+              result = false
+            end
+          else
+            local found = 0
+            for _,fren in ipairs(frens) do
+              if other[fren] then
+                found = found+1
+                if found >= count then break end
+              end
+            end
+            if found < count then
+              result = false
+              break
+            end
+          end
+        end
+      end
+    elseif condtype == "sid<" then
+      if unit == outerlvl then
+        for _,other in ipairs(sets) do
+          local found = 0
+          for _,fren in ipairs(units) do
+            if inBounds(fren.x,fren.y) and other[fren] then
+              found = found+1
+              if found >= count then break end
+            end
+          end
+          if found < count then
+            result = false
+            break
+          end
+        end
+        --something something surrounds maybe?
+        --[[if unit == outerlvl and surrounds ~= nil and surrounds_name == level_name then
+          --use surrounds to remember what was around the level
+          for __,on in ipairs(surrounds[0][0]) do
+            if nameIs(on, param) then
+              table.insert(others, on)
+            end
+          end]]
+        for _,other in ipairs(lists) do
+          if #other == 0 then
+            result = false
+            break
+          end
+        end
+      else
+        local frens = getUnitsOnTile(x-1, y, {exclude = unit, checkmous = true, thicc = thicc_units[unit]})
+        for _,other in ipairs(sets) do
+          if other[outerlvl] then
+            if not inBounds(unit.x,unit.y) or count > 1 then
+              result = false
+            end
+          else
+            local found = 0
+            for _,fren in ipairs(frens) do
+              if other[fren] then
+                found = found+1
+                if found >= count then break end
+              end
+            end
+            if found < count then
+              result = false
+              break
+            end
+          end
+        end
+      end
     elseif condtype:ends("arond") then
       --Vitellary: Deliberately ignore the tile we're on. This is different from baba.
       local others = {}
@@ -2628,6 +2832,42 @@ function addParticles(ptype,x,y,color,count)
     ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
     ps:setSpeed(love.math.random(3,-3)*(speed*20))
     ps:setSpin(0, 0)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(3)
+    ps:setDirection(1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "dustbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["sparklebg"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = (mapheight*TILE_SIZE)
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE), (mapwidth*TILE_SIZE), 0)
+    ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(love.math.random(-3,-1)*(speed*20))
+    ps:setSpin(0, 0)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(3)
+    ps:setDirection(1.5*math.pi)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 20)
+    table.insert(particles, ps)
+  elseif ptype == "glitterbg" then
+    local speed = (TILE_SIZE*mapheight)/350
+    local ps = love.graphics.newParticleSystem(sprites["glitterbg"])
+    local px = (mapwidth*TILE_SIZE)/2
+    local py = (mapheight*TILE_SIZE)/2
+    ps:setPosition(px, py)
+    ps:setSpread(math.pi/4)
+    ps:setEmissionArea("uniform", (mapwidth*TILE_SIZE), (mapwidth*TILE_SIZE), 0)
+    ps:setSizes(0.2, 0.5, 0.4, 0.2, 0.1)
+    ps:setSpeed(love.math.random(3,-3)*(speed*20))
+    ps:setSpin(0, 5)
     ps:setLinearDamping(1)
     ps:setParticleLifetime(3)
     ps:setDirection(1.5*math.pi)
@@ -4126,7 +4366,6 @@ function buildOptions()
     scene.addOption("mouse_lines", "mouse lines", {{"on", true}, {"off", false}})
     scene.addOption("stopwatch_effect", "stopwatch effect", {{"on", true}, {"off", false}})
     scene.addOption("fullscreen", "screen mode", {{"windowed", false}, {"fullscreen", true}}, function() fullScreen() end)
-    scene.addOption("babafont", "use Baba Is You font", {{"off", false}, {"on", true}})
     if scene == menu then
       scene.addOption("scroll_on", "menu background scroll", {{"on", true}, {"off", false}})
       scene.addOption("menu_anim", "menu animations", {{"on", true}, {"off", false}})
@@ -4142,14 +4381,15 @@ function buildOptions()
     scene.addOption("input_delay", "input delay", {{"0", 0}, {"50", 50}, {"100", 100}, {"125", 125}, {"150 (default)", 150}, {"200", 200}})
     scene.addOption("focus_pause", "pause on defocus", {{"on", true}, {"off", false}})
     scene.addOption("autoupdate", "autoupdate (experimental)", {{"on", true}, {"off", false}})
+    scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
+    scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
+    scene.addOption("bumpscosity", "Bumpscosity", {{"1", 1}, {"12", 12}, {"50", 50}, {"76", 76}, {"100", 100}, {"1000", 1000}, {"4200", 4200}, {"6368", 6368}, {"8888", 8888}, {"9999", 9999}, {"10000000000", 10000000000}, {"1000000000000000000000", 1000000000000000000000}, {"-1000", -1000}, {"e", e}, {"0", 0}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc2" then
     scene.addButton("SUPER MISC SETTINGS", function() global_menu_state = "misc3"; scene.buildUI() end)
     scene.addOption("contrast", "High contrasted colors", {{"on", true}, {"off", false}})
     scene.addOption("savefile", "Current Save File", {{"Bab", bab}, {"Keek", keek}, {"Meem", meem}})
     scene.addOption("ads", "Ads", {{"off", false}})
-    scene.addOption("max_wobble", "Max Wobbling", {{"on", true}, {"off", false}})
-    scene.addOption("true_wobble", "True Wobbling", {{"on", true}, {"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)

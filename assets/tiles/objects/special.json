@@ -208,7 +208,7 @@
     "sprite": ["stelth"],
     "types": ["object"],
     "layer": 20,
-    "desc": "Man, GLAS's description aged well.",
+    "desc": "translusid char",
     "convertible": false,
     "rotate": true,
     "color": [[1, 3]],

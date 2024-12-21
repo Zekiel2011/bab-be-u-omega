@@ -354,7 +354,7 @@
   {
     "name": "txt_omega",
     "sprite": ["txt/omega"],
-    "types": ["anti"],
+    "types": ["anti", "omega"],
     "color": [[2, 4]],
     "desc": "OMEGA: (Currently isn't inplemented, but acts the same as ANTI) Acts like ANTI, but instead makes it be more like a super counterpart. Does not work with nouns.\nEach text might have a custom effect when omega'd.",
     "tags": ["double", "super"]
