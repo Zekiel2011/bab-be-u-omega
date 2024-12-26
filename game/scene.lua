@@ -1580,6 +1580,17 @@ function scene.draw(dt)
 
           love.graphics.pop()
         end
+      elseif unit.fullname == "nemee" then
+        local tile = getTile(name)
+        if tile then
+          love.graphics.push()
+          love.graphics.translate(3, -9)
+
+          local color = getTileColors(tile, (c1 and c2) and {c1, c2} or nil)
+          drawTileSprite(tile, fulldrawx, fulldrawy, 0, 0.75, 0.75, {color = color})
+
+          love.graphics.pop()
+        end
       end
     end
 

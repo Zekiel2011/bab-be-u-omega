@@ -85,7 +85,8 @@
     "voice": "s_vitellary",
     "desc": "vite be haetflor",
     "tags": ["devs", "chars", "vitellary", "vvvvvv"],
-    "pronouns": ["she", "her"]
+    "pronouns": ["she", "her"],
+    "old_names": ["larry"]
   },
   {
     "name": "txt_vite",
@@ -93,7 +94,8 @@
     "types": ["object"],
     "color": [[2, 4]],
     "desc": "(its actually pronounced vit",
-    "tags": ["devs", "chars", "vitellary", "vvvvvv"]
+    "tags": ["devs", "chars", "vitellary", "vvvvvv"],
+    "old_names": ["txt_larry"]
   },
   {
     "name": "lila",

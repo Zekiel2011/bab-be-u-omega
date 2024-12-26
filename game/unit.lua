@@ -2259,6 +2259,14 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "fir" then
+        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+          unit.sprite = {"fir_night"}
+        else
+          unit.sprite = {"fir"}
+        end
+      end
+      
       if unit.fullname == "bah" then
         if unit.dir == 3 then
           unit.sprite = {"bah_down"}
@@ -2339,6 +2347,12 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "nemee" then 
+        if hasRule(unit,"got","?") then
+          unit.sprite = {"nemee_got"}
+        end
+      end
+       
       -- here goes the legendary ditto transformations
       if unit.fullname == "ditto" then
         --very low priority, will only trigger if nothing else does
