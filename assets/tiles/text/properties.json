@@ -83,10 +83,10 @@
   {
     "name": "txt_goawayplsdir",
     "display": "go away pls",
-    "sprite": ["txt/goaway", "arro"],
+    "sprite": ["txt/dirpush"],
     "types": ["property"],
     "rotate": true,
-    "color": [[6, 1], [6, 2]],
+    "color": [[6, 1]],
     "desc": "GO AWAY PLS DIRECTIONAL: Pushed by movement into its tile, but only in that direction.\nAnti: comepls",
     "tags": ["push"]
   },

@@ -628,7 +628,7 @@ selector_grid_contents = {
   -- page 10: the extra propertys and stuff
   {
     "txt_iscome","txt_befit","txt_dat",0,"txt_snaccish","txt_noswims","txt_foeddee","txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,"obejt_bab","obejt_be","obejt_keek","obejt_watr","obejt_fenss","obejt_algay","obejt_buble","obejt_meem","obejt_dor",
-    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,"txt_huh","txt_spark",0,0,0,0,"txt_obejt","obejt_til","obejt_flog","obejt_boux","obejt_bellt","obejt_kee","obejt_boll","obejt_wal","obejt_obejt_bab",
+    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,"txt_huh",0,0,0,0,0,"txt_obejt","obejt_til","obejt_flog","obejt_boux","obejt_bellt","obejt_kee","obejt_boll","obejt_wal","obejt_obejt_bab",
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,"txt_unhuh","txt_zup",0,0,0,0,"txt_classs","txt_deobe","obejt_huro","obejt_platfory","obejt_txt_u","obejt_obejt_keek","obejt_obejt_obejt_bab","obejt_txt_bab","obejt_txt_be",
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o","txt_zown",0,0,0,"txt_bunosd","txt_whuhd","txt_png",0,"obejt_lesbab","obejt_txt_a","obejt_letter_a","obejt_starr","obejt_obejt","obejt_meemto",
     "txt_dirgo","txt_nogoish","txt_goawayplsdir",0,"txt_step","txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,"obejt_skul","obejt_gras","obejt_hedg","obejt_arro","obejt_u","obejt_fof",
@@ -738,7 +738,7 @@ selector_grid_contents = {
     "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba","gat","txt_gat",0,0,0,0,0,0,
     "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg","man","txt_man",0,0,0,0,0,0,0,0,0,0,
     "aent","txt_aent","citten","txt_citten","snomstr","txt_snomstr","fren","txt_fren","whar","txt_whar","sedl","txt_sedl",0,0,0,0,0,0,0,0,0,0,0,0,
-    "kvait","txt_kvait",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "kvait","txt_kvait","slim","txt_slim",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
