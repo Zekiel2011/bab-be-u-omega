@@ -513,7 +513,7 @@ selector_grid_contents = {
   },
   -- page 4: characters and special objects
   {
-    "bab","txt_bab","kat","txt_kat","flof","txt_flof","babby","txt_babby","bad","txt_bad","fof","txt_fof",0,0,0,0,0,0,0,0,"lila","txt_lila","vite","txt_vite",
+    "bab","txt_bab","kat","txt_kat","flof","txt_flof","babby","txt_babby","bad","txt_bad","fof","txt_fof","one","txt_one",0,0,0,0,0,0,"lila","txt_lila","vite","txt_vite",
     "keek","txt_keek","creb","txt_creb","shrim","txt_shrim","moo","txt_moo","toby","txt_toby","jij","txt_jij",0,0,0,0,0,0,0,0,"pata","txt_pata","jill","txt_jill",
     "meem","txt_meem","statoo","txt_statoo","flamgo","txt_flamgo","migri","txt_migri","temmi","txt_temmi","ballt","txt_ballt",0,0,0,0,0,0,0,0,"slab","txt_slab","zsoob","txt_zsoob",
     "skul","txt_skul","beeee","txt_beeee","gul","txt_gul","kva","txt_kva","bunmy","txt_bunmy","cic","txt_cic",0,0,0,0,0,0,0,0,"notnat","txt_notnat","she","txt_she",
@@ -629,7 +629,7 @@ selector_grid_contents = {
   {
     "txt_iscome","txt_befit","txt_dat",0,"txt_snaccish","txt_noswims","txt_foeddee","txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,"obejt_bab","obejt_be","obejt_keek","obejt_watr","obejt_fenss","obejt_algay","obejt_buble","obejt_meem","obejt_dor",
     "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,"txt_huh",0,0,0,0,0,"txt_obejt","obejt_til","obejt_flog","obejt_boux","obejt_bellt","obejt_kee","obejt_boll","obejt_wal","obejt_obejt_bab",
-    "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,"txt_unhuh","txt_zup",0,0,0,0,"txt_classs","txt_deobe","obejt_huro","obejt_platfory","obejt_txt_u","obejt_obejt_keek","obejt_obejt_obejt_bab","obejt_txt_bab","obejt_txt_be",
+    "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,"txt_unhuh","txt_zup",0,0,0,0,0,"txt_deobe","obejt_huro","obejt_platfory","obejt_txt_u","obejt_obejt_keek","obejt_obejt_obejt_bab","obejt_txt_bab","obejt_txt_be",
     "txt_halfnogo",0,0,0,0,0,0,0,0,"txt_/:o","txt_zown",0,0,0,"txt_bunosd","txt_whuhd","txt_png",0,"obejt_lesbab","obejt_txt_a","obejt_letter_a","obejt_starr","obejt_obejt","obejt_meemto",
     "txt_dirgo","txt_nogoish","txt_goawayplsdir",0,"txt_step","txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,"obejt_skul","obejt_gras","obejt_hedg","obejt_arro","obejt_u","obejt_fof",
     "txt_living","txt_vsel","txt_stalkskye","txt_stalkflor","txt_clip","txt_board","txt_cliverb","letter_clip",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"obejt_obejt_flog","obejt_obejt_watr",
@@ -751,7 +751,7 @@ selector_grid_contents = {
   },
   -- page 5.5: inanimate objects
   {
-    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad","water","txt_water","durm","txt_durm","maell","txt_maell",0,0,0,0,0,0,0,0,
+    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad","water","txt_water","durm","txt_durm","maell","txt_maell","saev","txt_saev",0,0,0,0,0,0,
     "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart","nes","txt_nes","catpul","txt_catpul",0,0,0,0,0,0,0,0,
     "turnep","txt_turnep","mgama","txt_mgama","move","txt_move","paino","txt_paino","airkar","txt_airkar","wandrrs","txt_wandrrs",0,0,0,0,0,0,0,0,0,0,0,0,
     "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly","big","txt_big","sheild","txt_sheild",0,0,0,0,0,0,0,0,0,0,

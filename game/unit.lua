@@ -2242,6 +2242,12 @@ function miscUpdates(state_change)
           unit.sprite = {"imag_2"}
         elseif hasProperty(unit,"cuatro") then
           unit.sprite = {"imag_3"}
+        elseif hasProperty(unit,"cinco") then
+          unit.sprite = {"imag_4"}
+        elseif hasProperty(unit,"seis") then
+          unit.sprite = {"imag_5"}
+        elseif hasProperty(unit,"siete") then
+          unit.sprite = {"imag_6"}
         else
           unit.sprite = {"imag"}
         end
@@ -2515,7 +2521,8 @@ function miscUpdates(state_change)
       local png = matchesRule(unit, "png", nil)
       for _,ruleparent in ipairs(png) do
         print(ruleparent[2])
-        unit.sprite[1] = ruleparent[1].rule.object.name
+        local tile = ruleparent[2]
+        unit.sprite[1] = tile.sprite[1]
       end
       
       unit.overlay = {}

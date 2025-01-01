@@ -1743,14 +1743,6 @@
     "tags": ["deobj"]
   },
   {
-    "name": "txt_classs",
-    "sprite": ["txt/classs"],
-    "types": ["property"],
-    "color": [[3, 3]],
-    "desc": "CLASSS: Makes OBEJT's parse... well kinda. It's meant to be funny.",
-    "tags": ["class", "word", "object", "obj"]
-  },
-  {
     "name": "txt_crystal",
     "sprite": ["txt/crystal"],
     "types": ["property"],
