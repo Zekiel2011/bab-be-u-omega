@@ -1472,6 +1472,58 @@
     "tags": ["chars", "baba"]
   },
   {
+    "name": "jiji",
+    "sprite": ["jiji"],
+    "layer": 11,
+    "color": [[2, 3]],
+    "rotate": true,
+    "wobble": true,
+    "desc": "commits warcrimes"
+  },
+  {
+    "name": "txt_jiji",
+    "sprite": ["txt/jiji"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "desc": "gg",
+    "wobble": true,
+    "tags": ["chars", "jiji"]
+  },
+  {
+    "name": "fofo",
+    "sprite": ["fofo"],
+    "layer": 11,
+    "color": [[5, 2]],
+    "rotate": true,
+    "wobble": true,
+    "desc": "fofo my beloved"
+  },
+  {
+    "name": "txt_fofo",
+    "sprite": ["txt/fofo"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "wobble": true,
+    "tags": ["chars", "fofo"]
+  },
+  {
+    "name": "it2",
+    "sprite": ["it"],
+    "layer": 11,
+    "color": [[1, 4]],
+    "rotate": true,
+    "wobble": true,
+    "desc": "slime thing"
+  },
+  {
+    "name": "txt_it2",
+    "sprite": ["txt/it"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "wobble": true,
+    "tags": ["chars", "it"]
+  },
+  {
     "name": "bad",
     "sprite": ["bad_body", "bad_metal", "bad_skateboard"],
     "color": [[1, 4], [2, 4], [2, 2]],
@@ -1711,24 +1763,26 @@
     "desc": "wut is itt",
     "alias": ["itt"],
     "tags": ["chars", "itt"]
-},
+  },
   {
-    "name": "spirt",
+    "name": "ghost",
     "sprite": ["spirt"],
     "layer": 11,
     "color": [[4, 2]],
     "rotate": true,
     "wobble": true,
-    "desc": "Its a ghost but no one know who its the ghost of."
+    "desc": "Wait, is this a friend or not?",
+    "old_names": ["spirt"]
   },
   {
-    "name": "txt_spirt",
+    "name": "txt_ghost",
     "sprite": ["txt/spirt"],
     "types": ["object"],
     "color": [[4, 2]],
     "wobble": true,
-    "desc": "\"ghost\". thats what it says",
-    "tags": ["chars", "baba"]
+    "desc": "ghostfren fren",
+    "tags": ["chars", "baba"],
+    "old_names": ["txt_spirt"]
   },
   {
     "name": "menstr",
