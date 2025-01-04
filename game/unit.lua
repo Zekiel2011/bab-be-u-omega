@@ -2172,6 +2172,19 @@ function miscUpdates(state_change)
         end
       end
 
+      if unit.fullname == "sanik" then
+        if unit.color_override then
+          local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
+          if color == "grun" then
+            unit.sprite = {"asirah"}
+          elseif color == "reed" then
+            unit.sprite = {"shadohw"}
+          else
+            unit.sprite = {"sanik"}
+          end
+        end
+      end
+
       if unit.fullname == "man" then
         if unit.color_override then
           local color = colour_for_palette[unit.color_override[1]][unit.color_override[2]]
@@ -2248,6 +2261,10 @@ function miscUpdates(state_change)
           unit.sprite = {"imag_5"}
         elseif hasProperty(unit,"siete") then
           unit.sprite = {"imag_6"}
+        elseif hasProperty(unit,"ocho") then
+          unit.sprite = {"imag_7"}
+        elseif hasProperty(unit,"nueve") then
+          unit.sprite = {"imag_8"}
         else
           unit.sprite = {"imag"}
         end
