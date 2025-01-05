@@ -2983,8 +2983,20 @@ function levelBlock()
     love.event.quit()
   end
   
+  if hasProperty("gaem","thicc") then
+    love.window.maximize()
+  end
+  
   if hasProperty("gaem","gone") then
     love.event.quit()
+  end
+  
+  if hasProperty("gaem","zomb") then
+    love.window.restore()
+  end
+  
+  if hasProperty("gaem",":)") then
+    love.window.setTitle("u r win!")
   end
   
   if hasProperty("gaem", "delet") then
@@ -3023,6 +3035,26 @@ function levelBlock()
           destroyLevel("sink")
           if not lvlsafe then return 0,0 end
         elseif ignoreCheck(unit, outerlvl, "noswim") then
+          table.insert(to_destroy, unit)
+          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+        end
+      end
+    end
+    if #to_destroy > 0 then
+      playSound("sink")
+      shakeScreen(0.3, 0.1)
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+  
+  if hasProperty("gaem", "noswim") then
+    for _,unit in ipairs(units) do
+      if sameFloat(unit, "gaem") and inBounds(unit.x,unit.y) then
+        if ignoreCheck("gaem", unit) then
+          love.event.quit()
+          if not lvlsafe then return 0,0 end
+        elseif ignoreCheck(unit, "gaem", "noswim") then
           table.insert(to_destroy, unit)
           addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
         end
@@ -3099,6 +3131,33 @@ function levelBlock()
         end
         if lvlsafe then
           if ignoreCheck(unit,outerlvl,"nedkee") then
+            table.insert(to_destroy, unit)
+            addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+          end
+        else return 0,0 end
+      end
+    end
+    if #to_destroy > 0 then
+      playSound("unlock",0.5)
+      playSound("break",0.5)
+    end
+  end
+  
+  to_destroy = handleDels(to_destroy)
+  
+  if hasProperty("gaem", "nedkee") then
+    if hasProperty("gaem", "fordor") then
+      love.event.quit()
+      if not lvlsafe then return 0,0 end
+    end
+    local dors = getUnitsWithEffect("fordor")
+    for _,unit in ipairs(dors) do
+      if sameFloat(unit,"gaem") and inBounds(unit.x,unit.y) then
+        if ignoreCheck("gaem",unit,"fordor") then
+          love.event.quit()
+        end
+        if lvlsafe then
+          if ignoreCheck(unit,"gaem","nedkee") then
             table.insert(to_destroy, unit)
             addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
           end
