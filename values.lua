@@ -587,7 +587,7 @@ selector_grid_contents = {
     0,0,0,0,0,"lvl","txt_lvl","txt_txt","txt_no1","txt_every1","txt_every2","txt_every3","txt_mous",0,0,0,0,"txt_lesbad",0,0,0,0,0,0,
     "txt_...","txt_''","txt_nt","txt_anti",0,"bordr","txt_bordr","lin","txt_lin","txt_lethers","txt_numa","txt_toen","txt_yuiy",0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_is","txt_and","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_is","txt_and","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_gaem",
   },
   -- page 8: more characters and stuff
   {

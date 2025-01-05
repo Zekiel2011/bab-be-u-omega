@@ -3218,6 +3218,43 @@ function levelBlock()
     end
   end
   
+  if hasProperty("gaem","nedkee") and hasProperty("gaem","fordor") then
+    love.event.quit()
+  end
+  
+  if hasProperty("gaem","gone") then
+    love.event.quit()
+  end
+  
+  if hasProperty("gaem", "delet") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      if sameFloat(unit,"gaem") and inBounds(unit.x,unit.y) and ignoreCheck(unit,"gaem","delet") then
+        doXWX()
+      end
+    end
+  end
+  
+  if hasProperty("gaem", ":o") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      if sameFloat(unit,"game") and inBounds(unit.x,unit.y) and ignoreCheck("gaem",unit) then
+        writeSaveFile(true, {"levels", level_filename, "bonus"})
+        love.event.quit()
+        if not lvlsafe then return 0,0 end
+      end
+    end
+  end
+  
+  local issnacc = matchesRule(nil,"snacc","gaem")
+  for _,ruleparent in ipairs(issnacc) do
+    local unit = ruleparent[2]
+    if unit ~= "gaem" and sameFloat("gaem",unit) and inBounds(unit.x,unit.y) and ignoreCheck("gaem",unit) then
+      love.event.quit()
+      if not lvlsafe then return 0,0 end
+    end
+  end
+  
   return wins,unwins
 end
 

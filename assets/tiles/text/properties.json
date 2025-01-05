@@ -1881,13 +1881,5 @@
     "color": [[5, 1]],
     "desc": "STOOP: (Kinda works) Stops THE, and DEEZ.",
     "tags": ["block", "pointer cancel", "stop"]
-  },
-  {
-    "name": "txt_ifyyy",
-    "sprite": ["txt/ifyyy"],
-    "types": ["property"],
-    "color": [[4, 2]],
-    "desc": "IFYYY: BE IFYYY causes that object or text to turn into 2 of itself. Specifically, if also transforming into something else, it also stays there in addition to transforming.",
-    "tags": ["why", "mse"]
   }
 ]
