@@ -4815,5 +4815,21 @@
     "color": [[3, 3]],
     "desc": "Its not a verb, ok?",
     "tags": ["floppy disc", "ui", "so retro"]
+  },
+  {
+    "name": "bulon",
+    "sprite": ["bulon"],
+    "layer": 3,
+    "color": [[2, 2]],
+    "desc": "the sorce of all evil... or something",
+    "tags": ["bloon", "baloon", "ballon", "danielisgamer"]
+  },
+  {
+    "name": "txt_bulon",
+    "sprite": ["txt/bulon"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "blu on?",
+    "tags": ["bloon", "baloon", "ballon", "danielisgamer"]
   }
 ]

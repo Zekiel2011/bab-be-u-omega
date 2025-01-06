@@ -547,15 +547,15 @@ selector_grid_contents = {
     "brik","txt_brik","sparkl","txt_sparkl","sanglas","txt_sanglas","bullb","txt_bullb","son","txt_son","muun","txt_muun","bac","txt_bac","warn","txt_warn","piep","txt_piep","mhatt","txt_mhatt","noe","txt_noe","yea","txt_yea",
     "san","txt_san","piler","txt_piler","sancastl","txt_sancastl","shel","txt_shel","starr","txt_starr","cor","txt_cor","byc","txt_byc","gorder","txt_gorder","tuba","txt_tuba","sooda","txt_sooda","furt","txt_furt","hous","txt_hous",
     "glas","txt_glas","bom","txt_bom","sine","txt_sine","kar","txt_kar","can","txt_can","ger","txt_ger","sirn","txt_sirn","chain","txt_chain","sloop","txt_sloop","¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana",
-    "trol","txt_trol","wut","txt_wut","wat","txt_wat","splittr","txt_splittr","toggl","txt_toggl","bon","txt_bon","battry","txt_battry","chekr","txt_chekr","do$h","txt_do$h","stomp","txt_stomp","biechboll","txt_biechboll",0,0,
-    "fube","txt_fube","tronk","txt_tronk","cart","txt_cart","drop","txt_drop","woosh","txt_woosh","tanc","txt_tanc","gato","txt_gato","painbuct","txt_painbuct","sinyroc","txt_sinyroc","cryespik","txt_cryespik","ray","txt_ray","cair","txt_cair",
+    "trol","txt_trol","wut","txt_wut","wat","txt_wat","splittr","txt_splittr","toggl","txt_toggl","bon","txt_bon","battry","txt_battry","chekr","txt_chekr","do$h","txt_do$h","stomp","txt_stomp","biechboll","txt_biechboll","bulon","txt_bulon",
+    "fube","txt_fube","tronk","txt_tronk","cart","txt_cart","drop","txt_drop","woosh","txt_woosh","tanc","txt_tanc","gato","txt_gato","painbuct","txt_painbuct","sinyroc","txt_sinyroc","cryespik","txt_cryespik",0,0,"cair","txt_cair",
     "colect","txt_colect","zig","txt_zig","pixl","txt_pixl","prop","txt_prop","qb","txt_qb","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod","seewead","txt_seewead","forutoo","txt_forutoo","wulgaye","txt_wulgaye",
   },
   -- page 6: more inanimate objects
   {
     "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti","papr","txt_papr",0,0,"kees","txt_kees","cd","txt_cd","ßar","txt_ßar","spinklr","txt_spinklr","cledg","txt_cledg","goop","txt_goop",
     "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
-    "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil",0,0,0,0,0,0,0,0,0,0,
+    "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil","ray","txt_ray",0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

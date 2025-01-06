@@ -2923,6 +2923,211 @@ end
 function levelBlock()
   local to_destroy = {}
   local lvlsafe = hasRule(outerlvl,"got","lvl") or hasProperty(outerlvl,"protecc")
+ local gaemsafe = hasProperty("gaem","protecc")
+
+  if hasProperty("gaem","gone") then
+    love.event.quit()
+  end
+
+  if hasProperty("gaem", "nuek") then
+    for _,unit in ipairs(units) do
+      table.insert(to_destroy, unit)
+      addParticles("destroy", unit.x, unit.y, {2,2})
+    end
+  end
+
+  if hasProperty("gaem", "hotte") then
+    local melters = getUnitsWithEffect("fridgd")
+    for _,unit in ipairs(melters) do
+      table.insert(to_destroy, unit)
+      addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+    end
+    if #to_destroy > 0 then
+      playSound("hotte")
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  if hasProperty("gaem", "fridgd") then
+    if hasProperty("gaem", "hotte") then
+      if not gaemsafe then love.event.quit() end
+    end
+    local melters = getUnitsWithEffect("hotte")
+    for _,unit in ipairs(melters) do
+      if not gaemsafe then love.event.quit() end
+    end
+  end
+
+  local isvs = matchesRule(nil,"vs","gaem")
+  mergeTable(isvs,matchesRule("gaem","vs",nil))
+  for _,ruleparent in ipairs(isvs) do
+    local unit = ruleparent[2]
+    if unit ~= "gaem" then
+      local unitmoved = false
+      for _,undo in ipairs(undo_buffer[1]) do
+        if undo[1] == "update" and undo[2] == unit.id and ((undo[3] ~= unit.x) or (undo[4] ~= unit.y)) then
+          unitmoved = true
+        end
+      end
+      if unitmoved then
+        if not gaemsafe then love.event.quit() end
+      end
+    end
+  end
+
+  if hasProperty("gaem", "noswim") or hasProperty("gaem", "ouch") then
+    for _,unit in ipairs(units) do
+      if not gaemsafe then love.event.quit() end
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  if hasProperty("gaem", ":(") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+        table.insert(to_destroy, unit)
+        addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  if hasProperty("gaem", "nedkee") then
+    if hasProperty("gaem", "fordor") then
+      if not gaemsafe then love.event.quit() end
+    end
+    local dors = getUnitsWithEffect("fordor")
+    for _,unit in ipairs(dors) do
+      if gaemafe then
+        table.insert(to_destroy, unit)
+        addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+      else love.event.quit() end
+    end
+    if #to_destroy > 0 then
+      playSound("unlock",0.5)
+      playSound("break",0.5)
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  if hasProperty("gaem", "fordor") then
+    local kees = getUnitsWithEffect("nedkee")
+    for _,unit in ipairs(kees) do
+      if gaemsafe then
+        table.insert(to_destroy, unit)
+        addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+      else love.event.quit() end
+    end
+    if #to_destroy > 0 then
+      playSound("unlock",0.5)
+      playSound("break",0.5)
+    end
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  local issnacc = matchesRule("gaem","snacc",nil)
+  for _,ruleparent in ipairs(issnacc) do
+    local unit = ruleparent[2]
+    if unit ~= "gaem" then
+      if not hasProperty("gaem", "anti lesbad") and not hasProperty(unit, "anti lesbad") then
+        addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
+        table.insert(to_destroy, unit)
+      end
+    end
+  end
+
+  local issnacc = matchesRule(nil,"snacc","gaem")
+  for _,ruleparent in ipairs(issnacc) do
+    local unit = ruleparent[2]
+    if unit ~= outerlvl then
+      if not hasProperty("gaem", "anti lesbad") and not hasProperty(unit, "anti lesbad") then
+        if not gaemsafe then love.event.quit() end
+      end
+    end
+  end
+
+  if #to_destroy > 0 then
+    playSound("snacc")
+    shakeScreen(0.3, 0.1)
+  end
+
+  to_destroy = handleDels(to_destroy)
+
+  local will_undo = false
+  if hasProperty("gaem", "tryagain") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      doTryAgain()
+    end
+  end
+
+  if hasProperty("gaem", "delet") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      doXWX()
+    end
+  end
+
+  if hasProperty("gaem", ":o") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      writeSaveFile(true, {"levels", level_filename, "bonus"})
+      if not gaemsafe then love.event.quit() end
+    end
+  end
+
+  local unwins = 0
+  if hasProperty("gaem", "un:)") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      unwins = unwins + 1
+    end
+  end
+
+  local wins = 0
+  if hasProperty("gaem", ":)") then
+    local yous = getUs()
+    for _,unit in ipairs(yous) do
+      wins = wins + 1
+    end
+  end
+
+  local soko = matchesRule("gaem","soko","?")
+  for _,ruleparent in ipairs(soko) do
+    local units = findUnitsByName(ruleparent.rule.object.name)
+    local fail = false
+    if #units > 0 then
+      for _,unit in ipairs(units) do
+        local ons = getUnitsOnTile(unit.x,unit.y,{exclude = unit, thicc = thicc_units[unit]})
+        local success = false
+        for _,on in ipairs(ons) do
+          if sameFloat(unit,on) and ignoreCheck(unit,on) then
+            success = true
+            break
+          end
+        end
+        if not success then
+          fail = true
+          break
+        end
+      end
+    else fail = true end
+    if not fail then
+      local yous = getUs()
+      for _,unit in ipairs(yous) do
+        wins = wins + 1
+      end
+    end
+  end
+
+  if hasProperty("gaem", "nxt") then
+		table.insert(win_sprite_override, getTile("txt_nxt"));
+    doWin("nxt")
+  end
   
   if hasProperty(outerlvl,"notranform") then
     writeSaveFile(nil, {"levels", level_filename, "transform"})
@@ -2979,16 +3184,39 @@ function levelBlock()
     end
   end
   
-  if hasProperty("gaem","nedkee") and hasProperty("gaem","fordor") then
-    love.event.quit()
+  if hasProperty("gaem","walk") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x+64, y, displayindex )
   end
   
-  if hasProperty("gaem","thicc") then
-    love.window.maximize()
+  if hasProperty("gaem","stalkledge") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x-64, y, displayindex )
   end
   
-  if hasProperty("gaem","gone") then
-    love.event.quit()
+  if hasProperty("gaem","stalkredge") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x+64, y, displayindex )
+  end
+  
+  if hasProperty("gaem","stalkskye") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x, y-64, displayindex )
+  end
+  
+  if hasProperty("gaem","stalkflor") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x, y+64, displayindex )
+  end
+  
+  if hasProperty("gaem","haetskye") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x, y+10000, displayindex )
+  end
+  
+  if hasProperty("gaem","haetflor") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x, y-10000, displayindex )
   end
   
   if hasProperty("gaem","zomb") then
@@ -2999,35 +3227,6 @@ function levelBlock()
     love.window.setTitle("u r win!")
   end
   
-  if hasProperty("gaem", "delet") then
-    local yous = getUs()
-    for _,unit in ipairs(yous) do
-      if sameFloat(unit,"gaem") and inBounds(unit.x,unit.y) and ignoreCheck(unit,"gaem","delet") then
-        doXWX()
-      end
-    end
-  end
-  
-  if hasProperty("gaem", ":o") then
-    local yous = getUs()
-    for _,unit in ipairs(yous) do
-      if sameFloat(unit,"game") and inBounds(unit.x,unit.y) and ignoreCheck("gaem",unit) then
-        writeSaveFile(true, {"levels", level_filename, "bonus"})
-        love.event.quit()
-        if not lvlsafe then return 0,0 end
-      end
-    end
-  end
-  
-  local issnacc = matchesRule(nil,"snacc","gaem")
-  for _,ruleparent in ipairs(issnacc) do
-    local unit = ruleparent[2]
-    if unit ~= "gaem" and sameFloat("gaem",unit) and inBounds(unit.x,unit.y) and ignoreCheck("gaem",unit) then
-      love.event.quit()
-      if not lvlsafe then return 0,0 end
-    end
-  end
-  
   if hasProperty(outerlvl, "noswim") then
     for _,unit in ipairs(units) do
       if sameFloat(unit, outerlvl) and inBounds(unit.x,unit.y) then
@@ -3035,26 +3234,6 @@ function levelBlock()
           destroyLevel("sink")
           if not lvlsafe then return 0,0 end
         elseif ignoreCheck(unit, outerlvl, "noswim") then
-          table.insert(to_destroy, unit)
-          addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
-        end
-      end
-    end
-    if #to_destroy > 0 then
-      playSound("sink")
-      shakeScreen(0.3, 0.1)
-    end
-  end
-
-  to_destroy = handleDels(to_destroy)
-  
-  if hasProperty("gaem", "noswim") then
-    for _,unit in ipairs(units) do
-      if sameFloat(unit, "gaem") and inBounds(unit.x,unit.y) then
-        if ignoreCheck("gaem", unit) then
-          love.event.quit()
-          if not lvlsafe then return 0,0 end
-        elseif ignoreCheck(unit, "gaem", "noswim") then
           table.insert(to_destroy, unit)
           addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
         end
@@ -3131,33 +3310,6 @@ function levelBlock()
         end
         if lvlsafe then
           if ignoreCheck(unit,outerlvl,"nedkee") then
-            table.insert(to_destroy, unit)
-            addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
-          end
-        else return 0,0 end
-      end
-    end
-    if #to_destroy > 0 then
-      playSound("unlock",0.5)
-      playSound("break",0.5)
-    end
-  end
-  
-  to_destroy = handleDels(to_destroy)
-  
-  if hasProperty("gaem", "nedkee") then
-    if hasProperty("gaem", "fordor") then
-      love.event.quit()
-      if not lvlsafe then return 0,0 end
-    end
-    local dors = getUnitsWithEffect("fordor")
-    for _,unit in ipairs(dors) do
-      if sameFloat(unit,"gaem") and inBounds(unit.x,unit.y) then
-        if ignoreCheck("gaem",unit,"fordor") then
-          love.event.quit()
-        end
-        if lvlsafe then
-          if ignoreCheck(unit,"gaem","nedkee") then
             table.insert(to_destroy, unit)
             addParticles("destroy", unit.x, unit.y, getUnitColor(unit))
           end
