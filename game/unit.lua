@@ -3189,6 +3189,11 @@ function levelBlock()
     love.window.setPosition(x+64, y, displayindex )
   end
   
+  if hasProperty("gaem","vibe") then
+    x, y, displayindex = love.window.getPosition()
+    love.window.setPosition(x+(love.math.random(-1,1)*64), y+(love.math.random(-1,1)*64), displayindex )
+  end
+  
   if hasProperty("gaem","stalkledge") then
     x, y, displayindex = love.window.getPosition()
     love.window.setPosition(x-64, y, displayindex )

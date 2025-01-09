@@ -758,7 +758,7 @@ selector_grid_contents = {
     "lua","txt_lua","scizor","txt_scizor","lite","txt_lite","zzz","txt_zzz","bulett","txt_bulett","milck","txt_milck",0,0,0,0,0,0,0,0,0,0,0,0,
     "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee","tnt","txt_tnt",0,0,0,0,0,0,0,0,0,0,0,0,
     "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser","comnnd","txt_comnnd",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "con1","txt_con1","con2","txt_con2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

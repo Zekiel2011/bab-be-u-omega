@@ -4831,5 +4831,35 @@
     "color": [[2, 2]],
     "desc": "blu on?",
     "tags": ["bloon", "baloon", "ballon", "danielisgamer"]
+  },
+  {
+    "name": "con1",
+    "sprite": ["con1"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "desc": "rockt trieppe",
+    "tags": ["construct", "map", "rocket trip"]
+  },
+  {
+    "name": "txt_con1",
+    "sprite": ["txt/con1"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["construct", "map", "rocket trip"]
+  },
+  {
+    "name": "con2",
+    "sprite": ["con2"],
+    "layer": 20,
+    "color": [[0, 2]],
+    "desc": "rockt trieppe 2",
+    "tags": ["construct", "map", "rocket trip"]
+  },
+  {
+    "name": "txt_con2",
+    "sprite": ["txt/con2"],
+    "types": ["object"],
+    "color": [[0, 1]],
+    "tags": ["construct", "map", "rocket trip"]
   }
 ]
