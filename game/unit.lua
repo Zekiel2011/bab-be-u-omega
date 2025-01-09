@@ -679,6 +679,16 @@ function updateUnits(undoing, big_update)
     
     local wins,unwins = levelBlock()
     
+    local isignor = matchesRule(nil,"ignor","gaem")
+    mergeTable(isignor,matchesRule("gaem","ignor",nil))
+    local gaemignor = {}
+    for _,ruleparent in ipairs(isignor) do
+      unit = ruleparent[2]
+      unit.destroyed = true
+      unit.removed = true
+      table.insert(gaemignor, unit)
+    end
+    deleteUnits(gaemignor, false, false, true)
     
     local isgone = getUnitsWithEffect("gone")
     for _,unit in ipairs(isgone) do
@@ -3182,11 +3192,6 @@ function levelBlock()
         if not lvlsafe then return 0,0 end
       end
     end
-  end
-  
-  if hasProperty("gaem","walk") then
-    x, y, displayindex = love.window.getPosition()
-    love.window.setPosition(x+64, y, displayindex )
   end
   
   if hasProperty("gaem","vibe") then
