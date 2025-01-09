@@ -970,6 +970,7 @@ function addRule(full_rule)
 
   if subject == "every1" then
     if subject_not % 2 == 1 then
+      addRuleSimple({"gaem", rules.subject.conds}, rules.verb, rules.object, units, dir)
       addRuleSimple({"txt", rules.subject.conds}, rules.verb, rules.object, units, dir)
       addRuleSimple({"no1", rules.subject.conds}, rules.verb, rules.object, units, dir)
       local copied_conds = copyTable(rules.subject.conds)
@@ -983,6 +984,7 @@ function addRule(full_rule)
     end
   elseif subject == "every2" then
     if subject_not % 2 == 1 then
+      addRuleSimple({"gaem", rules.subject.conds}, rules.verb, rules.object, units, dir)
       return
     else
       for _,v in ipairs(referenced_objects) do
@@ -1085,6 +1087,14 @@ function addRule(full_rule)
       end
       return
     end
+  elseif subject_not % 2 == 1 then
+    if getTile(subject) or subject == "gaem" then
+      local new_subjects = getEverythingExcept(subject)
+      for _,v in ipairs(new_subjects) do
+        addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+      end
+      return
+    end
   end
 
   if object == "every1" then
@@ -1095,6 +1105,7 @@ function addRule(full_rule)
         local copied_conds = copyTable(rules.object.conds)
         table.insert(copied_conds, {name = "inner", type = {cond_prefix = true}, dir = rules.object.dir})
         addRuleSimple(rules.subject, rules.verb, {"lvl", copied_conds}, units, dir)
+        --addRuleSimple(rules.subject, rules.verb, {"gaem", rules.object.conds}, units, dir)
         return
       else
         --we'll special case x be every1 in convertUnit now
@@ -1105,6 +1116,7 @@ function addRule(full_rule)
     end
   elseif object == "every2" then
     if object_not % 2 == 1 then
+      addRuleSimple({"gaem", rules.subject.conds}, rules.verb, rules.object, units, dir)
       return
     elseif verb ~= "be" and verb ~= "ben't" then
       for _,v in ipairs(referenced_objects) do
@@ -1115,6 +1127,7 @@ function addRule(full_rule)
       local copied_conds = copyTable(rules.object.conds)
       table.insert(copied_conds, {name = "inner", type = {cond_prefix = true}, dir = rules.object.dir})
       addRuleSimple(rules.subject, rules.verb, {"lvl", copied_conds}, units, dir)
+      addRuleSimple(rules.subject, rules.verb, {"gaem", rules.object.conds}, units, dir)
     end
   elseif object == "every3" then
     if object_not % 2 == 1 then
@@ -1129,7 +1142,7 @@ function addRule(full_rule)
       end
     end
   elseif object_not % 2 == 1 then
-    if getTile(object) or object:starts("this") or object == "txt" or object == "mous" then
+    if getTile(object) or object:starts("this") or object == "txt" or object == "mous" or object == "gaem" then
       local new_objects = {}
       --skul be skul turns into skul ben't skuln't - but this needs to apply even to special objects (specific text, txt, no1, lvl, mous).
       if verb == "be" and verb_not % 2 == 1 then
