@@ -4446,6 +4446,7 @@ function buildOptions()
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "debug" then
     scene.addOption("night", "Fake Nighttime", {{"on", true}, {"off", false}})
+    scene.addOption("debugg", "Debug mode", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)

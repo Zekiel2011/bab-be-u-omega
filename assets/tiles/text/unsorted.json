@@ -123,8 +123,16 @@
     "sprite": ["txt/every3"],
     "types": ["object"],
     "color": [[4, 1]],
-    "desc": "EVERY3: Absolutely everything conceivable. The pinnacle of everything technology.",
+    "desc": "EVERY3: Absolutely everything conceivable except for GAEM. The pinnacle of everything technology.",
     "tags": ["all", "everyone", "every3"]
+  },
+  {
+    "name": "txt_every4",
+    "sprite": ["txt/every4"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "EVERY4: Absolutely everything conceivable. The true pinnacle of everything technology. But it doesn't do anything because it caused an error with EVERY3 and maybe the other EVERYS.",
+    "tags": ["all", "everyone", "every4"]
   },
   {
     "name": "txt_samefloat",

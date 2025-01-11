@@ -2245,6 +2245,14 @@ function scene.checkInput()
     pause = true
   end
   
+  if settings["debugg"] and love.keyboard.isDown("m") and love.keyboard.isDown("lctrl") then
+    doWin("won")
+  end
+  
+  if settings["debugg"] and love.keyboard.isDown("n") and love.keyboard.isDown("lctrl") then
+    doWin("nxt")
+  end
+  
   if not (key_down["w"] or key_down["a"] or key_down["s"] or key_down["d"]) then
       repeat_timers["wasd"] = nil
   end

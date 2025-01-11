@@ -4170,21 +4170,22 @@
     "tags": ["rune"]
   },
   {
-    "name": "move",
+    "name": "mouv",
     "sprite": ["move"],
     "layer": 3,
     "color": [[0, 1]],
     "desc": "a BEEG til dat came from da past",
-    "tags": ["rune"]
+    "tags": ["rune"],
+    "old_names": ["move"]
   },
   {
-    "name": "txt_move",
-    "sprite": ["baba/move"],
+    "name": "txt_mouv",
+    "sprite": ["txt/mouv"],
     "types": ["object"],
     "color": [[5, 3]],
-    "wobble": true,
-    "desc": "MOVE: Walks in a straight line each turn, bouncing off walls.\nAnti: opposite direction",
-    "tags": ["rune"]
+    "desc": "what?",
+    "tags": ["rune"],
+    "old_names": ["txt_move"]
   },
   {
     "name": "fallage",
@@ -4861,5 +4862,20 @@
     "types": ["object"],
     "color": [[0, 1]],
     "tags": ["construct", "map", "rocket trip"]
+  },
+  {
+    "name": "puf",
+    "sprite": ["puff"],
+    "layer": 20,
+    "color": [[0, 3]],
+    "desc": "I wish bab had a counter for how much lvls you won",
+    "tags": ["spore", "puff"]
+  },
+  {
+    "name": "txt_puf",
+    "sprite": ["txt/puf"],
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["spore", "puff"]
   }
 ]
