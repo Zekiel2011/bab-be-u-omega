@@ -2249,6 +2249,10 @@ function scene.checkInput()
     doWin("won")
   end
   
+  if settings["debugg"] and love.keyboard.isDown("u") and love.keyboard.isDown("lctrl") then
+    doWin(won, false)
+  end
+  
   if settings["debugg"] and love.keyboard.isDown("n") and love.keyboard.isDown("lctrl") then
     doWin("nxt")
   end
