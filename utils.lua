@@ -5079,8 +5079,7 @@ function drawUnitSprite(unit, x, y, rotation, sx, sy, o)
     id = unit.id,
     frame = unit.frame,
     wobble = unit.wobble,
-    delet = unit.delet,
-    delet = unit.xwx,
+    delet = unit.delet or unit.xwx,
     really_smol = unit.fullname == "babby",
     lvl = unit.fullname == "lvl",
   })
