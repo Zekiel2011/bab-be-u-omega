@@ -730,7 +730,7 @@ function scene.keyPressed(key)
   end
   
   if not selector_open and not settings_open and not level_dialogue.enabled then
-    if key_down["lshift"] or key_down["rshift"] then
+    if (key_down["lshift"] and not key_down["rshift"]) or (key_down["rshift"] and not key_down["lshift"]) then
         if key == "w" then
             scene.translateLevel(0, -1)
         elseif key == "a" then
@@ -739,6 +739,17 @@ function scene.keyPressed(key)
             scene.translateLevel(0, 1)
         elseif key == "d" then
             scene.translateLevel(1, 0)
+        end
+    end
+    if (key_down["lshift"] and key_down["rshift"]) and settings["debugg"] then
+        if key == "w" then
+            scene.translateLevel(0, -0.5)
+        elseif key == "a" then
+            scene.translateLevel(-0.5, 0)
+        elseif key == "s" then
+            scene.translateLevel(0, 0.5)
+        elseif key == "d" then
+            scene.translateLevel(0.5, 0)
         end
     end
   end
