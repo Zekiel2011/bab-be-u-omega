@@ -2312,6 +2312,18 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "baba" then
+        if unit.dir == 3 then
+          unit.sprite = {"baba_down"}
+        elseif unit.dir == 5 then
+          unit.sprite = {"baba_left"}
+        elseif unit.dir == 7 then
+          unit.sprite = {"baba_up"}
+        else
+          unit.sprite = {"baba"}
+        end
+      end
+      
       if unit.fullname == "keekie" then
         if unit.dir == 3 then
           unit.sprite = {"keekie_down"}

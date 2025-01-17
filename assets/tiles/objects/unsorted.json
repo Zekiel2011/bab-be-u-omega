@@ -3578,14 +3578,14 @@
     "color": [[6, 0], [0, 3]],
     "painted": [true, false],
     "desc": "The unhealthy flavored version of water, tbh idk what Boba is so I guess we have SOODA.",
-    "tags": ["boba", "soda", "unhealthy water"]
+    "tags": ["soda", "unhealthy water"]
   },
   {
     "name": "txt_sooda",
     "sprite": ["txt/sooda"],
     "types": ["object"],
     "color": [[2, 2]],
-    "tags": ["boba", "soda", "unhealthy water"]
+    "tags": ["soda", "unhealthy water"]
   },
   {
     "name": "biechboll",

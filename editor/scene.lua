@@ -229,12 +229,12 @@ function scene.setupGooi()
   end):bg({0,0,0,0}) -- no BGImage since it needs to be recolored
   x = x + 36
   local fullpaint_palette_x = x
-  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 5*8, w = 7*8}):onPress(function()
+  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 10*16, w = 10*16}):onPress(function()
     local x, y = love.mouse.getPosition()
-    local palette_x = math.floor((x - fullpaint_palette_x) / 8)
-    local palette_y = math.floor((y - 4) / 8)
+    local palette_x = math.floor((x - fullpaint_palette_x) / 16)
+    local palette_y = math.floor((y - 4) / 16)
     brush.color = {palette_x, palette_y}
-  end):setBGImage((palettes[current_palette] or palettes["default"]).sprite):bg({0,0,0,0})
+  end):setBGImage((palettes["bigger"]).sprite):bg({0,0,0,0})
   fullpaint_palette:setVisible(false)
   for _,color in pairs(color_names) do
     gooi.newButton({text = "", x = x, y = 4, h = 32, w = 32}):onPress(function()

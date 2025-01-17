@@ -270,7 +270,7 @@
     "sprite": ["txt/pathz"],
     "types": ["object", "group"],
     "color": [[3, 3]],
-    "desc": "PATHZ: A variant of FRENS for selectr.",
+    "desc": "PATHZ: A variant of FRENS for selectr. (UNIMPLIMENTED)",
     "tags": ["group"]
 },
   {

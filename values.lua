@@ -515,12 +515,12 @@ selector_grid_contents = {
   },
   -- page 4: characters and special objects
   {
-    "bab","txt_bab","kat","txt_kat","flof","txt_flof","babby","txt_babby","bad","txt_bad","fof","txt_fof","one","txt_one","baba","txt_baba",0,0,0,0,"lila","txt_lila","vite","txt_vite",
-    "keek","txt_keek","creb","txt_creb","shrim","txt_shrim","moo","txt_moo","toby","txt_toby","jij","txt_jij","sehseh","txt_sehseh","keke","txt_keke",0,0,0,0,"pata","txt_pata","jill","txt_jill",
-    "meem","txt_meem","statoo","txt_statoo","flamgo","txt_flamgo","migri","txt_migri","temmi","txt_temmi","ballt","txt_ballt","ehceec","txt_ehceec","me","txt_me",0,0,0,0,"slab","txt_slab","zsoob","txt_zsoob",
+    "bab","txt_bab","kat","txt_kat","flof","txt_flof","babby","txt_babby","bad","txt_bad","fof","txt_fof","one","txt_one","baba","txt_baba","jiji","txt_jiji",0,0,"lila","txt_lila","vite","txt_vite",
+    "keek","txt_keek","creb","txt_creb","shrim","txt_shrim","moo","txt_moo","toby","txt_toby","jij","txt_jij","sehseh","txt_sehseh","keke","txt_keke","fofo","txt_fofo",0,0,"pata","txt_pata","jill","txt_jill",
+    "meem","txt_meem","statoo","txt_statoo","flamgo","txt_flamgo","migri","txt_migri","temmi","txt_temmi","ballt","txt_ballt","ehceec","txt_ehceec","me","txt_me","it2","txt_it2",0,0,"slab","txt_slab","zsoob","txt_zsoob",
     "skul","txt_skul","beeee","txt_beeee","gul","txt_gul","kva","txt_kva","bunmy","txt_bunmy","cic","txt_cic","beeb","txt_beeb","badbad","txt_badbad",0,0,0,0,"notnat","txt_notnat","she","txt_she",
-    "ghostfren","txt_ghostfren","fishe","txt_fishe","starrfishe","txt_starrfishe","pidgin","txt_pidgin","slogkat","txt_slogkat","evil","txt_evil","jiji","txt_jiji","ghost","txt_ghost",0,0,0,0,"ally","txt_ally","butcher","txt_butcher",
-    "robobot","txt_robobot","snek","txt_snek","sneel","txt_sneel","swan","txt_swan","b..er","txt_b..er","itte!","txt_itte!","fofo","txt_fofo","it2","txt_it2",0,0,0,0,0,0,"pitta","txt_pitta",
+    "ghostfren","txt_ghostfren","fishe","txt_fishe","starrfishe","txt_starrfishe","pidgin","txt_pidgin","slogkat","txt_slogkat","evil","txt_evil","bobua","txt_bobua","ghost","txt_ghost",0,0,0,0,"ally","txt_ally","butcher","txt_butcher",
+    "robobot","txt_robobot","snek","txt_snek","sneel","txt_sneel","swan","txt_swan","b..er","txt_b..er","itte!","txt_itte!","kiik","txt_kiik",0,0,0,0,0,0,0,0,"pitta","txt_pitta",
     "woug","txt_woug","bog","txt_bog","enbybog","txt_enbybog","spoder","txt_spoder","niko","txt_niko","tu","txt_tu","smoll","txt_smoll","tesho","txt_tesho",0,0,0,0,0,0,0,0,
     "kirb","txt_kirb","ripof","txt_ripof","trob","txt_trob","cavebab","txt_cavebab","detox","txt_detox","nyowo","txt_nyowo","amoung","txt_amoung","bibi","txt_bibi",0,0,0,0,0,0,"tot","txt_tot",
     "bup","txt_bup","butflye","txt_butflye","boooo","txt_boooo","prime","txt_prime","grimkid","txt_grimkid","dad","txt_dad","bellby","txt_bellby","balt","txt_balt",0,0,0,0,0,0,"fax","txt_fax",
@@ -615,7 +615,7 @@ selector_grid_contents = {
 	"whiz","txt_whiz","monsert","txt_monsert",0,0,0,0,0,0,0,0,"it","txt_it","lol","txt_lol",0,0,0,0,0,0,0,0,
 	"ubu","txt_ubu",0,0,0,0,"waly","txt_waly",0,0,"wowbrutal","txt_wowbrutal",0,0,"heeh2","txt_heeh2",0,0,0,0,0,0,0,0,
 	"sammah","txt_sammah","sallt","txt_sallt","huro","txt_huro","chonke","txt_chonke","quiq","txt_quiq","follt","txt_follt",0,0,0,0,0,0,0,0,0,0,0,0,
-	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic",0,"txt_did",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	"txt_gud","txt_awdul","txt_nft","txt_corl","txt_limeme","txt_matic",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"muuv","pooosh","redbloodcell","tholl","stne",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	"be","goawaypls","nedkee","fordor","every1","every2","every3","txtify",":)",0,0,0,0,"direction",0,0,0,0,0,0,0,0,0,0,
 	"snacc","ouch","lookat","nogo","walk","flye","go",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -735,7 +735,7 @@ selector_grid_contents = {
   },
   -- page 4.5: characters and special objects
   {
-    "bobua","txt_bobua","kiik","txt_kiik","baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge",0,0,0,0,0,0,0,0,
+    0,0,0,0,"baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge",0,0,0,0,0,0,0,0,
     "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron","kib","txt_kib","nemee","txt_nemee","wahaw","txt_wahaw","monte","txt_monte",0,0,0,0,0,0,0,0,
     "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba","gat","txt_gat",0,0,0,0,0,0,
     "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg","man","txt_man",0,0,0,0,0,0,0,0,0,0,

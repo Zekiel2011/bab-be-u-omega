@@ -3787,7 +3787,7 @@
     "name": "kiik",
     "sprite": ["kiik"],
     "layer": 11,
-    "color": [[2, 2]],
+    "color": [[7, 2]],
     "rotate": true,
     "voice": "s_saw",
     "desc": "Would you call it \"KIIK\" or \"BOBUA\"?",
@@ -3798,7 +3798,7 @@
     "name": "txt_kiik",
     "sprite": ["txt/kiik"],
     "types": ["object"],
-    "color": [[2, 2]],
+    "color": [[7, 2]],
     "tags": ["keke", "chars", "kiki"]
   },
   {
