@@ -4574,5 +4574,22 @@
     "types": ["object"],
     "color": [[4, 2]],
     "tags": ["chars", "bab remake"]
+  },
+  {
+    "name": "seabab",
+    "sprite": ["seabab"],
+    "layer": 20,
+    "color": [[2, 8]],
+    "rotate": true,
+    "desc": "unevulvd bab dat stil livs in da c",
+    "tags": ["chars", "bab", "seabunny", "underwater"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_seabab",
+    "sprite": ["txt/seabab"],
+    "types": ["object"],
+    "color": [[8, 2]],
+    "tags": ["chars", "bab", "seabunny", "underwater"]
   }
 ]

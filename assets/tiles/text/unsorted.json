@@ -131,7 +131,7 @@
     "sprite": ["txt/every4"],
     "types": ["object"],
     "color": [[4, 2]],
-    "desc": "EVERY4: Absolutely everything conceivable. The true pinnacle of everything technology. But it doesn't do anything because it caused an error with EVERY3 and maybe the other EVERYS.",
+    "desc": "EVERY4: Absolutely everything conceivable. The true pinnacle of everything technology, but currently its basicly EVERY3.",
     "tags": ["all", "everyone", "every4"]
   },
   {

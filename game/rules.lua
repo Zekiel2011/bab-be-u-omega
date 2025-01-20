@@ -1020,6 +1020,30 @@ function addRule(full_rule)
         end
       end
     end
+  elseif subject == "every4" then
+    if subject_not % 2 == 1 then
+      return
+    else
+      for _,v in ipairs(referenced_objects) do
+        addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+      end
+      addRuleSimple({"txt", rules.subject.conds}, rules.verb, rules.object, units, dir)
+      for _,v in ipairs(special_objects) do
+        addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+      end
+    end
+  elseif subject == "lethers" then
+    for _,v in ipairs(referenced_text) do
+      if subject_not % 2 == 1 then
+        if not v:starts("letter_") then
+          addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+        end
+      else
+        if v:starts("letter_") then
+          addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
+        end
+      end
+    end
   elseif subject == "numa" then
     for _,v in ipairs(referenced_text) do
       if subject_not % 2 == 1 then

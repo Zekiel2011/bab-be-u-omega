@@ -949,6 +949,8 @@ function scene.draw(dt)
     lvl_color = {hslToRgb(love.timer.getTime()/6%1, .1, .1, .9), 1}
   elseif (hasProperty(outerlvl,"reed") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"pinc") then
     lvl_color = {getPaletteColor(4, 1)}
+  elseif hasProperty(outerlvl,"viloet") then
+    lvl_color = {getPaletteColor(3, 3)}
   elseif (hasProperty(outerlvl,"pinc") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"corl") then
     lvl_color = {getPaletteColor(4, 2)}
   elseif (hasProperty(outerlvl,"yello") and hasProperty(outerlvl,"brwn")) or hasProperty(outerlvl,"golld") then

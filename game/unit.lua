@@ -4238,6 +4238,69 @@ function convertUnits(pass)
     end
   end
   
+  local all4 = matchesRule(nil,"be","every4")
+  for _,match in ipairs(all4) do
+    local rules = match[1]
+    local unit = match[2]
+    local rule = rules.rule
+    if not hasProperty(unit, "notranform") or not hasProperty(unit, "404") then
+      if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
+        for _,cursor in ipairs(cursors) do
+          if testConds(cursor, rule.subject.conds) then
+            local tbl = copyTable(referenced_objects)
+            mergeTable(tbl, referenced_text)
+            mergeTable(tbl, special_objects)
+            for _,v in ipairs(tbl) do
+              local tile
+              if v == "txt" then
+                tile = getTile("txt_" .. rule.subject.name)
+              else
+                tile = getTile(v)
+              end
+              if tile ~= nil then
+                table.insert(del_cursors, cursor)
+              end
+              local new_unit = createUnit(tile.name, unit.x, unit.y, unit.dir, true)
+              if (new_unit ~= nil) then
+                addUndo({"create", new_unit.id, true, created_from_id = unit.id})
+              end
+            end
+          end
+        end
+      elseif not unit.new and unit.type ~= "outerlvl" and not hasRule(unit, "be", unit.name) and timecheck(unit) then
+        local tbl = copyTable(referenced_objects)
+        mergeTable(tbl, referenced_text)
+        mergeTable(tbl, special_objects)
+        for _,v in ipairs(tbl) do
+          local tile
+          if v == "txt" then
+            tile = getTile("txt_" .. rule.subject.name)
+          elseif v == "obejt" then
+            tile = getTile("obejt_" .. rule.subject.name)
+          else
+            tile = getTile(v)
+          end
+          if tile ~= nil then
+            if not unit.removed then
+              table.insert(converted_units, unit)
+            end
+            local new_unit = createUnit(tile.name, unit.x, unit.y, unit.dir, true)
+            if (new_unit ~= nil) then
+              addUndo({"create", new_unit.id, true, created_from_id = unit.id})
+            end
+          elseif v == "mous" then
+            if not unit.removed then
+              table.insert(converted_units, unit)
+            end
+            unit.removed = true
+            local new_mouse = createMouse(unit.x, unit.y)
+            addUndo({"create_cursor", new_mouse.id, created_from_id = unit.id})
+          end
+        end
+      end
+    end
+  end
+  
   local converts = matchesRule(nil,"be","?")
   for _,match in ipairs(converts) do
     local rules = match[1]
@@ -4676,7 +4739,7 @@ function createUnit(tile,x,y,dir,convert,id_,really_create_empty,prefix,anti_gon
   end
   
   --do this before the 'this' change to textname so that we only get 'this' in referenced_objects
-  if unit.typeset.object and unit.textname ~= "every1" and unit.textname ~= "every2" and unit.textname ~= "every3" and unit.textname ~= "mous" and unit.textname ~= "bordr" and unit.textname ~= "no1" and unit.textname ~= "lvl" and unit.textname ~= "the" and unit.textname ~= "deez" and unit.textname ~= "txt" and unit.textname ~= "this" and group_names_set[unit.textname] ~= true then
+  if unit.typeset.object and unit.textname ~= "every1" and unit.textname ~= "every2" and unit.textname ~= "every3" and unit.textname ~= "every4" and unit.textname ~= "mous" and unit.textname ~= "bordr" and unit.textname ~= "no1" and unit.textname ~= "lvl" and unit.textname ~= "the" and unit.textname ~= "deez" and unit.textname ~= "txt" and unit.textname ~= "this" and group_names_set[unit.textname] ~= true then
     if not unit.textname:ends("n't") and not unit.textname:starts("gaem") and not unit.textname:starts("txt_") and not unit.textname:starts("letter_") and not table.has_value(referenced_objects, unit.textname) then
       table.insert(referenced_objects, unit.textname)
     end

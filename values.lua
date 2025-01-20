@@ -593,7 +593,7 @@ selector_grid_contents = {
   },
   -- page 8: more characters and stuff
   {
-    0,0,"itt","txt_itt","sanik","txt_sanik","menstr","txt_menstr","kook","txt_kook","muum","txt_muum",0,0,"babbab","txt_babbab",0,0,"aes","txt_aes","wontapply","txt_wontapply","funni","txt_funni",
+    "seabab","txt_seabab","itt","txt_itt","sanik","txt_sanik","menstr","txt_menstr","kook","txt_kook","muum","txt_muum",0,0,"babbab","txt_babbab",0,0,"aes","txt_aes","wontapply","txt_wontapply","funni","txt_funni",
     0,0,"baddy","txt_baddy","iys","txt_iys","kyyk","txt_kyyk","kmeem","txt_kmeem","hbab","txt_hbab","babnot","txt_babnot","snobab","txt_snobab","jely","txt_jely",0,0,"itevt","txt_itevt","datti","txt_datti",
     "aba","txt_aba","tratra","txt_tratra","fukc","txt_fukc","zekiel","txt_zekiel","patric","txt_patric","blebl","txt_blebl","licba","txt_licba","snoffe","txt_snoffe","gmals","txt_gmals","bob","txt_bob","nice","txt_nice","bahb","txt_bahb",
     "maeryio","txt_maeryio","zez","txt_zez",0,0,"baab","txt_baab","keeeeeeke","txt_keeeeeeke","tzsh","txt_tzsh",0,0,"glebab","txt_glebab","meemto","txt_meemto","dood","txt_dood","robert","txt_robert","emme","txt_emme",
