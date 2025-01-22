@@ -11,6 +11,7 @@ local oldmousey = 0
 
 local buttons = {}--{"play", "editor", "options", "exit"}
 local git_btn = nil
+local discord_btn = nil
 
 math.randomseed(os.time())
 local splash = math.random()
@@ -54,7 +55,10 @@ function scene.load()
   -- tweens
   -- the tween table on each update call updates every updatable tween, so you dont have to worry about updating anything else upon adding a tween
   tweens['git'] = {x = 10, y = love.graphics.getHeight() + sprites["ui/github"]:getHeight() + 10}
-  tweens['gitTween'] = tween.new(0.5, tweens['git'], {y = love.graphics.getHeight() - sprites["ui/github"]:getHeight() - 10}, 'outCirc')
+  tweens['gitTween'] = tween.new(0.5, tweens['git'], {y = love.graphics.getHeight() - sprites["ui/github"]:getHeight() - 20}, 'outCirc')
+  
+  tweens['discord'] = {x = 60, y = love.graphics.getHeight() + sprites["ui/discord"]:getHeight() + 60}
+  tweens['discordTween'] = tween.new(0.5, tweens['discord'], {y = love.graphics.getHeight() - sprites["ui/discord"]:getHeight() - 20}, 'outCirc')
 
   tweens['title'] = {rotate = -math.pi*2, scale = 0}
   tweens['titleRotateTween'] = tween.new(1.6, tweens['title'], {rotate = (math.random(1,1000) == 1) and 999999 or math.pi*2}, 'outBack')
@@ -73,11 +77,14 @@ function scene.buildUI()
   if getTheme() == "halloween" then
     if not settings["lessflashing"] and (love.timer.getTime()%10 > 8.7 and love.timer.getTime()%10 < 8.8 or love.timer.getTime()%10 > 8.9 and love.timer.getTime()%10 < 9) then
         giticon = sprites["ui/github_halloween_blood"]
+        discordicon = sprites["ui/discord_halloween_blood"]
     else
         giticon = sprites["ui/github_halloween"]
+        discordicon = sprites["ui/discord_halloween"]
     end
   else
     giticon = sprites["ui/github"]
+    discordicon = sprites["ui/discord"]
   end
   
   git_btn = ui.component.new()
@@ -87,6 +94,14 @@ function scene.buildUI()
     :setPivot(0.5, 0.5)
     :onPreDraw(function(o) ui.buttonFX(o, {rotate = false}) end)
     :onReleased(function() love.system.openURL("https://github.com/lilybeevee/bab-be-u") end)
+  
+  discord_btn = ui.component.new()
+    :setSprite(discordicon)
+    :setColor(1, 1, 1)
+    :setPos(60, love.graphics.getHeight()-sprites["ui/discord"]:getHeight()-10)
+    :setPivot(0.5, 0.5)
+    :onPreDraw(function(o) ui.buttonFX(o, {rotate = false}) end)
+    :onReleased(function() love.system.openURL("https://discord.gg/uvcytbAYBW") end)
 
   local ox, oy
   if not options then
@@ -160,6 +175,7 @@ function scene.update(dt)
   end
 
   git_btn:setPos(tweens['git'].x, tweens['git'].y, sprites["ui/github"]:getHeight()+10, -sprites["ui/github"]:getHeight()-10, 1.2)
+  discord_btn:setPos(tweens['discord'].x, tweens['discord'].y, sprites["ui/discord"]:getHeight()+60, -sprites["ui/discord"]:getHeight()-60, 1.2)
 end
 
 function scene.draw(dt)
@@ -195,6 +211,7 @@ function scene.draw(dt)
     button:draw()
   end
   git_btn:draw()
+  discord_btn:draw()
 
   if not options then
     local bab_logo = sprites["ui/title/"..getTheme()] or sprites["ui/title/default"]

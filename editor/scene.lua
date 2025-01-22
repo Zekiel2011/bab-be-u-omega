@@ -996,10 +996,10 @@ function scene.mouseReleased(x, y, button)
         editor_save.brush = brush
       end
       if mouseOverBox(30, -30, 62, 14, t) then -- go to level
-        loadLevels({level_dialogue.unit.special.name}, "edit", level_dialogue.unit)
-        clear()
-        loadMap()
-        resetMusic(map_music, 0.1)
+        --loadLevels({level_dialogue.unit.special.name}, "edit", level_dialogue.unit)
+        --clear()
+        --loadMap()
+        --resetMusic(map_music, 0.1)
       end
       scene.updateMap()
     elseif level_dialogue.unit.name == "lin" and mouseOverBox(-75, -58, 150, 50, t) then
@@ -1843,7 +1843,7 @@ function scene.draw(dt)
         love.graphics.draw(icon_data or sprites["ui/default icon"], 31, -95, 0, 0.625)
         
         if unit.special.name then
-          love.graphics.printf("Go to Level", 31, -28, 60, "center")
+          love.graphics.printf("Don't go 2 Lvl", 31, -28, 60, "center")
         end
     
         love.graphics.pop()
