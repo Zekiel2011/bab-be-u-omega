@@ -1,0 +1,84 @@
+[
+  {
+    "name": "txt_uno",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_dos",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_enn",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_trwa",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_cuatro",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_cinco",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_seis",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_siete",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_ocho",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "txt_nueve",
+    "sprite": ["txt/wat"],
+    "types": ["property"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "corruptedbab",
+    "sprite": ["corrbab"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
+    },
+    "voice": "s_doo",
+    "desc": "boOOOoorring, its a destruction world clone... (rolls eyes)",
+    "tags": ["chars", "baba"],
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_corruptedbab",
+    "sprite": ["txt_corrbab"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "\"BAB\". thats what it says..?",
+    "tags": ["chars", "baba"]
+  }
+]

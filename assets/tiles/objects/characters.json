@@ -130,15 +130,17 @@
     "voice": "s_strum",
     "desc": "smol frens who own pointy tridents, play with explosives, and bake good cake. nobody knows how to describe more than one of them",
     "tags": ["wug", "chars", "bird"],
-	  "pronouns": ["they", "them"]
+    "pronouns": ["they", "them"],
+    "old_names": ["woug"]
   },
   {
     "name": "txt_wog",
     "sprite": ["txt/wog"],
     "types": ["object"],
     "color": [[2, 4]],
-    "desc": "shhh... don't tell anyone its name is actually wog.",
-    "tags": ["wug", "chars", "bird"]
+    "desc": "wogs dream is to be a mad scientist and go evil with power using nothing but sheer linguistics. linguists' evil career options may be limited but that wont stop wog from trying their best",
+    "tags": ["wug", "chars", "bird"],
+    "old_names": ["txt_woug"]
   },
   {
     "name": "bup",
@@ -4591,5 +4593,21 @@
     "types": ["object"],
     "color": [[8, 2]],
     "tags": ["chars", "bab", "seabunny", "underwater"]
+  },
+  {
+    "name": "craewlr",
+    "sprite": ["craewlr"],
+    "layer": 20,
+    "color": [[1, 4]],
+    "rotate": true,
+    "desc": "envoirmetn staeton aelphah ehnami",
+    "tags": ["chars", "crawler", "esa"]
+  },
+  {
+    "name": "txt_craewlr",
+    "sprite": ["txt/craewlr"],
+    "types": ["object"],
+    "color": [[1, 4]],
+    "tags": ["chars", "crawler", "esa"]
   }
 ]

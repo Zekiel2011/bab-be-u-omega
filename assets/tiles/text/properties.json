@@ -1630,14 +1630,6 @@
     "tags": ["duh", "uh"]
   },
   {
-    "name": "txt_doth",
-    "sprite": ["txt/doth"],
-    "types": ["property"],
-    "color": [[6, 1]],
-    "desc": "DOTH: doth",
-    "tags": ["doth"]
-  },
-  {
     "name": "txt_zup",
     "sprite": ["txt/zup"],
     "types": ["property"],

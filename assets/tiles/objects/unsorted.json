@@ -4877,5 +4877,35 @@
     "types": ["object"],
     "color": [[2, 4]],
     "tags": ["spore", "puff"]
+  },
+  {
+    "name": "dirrt",
+    "sprite": ["dirrt"],
+    "layer": 15,
+    "color": [[1, 1]],
+    "desc": "/set air 100 100 100 dirt",
+    "tags": ["dirt", "ground", "esa"]
+  },
+  {
+    "name": "txt_dirrt",
+    "sprite": ["txt/dirrt"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["dirt", "ground", "esa"]
+  },
+  {
+    "name": "esgras",
+    "sprite": ["esgras"],
+    "layer": 15,
+    "color": [[1, 4]],
+    "desc": "/set air 100 100 100 grass",
+    "tags": ["grass", "ground", "esa"]
+  },
+  {
+    "name": "txt_esgras",
+    "sprite": ["txt/esgras"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["grass", "ground", "esa"]
   }
 ]

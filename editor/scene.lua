@@ -402,15 +402,6 @@ w = w-h, h = h}):center():setGroup("settings")
   for i=1,#tile_grid do
     --#tile_grid
     local tab_name = custom_selector_tab == i and "custom" or i
-    if tab_name == 11 then
-      if settings["baba"] then
-        tab_name = "baba"
-      else
-        tab_name = "unfinished"
-      end
-    elseif tab_name == 12 then
-      tab_name = "unfinished"
-    end
     local button_width = math.floor(576 / #tile_grid) --576 is 18 tiles wide * 32 pixels per tile
     local button = gooi.newButton({text = "", x = x + button_width*i, y = y, w = button_width, h = 32}):onRelease(function()
       if selector_page == custom_selector_tab then
