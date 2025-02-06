@@ -1225,7 +1225,7 @@ function updateUnits(undoing, big_update)
     
     local islua = getUnitsWithEffect("lua")
     for _,unit in ipairs(islua) do
-      love.window.showMessageBox("Lua error", "bab-be-u-omega/game/unit.lua:1126", "warning")
+      love.window.showMessageBox("Lua error", "bab-be-u-omega/game/unit.lua:1228", "warning")
     end
     
     local isdefeat = getUnitsWithEffect(":(")
@@ -2395,6 +2395,22 @@ function miscUpdates(state_change)
       if unit.fullname == "nemee" then 
         if hasRule(unit,"got","?") then
           unit.sprite = {"nemee_got"}
+        end
+      end
+      
+      if unit.fullname == "platfory" then
+        if hasProperty(unit,":(") then 
+          unit.sprite = {"modd/platforey/shorp"}
+        elseif hasProperty(unit,"gomyway") then 
+          unit.sprite = {"modd/platforey/REAL"}
+        elseif hasProperty(unit,"qt") then 
+          unit.sprite = {"modd/platforey/uwu"}
+        elseif hasProperty(unit,"haetskye") then 
+          unit.sprite = {"modd/platforey/fallen"}
+        elseif hasProperty(unit,"icy") then 
+          unit.sprite = {"modd/platforey/freeze"}
+        else
+          unit.sprite = {"modd/platforey/platfory"}
         end
       end
        

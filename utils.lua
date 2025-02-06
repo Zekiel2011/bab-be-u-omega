@@ -5128,7 +5128,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
       if (current_palette == "default" or current_palette == "bigger") and o.wobble then
         palette = "baba"
       end
-      if color[1] > 6 or color[2] > 4 then
+      if color[2] > 4 then
         palette = "bigger"
       end
       if current_palette == "garden" and o.wobble then

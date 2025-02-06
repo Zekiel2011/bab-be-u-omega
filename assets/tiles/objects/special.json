@@ -336,18 +336,6 @@
     "tags": ["it"]
   },
   {
-    "name": "the",
-    "sprite": ["the"],
-    "types": ["object"],
-    "layer": 20,
-    "desc": "MEEM BE BEN'T BE -OK",
-    "convertible": false,
-    "color": [[4, 2]],
-    "rotate": true,
-    "tags": ["chars", "this", "iiy", "thingify"],
-    "tags": ["it"]
-  },
-  {
     "name": "reed",
     "sprite": ["colors"],
     "types": ["object"],

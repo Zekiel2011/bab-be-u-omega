@@ -4609,5 +4609,21 @@
     "types": ["object"],
     "color": [[1, 4]],
     "tags": ["chars", "crawler", "esa"]
+  },
+  {
+    "name": "soil",
+    "sprite": ["soil"],
+    "layer": 20,
+    "color": [[5, 2]],
+    "rotate": true,
+    "desc": "gras blok?!?",
+    "tags": ["chars", "soli", "platfory", "theopold"]
+  },
+  {
+    "name": "txt_soil",
+    "sprite": ["txt/soil"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["chars", "soli", "platfory", "theopold"]
   }
 ]

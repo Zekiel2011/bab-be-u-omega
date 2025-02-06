@@ -740,7 +740,7 @@ selector_grid_contents = {
     "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba","gat","txt_gat",0,0,0,0,0,0,
     "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg","man","txt_man",0,0,0,0,0,0,0,0,0,0,
     "aent","txt_aent","citten","txt_citten","snomstr","txt_snomstr","fren","txt_fren","whar","txt_whar","sedl","txt_sedl",0,0,0,0,0,0,0,0,0,0,0,0,
-    "kvait","txt_kvait","slim","txt_slim","craewlr","txt_craewlr",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "kvait","txt_kvait","slim","txt_slim","craewlr","txt_craewlr","soil","txt_soil",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

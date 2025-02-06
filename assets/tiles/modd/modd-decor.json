@@ -148,6 +148,7 @@
     "sprite": ["modd/drincc"],
     "color": [[1, 3]],
     "tags": ["mod", "drink", "boba"],
+    "layer": 18,
     "desc": "It was RIGHT AT THIS EXACT POINT that I realized this mod was about to become quanity over qualtity",
     "rotate": true
   },

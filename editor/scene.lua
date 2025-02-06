@@ -229,7 +229,7 @@ function scene.setupGooi()
   end):bg({0,0,0,0}) -- no BGImage since it needs to be recolored
   x = x + 36
   local fullpaint_palette_x = x
-  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 10*16, w = 10*16}):onPress(function()
+  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 14*16, w = 7*16}):onPress(function()
     local x, y = love.mouse.getPosition()
     local palette_x = math.floor((x - fullpaint_palette_x) / 16)
     local palette_y = math.floor((y - 4) / 16)
