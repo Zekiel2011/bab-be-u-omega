@@ -1157,14 +1157,6 @@
     "tags": ["unhuh", "unhm", "face", "unok", "gotcha", ";d"]
   },
   {
-    "name": "txt_zip",
-    "sprite": ["txt/zip"],
-    "types": ["property"],
-    "color": [[5, 3]],
-    "desc": "ZIP: UNIMPLIMENTED, At end of turn, if it is on a tile it couldn't enter or shares a tile with another object of its name, it finds the nearest free tile (preferencing backwards directions) and ejects to it",
-    "tags": ["zip"]
-  },
-  {
     "name": "txt_v",
     "sprite": ["txt/v"],
     "types": ["property"],
@@ -1881,5 +1873,13 @@
     "color": [[4, 2]],
     "desc": "IFYYY: BE IFYYY causes that object or text to turn into 2 of itself. Specifically, if also transforming into something else, it also stays there in addition to transforming.",
     "tags": ["why", "mse"]
+  },
+  {
+    "name": "txt_attacc",
+    "sprite": ["txt/attacc"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "ATTACC: When idling, even when the unit is not U it will destroy the tile or txt it's facing one tile from it.\nAnti: Does it every turn you aren't idling.",
+    "tags": ["attack"]
   }
 ]

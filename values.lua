@@ -573,7 +573,7 @@ selector_grid_contents = {
   },
   -- page 7: properties, verbs and conditions
   {
-    "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat",0,"txt_idk","txt_knobout","txt_jojmen","txt_stoop",0,
+    "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat",0,"txt_idk","txt_knobout","txt_jojmen","txt_stoop","txt_attacc",
     "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_copdog","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx",0,0,
     "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd",0,"txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
     "txt_nogo","txt_goawaypls","txt_comepls","txt_sidekik","txt_diagkik","txt_delet","txt_hotte","txt_fridgd","txt_thingify",0,"txt_rythm","txt_curse","txt_alt","txt_clikt","txt_past","txt_wun","txt_an","txt_mayb",0,0,0,0,0,0,
@@ -643,7 +643,7 @@ selector_grid_contents = {
     "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_golld","txt_viloet",0,0,0,0,0,
     "txt_uhhh","txt_scary",0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6",0,"txt_crye",0,0,0,"txt_bigender","txt_gaymen",0,0,0,0,0,0,
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
-    "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz","txt_zip","txt_ad","txt_subt",0,0,0,0,0,0,
+    "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz",0,"txt_ad","txt_subt",0,0,0,0,0,0,
   },
   {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_camra","camra",0,0,0,0,0,0,
@@ -789,7 +789,7 @@ selector_grid_contents = {
   },
   -- page 7.5 properties and stuff
   {
-    "txt_flogus","txt_flogvn","txt_flogjp","txt_flogsg","txt_floggs","txt_floggb-eng",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -843,7 +843,7 @@ selector_grid_contents = {
   },
   -- page 10.5
   {
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_flogus","txt_flogvn","txt_flogjp","txt_flogsg","txt_floggs","txt_floggb-eng",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

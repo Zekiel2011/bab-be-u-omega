@@ -2256,19 +2256,17 @@
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
     },
-    "voice": "s_doo",
     "desc": "from patric's paraboux",
-    "tags": ["chars", "patrick", "patricks parabox"],
-    "pronouns": ["she", "her"]
+    "tags": ["chars", "patrick", "patricks parabox"]
   },
   {
     "name": "txt_patric",
     "sprite": ["txt/patric"],
     "types": ["object"],
-    "color": [[0, 3]],
+    "color": [[4, 2]],
     "rotate": true,
     "desc": "Be manous an instrument?",
-    "tags": ["chars", "patrick star", "spongebob"]
+    "tags": ["chars", "patrick", "patricks parabox"]
   },
   {
     "name": "platfory",
@@ -3789,7 +3787,7 @@
     "name": "kiik",
     "sprite": ["kiik"],
     "layer": 11,
-    "color": [[7, 2]],
+    "color": [[2, 10]],
     "rotate": true,
     "voice": "s_saw",
     "desc": "Would you call it \"KIIK\" or \"BOBUA\"?",
@@ -3800,7 +3798,7 @@
     "name": "txt_kiik",
     "sprite": ["txt/kiik"],
     "types": ["object"],
-    "color": [[7, 2]],
+    "color": [[2, 10]],
     "tags": ["keke", "chars", "kiki"]
   },
   {

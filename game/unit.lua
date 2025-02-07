@@ -1184,6 +1184,52 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
+    local isattacc = getUnitsWithEffect("attacc")
+    for _,unit in ipairs(isattacc) do
+      local dx, dy, dir, px, py = getNextTile(unit, dirs8[unit.dir][1], dirs8[unit.dir][2], unit.dir)
+      local stuff = getUnitsOnTile(unit.x+dx, unit.y+dy, {not_destroyed = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if on ~= unit and sameFloat(on, unit) and ignoreCheck(on, unit) and (last_move ~= nil and last_move[1] == 0 and last_move[2] == 0 and #last_clicks == 0) then
+          if timecheck(unit,"be","attacc") and timecheck(on) then
+            table.insert(to_destroy, on)
+            addParticles("rule", unit.x+dx, unit.y+dy, {0, 2})
+            playSound("sink")
+            shakeScreen(0.3, 0.1)
+          else
+            table.insert(time_destroy,{on.id,timeless})
+						addUndo({"time_destroy",on.id})
+            table.insert(time_sfx,"sink")
+          end
+          addParticles("destroy", on.x, on.y, getUnitColor(on))
+        end
+      end
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
+    local isattacc2 = getUnitsWithEffect("anti attacc")
+    for _,unit in ipairs(isattacc2) do
+      local dx, dy, dir, px, py = getNextTile(unit, dirs8[unit.dir][1], dirs8[unit.dir][2], unit.dir)
+      local stuff = getUnitsOnTile(unit.x+dx, unit.y+dy, {not_destroyed = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if on ~= unit and sameFloat(on, unit) and ignoreCheck(on, unit) and not (last_move ~= nil and last_move[1] == 0 and last_move[2] == 0 and #last_clicks == 0) then
+          if timecheck(unit,"be","anti attacc") and timecheck(on) then
+            table.insert(to_destroy, on)
+            addParticles("rule", unit.x+dx, unit.y+dy, {0, 2})
+            playSound("sink")
+            shakeScreen(0.3, 0.1)
+          else
+            table.insert(time_destroy,{on.id,timeless})
+						addUndo({"time_destroy",on.id})
+            table.insert(time_sfx,"sink")
+          end
+          addParticles("destroy", on.x, on.y, getUnitColor(on))
+        end
+      end
+    end
+    
+    to_destroy = handleDels(to_destroy)
+    
     local is404 = getUnitsWithEffect("404")
     for _,unit in ipairs(is404) do
       table.insert(to_destroy, unit)
