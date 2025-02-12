@@ -67,7 +67,7 @@
     "sprite": ["letter_j"],
     "types": ["letter"],
     "color": [[0, 3]],
-    "desc": "Used less than it should be. There aren't any non-nouns that use it..."
+    "desc": "Used less than it should be. There are non-nouns that use it..."
   },
   {
     "name": "letter_k",

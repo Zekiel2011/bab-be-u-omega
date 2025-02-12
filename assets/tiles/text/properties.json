@@ -1881,5 +1881,13 @@
     "color": [[2, 2]],
     "desc": "ATTACC: When idling, even when the unit is not U it will destroy the tile or txt it's facing one tile from it.\nAnti: Does it every turn you aren't idling.",
     "tags": ["attack"]
+  },
+  {
+    "name": "txt_nou",
+    "sprite": ["txt/nou"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOU: idk what it would do, no behavear has been decided yet.",
+    "tags": ["uno reverse card", "no you"]
   }
 ]

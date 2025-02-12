@@ -4245,6 +4245,11 @@
     "sprite": ["nemee"],
     "layer": 18,
     "color": [[4, 2]],
+    "features": {
+      "sant": {"x": 0, "y": 10},
+      "hatt": {"x": 0, "y": 10},
+      "cool": {"x": 0, "y": 10},
+    },
     "rotate": true,
     "desc": "wears different hats",
     "tags": ["nimi", "garden", "nimis garden"]
@@ -4589,7 +4594,7 @@
     "name": "txt_seabab",
     "sprite": ["txt/seabab"],
     "types": ["object"],
-    "color": [[8, 2]],
+    "color": [[5, 10]],
     "tags": ["chars", "bab", "seabunny", "underwater"]
   },
   {
