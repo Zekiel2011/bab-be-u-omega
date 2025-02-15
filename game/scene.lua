@@ -626,7 +626,7 @@ function scene.keyPressed(key, isrepeat)
   else
     scene.selecting = false
     local do_turn_now = false
-
+    
     if (key == "w" or key == "a" or key == "s" or key == "d") then
       if not repeat_timers["wasd"] or repeat_timers["wasd"] > 30 then
         repeat_timers["wasd"] = 30

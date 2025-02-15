@@ -328,6 +328,23 @@ function loadMap()
       if (levels_this_world > 0 and puffs_this_world >= levels_this_world) then
         writeSaveFile(true, {"levels", level_filename, "complete"})
       end
+      if levels_this_world > 0 and scene ~= editor then
+        gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["puff"], sprites["puff"], sprites["puff"]):bg({0, 0, 0, 0})
+        x = x + 50
+        gooi.newButton({text = puffs_this_world.."/"..level_puffs_to_clear, x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["no1"], sprites["no1"], sprites["no1"]):bg({0, 0, 0, 0})
+        x = x + 50
+        gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["ui/ui_lvl"], sprites["ui/ui_lvl"], sprites["ui/ui_lvl"]):bg({0, 0, 0, 0})
+        x = x + 40
+        gooi.newButton({text = levels_this_world, x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["no1"], sprites["no1"], sprites["no1"]):bg({0, 0, 0, 0})
+      end
       
       if dofloodfill then
         while #floodfill > 0 do
@@ -1984,7 +2001,7 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = readSaveFile{"levels",name,"won"}
     elseif condtype == "bunosd" then
       local name = unit.special.level or level_filename
-      result = readSaveFile{"levels",name,"bonus"}
+      result = readSaveFile{"levels",name,"bonused"}
     elseif condtype == "whuhd" then
       local name = unit.special.level or level_filename
       result = readSaveFile{"levels",name,"whunus"}
