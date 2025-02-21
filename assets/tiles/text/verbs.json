@@ -333,5 +333,13 @@
     "color": [[4, 2]],
     "desc": "PNG (Verb): Makes X uses the sprite for Y (Keep in mind that Y needs to be in the level in order to PNG it).",
     "tags": ["sprite", "picture"]
+  },
+ {
+    "name": "txt_alow",
+    "sprite": ["txt/alow"],
+    "types": ["verb_unit", "verb"],
+    "color": [[5, 2]],
+    "desc": "ALOW (Verb): A unit can step onto a tile that has something that ALOWs it (treating it like YESGO). \nAnti: mirrored haet",
+    "tags": ["allow", "allows", "bab anarchy", "dizzyandy"]
   }
 ]

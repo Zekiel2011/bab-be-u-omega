@@ -2370,6 +2370,9 @@ function canMove(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, push_
     return false,{},{}
   end
   local success, movers, specials = canMoveCore(unit,dx,dy,dir,o)
+  if specials == "yesgo" then
+    return true, movers, {}
+  end
   if thicc_units[unit] then
     local old_x, old_y = unit.x, unit.y;
     local thicc = thicc_units[unit]
@@ -2515,6 +2518,12 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
   local movers = {}
   local specials = {}
   table.insert(movers, {unit = unit, dx = x-unit.x, dy = y-unit.y, dir = dir, move_dx = move_dx, move_dy = move_dy, move_dir = move_dir, geometry_spin = geometry_spin, portal = portal_unit})
+  
+  for _,v in ipairs(getUnitsOnTile(x, y, {checkmous = true})) do
+    if hasProperty(v,"yesgo") or hasRule(v, "alow", unit) then
+      return true, movers, {}
+    end
+  end
   
   if unit == outergaem then
     return true,movers,{}

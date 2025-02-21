@@ -4907,5 +4907,20 @@
     "types": ["object"],
     "color": [[5, 2]],
     "tags": ["grass", "ground", "esa"]
+  },
+  {
+    "name": "muud",
+    "sprite": ["muud"],
+    "layer": 15,
+    "color": [[6, 1]],
+    "desc": "watr & dirrt",
+    "tags": ["mud"]
+  },
+  {
+    "name": "txt_muud",
+    "sprite": ["txt/muud"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["mud"]
   }
 ]

@@ -59,7 +59,7 @@
     "sprite": ["txt/nogo"],
     "types": ["property"],
     "color": [[5, 1]],
-    "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: icyyyy",
+    "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: yesgo",
     "tags": ["stop"]
   },
   {
@@ -1889,5 +1889,14 @@
     "color": [[3, 1]],
     "desc": "NOU: idk what it would do, no behavear has been decided yet.",
     "tags": ["uno reverse card", "no you"]
+  },
+ {
+    "name": "txt_yesgo",
+    "display": "yes go",
+    "sprite": ["txt/yesgo"],
+    "types": ["property"],
+    "color": [[2, 1]],
+    "desc": "YES GO: Can always be entered by objects. Overrides GO AWAY PLS!\nAnti: nogo",
+    "tags": ["unstop", "bab anarchy", "dizzyandy"]
   }
 ]
