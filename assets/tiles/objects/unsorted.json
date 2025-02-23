@@ -277,6 +277,21 @@
     "tags": ["grass", "plants"]
   },
   {
+    "name": "strand",
+    "sprite": ["strand"],
+    "layer": 4,
+    "color": [[5, 3]],
+    "desc": "les gras dan gras",
+    "tags": ["grass", "plants"]
+  },
+  {
+    "name": "txt_strand",
+    "sprite": ["txt/strand"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "tags": ["grass", "plants"]
+  },
+  {
     "name": "dayzy",
     "sprite": ["dayzy"],
     "layer": 4,
@@ -4881,7 +4896,7 @@
   {
     "name": "dirrt",
     "sprite": ["dirrt"],
-    "layer": 15,
+    "layer": 10,
     "color": [[1, 1]],
     "desc": "/set air 100 100 100 dirt",
     "tags": ["dirt", "ground", "esa"]
@@ -4911,7 +4926,7 @@
   {
     "name": "muud",
     "sprite": ["muud"],
-    "layer": 15,
+    "layer": 9,
     "color": [[6, 1]],
     "desc": "watr & dirrt",
     "tags": ["mud"]

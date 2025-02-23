@@ -1703,7 +1703,21 @@ function scene.draw(dt)
           else
             if (unit.rotate or (rules_with["rotatbl"] and hasProperty(unit,"rotatbl"))) then rot = (unit.dir - 1) * 45 end
           end
-          drawUnit(unit, x, y, rot)
+          if hasProperty(unit,"anti nooope") and hasProperty(unit,"anti nope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(98))*400))
+          elseif hasProperty(unit,"anti nooope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(28))*200))
+          elseif hasProperty(unit,"anti nope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(7))*50))
+          elseif hasProperty(unit,"nooope") and hasProperty(unit,"nope") then
+            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(96))*400))
+          elseif hasProperty(unit,"nooope") then
+            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(28))*200))
+          elseif hasProperty(unit,"nope") then
+            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(7))*50))
+          else
+            drawUnit(unit, x, y, rot)
+          end
         end
       end
       for _,unit in ipairs(removed_units) do

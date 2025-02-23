@@ -1898,5 +1898,21 @@
     "color": [[2, 1]],
     "desc": "YES GO: Can always be entered by objects. Overrides GO AWAY PLS!\nAnti: nogo",
     "tags": ["unstop", "bab anarchy", "dizzyandy"]
+  },
+  {
+    "name": "txt_nope",
+    "sprite": ["txt/nope"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOPE: Makes the unit sway like NOE.\nAnti: Opposite direction",
+    "tags": ["no", "noe", "visual"]
+  },
+  {
+    "name": "txt_nooope",
+    "sprite": ["txt/nooope"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOOOPE: Makes the unit sway like NOE, but even more.",
+    "tags": ["no", "noe", "visual"]
   }
 ]

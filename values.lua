@@ -758,7 +758,7 @@ selector_grid_contents = {
     "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart","nes","txt_nes","catpul","txt_catpul",0,0,0,0,0,0,0,0,
     "turnep","txt_turnep","mgama","txt_mgama","mouv","txt_mouv","paino","txt_paino","airkar","txt_airkar","wandrrs","txt_wandrrs",0,0,0,0,0,0,0,0,0,0,0,0,
     "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly","big","txt_big","sheild","txt_sheild",0,0,0,0,0,0,0,0,0,0,
-    "lua","txt_lua","scizor","txt_scizor","lite","txt_lite","zzz","txt_zzz","bulett","txt_bulett","milck","txt_milck",0,0,0,0,0,0,0,0,0,0,0,0,
+    "lua","txt_lua","scizor","txt_scizor","lite","txt_lite","zzz","txt_zzz","bulett","txt_bulett","milck","txt_milck","strand","txt_strand",0,0,0,0,0,0,0,0,0,0,
     "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee","tnt","txt_tnt",0,0,0,0,0,0,0,0,0,0,0,0,
     "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser","comnnd","txt_comnnd",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "con1","txt_con1","con2","txt_con2","puf","txt_puf","dirrt","txt_dirrt","esgras","txt_esgras",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -790,7 +790,7 @@ selector_grid_contents = {
   },
   -- page 7.5 properties and stuff
   {
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_nope","txt_nooope",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
