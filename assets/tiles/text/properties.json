@@ -1904,7 +1904,7 @@
     "sprite": ["txt/nope"],
     "types": ["property"],
     "color": [[3, 1]],
-    "desc": "NOPE: Makes the unit sway like NOE.\nAnti: Opposite direction",
+    "desc": "NOPE: Makes the unit sway like NOE, and stacks!\nAnti: Opposite direction, doesn't stack.",
     "tags": ["no", "noe", "visual"]
   },
   {
@@ -1912,7 +1912,7 @@
     "sprite": ["txt/nooope"],
     "types": ["property"],
     "color": [[3, 1]],
-    "desc": "NOOOPE: Makes the unit sway like NOE, but even more.",
+    "desc": "NOOOPE: Makes the unit sway like NOE, but even more, still stacks!\nAnti: Oppisite direction, doesn't stack.",
     "tags": ["no", "noe", "visual"]
   }
 ]

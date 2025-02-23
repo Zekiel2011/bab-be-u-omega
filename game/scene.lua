@@ -1709,12 +1709,10 @@ function scene.draw(dt)
             drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(28))*200))
           elseif hasProperty(unit,"anti nope") then
             drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(7))*50))
-          elseif hasProperty(unit,"nooope") and hasProperty(unit,"nope") then
-            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(96))*400))
-          elseif hasProperty(unit,"nooope") then
-            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(28))*200))
-          elseif hasProperty(unit,"nope") then
-            drawUnit(unit, x, y, rot+((math.sin(love.timer.getTime()*4)*math.rad(7))*50))
+          elseif hasProperty(unit,"nope") or hasProperty(unit,"nooope") then
+            local noc = countProperty(unit,"nope")+1*countProperty(unit,"nooope")*3+1
+            local nopedir = ((math.sin(love.timer.getTime()*4)*math.rad(7*noc))*(50*noc))
+            drawUnit(unit, x, y, rot+nopedir)
           else
             drawUnit(unit, x, y, rot)
           end
