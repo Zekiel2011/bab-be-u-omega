@@ -366,7 +366,7 @@ function moveBlock()
       end
     end
   end
-  
+    
   local isthere, thererules = getUnitsWithEffect("thr", true)
   local hasthered = {}
   for ri,unit in ipairs(isthere) do
@@ -1148,20 +1148,20 @@ function updateUnits(undoing, big_update)
     
     to_destroy = handleDels(to_destroy)
     
-    local issmash = getUnitsWithEffect("smash")
-    for _,unit in ipairs(issmash) do
-      local dx = dirs8[unit.dir][1]
-      local dy = dirs8[unit.dir][2]
-      local dir = unit.dir
-      local tx = unit.x
-      local ty = unit.y
-      local smashed = getNextTile(deez,dx,dy,dir,nil,tx,ty)
-      playSound("break")
-      shakeScreen(0.3, 0.1)
-      table.insert(to_destroy, on)
-    end
+    --local issmash = getUnitsWithEffect("smash")
+    --for _,unit in ipairs(issmash) do
+      --local dx = dirs8[unit.dir][1]
+      --local dy = dirs8[unit.dir][2]
+      --local dir = unit.dir
+      --local tx = unit.x
+      --local ty = unit.y
+      --local smashed = getNextTile(deez,dx,dy,dir,nil,tx,ty)
+      --playSound("break")
+      --shakeScreen(0.3, 0.1)
+      --table.insert(to_destroy, on)
+    --end
     
-    to_destroy = handleDels(to_destroy)
+    --to_destroy = handleDels(to_destroy)
     
     local isstrong = getUnitsWithEffect("anti ouch")
     for _,unit in ipairs(isstrong) do
@@ -3895,20 +3895,17 @@ function convertUnits(pass)
 
   local removed_rule = {}
   local removed_rule_unit = {}
-  local function removeRuleChain(rule, pride)
+  local function removeRuleChain(rule, poof)
     if removed_rule[rule] then return end
     removed_rule[rule] = true
     for _,unit in ipairs(rule.units) do
       if not removed_rule_unit[unit] then
         removed_rule_unit[unit] = true
         table.insert(converted_units, unit)
-        local particle_colors = {}
-        for _,color in ipairs(overlay_props[pride].colors) do
-          table.insert(particle_colors, main_palette_for_colour[color])
-        end
+        local particle_colors = {4, 2}
         addParticles("bonus", unit.x, unit.y, particle_colors)
         for _,other_rule in ipairs(rules_with_unit[unit]) do
-          removeRuleChain(other_rule, pride)
+          removeRuleChain(other_rule, poof)
         end
       end
     end
@@ -3925,6 +3922,14 @@ function convertUnits(pass)
     end
   end
 
+  if rules_with["poof"] then
+    for _,bad in ipairs(rules_with["poof"]) do
+      removed_rule = {}
+      removed_rule_unit = {}
+      removeRuleChain(bad, poof)
+    end
+  end
+  
   local function addTile(nametocreate,unit)
     table.insert(converted_units, unit)
     addParticles("bonus", unit.x, unit.y, getUnitColor(unit))

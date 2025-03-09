@@ -5030,6 +5030,8 @@ function getUnitColor(unit, index, override_)
       return {2, 2}
     elseif unit.sprite[i] == "detox" and graphical_property_cache["slep"][unit] ~= nil then
       return {1, 2}
+    elseif unit.sprite[i] == "sprites2/overdose" and graphical_property_cache["slep"][unit] ~= nil then
+      return {6, 2}
     else
       return getTileColor(getTile(unit.tile), index, override)
     end

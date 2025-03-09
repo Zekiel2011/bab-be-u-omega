@@ -525,14 +525,14 @@ selector_grid_contents = {
     "wog","txt_wog","bog","txt_bog","enbybog","txt_enbybog","spoder","txt_spoder","niko","txt_niko","tu","txt_tu","smoll","txt_smoll","tesho","txt_tesho",0,0,0,0,0,0,0,0,
     "kirb","txt_kirb","ripof","txt_ripof","trob","txt_trob","cavebab","txt_cavebab","detox","txt_detox","nyowo","txt_nyowo","amoung","txt_amoung","bibi","txt_bibi",0,0,0,0,0,0,"tot","txt_tot",
     "bup","txt_bup","butflye","txt_butflye","boooo","txt_boooo","prime","txt_prime","grimkid","txt_grimkid","dad","txt_dad","bellby","txt_bellby","balt","txt_balt",0,0,0,0,0,0,"fax","txt_fax",
-    "boy","txt_boy","wurm","txt_wurm","madi","txt_madi","angle","txt_angle","boogie","txt_boogie","aka","txt_aka","nyaka","txt_nyaka",0,0,0,0,0,0,0,0,"hempuli","txt_hempuli",
-    "steev","txt_steev","ratt","txt_ratt","badi","txt_badi","dvl","txt_dvl","assh","txt_assh","obby","txt_obby","chad.","txt_chad.",0,0,0,0,0,0,0,0,0,0,
-    "han","txt_han","iy","txt_iy","lisp","txt_lisp","paw","txt_paw","humuhumunukunukuapua'a","txt_humuhumunukunukuapua'a","day","txt_day","rru","txt_rru",0,0,0,0,0,0,0,0,0,0,
-    "snoman","txt_snoman","pingu","txt_pingu","der","txt_der","ginn","txt_ginn","snom","txt_snom","ses","txt_ses","hey","txt_hey",0,0,0,0,0,0,0,0,"square","txt_square",
-    "kapa","txt_kapa","urei","txt_urei","ryugon","txt_ryugon","viruse","txt_viruse","slog","txt_slog","pati","txt_pati","then","txt_then",0,0,0,0,0,0,0,0,"triangle","txt_triangle",
-    "os","txt_os","hors","txt_hors","mimi","txt_mimi","err","txt_err","scorpino","txt_scorpino","gargle","txt_gargle","foof","txt_foof",0,0,0,0,0,0,0,0,"oat","txt_oat",
-    "pyuku","txt_pyuku","lokkeek","txt_lokkeek","dorrkeek","txt_dorrkeek","babi","txt_babi","babber","txt_babber","skulnbon","txt_skulnbon","joj","txt_joj",0,0,0,0,0,0,0,0,0,0,
-    "memem","txt_memem","memeemem","txt_memeemem","snoboy","txt_snoboy","wogotch","txt_wogotch","sham","txt_sham","duf","txt_duf","itd","txt_itd",0,0,0,0,0,0,0,0,0,0,
+    "boy","txt_boy","wurm","txt_wurm","madi","txt_madi","angle","txt_angle","boogie","txt_boogie","aka","txt_aka","nyaka","txt_nyaka","foomf","txt_foomf",0,0,0,0,0,0,"hempuli","txt_hempuli",
+    "steev","txt_steev","ratt","txt_ratt","badi","txt_badi","dvl","txt_dvl","assh","txt_assh","obby","txt_obby","chad.","txt_chad.","floomf","txt_floomf",0,0,0,0,0,0,0,0,
+    "han","txt_han","iy","txt_iy","lisp","txt_lisp","paw","txt_paw","humuhumunukunukuapua'a","txt_humuhumunukunukuapua'a","day","txt_day","rru","txt_rru","overdose","txt_overdose",0,0,0,0,0,0,0,0,
+    "snoman","txt_snoman","pingu","txt_pingu","der","txt_der","ginn","txt_ginn","snom","txt_snom","ses","txt_ses","hey","txt_hey","sneelectric","txt_sneelectric",0,0,0,0,0,0,"square","txt_square",
+    "kapa","txt_kapa","urei","txt_urei","ryugon","txt_ryugon","viruse","txt_viruse","slog","txt_slog","pati","txt_pati","then","txt_then","furlof","txt_furlof",0,0,0,0,0,0,"triangle","txt_triangle",
+    "os","txt_os","hors","txt_hors","mimi","txt_mimi","err","txt_err","scorpino","txt_scorpino","gargle","txt_gargle","foof","txt_foof","great","txt_great",0,0,0,0,0,0,"oat","txt_oat",
+    "pyuku","txt_pyuku","lokkeek","txt_lokkeek","dorrkeek","txt_dorrkeek","babi","txt_babi","babber","txt_babber","skulnbon","txt_skulnbon","joj","txt_joj","good","txt_good",0,0,0,0,0,0,0,0,
+    "memem","txt_memem","memeemem","txt_memeemem","snoboy","txt_snoboy","wogotch","txt_wogotch","sham","txt_sham","duf","txt_duf","itd","txt_itd","bitte!","txt_bitte!","branium","txt_branium",0,0,0,0,0,0,
   },
   -- page 5: inanimate objects
   {
@@ -556,9 +556,6 @@ selector_grid_contents = {
   },
   -- page 6: more inanimate objects
   {
-    "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti","papr","txt_papr",0,0,"kees","txt_kees","cd","txt_cd","ßar","txt_ßar","spinklr","txt_spinklr","cledg","txt_cledg","goop","txt_goop",
-    "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
-    "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil","ray","txt_ray","muud","txt_muud",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -566,7 +563,10 @@ selector_grid_contents = {
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "flag","txt_flag","water","txt_water","violet","txt_violet","cake","txt_cake",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -575,7 +575,7 @@ selector_grid_contents = {
   -- page 7: properties, verbs and conditions
   {
     "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_alow","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat","txt_idk","txt_knobout","txt_jojmen","txt_stoop","txt_attacc",
-    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_copdog","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx",0,0,
+    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_copdog","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx","txt_paybac",0,
     "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd",0,"txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
     "txt_nogo","txt_goawaypls","txt_comepls","txt_sidekik","txt_diagkik","txt_delet","txt_hotte","txt_fridgd","txt_thingify",0,"txt_rythm","txt_curse","txt_alt","txt_clikt","txt_past","txt_wun","txt_an","txt_mayb",0,0,0,0,0,0,
     "txt_visitfren","txt_slep","txt_shy...","txt_behinu","txt_walk","txt_:o","txt_moar","txt_split","txt_txtify",0,"txt_dragbl","txt_nodrag",0,"txt_wait...","txt_samefloat","txt_samepaint","txt_sameface",0,0,0,0,0,0,0,
@@ -586,7 +586,7 @@ selector_grid_contents = {
     "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,0,"txt_rave","txt_colrful","txt_blacc","txt_brwn",0,0,0,0,0,0,
     "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez",0,0,0,0,"txt_stelth","txt_qt","txt_thonk","txt_cool",0,0,0,0,0,0,
     "txt_left","txt_direction","txt_right","txt_yesgo",0,0,0,0,0,0,0,0,0,"txt_gay","txt_lesbab","txt_tranz","txt_ace","txt_aro",0,0,0,0,0,0,
-    "txt_downleft","txt_down","txt_downright",0,0,"selctr","txt_selctr","txt_frens","txt_groop","txt_gang","txt_themself","this",0,"txt_pan","txt_bi","txt_enby","txt_fluid","txt_πoly","txt_lesbad",0,0,0,0,0,
+    "txt_downleft","txt_down","txt_downright","txt_poof",0,"selctr","txt_selctr","txt_frens","txt_groop","txt_gang","txt_themself","this",0,"txt_pan","txt_bi","txt_enby","txt_fluid","txt_πoly","txt_lesbad",0,0,0,0,0,
     0,0,0,0,0,"lvl","txt_lvl","txt_txt","txt_no1","txt_every1","txt_every2","txt_every3","txt_every4",0,0,0,0,0,0,0,0,0,0,0,
     "txt_...","txt_''","txt_nt","txt_anti",0,"bordr","txt_bordr","lin","txt_lin","txt_lethers","txt_numa","txt_toen","txt_yuiy","txt_gaem","txt_mous",0,"camra","txt_camra",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -754,7 +754,7 @@ selector_grid_contents = {
   },
   -- page 5.5: inanimate objects
   {
-    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad",0,0,"durm","txt_durm","maell","txt_maell","saev","txt_saev",0,0,0,0,0,0,
+    "cherri","txt_cherri","loc","txt_loc","dangoh","txt_dangoh","pick","txt_pick","taad","txt_taad",0,0,"durm","txt_durm","maell","txt_maell","saev","txt_saev",0,0,0,0,"placeholder","txt_placeholder",
     "gras2","txt_gras2","squar","txt_squar","tri","txt_tri","0sid","txt_0sid","run","txt_run","bogart","txt_bogart","nes","txt_nes","catpul","txt_catpul",0,0,0,0,0,0,0,0,
     "turnep","txt_turnep","mgama","txt_mgama","mouv","txt_mouv","paino","txt_paino","airkar","txt_airkar","wandrrs","txt_wandrrs",0,0,0,0,0,0,0,0,0,0,0,0,
     "fallage","txt_fallage","flour","txt_flour","fungwe","txt_fungwe","donot","txt_donot","lly","txt_lly","big","txt_big","sheild","txt_sheild",0,0,0,0,0,0,0,0,0,0,
@@ -764,11 +764,11 @@ selector_grid_contents = {
     "con1","txt_con1","con2","txt_con2","puf","txt_puf","dirrt","txt_dirrt","esgras","txt_esgras",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
+    "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti","papr","txt_papr",0,0,"kees","txt_kees","cd","txt_cd","ßar","txt_ßar","spinklr","txt_spinklr","cledg","txt_cledg","goop","txt_goop",
+    "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
+    "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil","ray","txt_ray","muud","txt_muud",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "placeholder","txt_placeholder",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "flag","txt_flag","water","txt_water","violet","txt_violet","cake","txt_cake",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   },
   -- page 6.5: more inaminate objects
   {
@@ -808,7 +808,7 @@ selector_grid_contents = {
   },
   -- page 8.8 extra chars
   {
-    "twooo","txt_twooo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "twooo","txt_twooo","goo","txt_goo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

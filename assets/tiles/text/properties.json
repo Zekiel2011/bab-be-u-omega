@@ -1914,5 +1914,21 @@
     "color": [[3, 1]],
     "desc": "NOOOPE: Makes the unit sway like NOE, but even more, still stacks!\nAnti: Oppisite direction, doesn't stack.",
     "tags": ["no", "noe", "visual"]
+  },
+  {
+    "name": "txt_poof",
+    "sprite": ["txt/poof"],
+    "types": ["property"],
+    "color": [[4, 2]],
+    "desc": "POOF: Deletes every active text near it when used in a rule. Anti: every pride flag (unimplimented)",
+    "tags": ["bab anarchy", "dizzyandy"]
+  },
+  {
+    "name": "txt_paybac",
+    "sprite": ["txt/paybac"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "PAYBAC: (Unimplimented) If the unit has destroyed another object, that object gets destroyed.",
+    "tags": ["karma"]
   }
 ]
