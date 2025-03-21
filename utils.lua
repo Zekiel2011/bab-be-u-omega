@@ -2013,6 +2013,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       end
     elseif condtype == "samefloat" then
       result = sameFloat(unit, compare_with)
+    elseif condtype == "samepng" then
+      result = unit.sprite[1] == compare_with.sprite[1]
     elseif condtype == "samepaint" then
       result = matchesColor(getUnitColors(unit), getUnitColors(compare_with))
     elseif condtype == "sameface" then
@@ -2969,8 +2971,8 @@ function addParticles(ptype,x,y,color,count)
   elseif ptype == "leafbg" then
     local speed = (TILE_SIZE*mapheight)/350
     local ps = love.graphics.newParticleSystem(sprites["leef"])
-    local px = (mapwidth*TILE_SIZE)
-    local py = (mapheight*TILE_SIZE)
+    local px = (mapwidth*TILE_SIZE)-100
+    local py = (mapheight*TILE_SIZE)-100
     ps:setPosition(px, py)
     ps:setSpread(math.pi/4)
     ps:setEmissionArea("uniform", ((mapwidth)*TILE_SIZE), ((mapwidth)*TILE_SIZE), 0)
@@ -4454,6 +4456,7 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
+    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Joke", 3}, {"Custom", 4}, {"Custom 2", 5}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
     scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
@@ -4856,6 +4859,26 @@ function getTileSprite(name, tile, o)
 
     if o.altsprite then
       addTry(try, "?_alt", true)
+    end
+    
+    if settings["texture"] == 1 then
+      addTry(try, "bit/?", true)
+    end
+    
+    if settings["texture"] == 2 then
+      addTry(try, "redo/?", true)
+    end
+    
+    if settings["texture"] == 3 then
+      addTry(try, "joke/?", true)
+    end
+    
+    if settings["texture"] == 4 then
+      addTry(try, "custom1/?", true)
+    end
+    
+    if settings["texture"] == 5 then
+      addTry(try, "custom2/?", true)
     end
 
     if o.altsprite2 then

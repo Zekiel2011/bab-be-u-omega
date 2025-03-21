@@ -150,7 +150,7 @@
   },
   {
     "name": "laav",
-    "sprite": ["laav"],
+    "sprite": ["watr"],
     "layer": 2,
     "color": [[2, 3]],
     "desc": "very hot. not hotte tho unless u make it",
@@ -4937,5 +4937,22 @@
     "types": ["object"],
     "color": [[6, 1]],
     "tags": ["mud"]
+  },
+  {
+    "name": "protyp",
+    "sprite": ["protyp"],
+    "rotate": false,
+    "layer": 17,
+    "convertible": false,
+    "color": [[4, 2]],
+    "desc": "blob thyng",
+    "tags": ["proto"]
+  },
+  {
+    "name": "txt_protyp",
+    "sprite": ["txt/protyp"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["proto"]
   }
 ]

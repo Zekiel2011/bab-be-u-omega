@@ -139,7 +139,7 @@
     "sprite": ["txt/samefloat"],
     "types": ["cond_compare"],
     "color": [[1, 4]],
-    "desc": "SAMEFLOAT( (Compare Condition): True if the condition unit has the same amount of FLYE as the target.\nAnti: a = -b",
+    "desc": "SAMEFLOAT( (Compare Condition): True if the condition unit has the same amount of FLYE as the target.\nAnti: a = -b\nExample: X LOOKAT SAMEFLOAT Y BE Z",
     "tags": ["sameflye"]
   },
   {
@@ -157,6 +157,14 @@
     "color": [[2, 4]],
     "desc": "SAMEFACE (Compare Condition): True if the condition unit is facing the same direction as the target.\nAnti: opposite direction",
     "tags": ["samedirection", "samefacing"]
+  },
+  {
+    "name": "txt_samepng",
+    "sprite": ["txt/samepng"],
+    "types": ["cond_compare"],
+    "color": [[4, 2]],
+    "desc": "SAMEPNG (Compare Condition): True if the condition unit has the same sprite as the target.",
+    "tags": ["samesprite", "png"]
   },
   {
     "name": "txt_cann't",

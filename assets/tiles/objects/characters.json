@@ -2711,7 +2711,7 @@
     "color": [[5, 3]],
     "rotate": true,
     "features": {
-      "sans": {"x": 19, "y": 7, "w": 2, "h": 2}
+      "cool": {"x": -1, "y": -5}
     },
     "voice": "s_saw",
     "desc": "so cool that it doesn't need a slep sprite",
@@ -2860,7 +2860,7 @@
     },
     "voice": "yahoo",
     "desc": "Luigi, go take a shit, now! Luigi go to the bathroom, your going to shit yourself!",
-    "tags": ["chars", "mario"],
+    "tags": ["chars", "mario", "nintendo please dont sue me"],
     "pronouns": ["he", "him"]
   },
   {
@@ -3203,7 +3203,7 @@
     },
     "voice": "403",
     "desc": "Its forelegs create electricity through its muscle-based system, it becomes SINY when it is in danger.",
-    "tags": ["shinx", "chars", "pokemon"],
+    "tags": ["shinx", "chars", "pokemon", "nintendo please dont sue me"],
   },
   {
     "name": "txt_sinx",
@@ -3323,6 +3323,7 @@
     "features": {
       "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
     },
+    "voice": "babi",
     "desc": "in a fit of inspiration, bab grew another eye.",
     "tags": ["chars", "baba"]
   },
@@ -3343,6 +3344,7 @@
     "features": {
       "sans": {"x": 25, "y": 14, "w": 2, "h": 2}
     },
+    "voice": "babber",
     "desc": "it's rumored that babber is actually the bab attempting to split into two babs, because babs like company. bab doesn't seem upset about this outcome though.",
     "tags": ["chars", "baba"]
   },
@@ -4626,6 +4628,23 @@
     "tags": ["chars", "bab remake"]
   },
   {
+    "name": "rriotu",
+    "sprite": ["rriotu"],
+    "layer": 11,
+    "color": [[4, 1]],
+    "rotate": true,
+    "desc": "It's tail is used as a weapon to defend itself, it also grew a fourth leg in order to help it escape in battles when severly injured",
+    "tags": ["chars", "rru"],
+	  "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_rriotu",
+    "sprite": ["txt/rriotu"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "tags": ["chars", "rru"]
+  },
+  {
     "name": "seabab",
     "sprite": ["seabab"],
     "layer": 20,
@@ -4822,5 +4841,43 @@
     "color": [[2, 1]],
     "desc": "brains over SUUUUPER SMASH BROOOTHEEERS: brawl.",
     "tags": ["chars", "skul", "cranium"]
+  },
+  {
+    "name": "saur",
+    "sprite": ["bulbasaur1", "bulbasaur2"],
+    "layer": 11,
+    "color": [[5, 3], [0, 3]],
+    "painted": [true, false],
+    "rotate": true,
+    "desc": "A seed was planted onto the back at birth, the plant grows and sprouts with it.",
+    "tags": ["chars", "bulbasaur", "pokemon", "nintendo please dont sue me"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_saur",
+    "sprite": ["txt/saur"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "desc": "bulba",
+    "tags": ["chars", "bulbasaur", "pokemon", "nintendo please dont sue me"]
+  },
+  {
+    "name": "joofj",
+    "sprite": ["joofj"],
+    "layer": 11,
+    "color": [[6, 2]],
+    "rotate": true,
+    "features": {
+      "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
+    },
+    "desc": "In order for convenience for movement, Jij decided to take a horse like form.",
+    "pronouns": ["she", "her"]
+  },
+  {
+    "name": "txt_joofj",
+    "sprite": ["txt/joofj"],
+    "types": ["object"],
+    "color": [[6, 2]],
+    "tags": ["chars", "jij", "horse"]
   }
 ]

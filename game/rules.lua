@@ -44,6 +44,7 @@ function clearRules()
   addBaseRule("txt","be","wurd")
   addBaseRule("txt","be","goawaypls")
   addBaseRule("lvl","be","nogo")
+  addBaseRule("jim","be","cool")
   --cell machiiiiine
   addBaseRule("pooosh","be","goawaypls")
   addBaseRule("pooosh","rp","cell")
@@ -69,8 +70,8 @@ function clearRules()
   addBaseRule("roatat","rp","cell")
   addBaseRule("roatat","be","goawaypls")
   --kees baserules
-  addBaseRule("kees","rp","kee")
-  addBaseRule("kees","got","kee")
+  --addBaseRule("kees","rp","kee")
+  --addBaseRule("kees","got","kee")
   --half properties
   addBaseRule("halfu","be","u")
   addBaseRule("halfnogo","be","nogo")
