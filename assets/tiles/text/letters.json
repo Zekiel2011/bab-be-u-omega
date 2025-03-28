@@ -208,6 +208,14 @@
     "tags": ["9", "0", "brackets"]
   },
   {
+    "name": "letter_0",
+    "sprite": ["letter_0"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "Wait what?",
+    "tags": ["number", "digit", "zero"]
+  },
+  {
     "name": "letter_1",
     "sprite": ["letter_1"],
     "types": ["letter"],
@@ -215,7 +223,6 @@
     "desc": "Used in EVERY1 and NO1.",
     "tags": ["number", "digit", "one"]
   },
-  
   {
     "name": "letter_2",
     "sprite": ["letter_2"],
@@ -285,7 +292,7 @@
     "sprite": ["letter_semicolon"],
     "types": ["letter"],
     "color": [[0, 3]],
-    "desc": "Formerly used in ;D, until we changed that to be UN:). Now it's useless, very sad.",
+    "desc": "Formerly used in ;D, until we changed that to be UN:). Now it's useless, very sad... or is it? (vinesauce music)",
     "tags": ["semicolon", "wink"]
   },
   {

@@ -2390,6 +2390,10 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "jim" then
+        unit.sprite = {"jim"}
+      end
+      
       if unit.fullname == "txt_:)" then
         if hasProperty(unit,"slep") or (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
           unit.sprite = {"txt/yay_slep"}

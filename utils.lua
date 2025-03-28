@@ -2751,6 +2751,78 @@ function addParticles(ptype,x,y,color,count)
     ps:start()
     ps:emit(count or 10)
     table.insert(particles, ps)
+  elseif ptype == "happi1" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi1"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi2" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi2"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi3" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi3"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi4" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi4"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
   elseif ptype == "unwin" then
     local ps = love.graphics.newParticleSystem(sprites["sparkle"])
     local px = (x + 0.5) * TILE_SIZE
@@ -3180,7 +3252,7 @@ function addParticles(ptype,x,y,color,count)
     local size = 0.2
   elseif ptype == "orrb" then
     --print("sparkle !!")
-    local ps = love.graphics.newParticleSystem(sprites["dotti"])
+    local ps = love.graphics.newParticleSystem(sprites["bonusparticles"])
     local px = (x + 0.5) * TILE_SIZE
     local py = (y + 0.5) * TILE_SIZE
     ps:setPosition(px, py)
