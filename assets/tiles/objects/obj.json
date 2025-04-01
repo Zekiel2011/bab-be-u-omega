@@ -402,5 +402,14 @@
     "rotate": true,
     "desc": "WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
     "tags": ["obj"]
+  },
+  {
+    "name": "obejt_tre",
+    "sprite": ["obejt/tre"],
+    "layer": 20,
+    "color": [[5, 3]],
+    "rotate": true,
+    "desc": "make air",
+    "tags": ["obj"]
   }
 ]

@@ -4810,7 +4810,7 @@ function createUnit(tile,x,y,dir,convert,id_,really_create_empty,prefix,anti_gon
   end
   
   --do this before the 'this' change to textname so that we only get 'this' in referenced_objects
-  if unit.typeset.object and unit.textname ~= "every1" and unit.textname ~= "every2" and unit.textname ~= "every3" and unit.textname ~= "every4" and unit.textname ~= "mous" and unit.textname ~= "bordr" and unit.textname ~= "no1" and unit.textname ~= "lvl" and unit.textname ~= "the" and unit.textname ~= "deez" and unit.textname ~= "txt" and unit.textname ~= "this" and group_names_set[unit.textname] ~= true then
+  if unit.typeset.object and unit.textname ~= "every1" and unit.textname ~= "every2" and unit.textname ~= "every3" and unit.textname ~= "every4" and unit.textname ~= "mous" and unit.textname ~= "bordr" and unit.textname ~= "no1" and unit.textname ~= "lvl" and unit.textname ~= "the" and unit.textname ~= "deez" and unit.textname ~= "txt" and unit.textname ~= "this" and unit.textname ~= "obejt" and group_names_set[unit.textname] ~= true then
     if not unit.textname:ends("n't") and not unit.textname:starts("gaem") and not unit.textname:starts("txt_") and not unit.textname:starts("letter_") and not table.has_value(referenced_objects, unit.textname) then
       table.insert(referenced_objects, unit.textname)
     end

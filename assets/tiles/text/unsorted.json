@@ -167,6 +167,22 @@
     "tags": ["samesprite", "png"]
   },
   {
+    "name": "txt_samex",
+    "sprite": ["txt/samex"],
+    "types": ["cond_compare"],
+    "color": [[3, 3]],
+    "desc": "SAMEX (Compare Condition): True if the condition unit has the same x position as the target.",
+    "tags": ["sameposition", "x-axis"]
+  },
+  {
+    "name": "txt_samey",
+    "sprite": ["txt/samey"],
+    "types": ["cond_compare"],
+    "color": [[3, 1]],
+    "desc": "SAMEY (Compare Condition): True if the condition unit has the same y position as the target.",
+    "tags": ["sameposition", "y-axis"]
+  },
+  {
     "name": "txt_cann't",
     "sprite": ["txt/can't"],
     "types": ["object"],

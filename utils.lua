@@ -2039,6 +2039,10 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       }]]
     elseif condtype == "anti sameface" then
       result = unit.dir == dirAdd(compare_with.dir,4)
+    elseif condtype == "samex" then
+      result = unit.x == compare_with.x
+    elseif condtype == "samey" then
+      result = unit.y == compare_with.y
     elseif condtype == "oob" then
       result = not inBounds(unit.x,unit.y)
     elseif condtype == "offgrid" then
@@ -5064,7 +5068,7 @@ function getUnitSprite(name, unit)
       local last_units
       for _,rules in ipairs(rules_with_unit[unit]) do
         local name = rules.rule.subject.name 
-        if name:ends("n't") or name == "every1" or name == "every2" or name == "every3" or name == "lethers" or name == "numa" or name == "yuiy" or group_names_set[name] then
+        if name:ends("n't") or name == "every1" or name == "every2" or name == "every3" or name == "lethers" or name == "obejt" or name == "numa" or name == "yuiy" or group_names_set[name] then
           has_multiple = true
           break
         elseif not last_units then
