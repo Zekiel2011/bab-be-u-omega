@@ -2580,7 +2580,7 @@ function miscUpdates(state_change)
       
       if unit.fullname == "twooo" and scene ~= editor then
         if not card_for_id[unit.id] then
-          card_for_id[unit.id] = {math.random(1,123)}
+          card_for_id[unit.id] = {math.random(1,129)}
         end
         local it = unpack(card_for_id[unit.id])
         print("b")

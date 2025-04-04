@@ -119,7 +119,7 @@
     "tags": ["apple", "android", "windows", "linux", "operating system"]
   },
   {
-    "name": "wog",
+    "name": "woug",
     "sprite": ["wog"],
     "layer": 10,
     "color": [[2, 4]],
@@ -131,16 +131,16 @@
     "desc": "smol frens who own pointy tridents, play with explosives, and bake good cake. nobody knows how to describe more than one of them",
     "tags": ["wug", "chars", "bird"],
     "pronouns": ["they", "them"],
-    "old_names": ["woug"]
+    "old_names": ["wog"]
   },
   {
-    "name": "txt_wog",
-    "sprite": ["txt/wog"],
+    "name": "txt_woug",
+    "sprite": ["txt/woug"],
     "types": ["object"],
     "color": [[2, 4]],
-    "desc": "wogs dream is to be a mad scientist and go evil with power using nothing but sheer linguistics. linguists' evil career options may be limited but that wont stop wog from trying their best",
+    "desc": "wougs dream is to be a mad scientist and go evil with power using nothing but sheer linguistics. linguists' evil career options may be limited but that wont stop woug from trying their best",
     "tags": ["wug", "chars", "bird"],
-    "old_names": ["txt_woug"]
+    "old_names": ["txt_wog"]
   },
   {
     "name": "bup",
