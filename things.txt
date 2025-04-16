@@ -1,0 +1,5 @@
+aba:
+    "desc": "um... bab? are you ok...",
+
+txt_aba:
+    "desc": "We dont know what Abab dreams about, but probaly consuming a living flag? But we know for sure what Aba dreams about, Aba dreams about when it was just a normal Bab.",

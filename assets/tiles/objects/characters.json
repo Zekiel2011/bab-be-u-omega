@@ -2206,13 +2206,13 @@
     "name": "aba",
     "sprite": ["aba"],
     "layer": 11,
-    "color": [[0, 3]],
+    "color": [[0, 2]],
     "rotate": true,
     "features": {
       "sans": {"x": 22, "y": 10, "w": 2, "h": 2}
     },
     "voice": "s_doo",
-    "desc": "um... bab? are you ok...",
+    "desc": "It dreams of the old times when it was just a regular Bab. When it sees itself in it's current state of being, it weeps of sorrow.",
     "tags": ["chars", "baba", "abab"],
     "pronouns": ["she", "her"]
   },
@@ -2221,7 +2221,7 @@
     "sprite": ["txt/aba"],
     "types": ["object"],
     "color": [[4, 1]],
-    "desc": "We dont know what Abab dreams about, but probaly consuming a living flag? But we know for sure what Aba dreams about, Aba dreams about when it was just a normal Bab.",
+    "desc": "is bab ok?",
     "tags": ["chars", "baba", "abab"]
   },
   {
@@ -4899,5 +4899,42 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["chars", "aaaa", "new adventures"]
+  },
+  {
+    "name": "spik2",
+    "sprite": ["spik2", "spik2_spikes"],
+    "layer": 11,
+    "color": [[2, 3], [0, 3]],
+    "painted": [true, false],
+    "rotate": true,
+    "desc": "itte go poek poek poek!",
+    "tags": ["chars", "spike", "squishcraft"]
+  },
+  {
+    "name": "txt_spik2",
+    "sprite": ["txt/spik2"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "desc": "alt sp(r)ike",
+    "tags": ["chars", "spike", "squishcraft"]
+  },
+  {
+    "name": "katboux",
+    "sprite": ["katboux1", "katboux2"],
+    "layer": 11,
+    "color": [[3, 3], [0, 3]],
+    "painted": [true, false],
+    "rotate": true,
+    "desc": "\"srsly wtf is this some thinly veiled fetish game??\" - Squishcraft refering to itself.",
+    "tags": ["chars", "squishy", "catgirl", "squishcraft"]
+  },
+  {
+    "name": "txt_katboux",
+    "sprite": ["txt/katboux1", "txt/katboux2"],
+    "types": ["object"],
+    "color": [[4, 1], [6, 2]],
+    "painted": [true, false],
+    "desc": "boux thats a kat",
+    "tags": ["chars", "squishy", "catgirl", "squishcraft"]
   }
 ]

@@ -4532,7 +4532,7 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
-    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Joke", 3}, {"Custom", 4}, {"Custom 2", 5}})
+    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
     scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
@@ -4946,7 +4946,7 @@ function getTileSprite(name, tile, o)
     end
     
     if settings["texture"] == 3 then
-      addTry(try, "joke/?", true)
+      addTry(try, "classic/?", true)
     end
     
     if settings["texture"] == 4 then

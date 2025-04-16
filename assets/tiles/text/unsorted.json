@@ -472,5 +472,13 @@
     "convertible": false,
     "desc": "(UNIMPLIMENTED, only acts like FRENS currently.) Please don't use in normal levels, acts like FRENS but is used for the EVERY1 BE FRENS ending.",
     "tags": ["group", "friends"]
+  },
+  {
+     "name": "txt_looped",
+     "sprite": ["txt/looped"],
+     "types": ["cond_prefix"],
+     "color": [[4, 1]],
+     "desc": "LOOPED (Prefix Condition): (UNIMPLIMENTED) True if the level has been destroyed due to an infinite loop.",
+     "tags": ["infloop", "infinity", "infinite loop", "lvl", "level", "mse"]
   }
 ]

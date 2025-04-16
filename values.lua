@@ -11,9 +11,8 @@ UNDO_SPEED = 5
 UNDO_DELAY = MAX_UNDO_DELAY
 repeat_keys = {"wasd","udlr","numpad","ijkl","space","undo"}
 
-is_mobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
+--is_mobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
 emulating_mobile = false
---is_mobile = 
 
 PACK_UNIT_V1 = "hhhb" -- TILE, X, Y, DIR
 PACK_UNIT_V2 = "hhhhbs" -- ID, TILE, X, Y, DIR, SPECIALS
@@ -26,6 +25,7 @@ profile = {
 }
 
 defaultsettings = {
+  is_mobile = false,
   master_vol = 1,
   music_on = true,
   music_vol = 1,
@@ -575,15 +575,15 @@ selector_grid_contents = {
   -- page 7: properties, verbs and conditions
   {
     "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_copkat","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat",0,"txt_idk","txt_knobout","txt_jojmen","txt_stoop","txt_attacc",
-    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc",0,"txt_nxt","txt_stayther","txt_wont","txt_giv","txt_alow","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx","txt_paybac","txt_copdog",
-    "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd",0,"txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
+    "txt_u","txt_utoo","txt_utres","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc","txt_B)","txt_nxt","txt_stayther","txt_wont","txt_giv","txt_alow","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx","txt_paybac","txt_copdog",
+    "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd","txt_looped","txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
     "txt_nogo","txt_goawaypls","txt_comepls","txt_sidekik","txt_diagkik","txt_delet","txt_hotte","txt_fridgd","txt_thingify",0,"txt_rythm","txt_curse","txt_alt","txt_clikt","txt_past","txt_wun","txt_an","txt_mayb",0,"txt_gay","txt_lesbab","txt_tranz","txt_ace","txt_aro",
     "txt_visitfren","txt_slep","txt_shy...","txt_behinu","txt_walk","txt_:o","txt_moar","txt_split","txt_txtify",0,"txt_dragbl","txt_nodrag",0,"txt_wait...","txt_samefloat","txt_samepaint","txt_sameface","txt_samepng",0,"txt_pan","txt_bi","txt_enby","txt_fluid","txt_πoly",
     "txt_flye","txt_tall","txt_haetskye","txt_haetflor","txt_zomb","txt_un:)","txt_gone","txt_nuek","txt_n'tify","txt_n'tifyyy",0,0,0,0,0,0,"txt_samex","txt_samey",0,"txt_rave","txt_colrful","txt_bigender","txt_gaymen","txt_lesbad",
     "txt_diag","txt_ortho","txt_gomyway","txt_halfstep","txt_rond","txt_boring","txt_bce","txt_notranform","txt_ify","txt_ifyyy",0,0,0,"txt_w/fren","txt_arond","txt_sans","txt_seenby","txt_behind",0,0,0,0,0,0,
     "txt_turncornr","txt_folowal","txt_hopovr","txt_reflecc",0,0,0,0,0,0,0,0,0,"txt_that","txt_thatbe","txt_thatgot","txt_meow","txt_beside",0,"txt_qt","txt_thonk","txt_happi","txt_crye","txt_scream",
     "txt_munwalk","txt_sidestep","txt_diagstep","txt_knightstep",0,"txt_tryagain","txt_noundo","txt_undo","txt_zawarudo","txt_brite","txt_torc","txt_tranparnt",0,"txt_reed","txt_orang","txt_yello","txt_grun","txt_cyeann",0,"txt_stelth","txt_huh","txt_unhuh","txt_/:o","txt_cool",
-    "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,"txt_bleu","txt_purp","txt_pinc","txt_whit","txt_graey",0,0,0,0,"txt_nope","txt_nooope",
+    "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,"txt_bleu","txt_purp","txt_pinc","txt_whit","txt_graey",0,0,"txt_altsprite","txt_altsprite2","txt_nope","txt_nooope",
     "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez",0,0,0,0,"txt_golld","txt_viloet","txt_blacc","txt_brwn",0,0,0,0,0,0,
     "txt_left","txt_direction","txt_right","txt_yesgo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_downleft","txt_down","txt_downright","txt_poof",0,"selctr","txt_selctr","txt_frens","txt_groop","txt_gang","txt_themself","this",0,0,0,0,0,0,0,0,0,0,0,0,
@@ -602,7 +602,7 @@ selector_grid_contents = {
     0,0,"arvi","txt_arvi","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!","jillt","txt_jillt","beellt","txt_beellt","nalß","txt_nalß","nabby","txt_nabby",0,0,0,0,0,0,0,0,
     "sinx","txt_sinx","robwot","txt_robwot","404","txt_404","flaf","txt_flaf","al23m","txt_al23m","alpha","txt_alpha",0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "flir","txt_flir",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "flir","txt_flir",0,0,"spik2","txt_spik2","katboux","txt_katboux",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -801,7 +801,7 @@ selector_grid_contents = {
     "txt_no2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_omega",0,"txt_east2","txt_vibe",0,"txt_abov","txt_sid>",0,0,0,0,0,"txt_golden_be",0,0,0,0,0,0,0,0,0,0,0,
     "txt_loep","txt_toss",0,0,0,"txt_sid<","txt_below",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_altsprite","txt_altsprite2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_uhhh",0,0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6",0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
     "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz",0,"txt_ad","txt_subt",0,0,0,0,0,0,

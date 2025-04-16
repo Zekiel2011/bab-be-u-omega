@@ -130,6 +130,13 @@ function thiccBlock(undoing)
 end
 
 function moveBlock()
+  
+  for _,unit in ipairs(units_by_name["text_xwx"] or {}) do
+    local newname = hasProperty(unit, "slep") and "uwu" or "xwx"
+    should_parse_rules = unit.textname ~= newname
+    unit.textname = newname
+  end
+  
   --baba order: FOLLOW, BACK, TELE, SHIFT
   --bab order: thicc, look at, undo, visit fren, go, goooo, shy, spin, folo wal, turn cornr
   
@@ -2549,6 +2556,11 @@ function miscUpdates(state_change)
       if unit.fullname == "die" and (first_turn or not (hasProperty(unit,"stukc") or hasProperty(unit,"noturn"))) then
         local roll = math.random(6)
         unit.sprite[2] = "die_"..roll
+      end
+      
+      if unit.fullname == "spik2" and (first_turn or not (hasProperty(unit,"stukc"))) then
+        unit.draw.rotation = unit.draw.rotation - 10
+        addTween(tween.new(0.5, unit.draw, {rotation = (unit.rotatdir-1)*45}, "outElastic"), "unit:rotation:" .. unit.tempid)
       end
 
       if unit.name == "it" and scene ~= editor then --blatantly stolen from byc, but dont let anyone know that

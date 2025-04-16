@@ -1932,5 +1932,16 @@
     "color": [[2, 2]],
     "desc": "PAYBAC: (Unimplimented) If the unit has destroyed another object, that object gets destroyed.",
     "tags": ["karma"]
+  },
+  {
+    "name": "txt_B)",
+    "sprite": ["txt/B)"],
+    "types": ["property"],
+    "color": [[1, 4]],
+    "features": {
+      "sans": {"x": 20, "y": 6, "w": 5, "h": 4}
+    },
+    "desc": "B): Unimplimented, idk, it can either probally end up as a thing that gives COOL or is a secret exit property.",
+    "tags": ["cool", "smiley"]
   }
 ]
