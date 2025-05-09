@@ -5017,5 +5017,21 @@
     "types": ["object"],
     "color": [[1, 3]],
     "tags": ["waterbolt"]
+  },
+  {
+    "name": "mushy",
+    "sprite": ["mushy"],
+    "layer": 5,
+    "color": [[5, 3]],
+    "desc": "bum ba dah... oh wait its green nevermind",
+    "tags": ["mushroom", "super mushroom", "1-up mushroom", "mario"]
+  },
+  {
+    "name": "txt_mushy",
+    "sprite": ["txt/mushy"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "desc": "room",
+    "tags": ["mushroom", "super mushroom", "1-up mushroom", "mario"]
   }
 ]
