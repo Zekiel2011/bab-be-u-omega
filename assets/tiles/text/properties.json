@@ -1943,5 +1943,13 @@
     },
     "desc": "B): Unimplimented, idk, it can either probally end up as a thing that gives COOL or is a secret exit property.",
     "tags": ["cool", "smiley"]
+  },
+  {
+    "name": "txt_yfi",
+    "sprite": ["txt/yfi"],
+    "types": ["property"],
+    "color": [[1, 2]],
+    "desc": ".KIRB otni snrut BRIK os ,esrever ni eman s'ti emoceb ot tinu a sesuaC :IFY",
+    "tags": ["why"]
   }
 ]

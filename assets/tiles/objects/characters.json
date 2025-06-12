@@ -4217,6 +4217,25 @@
     "tags": ["chars", "keze"]
   },
   {
+    "name": "faekr",
+    "sprite": ["faekr_body", "faekr_eyes", "faekr_mouth"],
+    "layer": 11,
+    "color": [[6, 1], [1, 3], [2, 2]],
+    "rotate": true,
+    "voice": "s_zdoo",
+    "desc": "A form that KEZ can switch between on it's own will.",
+    "tags": ["chars", "keze", "faker"],
+    "pronouns": ["he", "him"]
+  },
+  {
+    "name": "txt_faekr",
+    "sprite": ["txt/faekr"],
+    "types": ["object"],
+    "color": [[2, 2]],
+    "desc": "I found you, faker!",
+    "tags": ["chars", "keze", "faker"]
+  },
+  {
     "name": "mez",
     "sprite": ["kez1", "mez"],
     "layer": 11,

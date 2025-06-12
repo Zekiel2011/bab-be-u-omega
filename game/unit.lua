@@ -4073,6 +4073,18 @@ function convertUnits(pass)
     end
   end
 
+  local tnyfitn = getUnitsWithEffectAndCount("yfi")
+  for unit,amt in pairs(tnyfitn) do
+    unit = units_by_id[unit] or cursors_by_id[unit]
+    if not unit.new and unit.type ~= "outerlvl" and timecheck(unit,"be","yfi") then
+      local nametocreate = unit.fullname
+      if getTile(nametocreate) then
+        reversed = string.reverse(unit.fullname)
+        addTile(reversed,unit)
+      end
+    end
+  end
+
   local ntifynt = getUnitsWithEffectAndCount("ifyyy")
   for unit,amt in pairs(ntifynt) do
     unit = units_by_id[unit] or cursors_by_id[unit]
