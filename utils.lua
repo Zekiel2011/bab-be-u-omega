@@ -4539,6 +4539,7 @@ function buildOptions()
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
     scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
+    scene.addOption("canspooku", "Allow Spookmode?", {{"yes (not recommended)", true}, {"no", false}})
     scene.addButton("back", function() global_menu_state = "misc2"; scene.buildUI() end)
   elseif global_menu_state == "sus" then
     love.graphics.draw(sprites["ui/fukc"], 34, -50)

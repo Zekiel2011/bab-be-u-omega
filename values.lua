@@ -62,6 +62,7 @@ defaultsettings = {
   night = false,
   randomize = false,
   contrast = false,
+  canspooku = false,
 }
 
 if love.filesystem.read("Settings.bab") ~= nil then
