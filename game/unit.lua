@@ -1952,6 +1952,53 @@ function updateUnits(undoing, big_update)
         addUndo({"create_cursor", new_mouse.id})
       end
     end
+
+    local function doOneCreateDX(rule, creator, createe)
+      local object = createe
+      if (createe == "txt") then
+        createe = "txt_"..creator.fullname
+      end
+      if (createe == "obejt") then
+        createe = "obejt_"..creator.fullname
+      end
+      
+      local tile = getTile(createe)
+      --let x ben't x txt prevent x be txt, and x ben't txt prevent x be y txt
+      local overriden = false;
+      if tile ~= nil and not overriden then
+        local others = getUnitsOnTile(creator.x, creator.y, {name = createe, not_destroyed = true, thicc = countProperty(creator,"thicc")})
+        if #others == 0 then
+          local color = rule.object.prefix
+          if color == "samepaint" then
+            color = colour_for_palette[getUnitColor(creator)[1]][getUnitColor(creator)[2]]
+          end
+          local new_unit = createUnit(tile.name, creator.x, creator.y, creator.dir, nil, nil, nil, color)
+          if new_unit ~= nil then
+            addUndo({"create", new_unit.id, false})
+          end
+        end
+      elseif createe == "mous" then
+        local new_mouse = createMouse(creator.x, creator.y)
+        addUndo({"create_cursor", new_mouse.id})
+      end
+    end
+    
+    local beobjs = matchesRule(nil, "beobj", "?")
+    for _,match in ipairs(beobjs) do
+      local creator = match[2]
+      local createe = "obejt_" .. match[1].rule.object.name
+      if timecheck(creator,"beobj",createe) then
+        if (group_names_set[createe] ~= nil) then
+          for _,v in ipairs(namesInGroup(createe)) do
+            doOneCreateDX(match[1].rule, creator, v)
+            table.insert(del_units, creator)
+          end
+        else
+          doOneCreateDX(match[1].rule, creator, createe)
+          table.insert(del_units, creator)
+        end
+      end
+    end
     
     local creators = matchesRule(nil, "creat", "?")
     for _,match in ipairs(creators) do

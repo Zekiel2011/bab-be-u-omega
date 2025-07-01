@@ -1820,6 +1820,7 @@
     "sprite": ["txt/vn"],
     "types": ["property", "gang_prefix"],
     "color": [[2, 2]],
+    "unsearchable": true,
     "overlay": {
       "sprite": "flog/vn",
     }
@@ -1951,5 +1952,13 @@
     "color": [[1, 2]],
     "desc": ".KIRB otni snrut BRIK os ,esrever ni eman s'ti emoceb ot tinu a sesuaC :IFY",
     "tags": ["why"]
+  },
+  {
+    "name": "txt_stare",
+    "sprite": ["txt/stare"],
+    "types": ["property"],
+    "color": [[0, 2]],
+    "desc": "STARE: Unimplimented, but it would be sort of like GOAWAYPLS, without the stop or the push, and just the direction changing.",
+    "tags": ["steer", "untitled mod"]
   }
 ]

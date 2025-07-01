@@ -1504,6 +1504,35 @@ function scene.draw(dt)
       end
     end
 
+    local matchrules2 = matchesRule(unit,"ware","?")
+    for _,matchrule2 in ipairs(matchrules2) do
+      local name = matchrule2.rule.object.name
+
+      -- GOT object coloring!
+      local c1, c2
+      if matchrule2.rule.object.prefix then
+        local dummy = {}
+        dummy[matchrule2.rule.object.prefix] = true
+        updateUnitColourOverride(dummy)
+        if dummy.color_override then
+          c1, c2 = dummy.color_override[1], dummy.color_override[2]
+        end
+      end
+
+      local shake_x, shake_y = getOffset()
+      local tile = getTile(name)
+      if tile then
+        love.graphics.push()
+        local o = getTableWithDefaults(unit.features.hatt, {x=0, y=0, sprite="hatsmol"})
+        love.graphics.translate(o.x, o.y-23)
+
+        local color = getTileColors(tile, (c1 and c2) and {c1, c2} or nil)
+        drawTileSprite(tile, fulldrawx, fulldrawy, 0, 0.75, 0.75, {color = color})
+
+        love.graphics.pop()
+      end
+    end
+
     local matchrules = matchesRule(unit,"got","?")
     for _,matchrule in ipairs(matchrules) do
       local name = matchrule.rule.object.name

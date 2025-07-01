@@ -473,6 +473,7 @@ function parseRules(undoing)
     populateRulesEffectingNames("?", "be", "wurd")
     populateRulesEffectingNames("?", "be", "anti wurd")
     populateRulesEffectingNames("?", "be", "poortoll")
+    populateRulesEffectingNames("obejt", "be", "?")
     if (rules_with["goarnd"] or rules_with["mirrarnd"]) then
       rules_effecting_names["bordr"] = true
     end

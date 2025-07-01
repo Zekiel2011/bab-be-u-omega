@@ -2397,7 +2397,7 @@
   },
   {
     "name": "zez",
-    "sprite": ["zez_body", "zez_face"],
+    "sprite": ["zezdx_body", "zezdx_face"],
     "layer": 11,
     "color": [[6, 1], [1, 3]],
     "rotate": true,
@@ -4955,5 +4955,23 @@
     "painted": [true, false],
     "desc": "boux thats a kat",
     "tags": ["chars", "squishy", "catgirl", "squishcraft"]
+  },
+  {
+    "name": "haeh",
+    "sprite": ["haeh", "haeh_face"],
+    "layer": 11,
+    "color": [[1, 1], [0, 3]],
+    "painted": [true, false],
+    "rotate": true,
+    "desc": "\"haeh for bab be u omega maybe since theres alredy kwewee duf and zez there idk.\ncolor in-game should be white (to make the body be the same color as in the image) and i made it just bright enough to maybe stand out in the background\nor maybe make it bordr colored\": Hello, Im H.",
+    "tags": ["chars", "h", "Hello, Im H"]
+  },
+  {
+    "name": "txt_haeh",
+    "sprite": ["txt/haeh"],
+    "types": ["object"],
+    "color": [[1, 1]],
+    "desc": "hey",
+    "tags": ["chars", "h", "Hello, Im H"]
   }
 ]

@@ -115,6 +115,22 @@
     "tags": ["copycat", "lily"]
   },
   {
+    "name": "txt_copbab",
+    "sprite": ["txt/copbab"],
+    "types": ["verb_unit", "verb"],
+    "color": [[4, 2]],
+    "desc": "COPBAB: A version of COPKAT that changes the X by Y and Y by X.",
+    "tags": ["copycat", "zez"]
+  },
+  {
+    "name": "txt_copzez",
+    "sprite": ["txt/copzez"],
+    "types": ["verb_unit", "verb"],
+    "color": [[6, 2]],
+    "desc": "COPZEZ: A version of COPKAT that is also sort of like KNIGHTSTEP.",
+    "tags": ["copycat", "zez"]
+  },
+  {
     "name": "txt_ignor",
     "sprite": ["txt/ignor"],
     "types": ["verb_unit", "verb"],
@@ -345,9 +361,17 @@
   {
     "name": "txt_beobj",
     "sprite": ["txt/beobj"],
+    "types": ["verb_property", "verb_class", "verb"],
+    "color": [[0, 1]],
+    "desc": "BEOBJ (Verb): Turns X into the OBEJT for Y.",
+    "tags": ["becobj","obejt","obj"]
+  },
+  {
+    "name": "txt_ware",
+    "sprite": ["txt/ware"],
     "types": ["verb_class", "verb"],
     "color": [[0, 1]],
-    "desc": "BEOBJ (Verb) (Unimplimented): Turns X into the OBEJT for Y.",
-    "tags": ["becobj","obejt","obj"]
+    "desc": "WARE (Verb): Causes X to wear Y on it's head, like how GOT HATT is.",
+    "tags": ["wear", "visual"]
   }
 ]

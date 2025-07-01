@@ -458,5 +458,13 @@
     "color": [[1, 4]],
     "desc": "SID< (Infix Condition): True if X is one tile to the left of Y.",
     "tags": ["on", "wfren", "below", "down", "above", "up", "beside", "left", "right"]
+  },
+  {
+    "name": "txt_undun",
+    "sprite": ["txt/undun"],
+    "types": ["cond_prefix"],
+    "color": [[0, 3]],
+    "desc": "UNDUN (Prefix Condition): Janky right now, but true if you have undoed that turn.",
+    "tags": ["undone", "undo"]
   }
 ]

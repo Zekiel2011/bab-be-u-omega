@@ -5033,5 +5033,21 @@
     "color": [[5, 3]],
     "desc": "room",
     "tags": ["mushroom", "super mushroom", "1-up mushroom", "mario"]
+  },
+  {
+    "name": "toe",
+    "sprite": ["toe"],
+    "layer": 16,
+    "color": [[6, 1]],
+    "rotate": true,
+    "desc": "We've been planning on infiltrating <Bab Be U Omega> for weeks.",
+    "tags": ["potato", "plant", "vegetable"]
+  },
+  {
+    "name": "txt_toe",
+    "sprite": ["txt/toe"],
+    "types": ["object"],
+    "color": [[6, 1]],
+    "tags": ["potato", "plant", "vegetable"]
   }
 ]

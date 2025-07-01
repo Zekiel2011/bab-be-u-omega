@@ -1835,6 +1835,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       end
       rng = deterministicRng(unit, cond.unit)
       result = (rng*100) < threshold_for_dir[cond.unit.dir]
+    elseif condtype == "undun" then
+      result = (#undo_buffer > 0 and #undo_buffer[1] == 0)
     elseif condtype == "an" then
       local cond_unit = cond.unit
       --add a dummy action so that undoing happens
@@ -4532,7 +4534,8 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
-    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}})
+    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}, {"HD", 6}})
+    scene.addOption("gaemmove", "GAEM window management", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
     scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
@@ -4957,6 +4960,10 @@ function getTileSprite(name, tile, o)
       addTry(try, "custom2/?", true)
     end
 
+    if settings["texture"] == 6 then
+      addTry(try, "hd/?", true)
+    end
+    
     if o.altsprite2 then
       addTry(try, "?_alt2", true)
     end
@@ -5333,6 +5340,10 @@ function drawSprite(x, y, rotation, sx, sy, o)
       love.graphics.shear(-0.05, 0)
     end
     love.graphics.translate(-x - max_w/TILE_SIZE/2, -y - max_h/TILE_SIZE/2)
+  end
+  if settings["texture"] == 6 then
+    love.graphics.scale(0.5, 0.5)
+    love.graphics.translate(x + max_w/TILE_SIZE/2, y + max_h/TILE_SIZE/2)
   end
 
   if (o.delet or o.xwx or spookmode) and (math.floor(love.timer.getTime() * 9) % 9 == 0) then -- if we're delet, apply the special shader to our object
