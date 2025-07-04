@@ -183,7 +183,7 @@
       "inactive": "txt/tranz"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "trans",
       "colors": ["cyeann", "whit", "pinc"]
@@ -198,7 +198,7 @@
       "inactive": "txt/gay"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "gay",
       "colors": ["reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc"]
@@ -212,7 +212,7 @@
       "inactive": "txt/enby"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "enby",
       "colors": ["yello", "whit", "purp", "blacc", "graey"]
@@ -227,7 +227,7 @@
       "inactive": "txt/ace"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "ace",
       "colors": ["blacc", "graey", "whit", "purp"]
@@ -242,7 +242,7 @@
       "inactive": "txt/pan"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "pan",
       "colors": ["pinc", "yello", "cyeann"]
@@ -257,7 +257,7 @@
       "inactive": "txt/bi"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "bi",
       "colors": ["pinc", "purp", "bleu"]
@@ -272,7 +272,7 @@
       "inactive": "txt/lesbab"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "lesbian",
       "colors": ["reed", "orang", "whit", "pinc"]
@@ -287,7 +287,7 @@
       "inactive": "txt/lesbad"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "vore",
       "colors": ["cyeann", "purp", "bleu"]
@@ -302,7 +302,7 @@
       "inactive": "txt/aro"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "aro",
       "colors": ["grun", "whit", "graey", "blacc"]
@@ -317,7 +317,7 @@
       "inactive": "txt/fluid"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "fluid",
       "colors": ["pinc", "whit", "blacc", "bleu"]
@@ -332,7 +332,7 @@
       "inactive": "txt/poly"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "poly",
       "colors": ["yello", "reed", "bleu", "blacc"]
@@ -1113,7 +1113,7 @@
       "inactive": "txt/cube"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "other/cube",
       "colors": ["reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc"]
@@ -1127,7 +1127,7 @@
       "inactive": "txt/samroc"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "other/samroc",
       "colors": ["grun"]
@@ -1267,7 +1267,7 @@
     "name": "txt_gaymen",
     "sprite": ["txt/prade"],
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "prade",
       "colors": ["grun", "cyeann", "whit", "bleu"]
@@ -1293,7 +1293,7 @@
       "inactive": "txt/bigender"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "bigender",
       "colors": ["pinc", "purp", "whit", "cyeann"]
@@ -1960,5 +1960,13 @@
     "color": [[0, 2]],
     "desc": "STARE: Unimplimented, but it would be sort of like GOAWAYPLS, without the stop or the push, and just the direction changing.",
     "tags": ["steer", "untitled mod"]
+  },
+  {
+    "name": "txt_yyyfi",
+    "sprite": ["txt/yyyfi"],
+    "types": ["property"],
+    "color": [[1, 1]],
+    "desc": ".bab_txt otni daetsni tub ,txt_bab otni nrut ot yrt t'now bab_txt os epyt sti speek ti tub IFY ot ralimis snoitcnuF )detnemilpminU( :IFYYY",
+    "tags": ["why"]
   }
 ]

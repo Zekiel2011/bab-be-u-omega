@@ -2807,7 +2807,7 @@
     "tags": ["chars", "fof2", "bush"]
   },
   {
-    "name": "snoffe",
+    "name": "lootro",
     "sprite": ["snoffe"],
     "layer": 11,
     "color": [[0, 3]],
@@ -2816,16 +2816,18 @@
       "sans": {"x": 25, "y": 17, "w": 2, "h": 2}
     },
     "desc": "the snowy bush",
-    "pronouns": ["he", "him"]
+    "pronouns": ["he", "him"],
+    "old_names": ["snoffe"]
   },
   {
-    "name": "txt_snoffe",
+    "name": "txt_lootro",
     "sprite": ["looro"],
     "types": ["object"],
     "color": [[5, 3]],
     "desc": "from mt everest",
     "alias": ["jij"],
-    "tags": ["chars", "fof2", "bush"]
+    "tags": ["chars", "fof2", "bush"],
+    "old_names": ["txt_snoffe"]
   },
   {
     "name": "gmals",
