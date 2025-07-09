@@ -1245,7 +1245,7 @@
     "sprite": ["txt/ufor"],
     "types": ["property"],
     "color": [[4, 1]],
-    "desc": "oh shoot, a fourth player\nCan also be spelled 'u4'.\nAnti: opposite direction",
+    "desc": "oh shoot, a fourth player (tfgh)\nCan also be spelled 'u4'.\nAnti: opposite direction",
     "alias": ["u4"],
     "tags": ["you4", "p4", "player"]
   },

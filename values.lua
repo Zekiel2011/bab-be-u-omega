@@ -9,7 +9,7 @@ MAX_UNDO_DELAY = 150
 MIN_UNDO_DELAY = 50
 UNDO_SPEED = 5
 UNDO_DELAY = MAX_UNDO_DELAY
-repeat_keys = {"wasd","udlr","numpad","ijkl","space","undo"}
+repeat_keys = {"wasd","udlr","numpad","ijkl","space","undo","tfgh"}
 
 --is_mobile = love.system.getOS() == "Android" or love.system.getOS() == "iOS"
 emulating_mobile = false

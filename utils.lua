@@ -1013,7 +1013,7 @@ function countProperty(unit, prop, ignore_flye)
 end
 
 function hasU(unit)
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
+  for _,prop in ipairs{"u","utoo","utres","ufor","y'all","w","you","living"} do
     if hasProperty(unit,prop) or hasProperty(unit,"anti "..prop) then
       return true
     end
@@ -1023,7 +1023,7 @@ end
 
 function getUs()
   local yous = {}
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
+  for _,prop in ipairs{"u","utoo","utres","ufor","y'all","w","you","living"} do
     mergeTable(yous,getUnitsWithEffect(prop))
     mergeTable(yous,getUnitsWithEffect("anti "..prop))
   end
@@ -3936,7 +3936,7 @@ end
 
 function timecheckUs(unit)
   if timecheck(unit) then return true end
-  local to_check = {"u","utoo","utres","y'all","you","w"}
+  local to_check = {"u","utoo","utres","ufor","y'all","you","w"}
   for _,prop in ipairs(to_check) do
     local rulecheck = matchesRule(unit,"be",prop)
     for _,ruleparent in ipairs(rulecheck) do

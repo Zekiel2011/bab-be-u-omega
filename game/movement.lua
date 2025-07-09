@@ -283,6 +283,7 @@ function doMovement(movex, movey, key)
         wasd= not (hasPropertyOrAnti(nil,"u") or hasPropertyOrAnti(nil,"vsel") or hasPropertyOrAnti(nil,"w")),
         udlr= not hasPropertyOrAnti(nil,"utoo"),
         ijkl= not hasPropertyOrAnti(nil,"utres"),
+        tfgh= not hasPropertyOrAnti(nil,"ufor"),
       }
       --[[((key == "wasd") and not hasProperty(nil,"u") and not hasProperty(nil, "anti u")) or
           ((key == "udlr") and not hasProperty(nil,"utoo") and not hasProperty(nil,"anti utoo")) or
@@ -317,6 +318,7 @@ function doMovement(movex, movey, key)
       uMoveAnti("u","wasd")
       uMoveAnti("utoo","udlr")
       uMoveAnti("utres","ijkl")
+      uMoveAnti("ufor","tfgh")
       uMoveAnti("y'all")
       uMoveAnti("w","wasd",2)
       uMoveAnti("vsel","wasd")

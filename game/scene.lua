@@ -652,6 +652,13 @@ function scene.keyPressed(key, isrepeat)
         do_turn_now = true
         repeat_timers["ijkl"] = 0
       end
+    elseif (key == "t" or key == "f" or key == "g" or key == "h") then
+      if not repeat_timers["tfgh"] or repeat_timers["tfgh"] > 30 then
+        repeat_timers["tfgh"] = 30
+      elseif repeat_timers["tfgh"] <= 30 then
+        do_turn_now = true
+        repeat_timers["tfgh"] = 0
+      end
     elseif (key == "kp1" or
     key == "kp2" or
     key == "kp3" or
@@ -820,6 +827,11 @@ function scene.keyReleased(key)
     if repeat_timers["wasd"] <= 30 then
       do_turn_now = true
       repeat_timers["wasd"] = 0
+    end
+  elseif key == "f" or key == "h" and not key_down["t"] and not key_down["g"] then
+    if repeat_timers["tfgh"] <= 30 then
+      do_turn_now = true
+      repeat_timers["tfgh"] = 0
     end
   elseif key == "up" or key == "down" and not key_down["left"] and not key_down["right"] then
     if repeat_timers["udlr"] <= 30 then
@@ -2309,6 +2321,9 @@ function scene.checkInput()
   if not (key_down["i"] or key_down["j"] or key_down["k"] or key_down["l"]) then
       repeat_timers["ijkl"] = nil
   end
+  if not (key_down["t"] or key_down["f"] or key_down["g"] or key_down["h"]) then
+      repeat_timers["tfgh"] = nil
+  end
   if not (key_down["kp1"] or
         key_down["kp2"] or
         key_down["kp3"] or
@@ -2355,6 +2370,11 @@ function scene.checkInput()
             if key_down["k"] and most_recent_key ~= "i" then y = y + 1 end
             if key_down["j"] and most_recent_key ~= "l" then x = x - 1 end
             if key_down["l"] and most_recent_key ~= "j" then x = x + 1 end
+        elseif key == "tfgh" then
+            if key_down["t"] and most_recent_key ~= "g" then y = y - 1 end
+            if key_down["g"] and most_recent_key ~= "t" then y = y + 1 end
+            if key_down["f"] and most_recent_key ~= "h" then x = x - 1 end
+            if key_down["h"] and most_recent_key ~= "f" then x = x + 1 end
         elseif key == "numpad" then
             if key_down["kp1"] and most_recent_key ~= "kp9" then x = x + -1; y = y + 1 end
             if key_down["kp2"] and most_recent_key ~= "kp8" then x = x + 0; y = y + 1 end
