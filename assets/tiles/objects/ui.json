@@ -238,6 +238,7 @@
     "name": "ui_t",
     "sprite": ["ui_t"],
     "layer": 20,
+    "desc": "UFOR up key.",
     "color": [[0, 3]]
   },
   {
@@ -451,5 +452,12 @@
     "layer": 20,
     "color": [[0, 3]],
     "desc": "Used in tutorials for utres."
+  },
+  {
+    "name": "ui_walk4",
+    "sprite": ["ui_walk4"],
+    "layer": 20,
+    "color": [[0, 3]],
+    "desc": "Used in tutorials four... ufor... is this TOO much players?"
   }
 ]

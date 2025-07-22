@@ -370,5 +370,14 @@
     "rotate": true,
     "tags": ["chars", "on", "iiy", "thingify"],
     "tags": ["it"]
+  },
+  {
+    "name": "txt",
+    "sprite": ["txtt"],
+    "layer": 19,
+    "color": [[4, 1]],
+    "rotate": false,
+    "desc": "OH NO, MY ONLY WEAKNESS, A DOCUMENT!",
+    "tags": ["txt", "file", "text"]
   }
 ]

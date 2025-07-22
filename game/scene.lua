@@ -1042,18 +1042,6 @@ function scene.draw(dt)
       brightness = 0.33
     end
 
-    if hasProperty(unit,"ad") then
-      love.graphics.setBlendMode("add", "alphamultiply")
-    end
-
-    if hasProperty(unit,"subt") then
-      love.graphics.setBlendMode("subtract", "alphamultiply")
-    end
-
-    if hasProperty(unit,"uhhh") then
-      love.graphics.setBlendMode("multiply", "premultiplied")
-    end
-
     if unit.fullname == "txt_now" then
       if doing_past_turns then
         unit.sprite = {"txt/latr"}
@@ -1747,6 +1735,15 @@ function scene.draw(dt)
             rot = unit.draw.rotation
           else
             if (unit.rotate or (rules_with["rotatbl"] and hasProperty(unit,"rotatbl"))) then rot = (unit.dir - 1) * 45 end
+          end
+          if hasProperty(unit,"ad") then
+            love.graphics.setBlendMode("add", "alphamultiply")
+          end
+          if hasProperty(unit,"subt") then
+            love.graphics.setBlendMode("subtract", "alphamultiply")
+          end
+          if hasProperty(unit,"uhhh") then
+            love.graphics.setBlendMode("multiply", "premultiplied")
           end
           if hasProperty(unit,"anti nooope") and hasProperty(unit,"anti nope") then
             drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(98))*400))
