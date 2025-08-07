@@ -5342,7 +5342,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
     end
     love.graphics.translate(-x - max_w/TILE_SIZE/2, -y - max_h/TILE_SIZE/2)
   end
-  if settings["texture"] == 6 then
+  if settings["texture"] == 6 or o.sprite[1] == "txt/icantbelivehempuliisaddingbeanstobiy" then
     love.graphics.scale(0.5, 0.5)
     love.graphics.translate(x + max_w/TILE_SIZE/2, y + max_h/TILE_SIZE/2)
   end

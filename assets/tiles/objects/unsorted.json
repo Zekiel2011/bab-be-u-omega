@@ -5049,5 +5049,22 @@
     "types": ["object"],
     "color": [[6, 1]],
     "tags": ["potato", "plant", "vegetable"]
+  },
+  {
+    "name": "icantbelivehempuliisaddingbeanstobiy",
+    "sprite": ["icantbelivehempuliisaddingbeanstobiy"],
+    "layer": 15,
+    "color": [[2, 1]],
+    "rotate": false,
+    "desc": "bean attack",
+    "tags": ["bean"]
+  },
+  {
+    "name": "txt_icantbelivehempuliisaddingbeanstobiy",
+    "sprite": ["txt/icantbelivehempuliisaddingbeanstobiy"],
+    "types": ["object"],
+    "color": [[2, 1]],
+    "desc": "PLEASE HELP WHAT THE FUCK IS WRONG WITH ME WHY DID I NAME IT THIS LONG",
+    "tags": ["bean"]
   }
 ]

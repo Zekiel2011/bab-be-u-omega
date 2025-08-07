@@ -585,7 +585,7 @@ selector_grid_contents = {
     "txt_turncornr","txt_folowal","txt_hopovr","txt_reflecc",0,0,0,0,0,0,0,0,0,"txt_that","txt_thatbe","txt_thatgot","txt_meow","txt_beside",0,"txt_qt","txt_thonk","txt_happi","txt_crye","txt_scream",
     "txt_munwalk","txt_sidestep","txt_diagstep","txt_knightstep",0,"txt_tryagain","txt_noundo","txt_undo","txt_zawarudo","txt_brite","txt_torc","txt_tranparnt",0,"txt_reed","txt_orang","txt_yello","txt_grun","txt_cyeann",0,"txt_stelth","txt_huh","txt_unhuh","txt_/:o","txt_cool",
     "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,"txt_bleu","txt_purp","txt_pinc","txt_whit","txt_graey",0,0,"txt_altsprite","txt_altsprite2","txt_nope","txt_nooope",
-    "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez",0,0,0,0,"txt_golld","txt_viloet","txt_blacc","txt_brwn",0,0,0,0,0,0,
+    "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez","txt_dat",0,0,0,"txt_golld","txt_viloet","txt_blacc","txt_brwn",0,0,0,0,0,0,
     "txt_left","txt_direction","txt_right","txt_yesgo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_copkat","txt_copdog","txt_copbab","txt_copzez",
     "txt_downleft","txt_down","txt_downright","txt_poof",0,"selctr","txt_selctr","txt_frens","txt_groop","txt_gang","txt_themself","this",0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,"lvl","txt_lvl","txt","txt_txt","txt_no1","txt_every1","txt_every2","txt_every3","txt_every4",0,0,0,0,0,0,0,0,0,0,
@@ -763,7 +763,7 @@ selector_grid_contents = {
     "piza","txt_piza","trumpt","txt_trumpt","flyg","txt_flyg","ston","txt_ston","picee","txt_picee","tnt","txt_tnt",0,0,0,0,0,0,0,0,0,0,0,0,
     "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser","comnnd","txt_comnnd",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "con1","txt_con1","con2","txt_con2","puf","txt_puf","dirrt","txt_dirrt","esgras","txt_esgras",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "mushy","txt_mushy","toe","txt_toe",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "mushy","txt_mushy","toe","txt_toe","icantbelivehempuliisaddingbeanstobiy","txt_icantbelivehempuliisaddingbeanstobiy",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
     "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti","papr","txt_papr",0,0,"kees","txt_kees","cd","txt_cd","ßar","txt_ßar","spinklr","txt_spinklr","cledg","txt_cledg","goop","txt_goop",
     "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
@@ -791,7 +791,7 @@ selector_grid_contents = {
   },
   -- page 7.5 properties and stuff
   {
-    "txt_iscome","txt_befit","txt_dat",0,"txt_snaccish","txt_noswims",0,"txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,0,0,0,0,0,0,0,0,0,
+    "txt_iscome","txt_befit",0,0,"txt_snaccish","txt_noswims",0,"txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,0,0,0,0,0,0,0,0,0,
     "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,0,"txt_zup",0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_halfnogo",0,0,0,0,0,0,0,0,0,"txt_zown",0,0,0,"txt_bunosd","txt_whuhd","txt_png",0,0,0,0,0,0,0,
