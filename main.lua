@@ -129,7 +129,7 @@ bab arguments!
 
   searchbab()
 
-  if not babfound or cmdargs["spook"] or os.date("%m-%d") == "10-31" and os.date("%H") >= "22" or os.date("%H:%M") == "3:00" then
+  if (not babfound or cmdargs["spook"] or os.date("%m-%d") == "10-31" and os.date("%H") >= "22" or os.date("%H:%M") == "3:00") and settings["canspooku"] then
     spookmode = true
   end
 
@@ -358,7 +358,7 @@ bab arguments!
     --love.errorhandler = function() print(colr.red("goodbye")) end
     love.window.setIcon(love.image.newImageData("assets/sprites/wat.png"))
     love.window.setTitle("bxb bx x")
-    if not settings["lessflashing"] then
+    if not settings["lessflashing"] and not settings["gaemmove"] then
       love.window.setFullscreen(true)
     end
   else
@@ -579,7 +579,7 @@ local gettimetime = 0
 
 love.timer.getRealTime = love.timer.getTime
 love.timer.getTime = function()
-  if spookmode and not settings["lessflashing"] then
+  if spookmode and not settings["lessflashing"] and not settings["gaemmove"] then
     return gettimetime
   else
     return love.timer.getRealTime()
@@ -598,7 +598,7 @@ function love.update(dt)
     end
   end
 
-  if spookmode and not settings["lessflashing"] then
+  if spookmode and not settings["lessflashing"] and not settings["gaemmove"] then
     dt = math.tan(love.timer.getRealTime()*20)/200
   end
 
@@ -893,13 +893,13 @@ function love.draw()
 end
 
 function love.visible()
-  if spookmode and not settings["lessflashing"] then
+  if spookmode and not settings["lessflashing"] and not settings["gaemmove"] then
     love.resize()
   end
 end
 
 function love.resize(w, h)
-  if spookmode and not settings["lessflashing"] then
+  if spookmode and not settings["lessflashing"] and not settings["gaemmove"] then
     local winwidth, winheight = love.graphics.getDimensions()
     love.window.setMode(winwidth, winheight, {borderless=true, resizable=false, minwidth=705, minheight=510, fullscreen=true})
   end

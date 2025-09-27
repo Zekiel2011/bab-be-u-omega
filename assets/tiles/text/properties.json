@@ -59,7 +59,7 @@
     "sprite": ["txt/nogo"],
     "types": ["property"],
     "color": [[5, 1]],
-    "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: icyyyy",
+    "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: yesgo",
     "tags": ["stop"]
   },
   {
@@ -183,7 +183,7 @@
       "inactive": "txt/tranz"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "trans",
       "colors": ["cyeann", "whit", "pinc"]
@@ -198,7 +198,7 @@
       "inactive": "txt/gay"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "gay",
       "colors": ["reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc"]
@@ -212,7 +212,7 @@
       "inactive": "txt/enby"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "enby",
       "colors": ["yello", "whit", "purp", "blacc", "graey"]
@@ -227,7 +227,7 @@
       "inactive": "txt/ace"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "ace",
       "colors": ["blacc", "graey", "whit", "purp"]
@@ -242,7 +242,7 @@
       "inactive": "txt/pan"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "pan",
       "colors": ["pinc", "yello", "cyeann"]
@@ -257,7 +257,7 @@
       "inactive": "txt/bi"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "bi",
       "colors": ["pinc", "purp", "bleu"]
@@ -272,7 +272,7 @@
       "inactive": "txt/lesbab"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "lesbian",
       "colors": ["reed", "orang", "whit", "pinc"]
@@ -287,7 +287,7 @@
       "inactive": "txt/lesbad"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "vore",
       "colors": ["cyeann", "purp", "bleu"]
@@ -302,7 +302,7 @@
       "inactive": "txt/aro"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "aro",
       "colors": ["grun", "whit", "graey", "blacc"]
@@ -317,7 +317,7 @@
       "inactive": "txt/fluid"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "fluid",
       "colors": ["pinc", "whit", "blacc", "bleu"]
@@ -332,7 +332,7 @@
       "inactive": "txt/poly"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "poly",
       "colors": ["yello", "reed", "bleu", "blacc"]
@@ -1113,9 +1113,9 @@
       "inactive": "txt/cube"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
-      "sprite": "cube",
+      "sprite": "other/cube",
       "colors": ["reed", "orang", "yello", "grun", "cyeann", "bleu", "purp", "pinc"]
     },
     "desc": "CUBE: Causes the unit to appear rainbow coloured squares. cube objects like gay are objects are reed, orang, yello, grun, bleu, purp, and pinc, and not any other colors.\nAnti: poof"
@@ -1127,9 +1127,9 @@
       "inactive": "txt/samroc"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
-      "sprite": "samroc",
+      "sprite": "other/samroc",
       "colors": ["grun"]
     },
     "desc": "SAMROC: a shade of grun I think.\nAnti: poof"
@@ -1137,13 +1137,15 @@
   {
     "name": "txt_huh",
     "sprite": ["txt/huh"],
+    "display": ";/",
     "types": ["property"],
     "color": [[2, 4]],
     "features": {
       "sans": {"x": 21, "y": 6, "w": 3, "h": 4}
     },
-    "desc": "huh: makes :) particles.\nAnti: unhuh",
-    "tags": ["huh", "hm", "face", "ok"]
+    "desc": ";/ - Causes the unit to emit the same particles as :) does.\nAnti: unhuh",
+    "tags": ["huh", "hm", "face", "ok"],
+    "alias": [";/"]
   },
   {
     "name": "txt_unhuh",
@@ -1155,14 +1157,6 @@
     },
     "desc": "UNHUH: just huh but makes un:) particles.\nAnti: huh",
     "tags": ["unhuh", "unhm", "face", "unok", "gotcha", ";d"]
-  },
-  {
-    "name": "txt_zip",
-    "sprite": ["txt/zip"],
-    "types": ["property"],
-    "color": [[5, 3]],
-    "desc": "ZIP: UNIMPLIMENTED, At end of turn, if it is on a tile it couldn't enter or shares a tile with another object of its name, it finds the nearest free tile (preferencing backwards directions) and ejects to it",
-    "tags": ["zip"]
   },
   {
     "name": "txt_v",
@@ -1230,6 +1224,14 @@
     "tags": ["sad", "cry"]
   },
   {
+    "name": "txt_happi",
+    "sprite": ["txt/happi"],
+    "types": ["property", "gang_prefix"],
+    "color": [[2, 4]],
+    "desc": "HAPPI: Causes the unit to emit flower particles",
+    "tags": ["happy"]
+  },
+  {
     "name": "txt_scream",
     "sprite": ["txt2/scream"],
     "types": ["property", "gang_prefix"],
@@ -1243,7 +1245,7 @@
     "sprite": ["txt/ufor"],
     "types": ["property"],
     "color": [[4, 1]],
-    "desc": "oh shoot, a fourth player\nCan also be spelled 'u4'.\nAnti: opposite direction",
+    "desc": "oh shoot, a fourth player (tfgh)\nCan also be spelled 'u4'.\nAnti: opposite direction",
     "alias": ["u4"],
     "tags": ["you4", "p4", "player"]
   },
@@ -1265,7 +1267,7 @@
     "name": "txt_gaymen",
     "sprite": ["txt/prade"],
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "prade",
       "colors": ["grun", "cyeann", "whit", "bleu"]
@@ -1291,7 +1293,7 @@
       "inactive": "txt/bigender"
     },
     "types": ["property", "gang_prefix"],
-    "color": [[255, 255, 255]],
+    "color": [[0, 3]],
     "overlay": {
       "sprite": "bigender",
       "colors": ["pinc", "purp", "whit", "cyeann"]
@@ -1322,7 +1324,7 @@
     "sprite": ["txt/template", "wat"],
     "types": ["property"],
     "color": [[1, 3], [1, 2]],
-    "desc": "for templates as a attempt for custom propertys",
+    "desc": "for templates as a attempt for custom txt",
     "tags": ["test"]
   },
   {
@@ -1572,7 +1574,7 @@
     "types": ["property"],
     "color": [[0, 1]],
     "overlay": {
-      "sprite": "daed",
+      "sprite": "other/daed",
       "colors": ["whit"]
     },
     "desc": "DAED: Probally not coded yet, but it's meant to be like PHANTOM.",
@@ -1585,7 +1587,7 @@
     "types": ["property", "gang_prefix"],
     "color": [[2, 2]],
     "overlay": {
-      "sprite": "red",
+      "sprite": "other/red",
       "colors": ["reed"]
     },
     "desc": "Wait, RED is already a object..."
@@ -1597,7 +1599,7 @@
     "types": ["property", "gang_prefix"],
     "color": [[3, 3]],
     "overlay": {
-      "sprite": "blue",
+      "sprite": "other/blue",
       "colors": ["bleu"]
     },
     "desc": "Unlike RED, there is no BLUE object."
@@ -1630,14 +1632,6 @@
     "tags": ["duh", "uh"]
   },
   {
-    "name": "txt_doth",
-    "sprite": ["txt/doth"],
-    "types": ["property"],
-    "color": [[6, 1]],
-    "desc": "DOTH: doth",
-    "tags": ["doth"]
-  },
-  {
     "name": "txt_zup",
     "sprite": ["txt/zup"],
     "types": ["property"],
@@ -1660,14 +1654,6 @@
     "color": [[5, 3]],
     "desc": "STEP: Moves in a straight line each turn, bouncing off walls. (Doesn't stack)",
     "tags": ["move"]
-  },
-  {
-    "name": "txt_scary",
-    "sprite": ["txt/scary"],
-    "types": ["property"],
-    "color": [[2, 3]],
-    "desc": "SCARY: Makes a object look scary!",
-    "tags": ["spoop"]
   },
   {
     "name": "txt_stalkledge",
@@ -1747,7 +1733,7 @@
     "sprite": ["txt/crystal"],
     "types": ["property"],
     "overlay": {
-      "sprite": "crystal",
+      "sprite": "other/crystal",
     },
     "color": [[0, 3]],
     "desc": "CRYSTAL: (UNIMPLIMENTED) Destroys any objects on it if there are 2 or more on it, also has a overlay.",
@@ -1834,6 +1820,7 @@
     "sprite": ["txt/vn"],
     "types": ["property", "gang_prefix"],
     "color": [[2, 2]],
+    "unsearchable": true,
     "overlay": {
       "sprite": "flog/vn",
     }
@@ -1889,5 +1876,97 @@
     "color": [[4, 2]],
     "desc": "IFYYY: BE IFYYY causes that object or text to turn into 2 of itself. Specifically, if also transforming into something else, it also stays there in addition to transforming.",
     "tags": ["why", "mse"]
+  },
+  {
+    "name": "txt_attacc",
+    "sprite": ["txt/attacc"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "ATTACC: When idling, even when the unit is not U it will destroy the tile or txt it's facing one tile from it.\nAnti: Does it every turn you aren't idling.",
+    "tags": ["attack"]
+  },
+  {
+    "name": "txt_nou",
+    "sprite": ["txt/nou"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOU: idk what it would do, no behavear has been decided yet.",
+    "tags": ["uno reverse card", "no you"]
+  },
+ {
+    "name": "txt_yesgo",
+    "display": "yes go",
+    "sprite": ["txt/yesgo"],
+    "types": ["property"],
+    "color": [[2, 1]],
+    "desc": "YES GO: Can always be entered by objects. Overrides GO AWAY PLS!\nAnti: nogo",
+    "tags": ["unstop", "bab anarchy", "dizzyandy"]
+  },
+  {
+    "name": "txt_nope",
+    "sprite": ["txt/nope"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOPE: Makes the unit sway like NOE, and stacks!\nAnti: Opposite direction, doesn't stack.",
+    "tags": ["no", "noe", "visual"]
+  },
+  {
+    "name": "txt_nooope",
+    "sprite": ["txt/nooope"],
+    "types": ["property"],
+    "color": [[3, 1]],
+    "desc": "NOOOPE: Makes the unit sway like NOE, but even more, still stacks!\nAnti: Oppisite direction, doesn't stack.",
+    "tags": ["no", "noe", "visual"]
+  },
+  {
+    "name": "txt_poof",
+    "sprite": ["txt/poof"],
+    "types": ["property"],
+    "color": [[4, 2]],
+    "desc": "POOF: Deletes every active text near it when used in a rule. Anti: every pride flag (unimplimented)",
+    "tags": ["bab anarchy", "dizzyandy"]
+  },
+  {
+    "name": "txt_paybac",
+    "sprite": ["txt/paybac"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "PAYBAC: (Unimplimented) If the unit has destroyed another object, that object gets destroyed.",
+    "tags": ["karma"]
+  },
+  {
+    "name": "txt_B)",
+    "sprite": ["txt/B)"],
+    "types": ["property"],
+    "color": [[1, 4]],
+    "features": {
+      "sans": {"x": 20, "y": 6, "w": 5, "h": 4}
+    },
+    "desc": "B): Unimplimented, idk, it can either probally end up as a thing that gives COOL or is a secret exit property.",
+    "tags": ["cool", "smiley"]
+  },
+  {
+    "name": "txt_yfi",
+    "sprite": ["txt/yfi"],
+    "types": ["property"],
+    "color": [[1, 2]],
+    "desc": ".KIRB otni snrut BRIK os ,esrever ni eman s'ti emoceb ot tinu a sesuaC :IFY",
+    "tags": ["why"]
+  },
+  {
+    "name": "txt_stare",
+    "sprite": ["txt/stare"],
+    "types": ["property"],
+    "color": [[0, 2]],
+    "desc": "STARE: Unimplimented, but it would be sort of like GOAWAYPLS, without the stop or the push, and just the direction changing.",
+    "tags": ["steer", "untitled mod"]
+  },
+  {
+    "name": "txt_yyyfi",
+    "sprite": ["txt/yyyfi"],
+    "types": ["property"],
+    "color": [[1, 1]],
+    "desc": ".bab_txt otni daetsni tub ,txt_bab otni nrut ot yrt t'now bab_txt os epyt sti speek ti tub IFY ot ralimis snoitcnuF )detnemilpminU( :IFYYY",
+    "tags": ["why"]
   }
 ]

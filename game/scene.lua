@@ -241,6 +241,10 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, ":p", "orrb", 0.5, 0.8, 1, {3, 1})
   scene.doPassiveParticles(dt, "un:o", "unwin", 0.5, 0.8, 1, {4, 1})
   scene.doPassiveParticles(dt, "qt", "love", 0.25, 0.5, 1, {4, 2})
+  scene.doPassiveParticles(dt, "happi", "happi1", 1, 0.33, 1, {2, 4})
+  scene.doPassiveParticles(dt, "happi", "happi2", 1, 2.5, 1, {4, 2})
+  scene.doPassiveParticles(dt, "happi", "happi3", 1, 3, 1, {3, 3})
+  --scene.doPassiveParticles(dt, "happi", "happi4", 1, 0.3, 1, {3, 3})
   scene.doPassiveParticles(dt, "slep", "slep", 1, 0.33, 1, {0, 3})
   scene.doPassiveParticles(dt, "thonk", "thonk", 0.25, 0.5, 1, {0, 3})
   scene.doPassiveParticles(dt, "tryagain", "bonus", 0.25, 0.25, 1, {3, 3})
@@ -248,7 +252,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "awdul", "stink", 0.25, 1, 1, {1, 2})
   scene.doPassiveParticles(dt, "anti gud", "stink", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "anti awdul", "bonus", 0.25, 1, 1, {1, 2})
-  scene.doPassiveParticles(dt, "/:o", "bonus", 0.5, 0.8, 1, {4, 1})
+  scene.doPassiveParticles(dt, "/:o", "orrb", 0.5, 0.8, 1, {4, 1})
   scene.doPassiveParticles(dt, "huh", "bonus", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "unhuh", "unwin", 0.25, 1, 1, {1, 2})
   scene.doPassiveParticles(dt, "^o^", "unwin", 0.25, 1, 1, {0, 3})
@@ -257,7 +261,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "scream", "bain", 0.25, 1, 2, {0, 3})
   scene.doPassiveParticles(dt, "txt_:)", "bonusmeta", 0.25, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "txt_:o", "bonusmeta", 0.5, 0.8, 1, {4, 1})
-  scene.doPassiveParticles(dt, "hotte", "smoke", 1, 2, 1, {0, 1})
+  scene.doPassiveParticles(dt, "hotte", "smoke", 3.5, 1, 1, {0, 1})
   scene.doPassiveParticles(dt, "energy", "blood", 0.5, 2.5, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy", "movement-puff", 0.5, 1, 1, {2, 4})
   scene.doPassiveParticles(dt, "energy2", "blood", 0.5, 2.5, 1, {5, 3})
@@ -626,7 +630,7 @@ function scene.keyPressed(key, isrepeat)
   else
     scene.selecting = false
     local do_turn_now = false
-
+    
     if (key == "w" or key == "a" or key == "s" or key == "d") then
       if not repeat_timers["wasd"] or repeat_timers["wasd"] > 30 then
         repeat_timers["wasd"] = 30
@@ -647,6 +651,13 @@ function scene.keyPressed(key, isrepeat)
       elseif repeat_timers["ijkl"] <= 30 then
         do_turn_now = true
         repeat_timers["ijkl"] = 0
+      end
+    elseif (key == "t" or key == "f" or key == "g" or key == "h") then
+      if not repeat_timers["tfgh"] or repeat_timers["tfgh"] > 30 then
+        repeat_timers["tfgh"] = 30
+      elseif repeat_timers["tfgh"] <= 30 then
+        do_turn_now = true
+        repeat_timers["tfgh"] = 0
       end
     elseif (key == "kp1" or
     key == "kp2" or
@@ -817,6 +828,11 @@ function scene.keyReleased(key)
       do_turn_now = true
       repeat_timers["wasd"] = 0
     end
+  elseif key == "f" or key == "h" and not key_down["t"] and not key_down["g"] then
+    if repeat_timers["tfgh"] <= 30 then
+      do_turn_now = true
+      repeat_timers["tfgh"] = 0
+    end
   elseif key == "up" or key == "down" and not key_down["left"] and not key_down["right"] then
     if repeat_timers["udlr"] <= 30 then
       do_turn_now = true
@@ -949,6 +965,8 @@ function scene.draw(dt)
     lvl_color = {hslToRgb(love.timer.getTime()/6%1, .1, .1, .9), 1}
   elseif (hasProperty(outerlvl,"reed") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"pinc") then
     lvl_color = {getPaletteColor(4, 1)}
+  elseif hasProperty(outerlvl,"viloet") then
+    lvl_color = {getPaletteColor(3, 3)}
   elseif (hasProperty(outerlvl,"pinc") and hasProperty(outerlvl,"whit")) or hasProperty(outerlvl,"corl") then
     lvl_color = {getPaletteColor(4, 2)}
   elseif (hasProperty(outerlvl,"yello") and hasProperty(outerlvl,"brwn")) or hasProperty(outerlvl,"golld") then
@@ -1022,18 +1040,6 @@ function scene.draw(dt)
     
     if timeless and not hasProperty(unit,"zawarudo") and not (unit.type == "txt") then
       brightness = 0.33
-    end
-
-    if hasProperty(unit,"ad") then
-      love.graphics.setBlendMode("add", "alphamultiply")
-    end
-
-    if hasProperty(unit,"subt") then
-      love.graphics.setBlendMode("subtract", "alphamultiply")
-    end
-
-    if hasProperty(unit,"uhhh") then
-      love.graphics.setBlendMode("multiply", "premultiplied")
     end
 
     if unit.fullname == "txt_now" then
@@ -1498,6 +1504,35 @@ function scene.draw(dt)
       end
     end
 
+    local matchrules2 = matchesRule(unit,"ware","?")
+    for _,matchrule2 in ipairs(matchrules2) do
+      local name = matchrule2.rule.object.name
+
+      -- GOT object coloring!
+      local c1, c2
+      if matchrule2.rule.object.prefix then
+        local dummy = {}
+        dummy[matchrule2.rule.object.prefix] = true
+        updateUnitColourOverride(dummy)
+        if dummy.color_override then
+          c1, c2 = dummy.color_override[1], dummy.color_override[2]
+        end
+      end
+
+      local shake_x, shake_y = getOffset()
+      local tile = getTile(name)
+      if tile then
+        love.graphics.push()
+        local o = getTableWithDefaults(unit.features.hatt, {x=0, y=0, sprite="hatsmol"})
+        love.graphics.translate(o.x, o.y-23)
+
+        local color = getTileColors(tile, (c1 and c2) and {c1, c2} or nil)
+        drawTileSprite(tile, fulldrawx, fulldrawy, 0, 0.75, 0.75, {color = color})
+
+        love.graphics.pop()
+      end
+    end
+
     local matchrules = matchesRule(unit,"got","?")
     for _,matchrule in ipairs(matchrules) do
       local name = matchrule.rule.object.name
@@ -1701,7 +1736,28 @@ function scene.draw(dt)
           else
             if (unit.rotate or (rules_with["rotatbl"] and hasProperty(unit,"rotatbl"))) then rot = (unit.dir - 1) * 45 end
           end
-          drawUnit(unit, x, y, rot)
+          if hasProperty(unit,"ad") then
+            love.graphics.setBlendMode("add", "alphamultiply")
+          end
+          if hasProperty(unit,"subt") then
+            love.graphics.setBlendMode("subtract", "alphamultiply")
+          end
+          if hasProperty(unit,"uhhh") then
+            love.graphics.setBlendMode("multiply", "premultiplied")
+          end
+          if hasProperty(unit,"anti nooope") and hasProperty(unit,"anti nope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(98))*400))
+          elseif hasProperty(unit,"anti nooope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(28))*200))
+          elseif hasProperty(unit,"anti nope") then
+            drawUnit(unit, x, y, rot-((math.sin(love.timer.getTime()*4)*math.rad(7))*50))
+          elseif hasProperty(unit,"nope") or hasProperty(unit,"nooope") then
+            local noc = countProperty(unit,"nope")+1*countProperty(unit,"nooope")*3+1
+            local nopedir = ((math.sin(love.timer.getTime()*4)*math.rad(7*noc))*(50*noc))
+            drawUnit(unit, x, y, rot+nopedir)
+          else
+            drawUnit(unit, x, y, rot)
+          end
         end
       end
       for _,unit in ipairs(removed_units) do
@@ -2245,6 +2301,14 @@ function scene.checkInput()
     pause = true
   end
   
+  if settings["debugg"] and love.keyboard.isDown("m") and love.keyboard.isDown("lctrl") then
+    doWin("won")
+  end
+  
+  if settings["debugg"] and love.keyboard.isDown("u") and love.keyboard.isDown("lctrl") then
+    doWin(won, false)
+  end
+  
   if not (key_down["w"] or key_down["a"] or key_down["s"] or key_down["d"]) then
       repeat_timers["wasd"] = nil
   end
@@ -2253,6 +2317,9 @@ function scene.checkInput()
   end
   if not (key_down["i"] or key_down["j"] or key_down["k"] or key_down["l"]) then
       repeat_timers["ijkl"] = nil
+  end
+  if not (key_down["t"] or key_down["f"] or key_down["g"] or key_down["h"]) then
+      repeat_timers["tfgh"] = nil
   end
   if not (key_down["kp1"] or
         key_down["kp2"] or
@@ -2300,6 +2367,11 @@ function scene.checkInput()
             if key_down["k"] and most_recent_key ~= "i" then y = y + 1 end
             if key_down["j"] and most_recent_key ~= "l" then x = x - 1 end
             if key_down["l"] and most_recent_key ~= "j" then x = x + 1 end
+        elseif key == "tfgh" then
+            if key_down["t"] and most_recent_key ~= "g" then y = y - 1 end
+            if key_down["g"] and most_recent_key ~= "t" then y = y + 1 end
+            if key_down["f"] and most_recent_key ~= "h" then x = x - 1 end
+            if key_down["h"] and most_recent_key ~= "f" then x = x + 1 end
         elseif key == "numpad" then
             if key_down["kp1"] and most_recent_key ~= "kp9" then x = x + -1; y = y + 1 end
             if key_down["kp2"] and most_recent_key ~= "kp8" then x = x + 0; y = y + 1 end

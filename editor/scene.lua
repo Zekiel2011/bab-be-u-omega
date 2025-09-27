@@ -229,12 +229,12 @@ function scene.setupGooi()
   end):bg({0,0,0,0}) -- no BGImage since it needs to be recolored
   x = x + 36
   local fullpaint_palette_x = x
-  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 5*8, w = 7*8}):onPress(function()
+  fullpaint_palette = gooi.newButton({text = "", x = x, y = 4, h = 14*16, w = 7*16}):onPress(function()
     local x, y = love.mouse.getPosition()
-    local palette_x = math.floor((x - fullpaint_palette_x) / 8)
-    local palette_y = math.floor((y - 4) / 8)
+    local palette_x = math.floor((x - fullpaint_palette_x) / 16)
+    local palette_y = math.floor((y - 4) / 16)
     brush.color = {palette_x, palette_y}
-  end):setBGImage((palettes[current_palette] or palettes["default"]).sprite):bg({0,0,0,0})
+  end):setBGImage((palettes["bigger"]).sprite):bg({0,0,0,0})
   fullpaint_palette:setVisible(false)
   for _,color in pairs(color_names) do
     gooi.newButton({text = "", x = x, y = 4, h = 32, w = 32}):onPress(function()
@@ -402,15 +402,6 @@ w = w-h, h = h}):center():setGroup("settings")
   for i=1,#tile_grid do
     --#tile_grid
     local tab_name = custom_selector_tab == i and "custom" or i
-    if tab_name == 11 then
-      if settings["baba"] then
-        tab_name = "baba"
-      else
-        tab_name = "unfinished"
-      end
-    elseif tab_name == 12 then
-      tab_name = "unfinished"
-    end
     local button_width = math.floor(576 / #tile_grid) --576 is 18 tiles wide * 32 pixels per tile
     local button = gooi.newButton({text = "", x = x + button_width*i, y = y, w = button_width, h = 32}):onRelease(function()
       if selector_page == custom_selector_tab then
@@ -730,7 +721,7 @@ function scene.keyPressed(key)
   end
   
   if not selector_open and not settings_open and not level_dialogue.enabled then
-    if key_down["lshift"] or key_down["rshift"] then
+    if (key_down["lshift"] and not key_down["rshift"]) or (key_down["rshift"] and not key_down["lshift"]) then
         if key == "w" then
             scene.translateLevel(0, -1)
         elseif key == "a" then
@@ -739,6 +730,17 @@ function scene.keyPressed(key)
             scene.translateLevel(0, 1)
         elseif key == "d" then
             scene.translateLevel(1, 0)
+        end
+    end
+    if (key_down["lshift"] and key_down["rshift"]) and settings["debugg"] then
+        if key == "w" then
+            scene.translateLevel(0, -0.5)
+        elseif key == "a" then
+            scene.translateLevel(-0.5, 0)
+        elseif key == "s" then
+            scene.translateLevel(0, 0.5)
+        elseif key == "d" then
+            scene.translateLevel(0.5, 0)
         end
     end
   end
@@ -985,10 +987,10 @@ function scene.mouseReleased(x, y, button)
         editor_save.brush = brush
       end
       if mouseOverBox(30, -30, 62, 14, t) then -- go to level
-        loadLevels({level_dialogue.unit.special.name}, "edit", level_dialogue.unit)
-        clear()
-        loadMap()
-        resetMusic(map_music, 0.1)
+        --loadLevels({level_dialogue.unit.special.name}, "edit", level_dialogue.unit)
+        --clear()
+        --loadMap()
+        --resetMusic(map_music, 0.1)
       end
       scene.updateMap()
     elseif level_dialogue.unit.name == "lin" and mouseOverBox(-75, -58, 150, 50, t) then
@@ -1832,7 +1834,7 @@ function scene.draw(dt)
         love.graphics.draw(icon_data or sprites["ui/default icon"], 31, -95, 0, 0.625)
         
         if unit.special.name then
-          love.graphics.printf("Go to Level", 31, -28, 60, "center")
+          love.graphics.printf("Don't go 2 Lvl", 31, -28, 60, "center")
         end
     
         love.graphics.pop()

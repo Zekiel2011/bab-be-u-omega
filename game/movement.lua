@@ -28,7 +28,7 @@ function doUpdate(already_added, moving_units_next)
         updateDir(unit, dirAdd(dir, geometry_spin), true)
       end
       --movedebug("doUpdate:"..tostring(unit.fullname)..","..tostring(x)..","..tostring(y)..","..tostring(dir))
-      if unit == outergaem then
+      if unit == outergaem and settings["gaemmove"] then
         moveGameWindow(x-update.unit.x, y-update.unit.y)
       else
         moveUnit(unit, x, y, update.payload.portal)
@@ -283,6 +283,7 @@ function doMovement(movex, movey, key)
         wasd= not (hasPropertyOrAnti(nil,"u") or hasPropertyOrAnti(nil,"vsel") or hasPropertyOrAnti(nil,"w")),
         udlr= not hasPropertyOrAnti(nil,"utoo"),
         ijkl= not hasPropertyOrAnti(nil,"utres"),
+        tfgh= not hasPropertyOrAnti(nil,"ufor"),
       }
       --[[((key == "wasd") and not hasProperty(nil,"u") and not hasProperty(nil, "anti u")) or
           ((key == "udlr") and not hasProperty(nil,"utoo") and not hasProperty(nil,"anti utoo")) or
@@ -317,6 +318,7 @@ function doMovement(movex, movey, key)
       uMoveAnti("u","wasd")
       uMoveAnti("utoo","udlr")
       uMoveAnti("utres","ijkl")
+      uMoveAnti("ufor","tfgh")
       uMoveAnti("y'all")
       uMoveAnti("w","wasd",2)
       uMoveAnti("vsel","wasd")
@@ -1106,6 +1108,26 @@ It is probably possible to do, but lily has decided that it's not important enou
                 data.dir = dir
               end
             --dx/dy collation logic for copydog moves
+            elseif (data.reason == "copbab") and timecheck(unit) then
+              dx = data.dy
+              dy = data.dx
+              dir = data.dir
+            --dx/dy collation logic for copydog moves
+            elseif (data.reason == "copzez") and timecheck(unit) then
+              dx = data.dx
+              dy = data.dy
+              local root2 = math.sqrt(0.5)
+              local diagx = round(root2*dx-root2*dy)
+              local diagy = round(root2*dx+root2*dy)
+              if (dx - dy) % 2 == 1 then
+                dx = diagx + dx
+                dy = diagy + dy
+              elseif (dx - dy) % 2 == 0 then
+                dx = diagx + dx
+                dy = diagy + dy
+              end
+              dir = data.dir
+            --dx/dy collation logic for copydog moves
             elseif (data.reason == "copdog") then
               --new 'move ALL the way' logic:
               --1) Split the move into two parts - all the diagonal movement, then all the remaining orthogonal movement.
@@ -1388,7 +1410,7 @@ function moveIt(mover, dx, dy, facing_dir, move_dir, geometry_spin, data, pullin
       end
       local found = false
       for i,move in ipairs(copykat.moves) do
-        if move.reason == "copkat" or move.reason == "copdog" then
+        if move.reason == "copkat" or move.reason == "copdog" or move.reason == "copbab" or move.reason == "copzez" then
           if currently_moving then
             currently_moving = false
           else
@@ -1706,7 +1728,7 @@ end
 
 function findCopykats(unit)
   --fast track
-  if rules_with["copkat"] == nil and rules_with["copdog"] == nil then return {} end
+  if rules_with["copkat"] == nil and rules_with["copdog"] and rules_with["copbab"] == nil and rules_with["copzez"] == nil then return {} end
   local result = {}
   local iscopykat = matchesRule("?", "copkat", unit)
   for _,ruleparent in ipairs(iscopykat) do
@@ -1715,6 +1737,26 @@ function findCopykats(unit)
     for _,copykat in ipairs(copykats) do
       if testConds(copykat, copykat_conds) and ignoreCheck(copykat,unit) then
         result[copykat] = "copkat"
+      end
+    end
+  end
+  local iscopykat = matchesRule("?", "copbab", unit);
+  for _,ruleparent in ipairs(iscopykat) do
+    local copykats = findUnitsByName(ruleparent.rule.subject.name)
+    local copykat_conds = ruleparent.rule.subject.conds
+    for _,copykat in ipairs(copykats) do
+      if testConds(copykat, copykat_conds) then
+        result[copykat] = "copbab";
+      end
+    end
+  end
+  local iscopykat = matchesRule("?", "copzez", unit);
+  for _,ruleparent in ipairs(iscopykat) do
+    local copykats = findUnitsByName(ruleparent.rule.subject.name)
+    local copykat_conds = ruleparent.rule.subject.conds
+    for _,copykat in ipairs(copykats) do
+      if testConds(copykat, copykat_conds) then
+        result[copykat] = "copzez";
       end
     end
   end
@@ -2370,6 +2412,9 @@ function canMove(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, push_
     return false,{},{}
   end
   local success, movers, specials = canMoveCore(unit,dx,dy,dir,o)
+  if specials == "yesgo" then
+    return true, movers, {}
+  end
   if thicc_units[unit] then
     local old_x, old_y = unit.x, unit.y;
     local thicc = thicc_units[unit]
@@ -2515,6 +2560,12 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
   local movers = {}
   local specials = {}
   table.insert(movers, {unit = unit, dx = x-unit.x, dy = y-unit.y, dir = dir, move_dx = move_dx, move_dy = move_dy, move_dir = move_dir, geometry_spin = geometry_spin, portal = portal_unit})
+  
+  for _,v in ipairs(getUnitsOnTile(x, y, {checkmous = true})) do
+    if hasProperty(v,"yesgo") or hasRule(v, "alow", unit) then
+      return true, movers, {}
+    end
+  end
   
   if unit == outergaem then
     return true,movers,{}
@@ -2807,6 +2858,7 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
                   or (hasProperty(v, "anti sidekik") and ignoreCheck(unit,v,"anti sidekik"))
                   or (hasProperty(v, "anti diagkik") and ignoreCheck(unit,v,"anti diagkik"))
                   or (hasProperty(v, "push") and ignoreCheck(unit,v,"push"))
+                  or (hasProperty(v, "staire") and ignoreCheck(unit,v,"staire"))
                   or (hasProperty(v, "goawayplsdir1") and ignoreCheck(unit,v,"goawayplsdir1")) and dir == 1
                   or (hasProperty(v, "goawayplsdir2") and ignoreCheck(unit,v,"goawayplsdir2")) and dir == 2
                   or (hasProperty(v, "goawayplsdir3") and ignoreCheck(unit,v,"goawayplsdir3")) and dir == 3
@@ -2816,6 +2868,7 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
                   or (hasProperty(v, "goawayplsdir7") and ignoreCheck(unit,v,"goawayplsdir7")) and dir == 7
                   or (hasProperty(v, "goawayplsdir8") and ignoreCheck(unit,v,"goawayplsdir8")) and dir == 8
         local moov = hasRule(unit, "moov", v) and ignoreCheck(unit,v);
+        local staire = hasProperty(v, "staire") and ignoreCheck(unit,v,"staire");
         if (push or moov) and not would_swap_with then
           if o.pushing and ignoreCheck(v,unit) then
             --glued units are pushed all at once or not at all
@@ -2827,7 +2880,7 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
               local newer_movers = {}
               for _,v2 in ipairs(pushers) do
                 o.push_stack[unit] = true
-                local reason = push and "goawaypls" or "moov"
+                local reason = (push and "goawaypls" or "moov") and not "staire"
                 local temp_o = copyTable(o)
                 temp_o.reason = reason
                 local success,new_movers,new_specials = canMove(v2, dx, dy, dir, temp_o)

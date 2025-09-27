@@ -336,18 +336,6 @@
     "tags": ["it"]
   },
   {
-    "name": "the",
-    "sprite": ["the"],
-    "types": ["object"],
-    "layer": 20,
-    "desc": "MEEM BE BEN'T BE -OK",
-    "convertible": false,
-    "color": [[4, 2]],
-    "rotate": true,
-    "tags": ["chars", "this", "iiy", "thingify"],
-    "tags": ["it"]
-  },
-  {
     "name": "reed",
     "sprite": ["colors"],
     "types": ["object"],
@@ -382,5 +370,14 @@
     "rotate": true,
     "tags": ["chars", "on", "iiy", "thingify"],
     "tags": ["it"]
+  },
+  {
+    "name": "txt",
+    "sprite": ["txtt"],
+    "layer": 19,
+    "color": [[4, 1]],
+    "rotate": false,
+    "desc": "OH NO, MY ONLY WEAKNESS, A DOCUMENT!",
+    "tags": ["txt", "file", "text"]
   }
 ]

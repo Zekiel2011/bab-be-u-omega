@@ -328,6 +328,23 @@ function loadMap()
       if (levels_this_world > 0 and puffs_this_world >= levels_this_world) then
         writeSaveFile(true, {"levels", level_filename, "complete"})
       end
+      if levels_this_world > 0 and scene ~= editor then
+        gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["puff"], sprites["puff"], sprites["puff"]):bg({0, 0, 0, 0})
+        x = x + 50
+        gooi.newButton({text = puffs_this_world.."/"..level_puffs_to_clear, x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["no1"], sprites["no1"], sprites["no1"]):bg({0, 0, 0, 0})
+        x = x + 50
+        gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["ui/ui_lvl"], sprites["ui/ui_lvl"], sprites["ui/ui_lvl"]):bg({0, 0, 0, 0})
+        x = x + 40
+        gooi.newButton({text = levels_this_world, x = x, y = 0, w = 40, h = 40}):onRelease(function()
+          print(puffs_this_world)
+        end):setBGImage(sprites["no1"], sprites["no1"], sprites["no1"]):bg({0, 0, 0, 0})
+      end
       
       if dofloodfill then
         while #floodfill > 0 do
@@ -996,7 +1013,7 @@ function countProperty(unit, prop, ignore_flye)
 end
 
 function hasU(unit)
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
+  for _,prop in ipairs{"u","utoo","utres","ufor","y'all","w","you","living"} do
     if hasProperty(unit,prop) or hasProperty(unit,"anti "..prop) then
       return true
     end
@@ -1006,7 +1023,7 @@ end
 
 function getUs()
   local yous = {}
-  for _,prop in ipairs{"u","utoo","utres","y'all","w","you","living"} do
+  for _,prop in ipairs{"u","utoo","utres","ufor","y'all","w","you","living"} do
     mergeTable(yous,getUnitsWithEffect(prop))
     mergeTable(yous,getUnitsWithEffect("anti "..prop))
   end
@@ -1818,6 +1835,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       end
       rng = deterministicRng(unit, cond.unit)
       result = (rng*100) < threshold_for_dir[cond.unit.dir]
+    elseif condtype == "undun" then
+      result = (#undo_buffer > 0 and #undo_buffer[1] == 0)
     elseif condtype == "an" then
       local cond_unit = cond.unit
       --add a dummy action so that undoing happens
@@ -1984,7 +2003,7 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = readSaveFile{"levels",name,"won"}
     elseif condtype == "bunosd" then
       local name = unit.special.level or level_filename
-      result = readSaveFile{"levels",name,"bonus"}
+      result = readSaveFile{"levels",name,"bonused"}
     elseif condtype == "whuhd" then
       local name = unit.special.level or level_filename
       result = readSaveFile{"levels",name,"whunus"}
@@ -1996,6 +2015,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       end
     elseif condtype == "samefloat" then
       result = sameFloat(unit, compare_with)
+    elseif condtype == "samepng" then
+      result = unit.sprite[1] == compare_with.sprite[1]
     elseif condtype == "samepaint" then
       result = matchesColor(getUnitColors(unit), getUnitColors(compare_with))
     elseif condtype == "sameface" then
@@ -2020,6 +2041,10 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       }]]
     elseif condtype == "anti sameface" then
       result = unit.dir == dirAdd(compare_with.dir,4)
+    elseif condtype == "samex" then
+      result = unit.x == compare_with.x
+    elseif condtype == "samey" then
+      result = unit.y == compare_with.y
     elseif condtype == "oob" then
       result = not inBounds(unit.x,unit.y)
     elseif condtype == "offgrid" then
@@ -2732,6 +2757,78 @@ function addParticles(ptype,x,y,color,count)
     ps:start()
     ps:emit(count or 10)
     table.insert(particles, ps)
+  elseif ptype == "happi1" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi1"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi2" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi2"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi3" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi3"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
+  elseif ptype == "happi4" then
+    --print("sparkle !!")
+    local ps = love.graphics.newParticleSystem(sprites["happi4"])
+    local px = (x + 0.5) * TILE_SIZE
+    local py = (y + 0.5) * TILE_SIZE
+    ps:setPosition(px, py)
+    ps:setSpread(0.8)
+    ps:setEmissionArea("uniform", TILE_SIZE / 2, TILE_SIZE / 2, 0, true)
+    ps:setSizes(0.40, 0.40, 0.40, 0)
+    ps:setSpeed(x + 1.5 * TILE_SIZE)
+    --og speed is 30
+    ps:setSpin(1, 20)
+    ps:setLinearDamping(1)
+    ps:setParticleLifetime(0.6)
+    ps:setColors(unpack(particle_colors))
+    ps:start()
+    ps:emit(count or 10)
+    table.insert(particles, ps)
   elseif ptype == "unwin" then
     local ps = love.graphics.newParticleSystem(sprites["sparkle"])
     local px = (x + 0.5) * TILE_SIZE
@@ -2952,8 +3049,8 @@ function addParticles(ptype,x,y,color,count)
   elseif ptype == "leafbg" then
     local speed = (TILE_SIZE*mapheight)/350
     local ps = love.graphics.newParticleSystem(sprites["leef"])
-    local px = (mapwidth*TILE_SIZE)
-    local py = (mapheight*TILE_SIZE)
+    local px = (mapwidth*TILE_SIZE)-100
+    local py = (mapheight*TILE_SIZE)-100
     ps:setPosition(px, py)
     ps:setSpread(math.pi/4)
     ps:setEmissionArea("uniform", ((mapwidth)*TILE_SIZE), ((mapwidth)*TILE_SIZE), 0)
@@ -3161,7 +3258,7 @@ function addParticles(ptype,x,y,color,count)
     local size = 0.2
   elseif ptype == "orrb" then
     --print("sparkle !!")
-    local ps = love.graphics.newParticleSystem(sprites["dotti"])
+    local ps = love.graphics.newParticleSystem(sprites["bonusparticles"])
     local px = (x + 0.5) * TILE_SIZE
     local py = (y + 0.5) * TILE_SIZE
     ps:setPosition(px, py)
@@ -3839,7 +3936,7 @@ end
 
 function timecheckUs(unit)
   if timecheck(unit) then return true end
-  local to_check = {"u","utoo","utres","y'all","you","w"}
+  local to_check = {"u","utoo","utres","ufor","y'all","you","w"}
   for _,prop in ipairs(to_check) do
     local rulecheck = matchesRule(unit,"be",prop)
     for _,ruleparent in ipairs(rulecheck) do
@@ -4437,15 +4534,19 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
+    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}, {"HD", 6}})
+    scene.addOption("gaemmove", "GAEM window management", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
     scene.addOption("randomize", "Randomize assets? (relaunch 2 work)", {{"on", true}, {"off", false}})
+    scene.addOption("canspooku", "Allow Spookmode?", {{"yes (not recommended)", true}, {"no", false}})
     scene.addButton("back", function() global_menu_state = "misc2"; scene.buildUI() end)
   elseif global_menu_state == "sus" then
     love.graphics.draw(sprites["ui/fukc"], 34, -50)
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "debug" then
     scene.addOption("night", "Fake Nighttime", {{"on", true}, {"off", false}})
+    scene.addOption("debugg", "Debug mode", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   else
     scene.addButton("audio options", function() global_menu_state = "audio"; scene.buildUI() end)
@@ -4839,7 +4940,31 @@ function getTileSprite(name, tile, o)
     if o.altsprite then
       addTry(try, "?_alt", true)
     end
+    
+    if settings["texture"] == 1 then
+      addTry(try, "bit/?", true)
+    end
+    
+    if settings["texture"] == 2 then
+      addTry(try, "redo/?", true)
+    end
+    
+    if settings["texture"] == 3 then
+      addTry(try, "classic/?", true)
+    end
+    
+    if settings["texture"] == 4 then
+      addTry(try, "custom1/?", true)
+    end
+    
+    if settings["texture"] == 5 then
+      addTry(try, "custom2/?", true)
+    end
 
+    if settings["texture"] == 6 then
+      addTry(try, "hd/?", true)
+    end
+    
     if o.altsprite2 then
       addTry(try, "?_alt2", true)
     end
@@ -4951,7 +5076,7 @@ function getUnitSprite(name, unit)
       local last_units
       for _,rules in ipairs(rules_with_unit[unit]) do
         local name = rules.rule.subject.name 
-        if name:ends("n't") or name == "every1" or name == "every2" or name == "every3" or name == "lethers" or name == "numa" or name == "yuiy" or group_names_set[name] then
+        if name:ends("n't") or name == "every1" or name == "every2" or name == "every3" or name == "lethers" or name == "obejt" or name == "numa" or name == "yuiy" or group_names_set[name] then
           has_multiple = true
           break
         elseif not last_units then
@@ -5012,6 +5137,8 @@ function getUnitColor(unit, index, override_)
       return {2, 2}
     elseif unit.sprite[i] == "detox" and graphical_property_cache["slep"][unit] ~= nil then
       return {1, 2}
+    elseif unit.sprite[i] == "sprites2/overdose" and graphical_property_cache["slep"][unit] ~= nil then
+      return {6, 2}
     else
       return getTileColor(getTile(unit.tile), index, override)
     end
@@ -5079,7 +5206,6 @@ function drawUnitSprite(unit, x, y, rotation, sx, sy, o)
     frame = unit.frame,
     wobble = unit.wobble,
     delet = unit.delet,
-    delet = unit.xwx,
     really_smol = unit.fullname == "babby",
     lvl = unit.fullname == "lvl",
   })
@@ -5125,8 +5251,11 @@ function drawSprite(x, y, rotation, sx, sy, o)
       end
     else
       local palette = current_palette
-      if current_palette == "default" and o.wobble then
+      if (current_palette == "default" or current_palette == "bigger") and o.wobble then
         palette = "baba"
+      end
+      if color[2] > 4 then
+        palette = "bigger"
       end
       if current_palette == "garden" and o.wobble then
         palette = "babagarden"
@@ -5212,6 +5341,10 @@ function drawSprite(x, y, rotation, sx, sy, o)
       love.graphics.shear(-0.05, 0)
     end
     love.graphics.translate(-x - max_w/TILE_SIZE/2, -y - max_h/TILE_SIZE/2)
+  end
+  if settings["texture"] == 6 or o.sprite[1] == "txt/icantbelivehempuliisaddingbeanstobiy" then
+    love.graphics.scale(0.5, 0.5)
+    love.graphics.translate(x + max_w/TILE_SIZE/2, y + max_h/TILE_SIZE/2)
   end
 
   if (o.delet or o.xwx or spookmode) and (math.floor(love.timer.getTime() * 9) % 9 == 0) then -- if we're delet, apply the special shader to our object

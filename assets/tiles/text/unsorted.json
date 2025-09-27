@@ -123,15 +123,23 @@
     "sprite": ["txt/every3"],
     "types": ["object"],
     "color": [[4, 1]],
-    "desc": "EVERY3: Absolutely everything conceivable. The pinnacle of everything technology.",
+    "desc": "EVERY3: Absolutely everything conceivable except for GAEM. The pinnacle of everything technology.",
     "tags": ["all", "everyone", "every3"]
+  },
+  {
+    "name": "txt_every4",
+    "sprite": ["txt/every4"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "EVERY4: Absolutely everything conceivable. The true pinnacle of everything technology, but currently its basicly EVERY3.",
+    "tags": ["all", "everyone", "every4"]
   },
   {
     "name": "txt_samefloat",
     "sprite": ["txt/samefloat"],
     "types": ["cond_compare"],
     "color": [[1, 4]],
-    "desc": "SAMEFLOAT( (Compare Condition): True if the condition unit has the same amount of FLYE as the target.\nAnti: a = -b",
+    "desc": "SAMEFLOAT( (Compare Condition): True if the condition unit has the same amount of FLYE as the target.\nAnti: a = -b\nExample: X LOOKAT SAMEFLOAT Y BE Z",
     "tags": ["sameflye"]
   },
   {
@@ -149,6 +157,30 @@
     "color": [[2, 4]],
     "desc": "SAMEFACE (Compare Condition): True if the condition unit is facing the same direction as the target.\nAnti: opposite direction",
     "tags": ["samedirection", "samefacing"]
+  },
+  {
+    "name": "txt_samepng",
+    "sprite": ["txt/samepng"],
+    "types": ["cond_compare"],
+    "color": [[4, 2]],
+    "desc": "SAMEPNG (Compare Condition): True if the condition unit has the same sprite as the target.",
+    "tags": ["samesprite", "png"]
+  },
+  {
+    "name": "txt_samex",
+    "sprite": ["txt/samex"],
+    "types": ["cond_compare"],
+    "color": [[3, 3]],
+    "desc": "SAMEX (Compare Condition): True if the condition unit has the same x position as the target.",
+    "tags": ["sameposition", "x-axis"]
+  },
+  {
+    "name": "txt_samey",
+    "sprite": ["txt/samey"],
+    "types": ["cond_compare"],
+    "color": [[3, 1]],
+    "desc": "SAMEY (Compare Condition): True if the condition unit has the same y position as the target.",
+    "tags": ["sameposition", "y-axis"]
   },
   {
     "name": "txt_cann't",
@@ -262,7 +294,7 @@
     "sprite": ["txt/pathz"],
     "types": ["object", "group"],
     "color": [[3, 3]],
-    "desc": "PATHZ: A variant of FRENS for selectr.",
+    "desc": "PATHZ: A variant of FRENS for selectr. (UNIMPLIMENTED)",
     "tags": ["group"]
 },
   {
@@ -440,5 +472,13 @@
     "convertible": false,
     "desc": "(UNIMPLIMENTED, only acts like FRENS currently.) Please don't use in normal levels, acts like FRENS but is used for the EVERY1 BE FRENS ending.",
     "tags": ["group", "friends"]
+  },
+  {
+     "name": "txt_looped",
+     "sprite": ["txt/looped"],
+     "types": ["cond_prefix"],
+     "color": [[4, 1]],
+     "desc": "LOOPED (Prefix Condition): (UNIMPLIMENTED) True if the level has been destroyed due to an infinite loop.",
+     "tags": ["infloop", "infinity", "infinite loop", "lvl", "level", "mse"]
   }
 ]
