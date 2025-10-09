@@ -154,7 +154,7 @@ end
 function initializeGraphicalPropertyCache()
   local properties_to_init = -- list of properties that require the graphical cache
   {
-    "flye", "slep", "altsprite", "altsprite2", "stelth", "colrful", "delet", "xwx", "rave" -- miscelleaneous graphical effects
+    "flye", "slep", "altsprite", "altsprite2", "stelth", "colrful", "delet", "xwx", "rave", "scary" -- miscelleaneous graphical effects
   }
   for name,_ in pairs(overlay_props) do -- add overlays
     table.insert(properties_to_init, name)
@@ -5206,6 +5206,7 @@ function drawUnitSprite(unit, x, y, rotation, sx, sy, o)
     frame = unit.frame,
     wobble = unit.wobble,
     delet = unit.delet,
+    scary = unit.scary,
     really_smol = unit.fullname == "babby",
     lvl = unit.fullname == "lvl",
   })
@@ -5228,6 +5229,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
     wobble = false,
     anti_wobble = false,
     delet = false,
+    scary = false,
     xwx = false,
     really_smol = false,
     lvl = false,
@@ -5348,6 +5350,14 @@ function drawSprite(x, y, rotation, sx, sy, o)
   end
 
   if (o.delet or o.xwx or spookmode) and (math.floor(love.timer.getTime() * 9) % 9 == 0) then -- if we're delet, apply the special shader to our object
+    pcallSetShader(xwxShader)
+    drawSpriteMaybeOverlay()
+    love.graphics.setShader()
+  else
+    drawSpriteMaybeOverlay()
+  end
+  
+  if (o.scary) and (math.floor(love.timer.getTime() * 10) % 10 == 0) then -- if we're delet, apply the special shader to our object
     pcallSetShader(xwxShader)
     drawSpriteMaybeOverlay()
     love.graphics.setShader()

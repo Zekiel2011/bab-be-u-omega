@@ -2698,7 +2698,7 @@ function miscUpdates(state_change)
       
       -- for optimisation in drawing
       local objects_to_check = {
-      "stelth", "colrful", "delet", "rave"
+      "stelth", "colrful", "delet", "rave", "xwx", "scary"
       }
       for name,_ in pairs(overlay_props) do
         table.insert(objects_to_check, name)

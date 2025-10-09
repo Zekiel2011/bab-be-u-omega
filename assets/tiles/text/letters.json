@@ -447,6 +447,13 @@
     "desc": "you can't spell bab without ba"
   },
   {
+    "name": "letter_ab",
+    "sprite": ["letter_ab"],
+    "types": ["letter"],
+    "color": [[4, 1]],
+    "desc": "abc-3"
+  },
+  {
     "name": "letter_ke",
     "sprite": ["txt/ke"],
     "types": ["letter"],
@@ -530,5 +537,177 @@
     "types": ["letter"],
     "color": [[6, 2]],
     "desc": "CLIP (letter): TRUE FREEDOM!!!"
+  },
+  {
+    "name": "letter_+",
+    "sprite": ["letter_+"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "A special letter that can do addition. (Unimplimented)"
+  },
+  {
+    "name": "letter_gr",
+    "sprite": ["letter_gr"],
+    "types": ["letter"],
+    "color": [[5, 3]],
+    "desc": "GR IS DEF,\nASS IS EAT."
+  },
+  {
+    "name": "letter_oe",
+    "sprite": ["letter_oe"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "OEAAAAAAAAAAAAAAAAEEEEEEEEHHHE"
+  },
+  {
+    "name": "letter_sh",
+    "sprite": ["letter_sh"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "shhhhh, its a secret."
+  },
+  {
+    "name": "letter_bi",
+    "sprite": ["letter_bi"],
+    "types": ["letter"],
+    "color": [[4, 2]],
+    "desc": "babababa dee, ba ba de de de."
+  },
+  {
+    "name": "letter_ib",
+    "sprite": ["letter_ib"],
+    "types": ["letter"],
+    "color": [[4, 2]],
+    "desc": "babababa bababa ba, ba ba ba bababa"
+  },
+  {
+    "name": "letter_up",
+    "sprite": ["letter_up"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "not the property"
+  },
+  {
+    "name": "letter_le",
+    "sprite": ["letter_le"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "help idk what to write for these"
+  },
+  {
+    "name": "letter_ft",
+    "sprite": ["letter_ft"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_do",
+    "sprite": ["letter_do"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_wn",
+    "sprite": ["letter_wn"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_ag",
+    "sprite": ["letter_ag"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_an",
+    "sprite": ["letter_an"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_ar",
+    "sprite": ["letter_ar"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_at",
+    "sprite": ["letter_at"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_ca",
+    "sprite": ["letter_ca"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_ji",
+    "sprite": ["letter_ji"],
+    "types": ["letter"],
+    "color": [[6, 2]]
+  },
+  {
+    "name": "letter_fo",
+    "sprite": ["letter_fo"],
+    "types": ["letter"],
+    "color": [[5, 3]]
+  },
+  {
+    "name": "letter_be",
+    "sprite": ["letter_be"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_wi",
+    "sprite": ["letter_wi"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "wii crashing sound: eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+  {
+    "name": "letter_ea",
+    "sprite": ["letter_sports"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_aa",
+    "sprite": ["letter_aa"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  },
+  {
+    "name": "letter_bo",
+    "sprite": ["letter_bo"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_lt",
+    "sprite": ["letter_lt"],
+    "types": ["letter"],
+    "color": [[0, 3]]
+  },
+  {
+    "name": "letter_as",
+    "sprite": ["letter_as"],
+    "types": ["letter"],
+    "color": [[5, 3]]
+  },
+  {
+    "name": "letter_fr",
+    "sprite": ["letter_fr"],
+    "types": ["letter"],
+    "color": [[3, 3]]
+  },
+  {
+    "name": "letter_en",
+    "sprite": ["letter_en"],
+    "types": ["letter"],
+    "color": [[3, 3]]
   }
 ]

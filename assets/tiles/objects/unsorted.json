@@ -5066,5 +5066,39 @@
     "color": [[2, 1]],
     "desc": "PLEASE HELP WHAT THE FUCK IS WRONG WITH ME WHY DID I NAME IT THIS LONG",
     "tags": ["bean"]
+  },
+  {
+    "name": "hottedog",
+    "sprite": ["hottedog"],
+    "layer": 15,
+    "color": [[2, 3]],
+    "rotate": false,
+    "desc": "BAB BE U OMEGA MAKER 2's last major update",
+    "tags": ["hotdog"]
+  },
+  {
+    "name": "txt_hottedog",
+    "sprite": ["txt/hottedog"],
+    "types": ["object"],
+    "color": [[2, 3]],
+    "desc": "planet",
+    "tags": ["hotdog"]
+  },
+  {
+    "name": "brian",
+    "sprite": ["brian"],
+    "layer": 15,
+    "color": [[4, 2]],
+    "rotate": false,
+    "desc": "babomega2leak1.png",
+    "tags": ["brain", "abstract"]
+  },
+  {
+    "name": "txt_brian",
+    "sprite": ["txt/brian"],
+    "types": ["object"],
+    "color": [[4, 2]],
+    "desc": "babomega2leak2.png",
+    "tags": ["brain", "abstract"]
   }
 ]

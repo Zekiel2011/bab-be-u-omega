@@ -1577,7 +1577,7 @@
       "sprite": "other/daed",
       "colors": ["whit"]
     },
-    "desc": "DAED: Probally not coded yet, but it's meant to be like PHANTOM.",
+    "desc": "DAED: The idea was that this would be like PHANTOM, but now its just gonna be an overlay property.",
     "tags": ["phantom", "dead"]
   },
   {
@@ -1968,5 +1968,13 @@
     "color": [[1, 1]],
     "desc": ".bab_txt otni daetsni tub ,txt_bab otni nrut ot yrt t'now bab_txt os epyt sti speek ti tub IFY ot ralimis snoitcnuF )detnemilpminU( :IFYYY",
     "tags": ["why"]
+  },
+  {
+    "name": "txt_scary",
+    "sprite": ["txt/scary"],
+    "types": ["property", "gang_prefix"],
+    "color": [[1, 2]],
+    "desc": "SCARY: A visual property that mimics the glitchy effect of DELET.",
+    "tags": ["delet", "visual"]
   }
 ]

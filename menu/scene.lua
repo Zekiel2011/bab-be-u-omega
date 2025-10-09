@@ -14,8 +14,75 @@ local git_btn = nil
 local discord_btn = nil
 
 math.randomseed(os.time())
-local splash = math.random()
+  --local splashtext = math.random()
   -- love.timer.getTime() % 1 old splash
+splashtexts = {
+	"bab be u!",
+	"bab be u too: electric boogaloo!",
+	"bab craet lvl!",
+	"Also try Platfory's Modds!",
+	"keek be walk!",
+	"Also try 1000000-ratts-be-gay!",
+	"eat polish gras",
+	"good for puzzle levels",
+	"girl mode!!!!",
+	"splosh txt!",
+	"Do not delete bab.png, worst mistake of my life.",
+	"why is it called oven when you of in the cold food of out hot eat the food?",
+	"garfield - this is democracy in action.",
+	"features 3 unedited garfield pngs",
+	"hello there",
+	"beep boop bap?",
+	"beep?",
+	"beep bap boop?!",
+	"hello!",
+	"I finally got the wildfire in my sock drawer under control!",
+	"dude, it's called Bab Be U Omega, not Bab Be Omega.",
+	"hello world!",
+	"minecraft time",
+	"splash text!",
+	"plz dont sue me nintendo",
+	"patent pending!",
+	"get ye flask",
+	"true, false, or tuna?",
+	"big and huge!",
+	"don't do!",
+	"AN ULTIMATE FUN MOMENT!",
+	"oops. you bwoke i",
+	"comes from spce",
+	"bab be u! omeag!",
+	"house liek carpet",
+	"cool idea!",
+	"(edited)",
+	"keek be u!",
+	"keek be u too: electric boogaloo!",
+	"keek craet lvl!",
+	"dude, it's called Keek Be U Omega, not Keek Be Omega.",
+	"bab be walk!",
+	"boy mode!!!!",
+	--"b4b b3 u!",
+	--"b4b b3 u t00: 3l3ctr1c b00g4l00",
+	--"b4b cr43t lvl!",
+	"error 404: bab not found",
+	--"k33k b3 w4lk!",
+	--"g4rf13ld - th1s 1s d3m0cr4cy 1n 4ct10n.",
+	--"f34tur3s 3 un3d1t3d g4rf13ld pngs",
+	--"why 1s 1t c4ll3d 0v3n wh3n y0u 0f 1n th3 c0ld f00d 0f 0ut h0t 34t th3 f00d?",
+	--"spl0sh txt!",
+	"nice",
+	"not made with Love3d",
+	"test",
+	"test2",
+	"Test3",
+	"If its movement is cancelled, it will instantly melt.",
+	"made with adhd!",
+	"baba is you",
+	"ripof 'bab is you' game",
+	"bab saev u frum strok",
+	"not 4mobile...",
+
+}
+local splashtext = splashtexts[math.random(1,#splashtexts)]
 
 local tweens = {}
 local buttonPos = {}
@@ -244,6 +311,7 @@ function scene.draw(dt)
     
     love.graphics.push()
     
+    --[[
     if string.find(build_number, "420") or string.find(build_number, "1337") or string.find(build_number, "666") or string.find(build_number, "69") then
       love.graphics.setColor(hslToRgb(love.timer.getTime()%1, .5, .5, .9))
       splashtext = "nice"
@@ -370,6 +438,7 @@ function scene.draw(dt)
     else
       splashtext = "splosh txt!"
     end
+    ]]
     
     local textx = width/2 + bab_logo:getWidth() / 2
     local texty = height/20+bab_logo:getHeight()
