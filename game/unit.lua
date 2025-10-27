@@ -2424,6 +2424,18 @@ function miscUpdates(state_change)
         end
       end
       
+      if unit.fullname == "ßaßa" then
+        if unit.dir == 3 then
+          unit.sprite = {"ba-b-a_d"}
+        elseif unit.dir == 5 then
+          unit.sprite = {"ba-b-a_l"}
+        elseif unit.dir == 7 then
+          unit.sprite = {"ba-b-a_u"}
+        else
+          unit.sprite = {"ba-b-a_r"}
+        end
+      end
+      
       if unit.fullname == "keekie" then
         if unit.dir == 3 then
           unit.sprite = {"keekie_down"}

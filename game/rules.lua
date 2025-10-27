@@ -532,6 +532,13 @@ function parseSentence(sentence_, params_, dir) --prob make this a local functio
               name = "..e"
             end
           end
+        elseif letter.name == "i" then
+          local umlauts = getTextOnTile(unit.x,unit.y-1)
+          for _,umlaut in ipairs(umlauts) do
+            if umlaut.fullname == "letter_-" and umlaut ~= prevunit then
+              name = "-i"
+            end
+          end
         --[[elseif letter.fullname == "letter_colon" and letter.dir == 3 then
           name = ".."]]--
         elseif prevunit.fullname == "letter_colon" and prevunit.dir == dir
@@ -883,6 +890,15 @@ function addRule(full_rule)
   if verb == "is" then
     local new_verb = copyTable(rules.verb)
     new_verb.name = "be"
+    for i = 1, verb_not do
+      new_verb.name = new_verb.name .. "n't"
+    end
+    addRuleSimple(rules.subject, new_verb, rules.object, units, dir)
+  end
+  
+  if verb == "has" then
+    local new_verb = copyTable(rules.verb)
+    new_verb.name = "got"
     for i = 1, verb_not do
       new_verb.name = new_verb.name .. "n't"
     end

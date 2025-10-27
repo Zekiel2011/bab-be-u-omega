@@ -4975,5 +4975,22 @@
     "color": [[1, 1]],
     "desc": "hey",
     "tags": ["chars", "h", "Hello, Im H"]
-  }
+  },
+  {
+    "name": "ßaßa",
+    "sprite": ["ba-b-a_r"],
+    "layer": 11,
+    "color": [[0, 3]],
+    "rotate": true,
+    "wobble": true,
+    "desc": "Does... Baba, nevermind, this feels uncanny."
+  },
+  {
+    "name": "txt_ßaßa",
+    "sprite": ["txt/ba-b-a"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "wobble": true,
+    "desc": "error 404",
+  },
 ]

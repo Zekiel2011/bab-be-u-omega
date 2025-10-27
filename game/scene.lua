@@ -270,6 +270,7 @@ function scene.update(dt)
   scene.doPassiveParticles(dt, "energy3", "blood", 0.5, 2.5, 1, {3, 3})
   scene.doPassiveParticles(dt, "energy3", "movement-puff", 0.5, 1, 1, {3, 3})
   scene.doPassiveParticles(dt, "visitfren", "tele", 0.75, 2, 1, {1, 4})
+  scene.doPassiveParticles(dt, "angy", "angy", 2, 1, 1, {2, 2})
   
   if not (level_bg_effect == "" or level_bg_effect == " ") then
     bgwait = bgwait + 1

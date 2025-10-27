@@ -80,7 +80,9 @@ splashtexts = {
 	"ripof 'bab is you' game",
 	"bab saev u frum strok",
 	"not 4mobile...",
-
+	"You are Mr. Gay.",
+	"Yes I am, are you?",
+	"Spoiler alert: Mario dies."
 }
 local splashtext = splashtexts[math.random(1,#splashtexts)]
 

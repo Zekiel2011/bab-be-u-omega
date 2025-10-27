@@ -498,7 +498,7 @@ selector_grid_contents = {
   {
     "letter_a","letter_b","letter_c","letter_d","letter_e","letter_f","letter_g","letter_h","letter_i","letter_j","letter_k","letter_l","letter_m","letter_n","letter_o","letter_p","letter_q","letter_r",0,0,0,0,0,0,
     "letter_s","letter_t","letter_u","letter_v","letter_w","letter_x","letter_y","letter_z","letter_.","letter_colon","letter_parenthesis","letter_'","letter_/","letter_1","letter_2","letter_3","letter_4","letter_5",0,0,0,0,0,0,
-    0,0,0,0,0,0,0,"letter_π","letter_$","letter_;","letter_>",0,0,"letter_6","letter_7","letter_8","letter_9","letter_0",0,0,0,0,0,0,
+    0,0,0,0,0,0,"letter_-","letter_π","letter_$","letter_;","letter_>",0,0,"letter_6","letter_7","letter_8","letter_9","letter_0",0,0,0,0,0,0,
 	"letter_go","letter_come","letter_pls","letter_away","letter_my","letter_no","letter_way","letter_ee","letter_fren","letter_ll","letter_bolt","letter_ol",0,0,0,"letter_*","txt_numa","txt_lethers",0,0,0,0,0,0,
 	"txt_c_sharp","txt_d_sharp","txt_f_sharp","txt_g_sharp","txt_a_sharp","txt_sharp","txt_flat","letter_ae","letter_¢","letter_!","letter_ß","letter_+",0,0,0,0,0,0,0,0,0,0,0,0,
 	"letter_ba","letter_ab","letter_ke","letter_ek","letter_me","letter_em","letter_ga","letter_al","letter_ut","letter_lk","letter_wa","letter_gr",0,0,0,0,0,0,0,0,0,0,0,0,
@@ -525,7 +525,7 @@ selector_grid_contents = {
     "meem","txt_meem","statoo","txt_statoo","flamgo","txt_flamgo","migri","txt_migri","temmi","txt_temmi","ballt","txt_ballt","ehceec","txt_ehceec","me","txt_me","it2","txt_it2",0,0,"slab","txt_slab","zsoob","txt_zsoob",
     "skul","txt_skul","beeee","txt_beeee","gul","txt_gul","kva","txt_kva","bunmy","txt_bunmy","cic","txt_cic","beeb","txt_beeb","badbad","txt_badbad",0,0,0,0,"notnat","txt_notnat","she","txt_she",
     "ghostfren","txt_ghostfren","fishe","txt_fishe","starrfishe","txt_starrfishe","pidgin","txt_pidgin","slogkat","txt_slogkat","evil","txt_evil","bobua","txt_bobua","ghost","txt_ghost",0,0,0,0,"ally","txt_ally","butcher","txt_butcher",
-    "robobot","txt_robobot","snek","txt_snek","sneel","txt_sneel","swan","txt_swan","b..er","txt_b..er","itte!","txt_itte!","kiik","txt_kiik",0,0,0,0,0,0,0,0,"pitta","txt_pitta",
+    "robobot","txt_robobot","snek","txt_snek","sneel","txt_sneel","swan","txt_swan","b..er","txt_b..er","itte!","txt_itte!","kiik","txt_kiik","ßaßa","txt_ßaßa",0,0,0,0,0,0,"pitta","txt_pitta",
     "woug","txt_woug","bog","txt_bog","enbybog","txt_enbybog","spoder","txt_spoder","niko","txt_niko","tu","txt_tu","smoll","txt_smoll","tesho","txt_tesho",0,0,0,0,0,0,0,0,
     "kirb","txt_kirb","ripof","txt_ripof","trob","txt_trob","cavebab","txt_cavebab","detox","txt_detox","nyowo","txt_nyowo","amoung","txt_amoung","bibi","txt_bibi",0,0,0,0,0,0,"tot","txt_tot",
     "bup","txt_bup","butflye","txt_butflye","boooo","txt_boooo","prime","txt_prime","grimkid","txt_grimkid","dad","txt_dad","bellby","txt_bellby","balt","txt_balt",0,0,0,0,0,0,"fax","txt_fax",
@@ -556,7 +556,7 @@ selector_grid_contents = {
     "glas","txt_glas","bom","txt_bom","sine","txt_sine","kar","txt_kar","can","txt_can","ger","txt_ger","sirn","txt_sirn","chain","txt_chain",0,0,"¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana",
     "trol","txt_trol","wut","txt_wut","wat","txt_wat","splittr","txt_splittr","toggl","txt_toggl","bon","txt_bon","battry","txt_battry","chekr","txt_chekr","do$h","txt_do$h","stomp","txt_stomp","biechboll","txt_biechboll","bulon","txt_bulon",
     "fube","txt_fube","tronk","txt_tronk","cart","txt_cart","drop","txt_drop","woosh","txt_woosh","tanc","txt_tanc","gato","txt_gato","painbuct","txt_painbuct","sinyroc","txt_sinyroc","cryespik","txt_cryespik",0,0,"cair","txt_cair",
-    "colect","txt_colect","zig","txt_zig","pixl","txt_pixl","prop","txt_prop",0,0,"panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod","seewead","txt_seewead","forutoo","txt_forutoo","wulgaye","txt_wulgaye",
+    "colect","txt_colect","zig","txt_zig","pixl","txt_pixl","prop","txt_prop","b-ir","txt_b-ir","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod","seewead","txt_seewead","forutoo","txt_forutoo","wulgaye","txt_wulgaye",
   },
   -- page 6: more inanimate objects
   {
@@ -580,7 +580,7 @@ selector_grid_contents = {
   {
     "txt_be","txt_&","txt_got","txt_creat","txt_snacc","txt_spoop","txt_png","txt_moov","txt_yeet","txt_liek","txt_haet","txt_stalk","txt_ignor","txt_paint","txt_vs","txt_sing","txt_soko","txt_lookat","txt_ware","txt_idk","txt_knobout","txt_jojmen","txt_stoop","txt_attacc",
     "txt_u","txt_utoo","txt_utres","txt_ufor","txt_y'all","txt_w","txt_:)","txt_noswim","txt_ouch","txt_protecc","txt_nxt","txt_stayther","txt_wont","txt_giv","txt_alow","txt_rp","txt_offgrid","txt_lookaway",0,"txt_toad","txt_letr","txt_xwx","txt_paybac","txt_foeddee",
-    "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd","txt_stare","txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong",0,0,0,0,0,0,
+    "txt_go","txt_goooo","txt_icy","txt_icyyyy","txt_stubbn","txt_:(","txt_nedkee","txt_fordor","txt_wurd","txt_stare","txt_infloop","txt_plsdont","txt_oob","txt_frenles","txt_timles","txt_lit","txt_corekt","txt_rong","txt_lonk",0,0,0,0,0,
     "txt_nogo","txt_goawaypls","txt_comepls","txt_sidekik","txt_diagkik","txt_delet","txt_hotte","txt_fridgd","txt_thingify","txt_yfi","txt_rythm","txt_curse","txt_alt","txt_clikt","txt_past","txt_wun","txt_an","txt_mayb",0,"txt_gay","txt_lesbab","txt_tranz","txt_ace","txt_aro",
     "txt_visitfren","txt_slep","txt_shy...","txt_behinu","txt_walk","txt_:o","txt_moar","txt_split","txt_txtify","txt_yyyfi","txt_dragbl","txt_nodrag","txt_looped","txt_wait...","txt_samefloat","txt_samepaint","txt_sameface","txt_samepng",0,"txt_pan","txt_bi","txt_enby","txt_fluid","txt_πoly",
     "txt_flye","txt_tall","txt_haetskye","txt_haetflor","txt_zomb","txt_un:)","txt_gone","txt_nuek","txt_n'tify","txt_n'tifyyy",0,0,0,0,0,"txt_undun","txt_samex","txt_samey",0,"txt_rave","txt_colrful","txt_bigender","txt_gaymen","txt_lesbad",
@@ -588,13 +588,13 @@ selector_grid_contents = {
     "txt_turncornr","txt_folowal","txt_hopovr","txt_reflecc",0,0,0,0,0,0,0,0,0,"txt_that","txt_thatbe","txt_thatgot","txt_meow","txt_beside",0,"txt_qt","txt_thonk","txt_happi","txt_crye","txt_scream",
     "txt_munwalk","txt_sidestep","txt_diagstep","txt_knightstep",0,"txt_tryagain","txt_noundo","txt_undo","txt_zawarudo","txt_brite","txt_torc","txt_tranparnt",0,"txt_reed","txt_orang","txt_yello","txt_grun","txt_cyeann",0,"txt_stelth","txt_huh","txt_unhuh","txt_/:o","txt_cool",
     "txt_spin","txt_rotatbl","txt_noturn","txt_stukc",0,"txt_poortoll","txt_goarnd","txt_mirrarnd","txt_glued",0,0,0,0,"txt_bleu","txt_purp","txt_pinc","txt_whit","txt_graey",0,"txt_scary","txt_altsprite","txt_altsprite2","txt_nope","txt_nooope",
-    "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez","txt_dat",0,0,0,"txt_golld","txt_viloet","txt_blacc","txt_brwn",0,0,0,0,0,0,
-    "txt_left","txt_direction","txt_right","txt_yesgo",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_copkat","txt_copdog","txt_copbab","txt_copzez",
+    "txt_upleft","txt_up","txt_upright","txt_thicc",0,"txt_her","txt_thr","txt_rithere","txt_the","txt_deez","txt_dat",0,0,0,"txt_golld","txt_viloet","txt_blacc","txt_brwn",0,"txt_angy",0,0,0,0,
+    "txt_left","txt_direction","txt_right","txt_yesgo","txt_upgrade",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_copkat","txt_copdog","txt_copbab","txt_copzez",
     "txt_downleft","txt_down","txt_downright","txt_poof",0,"selctr","txt_selctr","txt_frens","txt_groop","txt_gang","txt_themself","this",0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,"lvl","txt_lvl","txt","txt_txt","txt_no1","txt_every1","txt_every2","txt_every3","txt_every4",0,0,0,0,0,0,0,0,0,0,
     "txt_...","txt_''","txt_nt","txt_anti",0,"bordr","txt_bordr","lin","txt_lin","txt_lethers","txt_numa","txt_toen","txt_yuiy","txt_gaem","txt_mous",0,"camra","txt_camra",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_is","txt_and","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "txt_is","txt_and","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2","txt_move","txt_has",0,0,0,0,0,0,0,0,0,0,0,0,0,
   },
   -- page 8: complex
   {

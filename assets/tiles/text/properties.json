@@ -1232,6 +1232,14 @@
     "tags": ["happy"]
   },
   {
+    "name": "txt_angy",
+    "sprite": ["txt/angy"],
+    "types": ["property", "gang_prefix"],
+    "color": [[2, 1]],
+    "desc": "ANGY: Causes the unit to emit angy particles.",
+    "tags": ["angry"]
+  },
+  {
     "name": "txt_scream",
     "sprite": ["txt2/scream"],
     "types": ["property", "gang_prefix"],
@@ -1976,5 +1984,22 @@
     "color": [[1, 2]],
     "desc": "SCARY: A visual property that mimics the glitchy effect of DELET.",
     "tags": ["delet", "visual"]
+  },
+  {
+    "name": "txt_move",
+    "sprite": ["baba/text_move_0"],
+    "wobble": true,
+    "types": ["property"],
+    "color": [[5, 3]],
+    "desc": "MOVE: Walks in a straight line each turn, bouncing off walls.\nAnti: opposite direction",
+    "tags": ["walk"]
+  },
+  {
+    "name": "txt_upgrade",
+    "sprite": ["txt/upgrade"],
+    "types": ["property"],
+    "color": [[5, 2]],
+    "desc": "UPGRADE: A property that UPGRADES properties that has this, so for example if TXT U BE UPGRADE, then the U txt will change functionallity to be more of so an upgraded version.",
+    "tags": ["upgrade", "property enhancer", "property modifier"]
   }
 ]

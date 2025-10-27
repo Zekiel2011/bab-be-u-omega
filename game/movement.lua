@@ -372,6 +372,17 @@ function doMovement(movex, movey, key)
         end
       end
       )
+      moveAndAnti("move",
+      function(word,dir)
+        local move = getUnitsWithEffectAndCount(word)
+        for unit,walkness in pairs(move) do
+          unit = units_by_id[unit] or cursors_by_id[unit]
+          if not hasProperty(unit, "slep") and slippers[unit.id] == nil and timecheck(unit,"be",word) then
+            addMove(unit,"walk",dirAdd(unit.dir,dir),walkness)
+          end
+        end
+      end
+      )
       moveAndAnti("toad1",
       function(word,dir)
         local walk = getUnitsWithEffectAndCount(word)
@@ -1728,7 +1739,7 @@ end
 
 function findCopykats(unit)
   --fast track
-  if rules_with["copkat"] == nil and rules_with["copdog"] and rules_with["copbab"] == nil and rules_with["copzez"] == nil then return {} end
+  if rules_with["copkat"] == nil and rules_with["copdog"] == nil and rules_with["copbab"] == nil and rules_with["copzez"] == nil then return {} end
   local result = {}
   local iscopykat = matchesRule("?", "copkat", unit)
   for _,ruleparent in ipairs(iscopykat) do

@@ -101,6 +101,15 @@ function resetMusic(name,volume)
   end
   
   music_fading = false
+  if name == "bab be go" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    name = "bab be slep"
+  end
+  if name == "forte be deepe" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    name = "forte be darrk"
+  end
+  if name == "limon be swiit" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+    name = "limight"
+  end
   if current_volume == 0 or not hasMusic() or current_music ~= name then
     playMusic(name,volume)
   else
@@ -109,15 +118,6 @@ function resetMusic(name,volume)
   end
   if load_mode == "edit" and settings["editor_music"] then
     music = "zez creat lvl"
-  end
-  if music == "bab be go" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
-    music = "bab be slep"
-  end
-  if music == "forte be deepe" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
-    music = "forte be darrk"
-  end
-  if music == "limon be swiit" and (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
-    music = "limight"
   end
 end
 

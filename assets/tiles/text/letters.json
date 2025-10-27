@@ -709,5 +709,11 @@
     "sprite": ["letter_en"],
     "types": ["letter"],
     "color": [[3, 3]]
+  },
+  {
+    "name": "letter_-",
+    "sprite": ["letter_minus"],
+    "types": ["letter"],
+    "color": [[0, 3]]
   }
 ]
