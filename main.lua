@@ -326,6 +326,7 @@ bab arguments!
   registerSound("unthicc", 1)
   registerSound("tele", 0.5)
   registerSound("gone2", 0.5)
+  registerSound("long", 0.5)
 
   print(colr.green("✓ sounds registered"))
 

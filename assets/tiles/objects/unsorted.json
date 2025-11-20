@@ -5117,5 +5117,20 @@
     "color": [[0, 3]],
     "desc": "to spell it using letters, do it like with L..UV and B..ER but instead use the letter - with I!",
     "tags": ["beer"]
+  },
+  {
+    "name": "lucki",
+    "sprite": ["shapes/lucki"],
+    "layer": 12,
+    "color": [[5, 2]],
+    "desc": "wait isn't the 4 leaf clovers the lucky ones?",
+    "tags": ["clover", "cards", "suit", "lucky"],
+  },
+  {
+    "name": "txt_lucki",
+    "sprite": ["shapes/txt/lucki"],
+    "types": ["object"],
+    "color": [[5, 2]],
+    "tags": ["clover", "cards", "suit", "lucky"]
   }
 ]

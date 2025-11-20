@@ -478,7 +478,7 @@
      "sprite": ["txt/looped"],
      "types": ["cond_prefix"],
      "color": [[4, 1]],
-     "desc": "LOOPED (Prefix Condition): (UNIMPLIMENTED) True if the level has been destroyed due to an infinite loop.",
+     "desc": "LOOPED (Prefix Condition): True if the level has been destroyed due to an infinite loop.",
      "tags": ["infloop", "infinity", "infinite loop", "lvl", "level", "mse"]
   }
 ]

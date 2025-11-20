@@ -2529,6 +2529,22 @@ function miscUpdates(state_change)
           unit.sprite = {"modd/platforey/platfory"}
         end
       end
+      
+      if unit.fullname == "mushy" then
+        if hasProperty(unit,"flye") then 
+          unit.sprite = {"mushyvar5"}
+        elseif hasProperty(unit,"thicc") then 
+          unit.sprite = {"mushyvar7"}
+        elseif hasProperty(unit,":(") then 
+          if hasRule(unit,"stalk","?") then
+            unit.sprite = {"mushyvar6"}
+          else
+            unit.sprite = {"mushyvar2"}
+          end
+        else
+          unit.sprite = {"mushy"}
+        end
+      end
        
       -- here goes the legendary ditto transformations
       if unit.fullname == "ditto" then

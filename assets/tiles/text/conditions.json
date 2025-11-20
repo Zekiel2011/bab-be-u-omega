@@ -359,6 +359,14 @@
     "tags": ["correct", "cg5"]
   },
   {
+    "name": "txt_thirds",
+    "sprite": ["txt/thirds"],
+    "types": ["cond_prefix"],
+    "color": [[1, 3]],
+    "desc": "THIRDS (Prefix Condition): True every third turn.",
+    "tags": ["correct"]
+  },
+  {
     "name": "txt_deez",
     "sprite": ["txt/deez"],
     "types": ["object", "cond_prefix"],

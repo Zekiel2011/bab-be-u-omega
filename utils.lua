@@ -1825,6 +1825,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
           result = false
         end
       end
+    elseif condtype == "looped" then
+      result = infcount > 0
     elseif condtype == "wait..." then
       result = last_move ~= nil and last_move[1] == 0 and last_move[2] == 0 and #last_clicks == 0
     elseif condtype == "mayb" then
@@ -2051,6 +2053,8 @@ function testConds(unit, conds, compare_with, first_unit) --cond should be a {co
       result = not ((math.floor(unit.x)==unit.x) and (math.floor(unit.y)==unit.y)) 
     elseif condtype == "alt" then
       result = #undo_buffer % 2 == 1
+    elseif condtype == "thirds" then
+      result = #undo_buffer % 3 == 1
     elseif condtype == "on" then
       result = countProperty(v, "energy", true) > 0
     elseif condtype == "on2" then
@@ -4552,7 +4556,7 @@ function buildOptions()
     scene.addOption("ads", "Ads", {{"off", false}})
     scene.addOption("editor_music", "Use custom editor music?", {{"yes (kinda jank)", true}, {"no", false}})
     scene.addOption("day", "Day Night Cycle?", {{"off", true}, {"on", false}})
-    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}, {"HD", 6}})
+    scene.addOption("texture", "Texture Pack", {{"Default", 0}, {"So Retro!", 1}, {"Redone", 2}, {"Classic", 3}, {"Custom", 4}, {"Custom 2", 5}, {"HD", 6}, {"bettertxt (by Catto)", 7}})
     scene.addOption("gaemmove", "GAEM window management", {{"on", true}, {"off", false}})
     scene.addButton("back", function() global_menu_state = "none"; scene.buildUI() end)
   elseif global_menu_state == "misc3" then
@@ -4981,6 +4985,10 @@ function getTileSprite(name, tile, o)
 
     if settings["texture"] == 6 then
       addTry(try, "hd/?", true)
+    end
+
+    if settings["texture"] == 7 then
+      addTry(try, "alt/?", true)
     end
     
     if o.altsprite2 then

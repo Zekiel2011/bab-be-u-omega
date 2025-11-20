@@ -296,7 +296,7 @@ function scene.setupGooi()
   label_bg_effect = gooi.newLabel({text = "Fg Effect", x = 4+dx*i, y = y, w = w, h = h}):center():setGroup("settings")
   y = y + h + p
   input_bg_effect = gooi.newText({text = bg_effect, x = 4+dx*i, y = y, w = w, h = h}):setGroup("settings")
-
+  
   if is_mobile then
     y = y_top - h
     i = 1
