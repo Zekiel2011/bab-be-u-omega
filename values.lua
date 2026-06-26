@@ -504,7 +504,7 @@ selector_grid_contents = {
 	"letter_ba","letter_ab","letter_ke","letter_ek","letter_me","letter_em","letter_ga","letter_al","letter_ut","letter_lk","letter_wa","letter_gr",0,0,0,0,0,0,0,0,0,0,0,0,
 	"letter_oe","letter_sh","letter_bi","letter_ib","letter_up","letter_le","letter_ft","letter_do","letter_wn","letter_ag","letter_an","letter_wi",0,0,0,0,0,0,0,0,0,0,0,0,
    	 "letter_ar","letter_at","letter_ca","letter_ji","letter_fo","letter_be","letter_ea","letter_aa","letter_bo","letter_lt","letter_as","letter_fr",0,0,0,0,0,0,0,0,0,0,0,0,
-    "letter_en",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "letter_en","letter_x2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   },
   -- page 3: ui / instructions
   {

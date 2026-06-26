@@ -60,15 +60,7 @@ splashtexts = {
 	"dude, it's called Keek Be U Omega, not Keek Be Omega.",
 	"bab be walk!",
 	"boy mode!!!!",
-	--"b4b b3 u!",
-	--"b4b b3 u t00: 3l3ctr1c b00g4l00",
-	--"b4b cr43t lvl!",
 	"error 404: bab not found",
-	--"k33k b3 w4lk!",
-	--"g4rf13ld - th1s 1s d3m0cr4cy 1n 4ct10n.",
-	--"f34tur3s 3 un3d1t3d g4rf13ld pngs",
-	--"why 1s 1t c4ll3d 0v3n wh3n y0u 0f 1n th3 c0ld f00d 0f 0ut h0t 34t th3 f00d?",
-	--"spl0sh txt!",
 	"nice",
 	"not made with Love3d",
 	"test",
@@ -82,7 +74,11 @@ splashtexts = {
 	"not 4mobile...",
 	"You are Mr. Gay.",
 	"Yes I am, are you?",
-	"Spoiler alert: Mario dies."
+	"Spoiler alert: Mario dies.",
+	"Played by Hempuli!",
+	"Might complete Geometry Dash with the longest time until an update!",
+	"Help how do I breathe",
+	"Hey y'all, Scott here!"
 }
 local splashtext = splashtexts[math.random(1,#splashtexts)]
 

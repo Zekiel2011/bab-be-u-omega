@@ -715,5 +715,12 @@
     "sprite": ["letter_minus"],
     "types": ["letter"],
     "color": [[0, 3]]
+  },
+  {
+    "name": "letter_x2",
+    "sprite": ["letter_x2"],
+    "types": ["letter"],
+    "color": [[0, 3]],
+    "desc": "a letter that will repeat the current amount by 2, so B A B B X2 will become B A B B B A B B."
   }
 ]
