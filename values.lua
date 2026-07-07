@@ -594,7 +594,7 @@ selector_grid_contents = {
     0,0,0,0,0,"lvl","txt_lvl","txt","txt_txt","txt_no1","txt_every1","txt_every2","txt_every3","txt_every4",0,0,0,0,0,0,"txt_:p","txt_loep","txt_living","txt_vsel",
     "txt_...","txt_''","txt_nt","txt_anti",0,"bordr","txt_bordr","lin","txt_lin","txt_lethers","txt_numa","txt_toen","txt_yuiy","txt_gaem","txt_mous",0,"camra","txt_camra",0,0,"txt_dirgo","txt_energy","txt_energy2","txt_energy3",
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_goawayplsdir","txt_on","txt_on2","txt_on3",
-    "txt_is","txt_and","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2","txt_move","txt_has",0,0,0,0,0,0,0,0,0,"txt_noswims","txt_yays","txt_whuhd","txt_vibe",
+    "txt_is","txt_and","txt_has","txt_not","txt_eat","txt_you","txt_push","txt_red2","txt_blue","txt_win2","txt_move","txt_open","txt_shut","txt_defeat","txt_level",0,0,0,0,0,"txt_noswims","txt_yays","txt_whuhd","txt_vibe",
   },
   -- page 8: complex
   {

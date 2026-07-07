@@ -379,5 +379,14 @@
     "rotate": false,
     "desc": "OH NO, MY ONLY WEAKNESS, A DOCUMENT!",
     "tags": ["txt", "file", "text"]
+  },
+  {
+    "name": "txt_level",
+    "sprite": ["baba/text_level_0"],
+    "types": ["object"],
+    "color": [[4, 1]],
+    "wobble": true,
+    "desc": "LEVEL: Refers to the lvl you're in, as well as any enterable levels in this lvl. \nMiddle or SHIFT right-click it to edit.)\nCreating lvl will be a samepaint lvl.\nLEVEL got X will trigger even if the lvl infloops.",
+    "tags": ["lvl"]
   }
 ]

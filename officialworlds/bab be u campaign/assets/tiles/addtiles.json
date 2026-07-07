@@ -1,0 +1,12 @@
+[
+  {
+    "name": "mistake",
+    "sprite": ["mistake"],
+    "layer": 22,
+    "wobble": true,
+    "color": [[1, 1]],
+    "rotate": true,
+    "desc": "its all your fault... why did you do this...",
+    "tags": ["your fault"]
+  }
+]

@@ -2016,5 +2016,32 @@
     "color": [[5, 2]],
     "desc": "GENERATE: (Unimplimented) Takes the object behinds it, and creates it in front of it.",
     "tags": ["cell machine", "duplicator", "dupe"]
+  },
+  {
+    "name": "txt_shut",
+    "sprite": ["baba/text_shut_0"],
+    "types": ["property"],
+    "color": [[2, 2]],
+    "desc": "SHUT: When a SHUT and OPEN unit move into each other or are on each other, they are both destroyed.\nAnti: open",
+    "tags": ["ned kee"],
+    "wobble": true
+  },
+  {
+    "name": "txt_open",
+    "sprite": ["baba/text_open_0"],
+    "types": ["property"],
+    "color": [[2, 4]],
+    "desc": "OPEN: When a SHUT and OPEN unit move into each other or are on each other, they are both destroyed.\nAnti: shut",
+    "tags": ["for dor"],
+    "wobble": true
+  },
+  {
+    "name": "txt_defeat",
+    "sprite": ["baba/text_defeat_0"],
+    "types": ["property"],
+    "color": [[2, 1]],
+    "desc": "DEFEAT: At end of turn, destroys any YOU objects on it.\nAnti: destroy self",
+    "tags": [":("],
+    "wobble": true
   }
 ]

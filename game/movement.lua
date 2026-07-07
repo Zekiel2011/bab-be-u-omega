@@ -2816,8 +2816,8 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
     end
   end
   
-  local nedkee = hasProperty(unit, "nedkee")
-  local fordor = hasProperty(unit, "fordor")
+  local nedkee = hasProperty(unit, "nedkee") or hasProperty(unit, "shut")
+  local fordor = hasProperty(unit, "fordor") or hasProperty(unit, "open")
   local swap_mover = hasProperty(unit, "behinu")
   
   --normal checks
@@ -2832,11 +2832,11 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
       --local would_swap_with = (swap_mover and ignoreCheck(v,unit,"behinu")) or (hasProperty(v, "behinu") and ignoreCheck(unit,v,"behinu")) and pushing
       local would_swap_with = swap_mover or hasProperty(v, "behinu") and o.pushing
       --pushing a key into a door automatically works
-      if ((fordor and hasProperty(v, "nedkee")) or (nedkee and hasProperty(v, "fordor"))) and sameFloat(unit, v) then
-        local dont_ignore_unit = (nedkee and ignoreCheck(unit,v,"fordor")) or (fordor and ignoreCheck(unit,v,"nedkee"))
-        local dont_ignore_other = (hasProperty(v,"nedkee") and ignoreCheck(v,unit,"fordor")) or (hasProperty(v,"fordor") and ignoreCheck(unit,v,"nedkee"))
+      if (((fordor and hasProperty(v, "nedkee")) or (nedkee and hasProperty(v, "fordor"))) or ((fordor and hasProperty(v, "shut")) or (nedkee and hasProperty(v, "open")))) and sameFloat(unit, v) then
+        local dont_ignore_unit = ((nedkee and ignoreCheck(unit,v,"fordor")) or (fordor and ignoreCheck(unit,v,"nedkee")) or (nedkee and ignoreCheck(unit,v,"open")) or (fordor and ignoreCheck(unit,v,"shut")))
+        local dont_ignore_other = ((hasProperty(v,"nedkee") and ignoreCheck(v,unit,"fordor")) or (hasProperty(v,"fordor") and ignoreCheck(unit,v,"nedkee")) or (hasProperty(v,"shut") and ignoreCheck(v,unit,"open")) or (hasProperty(v,"open") and ignoreCheck(unit,v,"shut")))
         if dont_ignore_unit or dont_ignore_other then
-          if (timecheck(unit,"be","nedkee") and timecheck(v,"be","fordor")) or (timecheck(unit,"be","fordor") and timecheck(v,"be","nedkee")) then
+          if ((timecheck(unit,"be","nedkee") and timecheck(v,"be","fordor")) or (timecheck(unit,"be","fordor") and timecheck(v,"be","nedkee")) or (timecheck(unit,"be","shut") and timecheck(v,"be","open")) or (timecheck(unit,"be","open") and timecheck(v,"be","shut")))then
             local opened = {}
             if dont_ignore_unit then
               table.insert(opened, unit)
