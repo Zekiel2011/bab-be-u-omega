@@ -1096,6 +1096,46 @@ function updateUnits(undoing, big_update)
     end
     
     to_destroy = handleDels(to_destroy)
+
+    local issink2 = getUnitsWithEffect("sink")
+    for _,unit in ipairs(issink2) do
+      local stuff = getUnitsOnTile(unit.x, unit.y, {not_destroyed = true, thicc = thicc_units[unit]})
+      for _,on in ipairs(stuff) do
+        if unit ~= on and on.fullname ~= "no1" and sameFloat(unit, on) then
+          local ignore_unit = ignoreCheck(unit, on)
+          local ignore_on = ignoreCheck(on, unit, "sink")
+          if ignore_unit or ignore_on then
+            if timecheck(unit,"be","sink") and timecheck(on) then
+              if ignore_unit then
+                table.insert(to_destroy, unit)
+              end
+              if ignore_on then
+                table.insert(to_destroy, on)
+              end
+              playSound("sink")
+              shakeScreen(0.3, 0.1)
+            else
+              if ignore_unit then
+                table.insert(time_destroy,{unit.id,timeless})
+                addUndo({"time_destroy",unit.id})
+              end
+              if ignore_on then
+                table.insert(time_destroy,{on.id,timeless})
+                addUndo({"time_destroy",on.id})
+              end
+              table.insert(time_sfx,"sink")
+            end
+            if ignore_unit then
+              addParticles("destroy", unit.x, unit.y, ignore_on and getUnitColor(on) or getUnitColor(unit))
+            else
+              addParticles("destroy", on.x, on.y, getUnitColor(on))
+            end
+          end
+        end
+      end
+    end
+    
+    to_destroy = handleDels(to_destroy)
     
     local issinklike = getUnitsWithEffect("noswimish")
     for _,unit in ipairs(issinklike) do
