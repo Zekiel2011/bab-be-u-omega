@@ -1349,8 +1349,8 @@ function updateUnits(undoing, big_update)
         if hasU(on) and sameFloat(unit, on) and ignoreCheck(on, unit, "defeat") then
           if timecheck(unit,"be","defeat") and (timecheckUs(on)) then
             table.insert(to_destroy, on)
-            playSound("break")
-            shakeScreen(0.3, 0.2)
+            playSound("babadestroy")
+            shakeScreen(0.5, 0.2)
           else
             table.insert(time_destroy,{on.id,timeless})
 						addUndo({"time_destroy",on.id})

@@ -308,6 +308,7 @@ bab arguments!
   registerSound("undo", 0.8)
   registerSound("fail", 0.5)
   registerSound("bonus", 0.4)
+  registerSound("babadestroy", 0.5)
   registerSound("timestop", 1)
   registerSound("timestop long", 1)
   registerSound("time resume", 1)

@@ -15,8 +15,7 @@
     "types": ["object"],
     "color": [[4, 1]],
     "desc": "TXT: An object class referring to all text objects, or just a specific one if you write e.g. BAB TXT BE GAY.",
-    "tags": ["txt"],
-    "old_names": ["txt_text"]
+    "tags": ["txt"]
   },
   {
     "name": "txt_nt",

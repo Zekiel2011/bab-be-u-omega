@@ -382,7 +382,7 @@
   },
   {
     "name": "txt_level",
-    "sprite": ["baba/text_level_0"],
+    "sprite": ["baba/level"],
     "types": ["object"],
     "color": [[4, 1]],
     "wobble": true,

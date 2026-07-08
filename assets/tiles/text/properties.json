@@ -1708,7 +1708,7 @@
     "types": ["property"],
     "color": [[2, 4]],
     "wobble": true,
-    "desc": "WIN: At end of turn, if U is on WIN and survives, U R :)!\nAnti: un:)",
+    "desc": "WIN: At end of turn, if U is on WIN and survives, U R :)!\nAnti: defeat",
     "tags": ["win", "baba"]
   },
   {
@@ -1998,7 +1998,7 @@
     "wobble": true,
     "types": ["property"],
     "color": [[5, 3]],
-    "desc": "MOVE: Walks in a straight line each turn, bouncing off walls.\nAnti: opposite direction",
+    "desc": "MOVE: Walks in a straight line each turn, bouncing off walls.",
     "tags": ["walk"]
   },
   {
@@ -2019,7 +2019,7 @@
   },
   {
     "name": "txt_shut",
-    "sprite": ["baba/text_shut_0"],
+    "sprite": ["baba/shut"],
     "types": ["property"],
     "color": [[2, 2]],
     "desc": "SHUT: When a SHUT and OPEN unit move into each other or are on each other, they are both destroyed.\nAnti: open",
@@ -2028,7 +2028,7 @@
   },
   {
     "name": "txt_open",
-    "sprite": ["baba/text_open_0"],
+    "sprite": ["baba/open"],
     "types": ["property"],
     "color": [[2, 4]],
     "desc": "OPEN: When a SHUT and OPEN unit move into each other or are on each other, they are both destroyed.\nAnti: shut",
@@ -2037,20 +2037,29 @@
   },
   {
     "name": "txt_defeat",
-    "sprite": ["baba/text_defeat_0"],
+    "sprite": ["baba/defeat"],
     "types": ["property"],
     "color": [[2, 1]],
-    "desc": "DEFEAT: At end of turn, destroys any U objects on it.\nAnti: destroy self",
+    "desc": "DEFEAT: At end of turn, destroys any U objects on it.\nAnti: win",
     "tags": [":("],
     "wobble": true
   },
   {
     "name": "txt_sink",
     "wobble": true,
-    "sprite": ["baba/text_sink_0"],
+    "sprite": ["baba/sink"],
     "types": ["property"],
     "color": [[1, 3]],
-    "desc": "SINK: At end of turn, if a SINK unit is touching another object, all objects on the tile are destroyed.\nAnti: giv protecc",
+    "desc": "SINK: At end of turn, if a SINK unit is touching another object, all objects on the tile are destroyed.",
     "tags": ["noswim"]
+  },
+  {
+    "name": "txt_stop",
+    "sprite": ["baba/stop"],
+    "wobble": true,
+    "types": ["property"],
+    "color": [[5, 1]],
+    "desc": "STOP: Can't be entered by objects. Overridden by GO AWAY PLS!",
+    "tags": ["nogo"]
   }
 ]

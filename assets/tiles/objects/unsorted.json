@@ -5132,5 +5132,42 @@
     "types": ["object"],
     "color": [[5, 2]],
     "tags": ["clover", "cards", "suit", "lucky"]
+  },
+  {
+    "name": "key",
+    "sprite": ["baba/objects/key"],
+    "layer": 16,
+    "wobble": true,
+    "color": [[2, 4]],
+    "rotate": false,
+    "voice": "s_hiclose",
+    "desc": "neds kee",
+    "tags": ["kee"]
+  },
+  {
+    "name": "txt_key",
+    "sprite": ["baba/key"],
+    "wobble": true,
+    "types": ["object"],
+    "color": [[2, 4]],
+    "tags": ["kee"]
+  },
+  {
+    "name": "door",
+    "sprite": ["baba/objects/door"],
+    "layer": 15,
+    "wobble": true,
+    "color": [[2, 2]],
+    "rotate": false,
+    "desc": "4 dor",
+    "tags": ["dor"]
+  },
+  {
+    "name": "txt_door",
+    "sprite": ["baba/door"],
+    "wobble": true,
+    "types": ["object"],
+    "color": [[2, 2]],
+    "tags": ["dor"]
   }
 ]

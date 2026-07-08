@@ -1122,7 +1122,7 @@ function addRule(full_rule)
       end
     end
   elseif subject_not % 2 == 1 then
-    if getTile(subject) or subject == "txt" then
+    if getTile(subject) or subject == "txt" or subject == "text" then
       local new_subjects = getEverythingExcept(subject)
       for _,v in ipairs(new_subjects) do
         addRuleSimple({v, rules.subject.conds}, rules.verb, rules.object, units, dir)
@@ -1184,7 +1184,7 @@ function addRule(full_rule)
       end
     end
   elseif object_not % 2 == 1 then
-    if getTile(object) or object:starts("this") or object == "txt" or object == "mous" or object == "gaem" then
+    if getTile(object) or object:starts("this") or object == "txt" or object == "text" or object == "mous" or object == "gaem" then
       local new_objects = {}
       --skul be skul turns into skul ben't skuln't - but this needs to apply even to special objects (specific text, txt, no1, lvl, mous).
       if verb == "be" and verb_not % 2 == 1 then
@@ -1197,7 +1197,7 @@ function addRule(full_rule)
         addRuleSimple(rules.subject, rules.verb, {v, rules.object.conds}, units, dir)
       end
       --txt be txt needs to also apply for flog txt, bab txt, etc.
-      if (object == "txt" and verb == "be" and verb_not % 2 == 1) then
+      if ((object == "txt" or object == "text") and verb == "be" and verb_not % 2 == 1) then
         for i,ref in ipairs(referenced_text) do
           for _,v in ipairs(new_objects) do
             addRuleSimple({ref, rules.subject.conds}, rules.verb, {v, rules.object.conds}, units, dir)
@@ -1279,7 +1279,7 @@ function postRules(no_sound)
               fverb = fverb .. "n't"
             end
             -- print("frule:", fullDump(frule))
-            if (frule.subject.name == rule.subject.name or (rule.subject.name == "txt" and frule.subject.name:starts("txt_"))) and fverb == rule.verb.name and (
+            if (frule.subject.name == rule.subject.name or ((rule.subject.name == "txt" or rule.subject.name == "text") and frule.subject.name:starts("txt_"))) and fverb == rule.verb.name and (
               (specialmatch == 0 and frule.object.name == rule.object.name and frule.object.name ~= "her" and frule.object.name ~= "thr" and frule.object.name ~= "rit here") or
               (specialmatch == 1 and (frule.object.type.object or frule.object.name == "tranz") and not group_names_set[frule.object.name]) or -- possibly more special cases needed
               (specialmatch == 2 and frule.object.name == "notranform")
@@ -1404,7 +1404,7 @@ function populateRulesEffectingNames(r1, r2, r3)
   local rules = matchesRule(r1, r2, r3)
   for _,rule in ipairs(rules) do
     local subject = rule.rule.subject.name
-    if subject == "txt" or (subject:sub(1, 4) ~= "txt") then
+    if subject == "txt" or subject == "text" or (subject:sub(1, 4) ~= "txt") then
       rules_effecting_names[subject] = true
     end
   end
