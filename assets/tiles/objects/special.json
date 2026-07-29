@@ -388,5 +388,14 @@
     "wobble": true,
     "desc": "LEVEL: Refers to the lvl you're in, as well as any enterable levels in this lvl. \nMiddle or SHIFT right-click it to edit.)\nCreating lvl will be a samepaint lvl.\nLEVEL got X will trigger even if the lvl infloops.",
     "tags": ["lvl"]
+  },
+  {
+    "name": "txt_empty",
+    "sprite": ["baba/empty"],
+    "wobble": true,
+    "types": ["object"],
+    "color": [[0, 3]],
+    "desc": "EMPTY: Refers to tiles with empthing in them. Rotation status is kept on the tile, and is deterministic from the start. Cannot be colored.",
+    "tags": ["none", "no1", "no one"]
   }
 ]

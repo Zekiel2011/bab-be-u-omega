@@ -5384,6 +5384,10 @@ function updateNameBasedOnDir(unit)
     should_parse_rules = true
   elseif unit.fullname == "txt_level" then
       unit.textname = "lvl"
+  elseif unit.fullname == "txt_empty" then
+      unit.textname = "no1"
+  elseif unit.fullname == "txt_near" then
+      unit.textname = "arond"
   elseif unit.fullname == "letter_h" then
     if unit.rotatdir == 3 or unit.rotatdir == 7 then
       unit.textname = "i"

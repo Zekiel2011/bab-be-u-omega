@@ -474,5 +474,14 @@
     "color": [[0, 3]],
     "desc": "UNDUN (Prefix Condition): Janky right now, but true if you have undoed that turn.",
     "tags": ["undone", "undo"]
+  },
+  {
+    "name": "txt_near",
+    "sprite": ["baba/near"],
+    "wobble": true,
+    "types": ["cond_infix"],
+    "color": [[0, 3]],
+    "desc": "NEAR (Infix Condition): True if the indicated object is on any of the tiles surrounding the unit. (The unit's own tile is not checked.) ORTHO/DIAG NEAR will only check the tiles orthogonally or diagonally. GO^ NEAR will only check the tile in that direction.",
+    "tags": ["arond", "neer"]
   }
 ]
