@@ -2942,9 +2942,9 @@ function canMoveCore(unit,dx,dy,dir,o) --pushing, pulling, solid_name, reason, p
         stopped = true
       elseif hasProperty(v, "nogo") and o.reason ~= "curse" or hasProperty(v, "doth") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogo"))
-      elseif hasProperty(v, "nogoish") and o.reason ~= "curse" and not hasProperty(v, "goawaypls") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
+      elseif hasProperty(v, "nogoish") and o.reason ~= "curse" and not hasProperty(v, "goawaypls") and not hasProperty(v, "push") then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"nogoish"))
-      elseif hasProperty(v, "stop") and o.reason ~= "curse" then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
+      elseif hasProperty(v, "stop") and not hasProperty(v, "goawaypls") and not hasProperty(v, "push")  and o.reason ~= "curse" then --Things that are STOP stop being PUSH, unlike in Baba. Also unlike Baba, a wall can be floated across if it is not tall!
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"stop"))
       elseif hasProperty(v, "sidekik") and not canpush and not would_swap_with and o.reason ~= "curse" then
         stopped = stopped or (sameFloat(unit, v) and ignoreCheck(unit,v,"sidekik"))

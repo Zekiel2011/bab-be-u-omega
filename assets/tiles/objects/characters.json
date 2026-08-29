@@ -4993,4 +4993,21 @@
     "wobble": true,
     "desc": "error 404",
   },
+  {
+    "name": "byb",
+    "sprite": ["byb"],
+    "layer": 11,
+    "color": [[1, 3]],
+    "rotate": true,
+    "desc": "bean back",
+    "tags": ["chars", "byby"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_byb",
+    "sprite": ["txt/byb"],
+    "types": ["object"],
+    "color": [[1, 3]],
+    "tags": ["chars", "byb"]
+  }
 ]

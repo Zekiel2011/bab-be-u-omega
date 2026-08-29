@@ -746,7 +746,7 @@ selector_grid_contents = {
   },
   -- page 4.5: characters and special objects
   {
-    0,0,0,0,"baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge","twooo","txt_twooo","goo","txt_goo","saur","txt_saur",0,0,
+    "byb","txt_byb",0,0,"baskitt","txt_baskitt","vaaver","txt_vaaver","trabab","txt_trabab","keekie","txt_keekie","cbab","txt_cbab","tridoge","txt_tridoge","twooo","txt_twooo","goo","txt_goo","saur","txt_saur",0,0,
     "zarj","txt_zarj","kuewee","txt_kuewee","datteve","txt_datteve","acron","txt_acron","kib","txt_kib","nemee","txt_nemee","wahaw","txt_wahaw","monte","txt_monte",0,0,0,0,0,0,0,0,
     "flimic","txt_flimic","noes","txt_noes","fot","txt_fot","..er","txt_..er","2fiv","txt_2fiv","buf","txt_buf","high.","txt_high.","ba","txt_ba","gat","txt_gat",0,0,0,0,0,0,
     "glitch","txt_glitch","lil","txt_lil","sixx","txt_sixx","210","txt_210","bohpel","txt_bohpel","bhridg","txt_bhridg","man","txt_man",0,0,0,0,0,0,0,0,0,0,
@@ -773,7 +773,7 @@ selector_grid_contents = {
     "lug","txt_lug","mblok","txt_mblok","floew","txt_floew","curser","txt_curser","comnnd","txt_comnnd",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "con1","txt_con1","con2","txt_con2","puf","txt_puf","dirrt","txt_dirrt","esgras","txt_esgras",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "mushy","txt_mushy","toe","txt_toe","icantbelivehempuliisaddingbeanstobiy","txt_icantbelivehempuliisaddingbeanstobiy","hottedog","txt_hottedog",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
+    "stoen","txt_stoen",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"turnrod","txt_turnrod",0,0,0,0,0,0,
     "chocho","txt_chocho","cartt","txt_cartt","americandepfridwatr","txt_americandepfridwatr","dotti","txt_dotti","papr","txt_papr",0,0,"kees","txt_kees","cd","txt_cd","ßar","txt_ßar","spinklr","txt_spinklr","cledg","txt_cledg","goop","txt_goop",
     "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
     "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil","ray","txt_ray","muud","txt_muud",0,0,0,0,0,0,
