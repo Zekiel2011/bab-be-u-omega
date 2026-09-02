@@ -1684,7 +1684,11 @@ function scene.draw(dt)
           end
           if gridid == newselect then
             if setval < 1 then
-              setval = setval+((1-setval)/180)
+              if setval+((1-setval)/(360-string.len(tile.desc)*2)) < 0 then
+                setval = 1
+              else
+                setval = setval+((1-setval)/(360-string.len(tile.desc)*2))
+              end
             end
           else
             newselect = last_hovered_tile[1]  + last_hovered_tile[2] * tile_grid_width
