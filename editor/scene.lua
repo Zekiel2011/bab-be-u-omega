@@ -1684,10 +1684,10 @@ function scene.draw(dt)
           end
           if gridid == newselect then
             if setval < 1 then
-              if setval+((1-setval)/(360-string.len(tile.desc)*2)) < 0 then
+              if setval+((1-setval)/(180-string.len(tile.desc)*2)) < 0 then
                 setval = 1
               else
-                setval = setval+((1-setval)/(360-string.len(tile.desc)*2))
+                setval = setval+((1-setval)/(180-string.len(tile.desc)*2))
               end
             end
           else
