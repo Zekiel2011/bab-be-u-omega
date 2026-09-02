@@ -778,7 +778,7 @@ selector_grid_contents = {
     "wav","txt_wav","clothe","txt_clothe","panzs","txt_panzs","veggi","txt_veggi","babfood","txt_babfood","spek","txt_spek",0,0,"pien","txt_pien","duran","txt_duran","4ke","txt_4ke","lin2","txt_lin2","lin3","txt_lin3",
     "pc","txt_pc","mildiw","txt_mildiw","ancorn","txt_ancorn","sord","txt_sord","wrench","txt_wrench","limonaid","txt_limonaid","hil","txt_hil","ray","txt_ray","muud","txt_muud",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "flag","txt_flag","water","txt_water","violet","txt_violet","cake","txt_cake","key","txt_key","door","txt_door",0,0,0,0,0,0,0,0,0,0,0,0,
+    "flag","txt_flag","water","txt_water","violet","txt_violet","cake","txt_cake","key","txt_key","door","txt_door","dot","txt_dot",0,0,0,0,0,0,0,0,0,0,
   },
   -- page 6.5: more inaminate objects
   {

@@ -1,5 +1,6 @@
 local scene = {}
-
+local setval = 0
+local oldselect = 0
 local brush
 
 local paintedtiles = 0
@@ -1671,7 +1672,6 @@ function scene.draw(dt)
     end
 
     love.graphics.pop()
-
     if selector_open then
       love.graphics.setColor(1, 1, 1)
       local gridid = last_hovered_tile[1]  + last_hovered_tile[2] * tile_grid_width
@@ -1679,22 +1679,35 @@ function scene.draw(dt)
       if inBounds(last_hovered_tile[1], last_hovered_tile[2]) and i ~= nil and i ~= 0 then
         local tile = getTile(i)
         if (tile.desc ~= nil and hx ~= nil) then
+          if not gridid == (last_hovered_tile[1]  + last_hovered_tile[2] * tile_grid_width) then
+            newselect = last_hovered_tile[1]  + last_hovered_tile[2] * tile_grid_width
+          end
+          if gridid == newselect then
+            if setval < 1 then
+              setval = setval+((1-setval)/180)
+            end
+          else
+            newselect = last_hovered_tile[1]  + last_hovered_tile[2] * tile_grid_width
+            setval = 0
+          end
           local tooltipwidth, ttlines = love.graphics.getFont():getWrap(tile.desc, love.graphics.getWidth() - love.mouse.getX() - 20)
           local tooltipheight = love.graphics.getFont():getHeight() * #ttlines
-
+          
           local tooltipyoffset = 0
-
+          
           if love.mouse.getY() + (tooltipheight + 20) - love.graphics.getHeight() > 0 then
             tooltipyoffset = love.mouse.getY() + (tooltipheight + 20) - love.graphics.getHeight()
           end
-
+          
           love.graphics.setColor(getPaletteColor(1, 3))
-          love.graphics.rectangle("fill", love.mouse.getX()+10, love.mouse.getY()+10-tooltipyoffset, tooltipwidth+14, tooltipheight+12)
+          love.graphics.rectangle("fill", love.mouse.getX()+10+math.cos(love.timer.getTime())*3, (love.mouse.getY()+10-tooltipyoffset)-math.sin(love.timer.getTime())*5, (tooltipwidth+14)*setval, tooltipheight+12)
           love.graphics.setColor(getPaletteColor(0, 4))
-          love.graphics.rectangle("fill", love.mouse.getX()+11, love.mouse.getY()+11-tooltipyoffset, tooltipwidth+12, tooltipheight+10)
-
+          love.graphics.rectangle("fill", love.mouse.getX()+11+math.cos(love.timer.getTime())*3, (love.mouse.getY()+11-tooltipyoffset)-math.sin(love.timer.getTime())*5, (tooltipwidth+12)*setval, tooltipheight+10)
+          
           love.graphics.setColor(getPaletteColor(0,3))
-          love.graphics.printf(tile.desc, love.mouse.getX()+16, love.mouse.getY()+14-tooltipyoffset, love.graphics.getWidth() - love.mouse.getX() - 20)
+          love.graphics.printf(tile.desc, (love.mouse.getX()+16), (love.mouse.getY()+14-tooltipyoffset)-math.sin(love.timer.getTime())*2.5, love.graphics.getWidth() - love.mouse.getX() - 20, "left", 0, setval,1)
+        else
+          setval = 0
         end
         if settings["infomode"] then
           love.graphics.push()
@@ -1748,6 +1761,8 @@ function scene.draw(dt)
           love.graphics.pop()
         end
       end
+    else
+      local setval = 0
     end
     
     if not selector_open and level_dialogue.scale > 0 then

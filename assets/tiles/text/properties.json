@@ -2006,7 +2006,7 @@
     "sprite": ["txt/upgrade"],
     "types": ["property"],
     "color": [[5, 2]],
-    "desc": "UPGRADE: (Unimplimented) A property that UPGRADES properties that has this, so for example if TXT U BE UPGRADE, then the U txt will change functionallity to be more of so an upgraded version.",
+    "desc": "UPGRADE: (Unimplimented) A property that UPGRADES properties that has this, so for example if TXT U BE UPGRADE,\nthen the U txt will change functionallity to be more of so an upgraded version.\nIf used on an object, it becomes a similar but 'evolved' version of itself.",
     "tags": ["upgrade", "property enhancer", "property modifier"]
   },
   {

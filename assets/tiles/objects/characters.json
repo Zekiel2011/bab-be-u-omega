@@ -11,6 +11,7 @@
     "voice": "s_doo",
     "desc": "its bab bruh",
     "tags": ["chars", "baba"],
+    "evolution": "babi",
     "pronouns": ["she", "her"]
   },
   {
@@ -3327,6 +3328,7 @@
     },
     "voice": "babi",
     "desc": "in a fit of inspiration, bab grew another eye.",
+    "evolution": "babber",
     "tags": ["chars", "baba"]
   },
   {

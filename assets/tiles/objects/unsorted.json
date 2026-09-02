@@ -5185,5 +5185,23 @@
     "types": ["object"],
     "color": [[0, 1]],
     "tags": ["stone"]
+  },
+  {
+    "name": "dot",
+    "sprite": ["baba/objects/dot"],
+    "layer": 12,
+    "wobble": true,
+    "color": [[0, 3]],
+    "rotate": false,
+    "desc": "abstract decoration",
+    "tags": ["dotti"]
+  },
+  {
+    "name": "txt_dot",
+    "sprite": ["baba/dot"],
+    "wobble": true,
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["dotti"]
   }
 ]
