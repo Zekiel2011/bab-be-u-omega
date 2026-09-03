@@ -508,7 +508,7 @@ selector_grid_contents = {
 	"letter_ba","letter_ab","letter_ke","letter_ek","letter_me","letter_em","letter_ga","letter_al","letter_ut","letter_lk","letter_wa","letter_gr",0,0,0,0,0,0,0,0,0,0,0,0,
 	"letter_oe","letter_sh","letter_bi","letter_ib","letter_up","letter_le","letter_ft","letter_do","letter_wn","letter_ag","letter_an","letter_wi",0,0,0,0,0,0,0,0,0,0,0,0,
    	 "letter_ar","letter_at","letter_ca","letter_ji","letter_fo","letter_be","letter_ea","letter_aa","letter_bo","letter_lt","letter_as","letter_fr",0,0,0,0,0,0,0,0,0,0,0,0,
-    "letter_en","letter_x2",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "letter_en",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
   },
   -- page 3: ui / instructions
   {
@@ -685,7 +685,7 @@ selector_grid_contents = {
     "txt_loep","txt_toss",0,0,0,"txt_sid<","txt_below",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_uhhh",0,0,0,0,0,"txt_groop2","txt_groop3","txt_groop4","txt_groop5","txt_groop6",0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_samroc","txt_cube",0,0,0,0,0,0,
+    "txt_^o^","txt_east","txt_west",0,0,0,0,0,0,0,0,0,0,0,0,0,0,"txt_cube",0,0,0,0,0,0,
     "txt_template","txt_template2","txt_template3",0,"txt_seventyfive","txt_energy","txt_energy2","txt_energy3","txt_on","txt_on2","txt_on3",0,0,"txt_un:O","txt_pathz",0,"txt_ad","txt_subt",0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_flogus","txt_flogjp","txt_flogsg","txt_floggs","txt_floggb-eng",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

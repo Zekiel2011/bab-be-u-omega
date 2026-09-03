@@ -983,7 +983,7 @@
   },
   {
     "name": "txt_triangle",
-    "sprite": ["txt/triangle"],
+    "sprite": ["txt/triangle2"],
     "types": ["object"],
     "color": [[2, 4]],
     "features": {

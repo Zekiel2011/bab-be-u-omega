@@ -1128,20 +1128,6 @@
     "desc": "CUBE: Causes the unit to appear rainbow coloured squares. cube objects like gay are objects are reed, orang, yello, grun, bleu, purp, and pinc, and not any other colors.\nAnti: poof"
   },
   {
-    "name": "txt_samroc",
-    "sprite": ["txt/samroc-colored"],
-    "sprite_transforms": {
-      "inactive": "txt/samroc"
-    },
-    "types": ["property", "gang_prefix"],
-    "color": [[0, 3]],
-    "overlay": {
-      "sprite": "other/samroc",
-      "colors": ["grun"]
-    },
-    "desc": "SAMROC: a shade of grun I think.\nAnti: poof"
-  },
-  {
     "name": "txt_huh",
     "sprite": ["txt/huh"],
     "display": ";/",
