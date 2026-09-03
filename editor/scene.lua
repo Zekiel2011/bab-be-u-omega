@@ -709,11 +709,7 @@ function scene.keyPressed(key)
         cancelText = "Cancel",
         ok = function()
           clear()
-          sound = love.sound.newSoundData("assets/audio/sfx/restart.wav");
-          local source = love.audio.newSource(sound, "static")
-          source:setVolume(1)
-          source:setPitch(1)
-          source:play()
+          sfxplay("restart.wav", 1, 1)
           scene.updateMap()
           loaded_level = false
         end
@@ -1166,11 +1162,7 @@ function scene.update(dt)
                     existing = unit
                   end
                 elseif brush.mode == "placing" and not (shift_active or selectorhold) then
-                  sound = love.sound.newSoundData("assets/audio/sfx/undo.wav");
-                  local source = love.audio.newSource(sound, "static")
-                  source:setVolume(1.5)
-                  source:setPitch(0.99+(math.random()/50))
-                  source:play()
+                  sfxplay("undo.wav", 1.5, 0.99+(math.random()/50))
                   deleteUnit(unit)
                   scene.updateMap()
                   painted = true
@@ -1185,11 +1177,7 @@ function scene.update(dt)
             if brush.id ~= nil then
               if brush.mode == "erasing" then
                 if existing and not selectorhold then
-                  sound = love.sound.newSoundData("assets/audio/sfx/undo.wav");
-                  local source = love.audio.newSource(sound, "static")
-                  source:setVolume(1.5)
-                  source:setPitch(0.99+(math.random()/50))
-                  source:play()
+                  sfxplay("undo.wav", 1.5, 0.99+(math.random()/50))
                   deleteUnit(existing)
                   scene.updateMap()
                   painted = true
@@ -1219,11 +1207,7 @@ function scene.update(dt)
                   end]]
                   scene.updateMap()
                   painted = true
-                  sound = love.sound.newSoundData("assets/audio/sfx/select.wav");
-                  local source = love.audio.newSource(sound, "static")
-                  source:setVolume(1.5)
-                  source:setPitch(0.99+(math.random()/50))
-                  source:play()
+                  sfxplay("select.wav", 1.5, 0.99+(math.random()/50))
                 end
               end
               if painted then
@@ -1256,7 +1240,7 @@ function scene.update(dt)
         if brush.mode ~= "picking" then
           if #hovered >= 1 then
             if brush.id ~= hovered[1].tile then
-              playSound("rule");
+              sfxplay("File0067.ogg", 1.5, 0.99+(math.random()/50))
             end
             brush.picked_tile = tileid
             if brush.picked_tile == tileid and brush.picked_index > 0 then
@@ -1274,7 +1258,7 @@ function scene.update(dt)
               brush.special = hovered[new_index].special
             else
               if brush.id ~= hovered[1].tile  then
-                playSound("rule");
+                sfxplay("File0067.ogg", 1.5, 0.99+(math.random()/50))
               end
               brush.id = hovered[1].tile 
               brush.color = hovered[1].color_override
@@ -1288,7 +1272,7 @@ function scene.update(dt)
             brush.mode = "picking"
           else
             if brush.id ~= nil then
-              playSound("sink");
+              sfxplay("File0166.ogg", 1.5, 0.99+(math.random()/50))
             end
             brush.id = nil
             brush.special = {}
@@ -2180,6 +2164,7 @@ function sanitize(filename)
 end
 
 function scene.saveLevel()
+  sfxplay("rule.wav", 0.5, 1)
   compactIds()
   scene.updateMap()
 
