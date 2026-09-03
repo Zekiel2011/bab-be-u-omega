@@ -709,6 +709,11 @@ function scene.keyPressed(key)
         cancelText = "Cancel",
         ok = function()
           clear()
+          sound = love.sound.newSoundData("assets/audio/sfx/restart.wav");
+          local source = love.audio.newSource(sound, "static")
+          source:setVolume(1)
+          source:setPitch(1)
+          source:play()
           scene.updateMap()
           loaded_level = false
         end
@@ -1161,6 +1166,11 @@ function scene.update(dt)
                     existing = unit
                   end
                 elseif brush.mode == "placing" and not (shift_active or selectorhold) then
+                  sound = love.sound.newSoundData("assets/audio/sfx/undo.wav");
+                  local source = love.audio.newSource(sound, "static")
+                  source:setVolume(1.5)
+                  source:setPitch(0.99+(math.random()/50))
+                  source:play()
                   deleteUnit(unit)
                   scene.updateMap()
                   painted = true
@@ -1175,6 +1185,11 @@ function scene.update(dt)
             if brush.id ~= nil then
               if brush.mode == "erasing" then
                 if existing and not selectorhold then
+                  sound = love.sound.newSoundData("assets/audio/sfx/undo.wav");
+                  local source = love.audio.newSource(sound, "static")
+                  source:setVolume(1.5)
+                  source:setPitch(0.99+(math.random()/50))
+                  source:play()
                   deleteUnit(existing)
                   scene.updateMap()
                   painted = true
@@ -1204,6 +1219,11 @@ function scene.update(dt)
                   end]]
                   scene.updateMap()
                   painted = true
+                  sound = love.sound.newSoundData("assets/audio/sfx/select.wav");
+                  local source = love.audio.newSource(sound, "static")
+                  source:setVolume(1.5)
+                  source:setPitch(0.99+(math.random()/50))
+                  source:play()
                 end
               end
               if painted then
@@ -1235,6 +1255,9 @@ function scene.update(dt)
       if (love.mouse.isDown(2) or (is_mobile and mobile_picking and love.mouse.isDown(1))) and not selector_open then
         if brush.mode ~= "picking" then
           if #hovered >= 1 then
+            if brush.id ~= hovered[1].tile then
+              playSound("rule");
+            end
             brush.picked_tile = tileid
             if brush.picked_tile == tileid and brush.picked_index > 0 then
               local new_index = brush.picked_index + 1
@@ -1250,6 +1273,9 @@ function scene.update(dt)
               end
               brush.special = hovered[new_index].special
             else
+              if brush.id ~= hovered[1].tile  then
+                playSound("rule");
+              end
               brush.id = hovered[1].tile 
               brush.color = hovered[1].color_override
               --brush.customletter = hovered[1].special.customletter
@@ -1261,6 +1287,9 @@ function scene.update(dt)
             end
             brush.mode = "picking"
           else
+            if brush.id ~= nil then
+              playSound("sink");
+            end
             brush.id = nil
             brush.special = {}
             brush.picked_tile = nil
@@ -1684,8 +1713,8 @@ function scene.draw(dt)
           end
           if gridid == newselect then
             if setval < 1 then
-              if setval+((1-setval)/(180-string.len(tile.desc)*2)) < 0 then
-                setval = 1
+              if string.len(tile.desc) > 68 then
+                setval = setval+((1-setval)/(180-136))
               else
                 setval = setval+((1-setval)/(180-string.len(tile.desc)*2))
               end
