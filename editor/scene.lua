@@ -1162,7 +1162,7 @@ function scene.update(dt)
                     existing = unit
                   end
                 elseif brush.mode == "placing" and not (shift_active or selectorhold) then
-                  sfxplay("undo.wav", 1.5, 0.99+(math.random()/50))
+                  sfxplay("File0105.ogg", 1.5, 0.99+(math.random()/50))
                   deleteUnit(unit)
                   scene.updateMap()
                   painted = true
@@ -1207,7 +1207,7 @@ function scene.update(dt)
                   end]]
                   scene.updateMap()
                   painted = true
-                  sfxplay("select.wav", 1.5, 0.99+(math.random()/50))
+                  sfxplay("File0069.ogg", 1.5, 0.99+(math.random()/50))
                 end
               end
               if painted then

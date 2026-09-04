@@ -60,6 +60,7 @@ defaultsettings = {
   editor_music = false,
   day = true,
   night = false,
+  baba = true,
   randomize = false,
   contrast = false,
   canspooku = false,
