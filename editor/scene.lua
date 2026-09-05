@@ -205,6 +205,10 @@ function scene.setupGooi()
     scene.keyReleased("tab")
   end):setBGImage(sprites["ui/selector"],sprites["ui/selector_h"], sprites["ui/selector_a"]):bg({0, 0, 0, 0})
   x = x + 40
+  gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onRelease(function()
+    sfxplay("File0105.ogg", 1.5, 0.99+(math.random()/50))
+  end):setBGImage(sprites["ui/music-on"],sprites["ui/musicicon1"], sprites["ui/musicicon2"]):bg({0, 0, 0, 0})
+  x = x + 40
   
   paint_button = gooi.newButton({text = "", x = x, y = 0, w = 40, h = 40}):onPress(function()
     if paint_open then
@@ -2164,7 +2168,12 @@ function sanitize(filename)
 end
 
 function scene.saveLevel()
-  sfxplay("rule.wav", 0.5, 1)
+  if love.math.random(1, 100) == 100 then
+    sfxplay("rule.wav", 0.5, 1)
+    sfxplay("granddad.mp3", 0.5, 1)
+  else
+    sfxplay("rule.wav", 0.5, 1)
+  end
   compactIds()
   scene.updateMap()
 

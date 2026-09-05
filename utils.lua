@@ -4513,7 +4513,7 @@ end
 
 function buildOptions()
   if global_menu_state == "audio" then
-    scene.addOption("master_vol", "master volume", {{"25%", 0.25}, {"50%", 0.5}, {"75%", 0.75}, {"100%", 1}})
+    scene.addOption("master_vol", "master volume", {{"25%", 0.25}, {"50%", 0.5}, {"75%", 0.75}, {"100%", 1}, {"125%", 1.25}, {"150%", 1.5}, {"175%", 1.75}, {"200%", 2}})
     scene.addOption("music_on", "music", {{"on", true}, {"off", false}})
     scene.addOption("music_vol", "music volume", {{"25%", 0.25}, {"50%", 0.5}, {"75%", 0.75}, {"100%", 1}})
     scene.addOption("sfx_on", "sound", {{"on", true}, {"off", false}})

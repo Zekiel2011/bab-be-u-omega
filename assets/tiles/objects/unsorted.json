@@ -3120,7 +3120,7 @@
     "sprite": ["watr"],
     "layer": 2,
     "color": [[5, 3]],
-    "desc": "burns and mellt thinggs",
+    "desc": "kils tings",
     "tags": ["poison"]
   },
   {
@@ -3143,7 +3143,7 @@
     "name": "stik",
     "sprite": ["stik"],
     "layer": 7,
-    "color": [[6, 2]],
+    "color": [[6, 1]],
     "voice": "s_bdrum",
     "desc": "froom tre & extre",
     "tags": ["rock"]

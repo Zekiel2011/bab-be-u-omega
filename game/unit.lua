@@ -1562,7 +1562,6 @@ function updateUnits(undoing, big_update)
         end
       end
     end
-    
     local issnacc = matchesRule(nil, "snacc", "?")
     for _,ruleparent in ipairs(issnacc) do
       local unit = ruleparent[2]
@@ -2486,7 +2485,7 @@ function miscUpdates(state_change)
       end
       
       if unit.fullname == "bab" then
-        if (os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"] then
+        if ((os.date("%H:%M") >= "12" or settings["night"]) and not settings["day"]) and not hasProperty(unit,"slep") then
           unit.sprite = {"bab_tired"}
         elseif hasProperty(unit,"crye") then
           unit.sprite = {"bab_crye"}

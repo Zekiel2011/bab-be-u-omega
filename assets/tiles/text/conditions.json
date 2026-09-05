@@ -51,6 +51,14 @@
     "tags": ["lonely", "friendless"]
   },
   {
+    "name": "txt_snacced",
+    "sprite": ["txt/snacced"],
+    "types": ["cond_prefix"],
+    "color": [[2, 2]],
+    "desc": "SNACCD (Prefix Condition): True if the unit has consumed something in this turn.\nThis won't work since I have no fucking clue to how make this work",
+    "tags": ["snacc", "eat"]
+  },
+  {
     "name": "txt_arond",
     "sprite": ["txt/arond"],
     "types": ["cond_infix"],

@@ -4083,7 +4083,7 @@
     "layer": 9,
     "color": [[0, 3]],
     "rotate": true,
-    "desc": "Very old sprite, that's why its so bad.",
+    "desc": "3ds step count idk",
     "tags": ["foot", "feet", "body part"],
 	  "pronouns": ["it", "they", "them"]
   },
@@ -5011,5 +5011,22 @@
     "types": ["object"],
     "color": [[1, 3]],
     "tags": ["chars", "byb"]
+  },
+  {
+    "name": "mawwr",
+    "sprite": ["mawwr"],
+    "layer": 11,
+    "color": [[5, 3]],
+    "rotate": true,
+    "desc": "it lures in victems into its mouth making them think its a tunnel, only to close its jaw when they realize what the got themself into.",
+    "tags": ["chars"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_mawwr",
+    "sprite": ["txt/mawwr"],
+    "types": ["object"],
+    "color": [[5, 3]],
+    "tags": ["chars"]
   }
 ]
