@@ -2451,10 +2451,12 @@ end
 function scene.translateLevel(dx, dy)
   for _,unit in ipairs(units) do
     local x, y = unit.x+dx, unit.y+dy
-    if x > mapwidth-1 then x = 0 end
-    if y > mapheight-1 then y = 0 end
-    if x < 0 then x = mapwidth-1 end
-    if y < 0 then y = mapheight-1 end
+    if not ((key_down["lshift"] and key_down["rshift"]) and settings["debugg"]) then
+      if x > mapwidth-1 then x = 0 end
+      if y > mapheight-1 then y = 0 end
+      if x < 0 then x = mapwidth-1 end
+      if y < 0 then y = mapheight-1 end
+    end
     moveUnit(unit, x, y)
   end
   scene.updateMap()

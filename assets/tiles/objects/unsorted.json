@@ -577,7 +577,7 @@
   {
     "name": "selctr",
     "sprite": ["selctr"],
-    "layer": 3,
+    "layer": 20,
     "color": [[3, 3]],
     "desc": "used to select levis",
     "tags": ["cursor", "selector"]
@@ -5237,5 +5237,18 @@
     "types": ["object"],
     "color": [[0, 2]],
     "tags": ["smoke", "smog"]
+  },
+  {
+    "name": "meat",
+    "sprite": ["meat"],
+    "layer": 10,
+    "color": [[2, 1]],
+    "desc": "or spaghetti if you color it yellow"
+  },
+  {
+    "name": "txt_meat",
+    "sprite": ["txt/meat"],
+    "types": ["object"],
+    "color": [[2, 0]]
   }
 ]
