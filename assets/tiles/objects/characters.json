@@ -5020,7 +5020,7 @@
     "color": [[5, 3]],
     "portal": true,
     "rotate": true,
-    "desc": "it lures in victems into its mouth making them think its a tunnel, only to close its jaw when they realize what the got themself into.",
+    "desc": "(Changes sprite if it has a rule using SNACC with the snaccer being itself or is ALTSPRITE) it lures in victims into its mouth that can stretch almost as tall as HOL, making them think its a tunnel, only to close its jaw when they realize what the got themself into.",
     "tags": ["chars"],
     "pronouns": ["they", "them"]
   },
