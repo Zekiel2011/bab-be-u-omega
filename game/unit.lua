@@ -2618,12 +2618,6 @@ function miscUpdates(state_change)
         end
       end
       
-      if unit.fullname == "mawwr" then 
-        if hasRule(unit,"snacc","?") then
-          unit.sprite = {"mawwr_alt"}
-        end
-      end
-      
       if unit.fullname == "platfory" then
         if hasProperty(unit,":(") then 
           unit.sprite = {"modd/platforey/shorp"}
