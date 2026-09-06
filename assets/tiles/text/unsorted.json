@@ -366,24 +366,6 @@
     "tags": ["group"]
   },
   {
-    "name": "txt_halfu",
-    "display": "half u",
-    "sprite": ["txt/halfu"],
-    "types": ["object", "group"],
-    "color": [[4, 1]],
-    "desc": "U: Controlled by you, the player!\nAnti: opposite direction",
-    "tags": ["group"]
-  },
-  {
-    "name": "txt_halfnogo",
-    "display": "half no go",
-    "sprite": ["txt/halfnogo"],
-    "types": ["object", "group"],
-    "color": [[5, 1]],
-    "desc": "NO GO: Can't be entered by objects. Overrides GO AWAY PLS!\nAnti: icyyyy",
-    "tags": ["group"]
-  },
-  {
     "name": "txt_omega",
     "sprite": ["txt/omega"],
     "types": ["anti", "omega"],

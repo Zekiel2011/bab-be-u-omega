@@ -5220,5 +5220,22 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["city", "street", "road"]
+  },
+  {
+    "name": "smoek",
+    "sprite": ["smoek"],
+    "layer": 6,
+    "color": [[0, 1]],
+    "rotate": false,
+    "tiled": true,
+    "desc": "*cough cough* its ver- *cough* it tile*cough cough* it tiles...",
+    "tags": ["smoke", "smog"]
+  },
+  {
+    "name": "txt_smoek",
+    "sprite": ["txt/smoek"],
+    "types": ["object"],
+    "color": [[0, 2]],
+    "tags": ["smoke", "smog"]
   }
 ]

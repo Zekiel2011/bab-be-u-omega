@@ -561,7 +561,7 @@ selector_grid_contents = {
     "glas","txt_glas","bom","txt_bom","sine","txt_sine","kar","txt_kar","can","txt_can","ger","txt_ger","sirn","txt_sirn","chain","txt_chain","rood","txt_rood","¢ont","txt_¢ont","bok","txt_bok","banananana","txt_banananana",
     "trol","txt_trol","wut","txt_wut","wat","txt_wat","splittr","txt_splittr","toggl","txt_toggl","bon","txt_bon","battry","txt_battry","chekr","txt_chekr","do$h","txt_do$h","stomp","txt_stomp","biechboll","txt_biechboll","bulon","txt_bulon",
     "fube","txt_fube","tronk","txt_tronk","cart","txt_cart","drop","txt_drop","woosh","txt_woosh","tanc","txt_tanc","gato","txt_gato","painbuct","txt_painbuct","sinyroc","txt_sinyroc","cryespik","txt_cryespik",0,0,"cair","txt_cair",
-    "colect","txt_colect",0,0,0,0,0,0,"b-ir","txt_b-ir","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod","seewead","txt_seewead","forutoo","txt_forutoo","wulgaye","txt_wulgaye",
+    "colect","txt_colect","smoek","txt_smoek",0,0,0,0,"b-ir","txt_b-ir","panlie","txt_panlie","cheez","txt_cheez","nuzt","txt_nuzt","xplod","txt_xplod","seewead","txt_seewead","forutoo","txt_forutoo","wulgaye","txt_wulgaye",
   },
   -- page 6: more inanimate objects
   {
@@ -674,9 +674,9 @@ selector_grid_contents = {
   },
   {
     "txt_iscome","txt_befit",0,0,"txt_snaccish","txt_noswims",0,"txt_daed","txt_blj",0,0,"txt_nuhuh","txt_were",0,0,0,0,0,0,0,0,0,0,0,
-    "txt_halfu","txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,"txt_yays","txt_when","txt_:(ish","txt_noswimish","txt_;)","txt_crystal","txt_no:)",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_lookwithme","txt_shiftaway","txt_march",0,0,"txt_:u",0,0,0,0,"txt_zup",0,0,0,0,0,0,0,0,0,0,0,0,0,
-    "txt_halfnogo",0,0,0,0,0,0,0,0,0,"txt_zown",0,0,0,"txt_bunosd","txt_whuhd","txt_png",0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,"txt_zown",0,0,0,"txt_bunosd","txt_whuhd","txt_png",0,0,0,0,0,0,0,
     "txt_dirgo","txt_nogoish","txt_goawayplsdir",0,"txt_step","txt_:p",0,0,0,"txt_boem",0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     "txt_living","txt_vsel","txt_stalkskye","txt_stalkflor","txt_clip","txt_board","txt_cliverb","letter_clip",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,"txt_stalkledge","txt_stalkredge",0,0,0,0,"txt_B)","txt_in","txt_out",0,0,0,0,0,0,0,0,0,0,0,0,0,
