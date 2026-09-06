@@ -2731,6 +2731,24 @@ function miscUpdates(state_change)
           unit.sprite = {"maglit", "no1"}
         end
       end
+
+      if unit.tiled then
+        local ogsprite = unit.sprite[1] 
+        local tiling = "_"
+        if hasitem((getUnitsOnTile(unit.x,unit.y-1)), unit.fullname) then
+          tiling = tiling.."u"
+        end
+        if hasitem((getUnitsOnTile(unit.x+1,unit.y)), unit.fullname) then
+          tiling = tiling.."r"
+        end
+        if hasitem((getUnitsOnTile(unit.x,unit.y+1)), unit.fullname) then
+          tiling = tiling.."d"
+        end
+        if hasitem((getUnitsOnTile(unit.x-1,unit.y)), unit.fullname) then
+          tiling = tiling.."l"
+        end
+        unit.sprite = {ogsprite..tiling}
+      end
       
       if unit.fullname == "die" and (first_turn or not (hasProperty(unit,"stukc") or hasProperty(unit,"noturn"))) then
         local roll = math.random(6)
@@ -4923,6 +4941,7 @@ function createUnit(tile,x,y,dir,convert,id_,really_create_empty,prefix,anti_gon
   unit.painted = deepCopy(data.painted)
   unit.layer = data.layer
   unit.rotate = data.rotate
+  unit.tiled = data.tiled
   unit.wobble = data.wobble
   unit.got_objects = {}
   unit.sprite_transforms = data.sprite_transforms

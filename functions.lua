@@ -6,3 +6,12 @@ function sfxplay(name,volume,pitch)
   source:setPitch(pitch)
   source:play()
 end
+
+function hasitem(a, b)
+    for _, item in ipairs(a) do
+        if item.name == b then
+            return true
+        end
+    end
+    return false
+end

@@ -5203,5 +5203,22 @@
     "types": ["object"],
     "color": [[0, 3]],
     "tags": ["dotti"]
+  },
+  {
+    "name": "rood",
+    "sprite": ["rood"],
+    "layer": 3,
+    "color": [[0, 3]],
+    "rotate": false,
+    "tiled": true,
+    "desc": "A variation of ROD that tiles.",
+    "tags": ["city", "street", "road"]
+  },
+  {
+    "name": "txt_rood",
+    "sprite": ["txt/rood"],
+    "types": ["object"],
+    "color": [[0, 3]],
+    "tags": ["city", "street", "road"]
   }
 ]

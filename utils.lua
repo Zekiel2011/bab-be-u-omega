@@ -4760,6 +4760,7 @@ function addTile(tile)
   tile.types = tile.types or {"object"}
   tile.painted = tile.painted or {true}
   tile.rotate = tile.rotate or false
+  tile.tiled = tile.tiled or false
   tile.portal = tile.portal or false
   tile.wobble = tile.wobble or false
   tile.sprite_transforms = tile.sprite_transforms or {}
@@ -5192,6 +5193,7 @@ function drawTileSprite(tile, x, y, rotation, sx, sy, o)
     color = getTileColors(tile),
     painted = tile.painted,
     meta = tile.meta,
+    tiled = tile.tiled,
     nt = tile.nt,
     wobble = tile.wobble,
     really_smol = tile.name == "babby",
@@ -5222,6 +5224,7 @@ function drawUnitSprite(unit, x, y, rotation, sx, sy, o)
     sprite = getUnitSprites(unit),
     color = getUnitColors(unit),
     painted = unit.painted,
+    tiled = unit.tiled,
     special = unit.special,
     overlay = unit.overlay,
     meta = unit.meta,
@@ -5253,6 +5256,7 @@ function drawSprite(x, y, rotation, sx, sy, o)
     id = 0,
     frame = x+y,
     wobble = false,
+    tiled = false,
     anti_wobble = false,
     delet = false,
     scary = false,
