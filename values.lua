@@ -759,7 +759,7 @@ selector_grid_contents = {
     "mez","txt_mez","baab","txt_baab","keeeeeeke","txt_keeeeeeke","tzsh","txt_tzsh","glebab","txt_glebab","meemto","txt_meemto","dood","txt_dood","robert","txt_robert","emme","txt_emme","flir","txt_flir","arvi","txt_arvi","sinx","txt_sinx",
     "pwn","txt_pwn","rok","txt_rok","bihop","txt_bihop","jim","txt_jim","beu","txt_beu","xixe","txt_xixe","bah","txt_bah","musrur","txt_musrur","nice","txt_nice","bahb","txt_bahb","itte!ve","txt_itte!ve","borgitte!","txt_borgitte!",
     "jillt","txt_jillt","beellt","txt_beellt","nalß","txt_nalß","nabby","txt_nabby","robwot","txt_robwot","404","txt_404","flaf","txt_flaf","al23m","txt_al23m","spik2","txt_spik2","katboux","txt_katboux","zezi","txt_zezi","zezzer","txt_zezzer",
-    "mawwr","txt_mawwr",0,0,0,0,"spoop","creat","reed","orang","w/fren",0,0,0,0,0,0,0,0,0,0,0,0,0,
+    "snacr","txt_snacr","mawwr","txt_mawwr","dimawwr","txt_dimawwr","spoop","creat","reed","orang","w/fren",0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,"nuek","fridgd","energy","hotte","behinu","arond","icy","nxt",0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,"got","nt",":o","gomyway","u",":(","utoo","stelth",0,"bebe","txt_bebe","txt_txt_bebe",0,0,0,0,0,0,
   },

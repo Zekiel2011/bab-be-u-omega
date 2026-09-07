@@ -5030,5 +5030,42 @@
     "types": ["object"],
     "color": [[5, 3]],
     "tags": ["chars"]
+  },
+  {
+    "name": "snacr",
+    "sprite": ["snacr"],
+    "voice": "snacc",
+    "layer": 11,
+    "color": [[5, 4]],
+    "rotate": true,
+    "desc": "It likes to put stuff into its mouth (much like a toddler when it comes to any object in a 5 mile radius), surprisingly it's quite big and cozy inside of it, leaving any creatures that wonder inside to most likely stay inside it.",
+    "tags": ["chars"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_snacr",
+    "sprite": ["txt/snacr"],
+    "types": ["object"],
+    "color": [[5, 4]],
+    "tags": ["chars"]
+  },
+  {
+    "name": "dimawwr",
+    "sprite": ["dimawwr"],
+    "voice": "snacc",
+    "layer": 11,
+    "color": [[3, 1]],
+    "portal": true,
+    "rotate": true,
+    "desc": "These strange creatures seem to be a weird evolution of Mawwr, these creatures have a whole new world all inside its stomach that it has full control over and can view it, any creatures that seem to wander into its mouth have never returned. Despite how scary it seems, this creature is actually very nice on the inside (get it?)",
+    "tags": ["chars"],
+    "pronouns": ["they", "them"]
+  },
+  {
+    "name": "txt_dimawwr",
+    "sprite": ["txt/dimawwr"],
+    "types": ["object"],
+    "color": [[3, 1]],
+    "tags": ["chars"]
   }
 ]
