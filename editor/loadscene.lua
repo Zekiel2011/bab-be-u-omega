@@ -348,6 +348,7 @@ function scene.loadLevel(data, new)
   level_author = data.author or ""
   level_bg_effect = data.bg_effect or ""
   level_extra = data.extra
+  level_canspectransform = data.canspectransform or false
   current_palette = data.palette or "default"
   map_music = data.music or "bab be u them"
   mapwidth = data.width

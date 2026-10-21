@@ -3857,6 +3857,7 @@ function loadLevels(levels, mode, level_objs, xwx)
     level_name = level_name:sub(1, 100)
     level_author = data.author or ""
     level_bg_effect = data.bg_effect or ""
+    level_canspectransform = data.canspectransform or false
     level_extra = data.extra or false
     current_palette = data.palette or "default"
     map_music = data.music or "bab be u them"

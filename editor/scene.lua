@@ -13,7 +13,7 @@ local saved_settings = false
 
 local settings_open, settings_ui, properties
 local label_palette, label_music
-local input_name, input_author, input_palette, input_music, input_width, input_height, input_extra, input_parent_level, input_next_level, input_is_overworld, input_puffs_to_clear, input_background_sprite, input_bg_effect
+local input_name, input_author, input_palette, input_music, input_width, input_height, input_extra, input_parent_level, input_next_level, input_is_overworld, input_puffs_to_clear, input_background_sprite, input_bg_effect, input_canspectransform
 
 local capturing, start_drag, end_drag
 local screenshot, screenshot_image
@@ -89,6 +89,9 @@ function scene.load()
   end
   if not level_bg_effect then
     level_bg_effect = ""
+  end
+  if not level_canspectransform then
+    level_canspectransform = false
   end
   if not level_level_number then
     level_level_number = 0
@@ -380,12 +383,18 @@ w = w-h, h = h}):center():setGroup("settings")
   y = y + h + p
   input_background_sprite = gooi.newText({text = level_background_sprite, x = 4+dx*i, y = y, w = w, h = h}):setGroup("settings")
 
+  y = y + h + p
+  gooi.newLabel({text = "Disable Special Transformations?", x = 4+dx*i, y = y, w = w, h = h}):center():setGroup("settings")
+  y = y + h + p
+  input_canspectransform = gooi.newCheck({checked = level_canspectransform, x = (w-h)/2+dx*i, y = y, w = h, h = h}):setGroup("settings")
+  input_canspectransform.checked = level_canspectransform
+
   if not is_mobile then
-    y = y_top + (h+p)*(is_mobile and 7 or 11) + p
-    gooi.newButton({text = "Save", x = 4+dx*i, y = y, w = w_half, h = h}):onRelease(function()
+    y = y_top + (h+p)*(is_mobile and 9 or 11) + p
+    gooi.newButton({text = "Save", x = 4+dx*i, y = y+h+p+p, w = w_half, h = h}):onRelease(function()
       scene.saveSettings()
     end):center():success():setGroup("settings")
-    gooi.newButton({text = "Cancel", x = 4+w_half+4+dx*i, y = y, w = w_half, h = h}):onRelease(function()
+    gooi.newButton({text = "Cancel", x = 4+w_half+4+dx*i, y = y+h+p+p, w = w_half, h = h}):onRelease(function()
       scene.openSettings()
     end):center():danger():setGroup("settings")
   else
@@ -2147,6 +2156,7 @@ function scene.updateMap()
     is_overworld = level_is_overworld,
     puffs_to_clear = level_puffs_to_clear,
     background_sprite = level_background_sprite,
+    canspectransform = level_canspectransform,
     bg_effect = level_bg_effect,
   }
   map = serpent.dump(map)
@@ -2247,6 +2257,7 @@ function scene.openSettings()
     input_background_sprite:setText(level_background_sprite)
     input_extra.checked = level_extra
     input_bg_effect:setText(level_bg_effect)
+    input_canspectransform.checked = level_canspectransform
 
     gooi.setGroupVisible("settings", true)
     gooi.setGroupEnabled("settings", true)
@@ -2292,13 +2303,13 @@ function scene.saveSettings()
   level_puffs_to_clear = input_puffs_to_clear:getValue()
   level_background_sprite = input_background_sprite:getText()
   level_bg_effect = input_bg_effect:getText()
-
   mapwidth = input_width:getValue()
   mapheight = input_height:getValue()
   level_extra = input_extra.checked
+  level_canspectransform = input_canspectransform.checked
   
   scene.updateMap()
-
+  
   clear()
   loadMap()
   resetMusic(map_music, 0.1)
@@ -2380,6 +2391,7 @@ function love.filedropped(file)
   level_puffs_to_clear = mapdata.level_puffs_to_clear or 0
   level_background_sprite = mapdata.background_sprite or ""
   level_bg_effect = mapdata.bg_effect or ""
+  level_canspectransform = mapdata.canspectransform or false
 
   if map_ver == 0 then
     maps = {{data = loadstring("return " .. mapstr)(), info = mapdata}}

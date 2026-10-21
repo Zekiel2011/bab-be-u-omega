@@ -4600,7 +4600,7 @@ function convertUnits(pass)
     local rule = rules.rule
     
     if not hasProperty(unit, "notranform") or not hasProperty(unit,"404") then
-      if (rule.subject.name == "mous" and rule.object.name ~= "mous") then
+      if ((rule.subject.name == "mous" and rule.object.name ~= "mous")) and level_canspectransform == true then
         for _,cursor in ipairs(cursors) do
           if testConds(cursor, rule.subject.conds) then
             local tile
